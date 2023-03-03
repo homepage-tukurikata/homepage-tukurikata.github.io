@@ -1,0 +1,346 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>FTP接続によるアップロード方法</title>
+<meta name="description" content="パソコン上で作成したファイルをレンタルサーバーへアップロードする際、FTP接続で転送するのが便利です。無料ホームページでも有料のレンタルサーバーでも、たいていはこのFTP接続を利用することができます。">
+<meta name="keywords" content="FFFTP,ファイル,アップロード">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../hp/ffftp-setuzoku.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FTP接続によるアップロード方法">
+<meta property="og:description" content="パソコン上で作成したファイルをレンタルサーバーへアップロードする際、FTP接続で転送するのが便利です。無料ホームページでも有料のレンタルサーバーでも、たいていはこのFTP接続を利用することができます。">
+<meta property="og:image" content="../../image/dw-ftp.png">
+<meta property="og:image" content="../../image/upload-ftp.png">
+<meta property="og:image" content="../../image/ffftpsetuzoku.png">
+<meta property="og:url" content="../../hp/ffftp-setuzoku.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1 id="step1">FTP接続によるアップロード方法</h1>
+<p>パソコン上で作成したファイルをレンタルサーバーへアップロードする際、<b>FTP接続</b>で転送すると便利です。無料ホームページでも有料のレンタルサーバーでも、たいていはこのFTP接続を利用することができます。</p><p>このFTP接続の無料ツールはさまざまありますが、一番有名なソフトに<span class="aka">FFFTP</span>があります。<br />
+<a href="http://www2.biglobe.ne.jp/~sota/ffftp.html" target="_blank" rel="noopener">Sota's Web Page (FFFTP)</a>（※Windows用）</p><p>ホームページ作成ソフトを何も持ってない場合は、こちらのFFFTPを利用されるとよいでしょう。</p><p>また、Macの場合は「FileZilla Client」が使いやすいです。<br>
+<a href="https://filezilla-project.org/" target="_blank" rel="nofollow noopener">FileZilla - The free FTP solution</a></p><p>一方、有料のホームページソフトを購入した場合、付属機能としてFTP接続を利用できますので、特に無料ツールを用意する必要はありません。</p><p>例えば、DreamweaverなどのソフトでFTP設定をしておけば、パソコン内のファイルをサーバー側と同期することができます。</p><p><amp-img src="../../image/dw-ftp.png" layout="intrinsic" alt="DreamweaverのFTP設定" width="320" height="275" class="ccc"></amp-img></p><p>ホームページ作成ソフトのFTP接続については、お使いのソフトのマニュアル等をご参照ください。このページでは無料ツールのFFFTPの使い方についてご紹介します。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2 id="step2">FFFTPの初期設定</h2>
+<p>このページでは無料ソフトのFFFTPを例にご紹介します。</p><p>まずはFFFTPをパソコンにインストールして起動したのち、「新規ホスト」をクリックして初期設定をします。こちらには、レンタルサーバーや無料ホームページサービスから通知された情報を確認しながら設定していくとよいでしょう。</p><p><amp-img src="../../image/ffftpsetuzoku.png" layout="intrinsic" alt="FFFTPの初期設定" width="320" height="215" class="ccc"></amp-img></p><p>このなかで正確に記入する必要がある箇所は赤丸の３つです。</p><p>「ホストの設定名」は適当に記入してもかまいませんが、「ホスト名」と「ユーザー名」、「パスワード」については正確な情報を設定する必要があります。</p>
+<ul>
+<li><p><b>ホスト名（アドレス）</b><br />
+こちらはアクセス先となるFTPサーバーのことですが、サーバー会社側から通知される「ドメイン名」か「ipアドレス」をそのまま記入します。</p></li>
+<li><p><b>ユーザー名・パスワード</b><br />こちらもレンタルサーバー側からメールなどで通知されているはずです。もしくは、ヘルプを参照すれば、たいていは設定方法が掲載されています。</p></li>
+</ul>
+<p>この赤丸の３つの情報については、レンタルサーバーを契約した際、サーバーの準備が完了したあとの最初のメールに記載されていることが多いです。</p><p>【例：さくらインターネット】<br />
+<amp-img src="../../image/sakura-ftp.png" width="320" height="187" layout="intrinsic" alt="さくらインターネットのFTP設定" class="ccc"></amp-img></p><p>【例：wappy】<br />
+<amp-img src="../../image/wappy-ftp.png" width="320" height="222" layout="intrinsic" alt="wappyのFTP設定" class="ccc"></amp-img></p><p>あるいは、ウェブ上の管理画面などで確認するケースもあります。</p><p>【例：コアサーバー】<br /><amp-img src="../../image/core-ftp.png" layout="intrinsic" alt="コアサーバーのFTP設定" width="236" height="137" class="ccc"></amp-img></p><p>【例：FC2無料ホームページ】<br />
+<amp-img src="../../image/fc2-ftp.png" layout="intrinsic" alt="FC2無料ホームページのFTP設定" width="320" height="144" class="ccc"></amp-img></p><p>【例：ヤフージオシティーズ】<br />
+<amp-img src="../../image/geo-ffftp.png" width="320" height="192" layout="intrinsic" alt="ジオシティーズのFTP設定" class="ccc"></amp-img></p><p>いずれにしても、FTP接続の設定に関する情報が必ずあるはずですので、送信されてきたメールなどを確認してみることをおすすめします。</p><p>その他、最初の「ホストの設定名」の箇所は自分で把握しやすくするためのものですので、分かりやすい任意の名前をつけておきましょう。</p><p>また、「ローカルの初期フォルダ」ですが、ローカルというのは自分のパソコン側のことで、「ホスト側の初期フォルダ」はネット上のレンタルサーバー側のことを意味しています。</p><p>接続するたびにファイルの場所を探して開くのは面倒なため、パソコン上のホームページファイルのある場所やデスクトップなどを指定しておくと便利ですが、こちらは特に指定しなくても接続することはできます。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2 id="step3">ファイルのアップロードの仕方</h2>
+<p>実際にFFFTPでファイルをアップロードする際、左側にあるローカル側（パソコン側）のファイルを選び、右側のサーバー側に転送します。</p><p><amp-img src="../../image/upload-ftp.png" layout="intrinsic" alt="FFFTPでのアップロード方法" width="320" height="138" class="ccc"></amp-img></p><p>左上の黄色いフォルダマークをクリックしたのち、PC上にある「アップロードしたいファイル」とサーバー側の「転送先のフォルダ」を選択しましょう。</p><p>例えば、デスクトップに転送したいファイルがある場合、左側の箇所で「C:\Users\ユーザー名\Desktop」などを開いて転送したいファイルを選び、<span class="aka">青色の矢印のアップロードマーク</span>をクリックすると転送することができます。</p><p>転送先のサーバー側のフォルダについては、「<a href="../../hp/public-html.html">public_html</a>」や「www」、あるいは「httpdocs」などが一般的ですが、レンタルサーバーによって転送先は異なるため、ヘルプページなどを確認してみることをおすすめします。</p><p>ファイルの転送が終了すると右側にアップロードしたファイルが反映されます。</p><p>複数のファイルを一括で転送する場合には「シフトキー」を押しながら複数を選択して転送します。大量のファイルを一括で転送する際、格安サーバーの場合はエラーで中断してしまうケースが多いため、小分けにして転送することをおすすめします。</p><p>また、転送モードには「アスキー」と「バイナリ」の違いがありますが、デフォルトの状態では自動で判別してくれる「ファイル名で転送モード切替え」の設定になっています。特に問題のない場合には、デフォルトのまま利用することをおすすめします。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>FFFTP「ホスト一覧」のフォルダ分け</h2>
+<p>複数のサイトを運営している場合、FFFTPの接続先が煩雑になってきますので、フォルダ分けをして整理しておくと便利です。</p><p>このフォルダ分けをする場合、「新規グループ」の箇所からフォルダ名を入力します。</p><p><amp-img src="../../image/ffftp-folder.png" width="294" height="216" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>例えば、<a href="../../rental-server/index.html">レンタルサーバー</a>ごとにサイトを管理する場合、「ロリポップ」などと入力してフォルダを作成します。</p><p><amp-img src="../../image/ffftp-folder2.png" width="316" height="224" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>次に、作成したフォルダに入れておくサイトを選択して反転させ、右側の矢印「↑」でそのフォルダまで移動させます。</p><p><amp-img src="../../image/ffftp-folder3.png" width="302" height="228" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>すると選択したサイトがフォルダ内に移動されます。</p><p><amp-img src="../../image/ffftp-folder4.png" width="318" height="215" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>同じように、複数のサイトをフォルダに移動して管理しておくとよいでしょう。</p><p><amp-img src="../../image/ffftp-folder5.png" width="320" height="216" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>このように、レンタルサーバーごとにフォルダ分けをしておくとわかりやすくなります。</p><p><amp-img src="../../image/ffftp-folder6.png" width="299" height="232" layout="intrinsic" alt="" class="ccc"></amp-img></p><p>ほか、サイトのカテゴリごとにフォルダ分けをしたり、更新頻度の高い順にフォルダわけをしておくと便利です。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../hp/index.html">作り方</a>　&#8260;　<b>FTP接続</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li class="list-li"><a href="../../hp/soft.html">おすすめのホームページ作成ソフト</a></li>
+<li class="list-li"><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li class="list-li"><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "FTP接続によるアップロード方法",
+      "description": "パソコン上で作成したファイルをレンタルサーバーへアップロードする際、FTP接続で転送するのが便利です。無料ホームページでも有料のレンタルサーバーでも、たいていはこのFTP接続を利用することができます。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/upload-ftp.png",
+        "height": "138",
+        "width": "320"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "FFFTP"
+        }, {
+          "@type": "HowToTool",
+          "name": "FileZilla Client"
+        }
+      ],
+	  "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "ホームページファイル"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/hp/ffftp-setuzoku.html#step1",
+          "name": "FTPソフトのダウンロード",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "「FFFTP」や「FileZilla Client」などの無料ツールをダウンロードしてインストールします。有料のホームページソフトを購入した場合、たいていは付属機能としてFTP接続を利用できます。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/dw-ftp.png",
+            "height": "275",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "FFFTPの初期設定",
+          "url": "https://www.homepage-tukurikata.com/hp/ffftp-setuzoku.html#step2",
+          "itemListElement": [{
+            "@type": "HowToTip",
+            "text": "無料ソフトのFFFTPを利用する場合、レンタルサーバーなどから通知される情報を確認しながら初期設定していくとよいでしょう。"
+          }, {
+            "@type": "HowToDirection",
+            "text": "FFFTPをパソコンにインストールして起動したのち、まずは「新規ホスト」をクリックして初期設定をします。"
+          }, {
+            "@type": "HowToDirection",
+            "text": "「ホストの設定名」は適当に記入してもかまいませんが、「ホスト名」と「ユーザー名」、「パスワード」については正確な情報を設定します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/ffftpsetuzoku.png",
+            "height": "215",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "ファイルのアップロード",
+          "url": "https://www.homepage-tukurikata.com/hp/ffftp-setuzoku.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "左上の黄色いフォルダマークをクリックしたのち、PC上にある「アップロードしたいファイル」とサーバー側の「転送先のフォルダ」を選択します。"
+          }, {
+            "@type": "HowToDirection",
+            "text": "左側の箇所で転送したいファイルを選び、青色の矢印のアップロードマークをクリックして転送します。"
+          }, {
+            "@type": "HowToTip",
+            "text": "転送先のフォルダについては、「public_html」や「www」、あるいは「httpdocs」などが一般的です。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/upload-ftp.png",
+            "height": "138",
+            "width": "320"
+          }
+        }],
+      "totalTime": "PT10M"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/hp/ffftp-setuzoku.html"
+      },
+      "headline": "FTP接続によるアップロード方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/dw-ftp-1200.png"
+       ],
+      "datePublished": "2011-11-16T00:00:00+09:00",
+      "dateModified": "2021-08-02T13:50:29+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "FTP接続",
+        "item": "https://www.homepage-tukurikata.com/hp/ffftp-setuzoku.html"
+      }]
+    }
+</script>
+</body>
+</html>

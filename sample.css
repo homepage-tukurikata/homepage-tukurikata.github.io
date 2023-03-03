@@ -1,0 +1,146 @@
+body {
+margin:0;
+padding:0;
+background-image:url(image/bg-gray.png);
+background-repeat:repeat-x;
+word-wrap: break-word;
+}
+#outer {
+padding:0 0 5px 0;
+margin:0 auto;
+width:760px;
+color:#111;
+border-right:1px solid #ccc;
+border-left:1px solid #ccc;
+background-color:#fff;
+}
+#cse-search-box {
+margin-top:15px;
+margin-left:20px;
+}
+#header {
+background-image:url(image/sample-sakura.jpg);
+background-repeat:no-repeat;
+height:90px;
+color:#444;
+line-height:140%;
+font-size:14px;
+}
+a{
+color: #036;
+}
+img {border:0;}
+h1 {
+margin:0;
+font-size:18px;
+padding:25px 0 0 24px;
+}
+h2 {
+font-size:16px;
+color: #A5110D;
+}
+h3 {
+font-size:16px;
+padding-left: 5px;
+}
+.description {
+font-size:12px;
+margin-top:5px;
+padding:0 10px 0 29px;
+line-height:150%;
+}
+.navi {
+font-size: 12px;
+text-align:center;
+margin:10px 0;
+}
+#main {
+float:left;
+width:520px;
+margin: 0;
+}
+ul {
+margin: 0 0 0 1em;
+padding: 0;
+}
+li {
+list-style:disc; 
+}
+.content {
+margin:10px 0;
+font-size:90%;
+padding:5px 0 0 24px;
+line-height:150%;
+}
+#right {
+color:#676767;
+padding:10px 0 0 0;
+width:240px;
+float:left;
+margin: 0;
+}
+.title {
+font-size:13px;
+padding:15px 0 15px 40px;
+font-weight:bold;
+color: #5F4F3F;
+}
+.side {
+padding:0;
+margin-bottom:0;
+font-size:13px;
+line-height:190%;
+}
+.side a{
+color:#036;
+text-decoration:none;
+}
+.side a:hover {
+text-decoration:underline;
+}
+.side li {
+margin: 0;
+list-style:none; 
+padding: 0 0 0 7px;
+}
+blockquote{
+border:1px solid #ccc;
+padding:5px;
+margin:10px;
+}
+#footer {
+height:120px;
+clear:left;
+}
+.pagetop {
+font-size:13px;
+padding-right:50px;
+text-align:right;
+}
+.copyright {
+padding-top: 30px;
+margin-left: 0;
+font-size: 11px;
+color: #666;
+text-align: center;
+}
+.copyright ul a{
+color: #666;
+text-decoration: underline;
+}
+.copyright ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.copyright ul li {
+margin: 0;
+padding:0 4px;
+display: inline;
+border-left: 1px solid #9A9A9A;
+}
+@media screen and (max-device-width: 480px) {
+#outer, #main, #right {width:100%;}
+#main, #right {float:none;}
+.title {padding:15px 0 15px 30px;}
+}

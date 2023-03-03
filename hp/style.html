@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ホームページファイルの作成方法</title>
+<meta name="description" content="ホームページで使用するファイルにはさまざまな種類がありますが、なかでもメインとなるHTMLファイルとスタイルシートのCSSファイルの作成方法についてご紹介しています。">
+<meta name="keywords" content="ホームページ,htmlファイル,作成,css">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/style.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/style-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="style.html">
+<link rel="amphtml" href="../amp/hp/style.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ホームページファイルの作成方法">
+<meta property="og:description" content="ホームページで使用するファイルにはさまざまな種類がありますが、なかでもメインとなるHTMLファイルとスタイルシートのCSSファイルの作成方法についてご紹介しています。">
+<meta property="og:image" content="../image/how6.png">
+<meta property="og:image" content="../image/how10.png">
+<meta property="og:image" content="../image/how1.png">
+<meta property="og:url" content="style.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/style.woff2) format("woff2"),
+url(../fonts/style.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/style-bold.woff2) format("woff2"),
+url(../fonts/style-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>ホームページファイルの作成方法</h1>
+<p>ホームページで使用するファイルにはさまざまな種類がありますが、なかでもメインとなるのは<span class="aka">HTMLファイル</span>と<span class="aka">CSSファイル</span>です。</p><p>ほかにも、.htaccessやjs、cgi、xml、php、jpg、あるいはrobots.txtなど様々な拡張子のファイルがありますが、htmlファイルとCSSファイルさえあればサイトは機能します。</p>
+<p>あまり推奨されてはいませんが、スタイルシートのCSSについてはHTMLファイル内の&lt;style&gt;&lt;/style&gt;の箇所に直接記述することもできるため、最低限、htmlファイルさえあれば、サイトを表示させることができます。</p>
+<h2>htmlファイルの作り方</h2>
+<p>htmlファイルはファイル名を「<span class="aka">任意の英数＋.html</span>」としてファイルを作成します。大文字でも表示されますが、英数小文字やハイフン「‐」などを使用するのが一般的です。</p><p>例えば、メモ帳を開いて<a href="../html/index.html">HTMLタグ</a>を入力します。</p><p><img src="../image/how1.png" alt="" width="320" height="200" class="ccc"></p><p>次に、「ファイル」 → 「名前を付けて保存」の箇所から「すべてのファイル」を選択し、ファイル名を「index.html」として「UTF-8」の文字コードで保存します。</p><p><img src="../image/memo-utf8.png" alt="" width="320" height="200" class="ccc"></p><p>これでHTMLファイルが完成しました。</p><p><img src="../image/how3.png" alt="" width="320" height="200" class="ccc"></p><p>このファイルをクリックするとページが表示されるはずです。</p><p><img src="../image/how2.png" alt="" width="320" height="200" class="ccc"></p><p> レンタルサーバーのファイルマネージャーで作成する際もほぼ同じ手順になります。</p><p>このファイル名については、そのページ内容をあらわすような名前で作成することをおすすめします。</p><p>例えば、犬のページを作成する場合は「dog.html」とか、そんな感じです。01.htmlなどの番号順で作成する人も多いですが、そのページ内容を表す文字列で作成した方が検索エンジンで認識されやすくなります。</p><p>ただし、トップページ用のファイルについては、「<span class="aka">index.html</span>」で作成するのが一般的です。<br />
+→ <a href="toppage.html">index.htmlとトップページの関係</a></p><p>無料ホームページやレンタルサーバーなどでは、デフォルトの状態で既にこのindex.htmlが作成されていることも多いですが、その内容を上書きする形で作成していくよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>スタイルシート作成でデザインを一括指定</h2>
+<p>スタイルシートのファイル名は、styles.css や index.css など「<span class="aka">任意の英数＋.css</span>」で作成します。</p><p>例えば、以下のように<a href="../css/index.html">CSSタグ</a>でデザインの指定をするスタイルシートを作成します。</p><p><img src="../image/how9.png" alt="" width="320" height="200" class="ccc"></p><p>このスタイルシートは、色彩やレイアウト幅などの見栄えの部分を指定するファイルになります。</p><p>ファイル名は「style.css」などとしておきます。</p><p><img src="../image/how7.png" alt="" width="320" height="200" class="ccc"></p><p>すると、CSSファイルも作成されました。</p><p><img src="../image/how6.png" alt="" width="320" height="200" class="ccc"></p><p>この状態で「index.html」ファイルのHEADタグにて、スタイルシートの「style.css」を参照するように指定します。</p><p>メモ帳の「ファイル」 → 「開く」から「すべてのファイル」を指定すれば、「index.html」ファイルを編集できるはずです。</p><p><img src="../image/how11.png" alt="" width="320" height="200" class="ccc"></p><p>上記のHTMLファイルのheadタグ内に以下のように指定します。</p><p style="word-wrap: break-word;">&lt;link rel="stylesheet" href="<span class="aka">CSSのURL</span>"&gt;</p><p><img src="../image/how12.png" alt="" width="320" height="200" class="ccc"></p><p>スタイルシートの書き方の詳細については、こちらのページをご参照ください。<br />
+<a href="../css/howto-css.html">スタイルシートの作り方</a></p><p>すると、サイトのデザインがstyle.cssの内容に変更されました。</p><p><img src="../image/how10.png" alt="" width="320" height="200" class="ccc"></p><p>上記の白黒のデザインから色がついて見やすくなったと思います。</p><p>以降、デザインを変更する際には、このCSSファイルの内容を書き変えるだけですみます。</p><p>個別ページを作成した際にも、それぞれのHTMLファイルに、このCSSファイルを参照するように指定しておけば、スタイルシートの設定を変えるだけでホームページ全体のデザインを一括して変更することができます。</p><p>とりあえず、トップページのindex.html とデザインを指定するcssファイルのふたつのページを時間をかけて作成するとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>ホームページファイルの作成方法</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li class="list-li"><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li class="list-li"><a href="file.html">ホームページファイルの種類</a></li>
+<li class="list-li"><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li class="list-li"><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li class="list-li"><a href="styles-css.html">スタイルシートでホームページのデザインを変更</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ホームページファイルの作成方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/how6-1200.png"
+       ],
+      "datePublished": "2008-10-04T00:00:00+09:00",
+      "dateModified": "2021-08-03T00:05:29+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ホームページファイルの作成方法",
+        "item": "https://www.homepage-tukurikata.com/hp/style.html"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>携帯サイトの作り方（ガラケーサイト）</title>
+<meta name="description" content="ガラケー用の携帯サイト（フィーチャーフォン端末用）の作り方をご紹介しています。スマホ用のレスポンシブサイトやAMPページとの違い、PCサイトとの連携方法など、ガラケーサイト作成の際のポイントについて掲載しています。">
+<meta name="keywords" content="携帯サイト,ガラケーサイト,フィーチャーフォン,作り方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/keitai-site.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/keitai-site-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="keitai-site.html">
+<link rel="amphtml" href="../amp/hp/keitai-site.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="携帯サイトの作り方（ガラケーサイト）">
+<meta property="og:description" content="ガラケー用の携帯サイト（フィーチャーフォン端末用）の作り方をご紹介しています。スマホ用のレスポンシブサイトやAMPページとの違い、PCサイトとの連携方法など、ガラケーサイト作成の際のポイントについて掲載しています。">
+<meta property="og:image" content="../image/keitai-now.png">
+<meta property="og:image" content="../image/keitai-view.png">
+<meta property="og:url" content="keitai-site.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/keitai-site.woff2) format("woff2"),
+url(../fonts/keitai-site.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/keitai-site-bold.woff2) format("woff2"),
+url(../fonts/keitai-site-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>携帯サイトの作り方（ガラケーサイト）</h1>
+<p>ガラケーは<span class="aka">フィーチャーフォン端末</span>とも呼ばれていますが、スマートフォン（スマホ）に対して単に携帯とも呼ばれています。このガラケー用の携帯サイトを作成する際は独特な作り方になるため、スマホサイトと比較すると困難な点が多いです。</p><p>また、このフィーチャーフォン携帯は2017年に生産が終了されており、大手サイト運営側も2014年には「Yahoo!メール」のガラケー版が終了、2016年には「ヤフオク！」や「Youtube」などが相次いでガラケー対応を終了しています。</p><p>NHKなどの公共性のあるサイトはいまだに健在ですが、令和の時代に入り、携帯サイトを見かけることはほとんどありません。</p><p><img src="../image/keitai-now.png" alt="" width="320" height="240" class="ccc"></p><p>加えて、2016年12月にはGoogle公式ブログで「<a href="https://webmaster-ja.googleblog.com/2016/12/an-update-on-googles-feature-phone..html" target="_blank" rel="nofollow noopener">フィーチャーフォン用 Googlebot の廃止</a>」が発表されていますので、今後はガラケー用のサイトを作っても<span class="aka">クロールやインデックス自体がされない</span>ものと思われます。</p>
+<p>「handheld」リンクを使用することで、ガラケーサイト用ページが存在することは確認されますが、ガラケーサイトを作成する意味はなくなってきているものと思われます。</p><p>以下の内容はまだスマホがあまり普及しておらず、ガラケーが主流だった「2009年頃」の情報になりますので、今後は<a href="responsive.html">レスポンシブ・ウェブデザイン</a>でスマートフォン向けのサイトを作成することをおすすめします。</p><p>さらに、最近のモバイル端末対応は<a href="amp.html">AMPページの作成</a>が主流になってきていますので、別途に携帯サイト用のページを作成するのでしたら、AMPページの作成を優先した方がメリットが多いと思います。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>スマホサイトとガラケー携帯サイトの違い</h2>
+<p>この“ガラケー”の意味についてですが、外部から孤立して独自に進化したガラパゴス諸島の生き物のように、i-modeなどが日本で独自に発展してきたため、世界標準ではないことからガラパゴス携帯（ガラケー）と呼ばれています。</p><p>また、スマホとガラケーでは以下のような違いがあります。</p>
+<ul>
+<li>スマホサイト → フルブラウザ → 基本的にはPCサイトと同じ</li>
+<li>ガラケーサイト → フルブラウザではない → 独自のHTMLファイルとCSSが必要</li>
+</ul>
+<p>■<b>スマートフォン用サイト</b></p>
+<p>スマートフォンの場合は「<span class="aka">フルブラウザ</span>」のため、基本的にはPC用のサイトでもそのまま閲覧できます。ただし、デフォルトの状態では文字が小さく表示されるため、レスポンシブウェブデザインでCSSのみを変更することで対応できます。<br />
+→ <a href="responsive.html">レスポンシブサイトの作り方</a></p>
+<p>（当サイトでの例：）</p>
+<p><img src="../image/sumaho-miyasui.jpg" alt="スマホ用サイト" width="240" height="411" class="ccc"></p><p>■<b>AMP対応・スマートフォン用サイト</b></p><p>また、最近ではモバイル端末での表示が高速化されるAMPページに対応するサイトも多くなってきました。AMPページの場合、ガラケー携帯サイトと同様、別途に専用のHTMLファイルとCSSを用意する必要があります。<br>
+→ <a href="amp.html">AMPページの作り方</a></p><p>例えば、このページをAMPに対応した場合、スマホで閲覧した際に上部にこのような表示がされて高速化されます。</p><p>（AMPページ対応の例：）</p><p><img src="../image/amp-tokutyou.png" alt="" width="320" height="268" class="ccc"></p><p>外部CSSが使えない点や別途にファイルを作成してURLを正規化する点など、携帯サイトとAMPページは似ている点も多いです。</p>
+<p>■<b>ガラケー用サイト（フィーチャーフォン端末）</b></p>
+<p>一方、携帯サイトのブラウザは「<span class="aka">フルブラウザではない</span>」ため、ファイル容量などに制限があります。ガラケーサイトを作成する場合はPCサイト用のファイルをそのまま流用できませんので、HTMLファイルとCSSをPCサイトとは別に用意する必要があります。</p>
+<p>（当サイトでの例：）</p>
+<p><img src="../image/keitai-view.png" alt="携帯用サイト" width="313" height="548" border="0" /></p>
+<p>また、CSSファイルを用意するといっても、ガラケーの場合は外部スタイルシートには対応していない機種も多いため、HTMLファイル内で内部化したり、HTMLタグに直接指定するなどして対応する必要があります。</p><p>そのため、HTMLソースはstyleの指定などでごちゃごちゃした作り方になる傾向があります。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>ガラケーサイト作成のポイント</h2>
+<p>携帯サイトを作成する際、以下のような点に注意して作成していくとよいでしょう。</p><p id="step1">■<b>携帯サイト専用のフォルダを作成し、PCサイトと携帯サイトを切り分ける。</b></p><p>一般的には、ドメイン下にmobileの意味の「m」や「mb」、「i」などのフォルダを新たに作成し、ガラケーからのアクセスは www.example/m/ などへ転送するケースが多いです。あるいは、サブドメインを設定し、mobile.example.com などへ転送しているケースもあります。</p><p id="step2">■<b>DTDは XHTML 1.0 Transitional でも特に問題ありません。</b></p> <p> 当サイトではPCサイトも携帯サイトも<a href="../html/dtd.html">DTD</a>は XHTML 1.0 Transitional で作成しています。あるいは「XHTML Mobile 1.0」などを指定しておきましょう。</p><p>■<b>外部化したスタイルシートは使わない（htmlファイルに直接記述する）</b></p><p><a href="../html/style-zokusei.html">div style=</a>などを使用して、htmlタグにCSSを直接指定しましょう。</p><p>■<b>ジャバスクリプトは使えない（通常のアクセス解析を使えない）</b></p><p>基本的に Javascript は使えませんので、一般的なアクセス解析は使えません。javascriptは使えないため、headタグ内でのjavascriptの指定もしなくてよいです。</p><p>■<b>画像サイズを240px程度にする</b></p><p> ガラケーはスマホよりも画面サイズが小さい傾向にあります。当サイト運営者の場合、スマホサイトでは320px以内に指定しておりますが、ガラケーサイトの場合は240px以内にしております。</p><p>■<b>リストタグは使わない</b></p><p>文下げされるため、リストタグのulなどは使わない方がよいでしょう。デザインが大幅に崩れるケースがあり、携帯サイトでは外部CSSが使えないため余白の調整が困難です。</p><p>■<b>カタカナは半角にする（F8キーで変換）</b></p><p>容量削減という意味もありますが、カタカナを半角にすると携帯サイトと認識されやすいです。Dreamweaver を使用している場合、一括で変換できる拡張ツールなども公開されています。</p><p>■<b>罫線や絵文字を使う（「けいせん」で変換）</b></p><p>罫線の（┏や┣）、あるいは絵文字をつかって見やすく整形しましょう。</p><p>■<b>カラーコードは「3桁」ではなく、「6桁」で指定する</b></p><p>PCサイトではカラーコードを3桁で省略することも多いです。（例：#000000 → #000など。）<br />けれども、携帯サイトで3桁で記述するとうまく反映されないケースがあるため、省略せずに「6桁」で記述することをおすすめします。</p><p>■<b>携帯サイトのフォントサイズについて</b></p>
+<p>&lt;div style=&quot;font-size:small;&quot;&gt;&lt;/div&gt;などと指定して全体を囲んでおくとよいです。大手ポータルなどでは、font-size:x-small;で小さ目の文字サイズに設定しているケースも多いです。</p><p>■<b>文字コードはshift-jisを使う</b></p><p>PCサイトではUTF-8、携帯サイトではshift-jisを使うことをおすすめします。</p><p>■<b>ファイル容量を100kb以内に収める</b></p><p> 画像の容量などを削減し、100kb以内に収めないと表示されないケースがあります。</p>
+<p id="step3">■<b>.htaccessで携帯サイトへと振り分ける</b></p><p>携帯でPCサイト用のトップページへアクセスした際、携帯用サイトへ転送されるように設定します。<br />例えば、携帯用サイトを「m」のフォルダで作成していた場合、.htaccessに以下のように記述するとよいでしょう。
+（※こちらは7年ほど前に設置したものですので、現在では古いかもしれません。）</p>
+<p>例：）/m/フォルダへ転送する場合</p>
+<p><textarea rows="5" cols="44">RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} ^(DoCoMo|KDDI|DDIPOKET|UP\.Browser|J-PHONE|Vodafone|SoftBank)
+RewriteRule ^$ /m/ [R]</textarea>
+</p>
+<p>■<b>QRコードの設置</b></p><p>ホームページアドレスを画像のQRコードに変換し、PCサイト上に設定しておきましょう。当サイトのQRコードはこのような画像になりますが、ネット上で変換できるサイトが多数公開されています。</p><p><img src="../image/qr-code.gif" alt="QRコード" width="135" height="135"></p><p>PCサイト用のURLをQRコードに変換するのか、それとも携帯サイト用の/m/フォルダ付きのURLを変換するのかについては、当サイトではPCサイト用のURLを変換しています。どのみち携帯からのアクセスは/m/フォルダへと振り分けられますので、正規のPCサイト用のURLを変換しておいた方がよい気がいたします。</p><p>実際のhtmlソースの例については、当サイトでも簡易的に携帯サイト用のページを作成しておりますので、そちらのソースなどを参考にしてみてください。こちらはPCブラウザでもアクセスできます。</p><p>https://www.homepage-tukurikata.com/m/</p><p id="step4">■<b>サイトビューワでのチェック</b></p><p>また、携帯からアクセスした場合、どのように表示されるかをPCサイトからチェックするには、Gooモバイルの<a href="https://emu.mobile.goo.ne.jp/emu/emu.php" target="_blank" rel="nofollow noopener">サイトビューワ</a>を利用するのがおすすめです。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2 id="step5">「handheld」と「canonical」でPCサイトと連携する</h2>
+<p>PCサイト側には、携帯サイト用の代替URLを示す「handheld」を指定します。</p><p>一方、携帯サイトにはPCサイトのURLを「<a href="../html/rel-canonical.html">canonical</a>」で指定して正規化します。PCサイト用のURLが正規のメインページ、携帯サイト用のページが代替ページの意味になります。</p>
+<p>携帯サイトではファイル容量が制限されているため、PCサイトよりも内容を削って作成しているケースも多いです。この場合、内容が微妙に違っているため、それぞれ別々のページとして検索エンジンにインデックスされてしまう可能性があります。</p>
+<p>このため、<span class="aka">携帯サイトの方に canonical を指定</span>し、PCサイト用のページを正規URLとして指定しておくとよいでしょう。<br />
+&lt;link rel=&quot;canonical&quot; href=&quot;http://ＰＣサイトのＵＲＬ&quot; /&gt;</p>
+<p>一方、<span class="aka">PCサイト側には携帯ページのURLを示す handled を指定</span>しておくことをおすすめします。<br />&lt;link rel=&quot;alternate&quot; media=&quot;handheld&quot; href=&quot;http://携帯サイトのＵＲＬ&quot; /&gt;</p>
+<p>参考：）<a href="https://developers.google.com/search/mobile-sites/mobile-seo/other-devices?hl=ja#feature_phones" target="_blank" rel="nofollow noopener">フィーチャーフォン - ウェブマスター向けモバイルガイド</a></p>
+<p>ただし、この「handheld」はメディアクエリレベル4で非推奨となったため、文法チェックをした際にはエラーが出るかもしれません。</p><p><img src="../image/handheld-deprecated.png" alt="" width="320" height="238" class="ccc"></p>
+<h2>モバイル用の「mobile_sitemap.xml」の作成</h2>
+<p>PCサイト用の sitemap.xml とは別に、モバイルサイトのURLのみを記述した sitemap.xml も作成しておきましょう。</p><p>通常のサイトマップに、&lt;mobile:mobile/&gt;を追加して記述していきます。ファイル名は任意ですが、mobile_sitemap.xmlなどが分かりやすいと思います。<br />
+→ <del>モバイル URL 情報をサイトマップに追加する</del></p>
+<p>また、robots.txt にその場所を指定しておくことをおすすめします。<br />
+Sitemap: http://www.example.com/mobile_sitemap.xml</p><p><span class="aka">■追記：</span><br />
+最近はスマートフォンが主流になり、モバイル用クローラーの仕様も変更になったため、こちらの携帯用（ガラケー、フィーチャーフォン用）のモバイルサイトマップは意味がなくなってきました。フィーチャーフォン用のGooglebotは廃止されたので、インデックスはされないと思います。</p><p>加えて、HTML5では、Validチェックで上記の「media=&quot;handheld&quot;」でエラーが出るようです。指定しても特に問題はないと思いますが、W3Cの方でもガラケー用は廃止の方向のようです。</p>
+<p>最近はガラケーとスマホを合体させた「ガラホ」や「ガラスマ」なるものも登場してきており、対応しきれなくなってきましたが、概ね、上記のような点に注意して作成していくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>携帯サイト</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li class="list-li"><a href="amp.html">AMPページの作り方</a></li>
+<li class="list-li"><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li class="list-li"><a href="../html/style-zokusei.html">HTMLタグにstyle属性の指定方法 style=</a></li>
+<li class="list-li"><a href="../html/hr.html">&lt;hr&gt;タグのhtmlとCSS</a></li>
+<li class="list-li"><a href="../html/background-color.html">background-colorで背景色の指定方法</a></li>
+<li class="list-li"><a href="../html/span-style.html">span styleで文字色と背景色の指定方法</a></li>
+<li class="list-li"><a href="../html/rel-canonical.html">&lt;link rel=&quot;canonical&quot;でURLを正規化</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "携帯サイトの作り方（ガラケーサイト）",
+      "description": "ガラケー用の携帯サイト（フィーチャーフォン端末用）の作り方をご紹介しています。スマホ用のレスポンシブサイトやAMPページとの違い、PCサイトとの連携方法など、ガラケーサイト作成の際のポイントについて掲載しています。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/keitai-view.png",
+        "height": "548",
+        "width": "313"
+      }, "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "携帯サイト用テンプレート"
+        }
+      ],
+	  "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "サイトビューワ"
+        }, {
+          "@type": "HowToTool",
+          "name": "QRコード変換ツール"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/hp/keitai-site.html#step1",
+          "name": "携帯サイト専用のフォルダを作成する",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "一般的にはドメイン下に「m」や「mb」、「i」などのフォルダを新たに作成し、ガラケーからのアクセスについてはそちらに転送します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "「XHTML Mobile 1.0」などでHTMLファイルを作成する",
+          "url": "https://www.homepage-tukurikata.com/hp/keitai-site.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "「XHTML Mobile 1.0」などでHTMLファイルを作成します。スタイルシートについては、外部CSSは使わず、style属性などを使用してHTMLファイルに直接記述します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": ".htaccessで携帯サイトへと振り分ける",
+          "url": "https://www.homepage-tukurikata.com/hp/keitai-site.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": ".htaccessを設置し、携帯でPCサイト用のトップページへアクセスした際、携帯用サイトへ転送されるように設定します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "サイトビューワでのチェック",
+          "url": "https://www.homepage-tukurikata.com/hp/keitai-site.html#step4",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "携帯からアクセスした場合、どのように表示されるかをPCサイトからチェックするには、Gooモバイルのサイトビューワが便利です。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "「handheld」と「canonical」でPCサイトと連携",
+          "url": "https://www.homepage-tukurikata.com/hp/keitai-site.html#step5",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "PCサイト側には、携帯サイト用の代替URLを示す「handheld」を指定します。一方、携帯サイトにはPCサイトのURLを「canonical」で指定して正規化します。"
+          }]
+        }],
+      "totalTime": "P2D"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "携帯サイトの作り方（ガラケーサイト）",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/keitai-now-1200.png"
+       ],
+      "datePublished": "2015-11-02T00:00:00+09:00",
+      "dateModified": "2021-08-13T00:00:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "携帯サイトの作り方（ガラケーサイト）",
+        "item": "https://www.homepage-tukurikata.com/hp/keitai-site.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "モバイル端末への最適化",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "携帯サイトの作り方（ガラケーサイト）",
+        "item": "https://www.homepage-tukurikata.com/hp/keitai-site.html"
+      }]
+    }
+</script>
+</body>
+</html>

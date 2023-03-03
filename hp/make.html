@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>簡単な無料ホームページの作り方</title>
+<meta name="description" content="無料ホームページを実際に作成してみましょう。htmlファイルとcssファイルのテンプレートふたつを使用して、ヤフージオシティーズでの作り方を例に簡単にご紹介します。">
+<meta name="keywords" content="ホームページ,作り方,簡単,初心者">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/r-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/cjk-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../hp-font.css" media="screen and (min-width:768px)">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="make.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="簡単な無料ホームページの作り方">
+<meta property="og:description" content="無料ホームページを実際に作成してみましょう。htmlファイルとcssファイルのテンプレートふたつを使用して、ヤフージオシティーズでの作り方を例に簡単にご紹介します。">
+<meta property="og:image" content="../image/subete-uwagaki.png">
+<meta property="og:url" content="make.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>簡単な無料ホームページの作り方</h1>
+<p>はじめてホームページを作る際、テンプレートを一から作成するのは困難なため、当サイトのサンプルを使用して実際に作成してみるとよいでしょう。</p><p>ここでは「index.html」と「index.css」のテンプレートのサンプルを使用して、<a href="../rental-server/free-space.html" target="_blank">無料ホームページスペース</a>の<span class="aka">ヤフーのジオシティーズ</span>で作ることを例にご紹介します。</p><p>（<b>追記：</b><a href="../rental-server/geocities-transfer.html">Yahoo!ジオシティーズは、2019年3月末でサービス終了</a>しました。）</p>
+<h2>スタイルシート（CSSファイル）の作り方</h2>
+<p>まず、デザインの部分を指定する<a href="../css/howto-css.html">スタイルシート（CSSファイル）の作り方</a>ですが、右クリックで「空のファイル」を新規に作成しましょう。</p>
+<p><img src="../image/new-yahucss.png" alt="" width="420" height="133" class="ccc" /></p>
+<p>すると、自動でファイル名が作成されるかと思います。</p>
+<p><img src="../image/untitle.png" alt="" width="292" height="124" class="ccc" /></p>
+<p>これを「<span class="aka">index.css</span>」のファイル名に変更します。</p>
+<left>
+<textarea rows="1" cols="12" onclick="this.select();">index.css</textarea>
+</left>
+<p><img src="../image/stylecss.png" alt="" width="287" height="86" class="ccc" /></p>
+<p>この作成した「index.css」のファイルに、次のソースを上書きします。</p>
+<left>
+<textarea rows="25" cols="49" onClick="this.select();">
+body {
+background-color:#EBE9E1;
+margin:0px;
+padding:0px;
+text-align:center;
+}
+#outer {
+background-color:#ffffff;
+margin:0px auto 0px auto;
+width:814px;
+font-size:13px;
+line-height:150%;
+border: solid 1px #D1D1D1;
+text-align:left;
+padding:0px;
+color:#222222;
+}
+#header {
+padding:20px 0px 0px 0px;
+text-align:left;
+height:90px;
+}
+.description {
+padding-left:37px;
+color:#333333;
+line-height:140%;
+}
+#main {
+width:550px;
+float:left;
+}
+.content {
+padding:0px 10px 10px 30px;
+margin-bottom:4px;
+text-align:left;
+font-size:13px;
+line-height:150%;
+}
+#right {
+width:240px;
+padding:14px 0px 0px 0px;
+color:#004C25;
+font-size:13px;
+float:left;
+text-align:left;
+}
+.title {
+font-size:13px;
+padding:5px 0px 4px 35px;
+margin:0px 0px 0px 0px;
+font-weight:bold;
+color:#ffffff;
+text-align: left;
+background-color:#004C25;
+border: 1px solid #f2f2f2;
+}
+.side {
+line-height:180%;
+font-size:13px;
+padding:6px 0px 10px 14px;
+margin:0px 00px 0px 0px;
+background-color:#DBE6DE;
+font-weight:bold;
+color: #777777;
+border-right: 1px solid #f2f2f2;
+border-left: 1px solid #f2f2f2;
+}
+.side a{
+color:#003366;
+text-decoration : none;
+}
+.side a:hover{
+text-decoration:underline;
+}
+ul {
+margin: 0 0 0 1em;
+padding: 0;
+}
+li {
+list-style:disc; 
+}
+.side ul {
+margin: 0 0 0 0;
+padding: 0;
+}
+.side li {
+margin: 0 0 0 20px;
+list-style:disc; 
+padding: 0 0 0 0px;
+}
+P {
+margin:1em 0 1em 0;
+line-height:150%;
+}
+img{
+border:0px;
+}
+hr {
+border-width: 1px 0px 0px 0px;
+border-style: solid;
+border-color: #cccccc;
+height: 1px;
+}
+a{
+font-weight:normal;
+color: #003366;
+}
+h1 {
+font-size:16px;
+text-align:left;
+color: #003333;
+padding:24px 0px 0px 37px;
+margin:0px;
+font-family: メイリオ, Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+h1 a{
+font-weight:bold;
+color:#003333;
+text-decoration:none;
+font-family: メイリオ, Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+h1 a:hover{
+text-decoration:underline;
+}
+h2 {
+font-size:16px;
+margin:0px 0px 0px 0px;
+padding:14px 0px 9px 4px;
+color:#000000;
+border-bottom:1px solid #999999;
+}
+h3 {
+font-size:16px;
+color: #000000;
+padding:5px 0px 3px 15px;
+margin-right: 20px;
+}
+h4 {
+font-size:16px;
+color: #000000;
+padding-left: 15px;
+}
+#footer {
+padding-top:10px;
+color:#666666;
+font-size:12px;
+height:100px;
+clear:left;
+text-align:center;
+}
+blockquote{
+border:1px solid #ccc;
+padding:5px;
+margin:10px;
+}
+@media screen and (max-device-width: 480px) {
+#outer {width:100%;}
+#header {width:100%;clear:both;}
+#main {width:100%;clear:both;}
+.content {clear:both;font-size:120%;padding:0px 10px 0px 10px;}
+#right {width:100%;clear:both;}
+#footer {width:100%;clear:both;}
+img {zoom:80%;}
+}</textarea>
+</left>
+<p>右クリックで「ファイル編集」を選択するとデフォルトで挿入されている内容が表示されますが、これを上のソースですべて上書き保存してください。</p><p><img src="../image/subete-uwagaki.png" alt="" width="371" height="208" class="ccc" /></p><p>保存する際、文字コードは「<span class="aka">UTF-8</span>」を選択してください。</p>
+<p><img src="../image/uwagaki-hozonn.png" alt="" width="423" height="220" class="ccc" /></p><p>これでスタイルシートは完成しました。</p>
+<h2>HTMLファイルもコピペで簡単作成</h2>
+<p>次に、コンテンツの部分のHTMLファイルを作りますが、同じようにコピペで作成します。</p><p>HTMLファイルは、こちらのソースをコピー＆ペーストして作成してください。</p>
+<p><b>HTMLファイルの中身</b></p>
+<left>
+<textarea rows="25" cols="49" onclick="this.select();">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
+&lt;title&gt;あなたのホームページのタイトル&lt;/title&gt;
+&lt;meta name="keywords" content="ページのキーワード1,2,3" /&gt;
+&lt;meta name="description" content="ページの説明" /&gt;
+&lt;meta name="viewport" content="width=device-width" /&gt;
+&lt;link rel="stylesheet" href="index.css" type="text/css" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="outer"&gt;
+&lt;div id="header"&gt;
+&lt;h1&gt;あなたのホームページのタイトル&lt;/h1&gt;
+&lt;p class="description"&gt;あなたのＨＰの説明文をここに記入&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id="main"&gt;
+&lt;div class="content"&gt;&lt;h2&gt;記事ページ見出し1&lt;/h2&gt;
+&lt;p&gt;文章あれこれ&lt;/p&gt;
+&lt;h3&gt;記事ページ見出し2&lt;/h3&gt;
+&lt;p&gt;文章あれこれ&lt;/p&gt;
+&lt;h4&gt;記事ページ見出し3&lt;/h4&gt;
+&lt;p&gt;文章あれこれ&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="right"&gt;
+&lt;div class="title"&gt;サイドバータイトル&lt;/div&gt;
+&lt;div class="side"&gt;
+&lt;ul&gt;
+&lt;li&gt;記事ページへのリンク&lt;/li&gt;
+&lt;li&gt;記事ページへのリンク&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="footer"&gt;© 2010 あなたのホームページ&lt;/div&gt;
+&lt;/div&gt;&lt;/body&gt;
+&lt;/html&gt;</textarea>
+</left>
+
+<p>右クリックで「ファイル編集」を選択し、デフォルトで記載されている内容を上のソースを使って全て上書き保存します。</p>
+<p><img src="../image/f-hennsyuu.png" alt="" width="306" height="125" class="ccc" /></p>
+<p>デフォルトで入力されている内容が上書きされ、現在表示されているページ内容はこちらのテンプレートですべて置き換わることになります。</p>
+<p>ファイル名はそのまま「index.html」で保存します。</p>
+<left>
+<textarea rows="1" cols="12" onclick="this.select();">index.html</textarea>
+</left>
+<p>文字コードはこちらも「<span class="aka">utf-8</span>」を選択してください。</p><p>このCSSファイルとHTMLファイルを作成すれば、とりあえずはトップページが表示されます。そのまま作れば、テンプレートはこのホームページとほぼ同じ構成になるはずです。</p><p><img src="../image/new-yafuho.png" alt="" width="200" height="118" class="ccc" /></p><p>無料テンプレートは、<a href="https://template.homepage-tukurikata.com/" rel="nofollow">こちらのサイト</a>にも多少ありますのでご自由にお使いください。</p><p>あとは「index.html」ファイルに書かれている「あなたのホームページ」などの文字を、実際のサイト名などに書きかえていけばよいでしょう。</p><p>ちなみに、まったく同じ作り方でfc2の無料ホームページで作成した場合、このような小さめの広告になります。</p><p><b>fc2の無料ホームページで作成した場合の広告</b></p><p><img src="../image/fc2pr.png" alt="ＦＣ２で作成した無料ＨＰ" width="343" height="242" class="ccc" /></p><p><a href="web.fc2.html">FC2無料ホームページの作り方</a></p><p>どちらのホームページスペースで作成しても大差はないかとは思いますが、ジオシティーズの場合は有料版にしないと広告が目立ってしまうかもしれません。</p>
+<hr /><p class="breadcrumb">次のページ：<a href="freesample.html">テンプレートのカスタマイズ方法</a></p>
+<hr /><br />
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li class="list-li"><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li class="list-li"><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li class="list-li"><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li class="list-li"><a href="../html/html5.html">HTML5とXHTML 1.0の違い</a></li>
+<li class="list-li"><a href="moving.html">無料ホームページからレンタルサーバーへの引越方法</a></li>
+<li class="list-li"><a href="../rental-server/geocities-transfer.html">ヤフージオシティーズ終了後の転送設定</a></li>
+<li class="list-li"><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li class="list-li"><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li class="list-li"><a href="https://template.homepage-tukurikata.com/" target="_blank">ホームページのテンプレートセンター</a></li>
+<li class="list-li"><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="../html/source.html">HTMLソースの書き方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+</body>
+</html>

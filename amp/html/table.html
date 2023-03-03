@@ -1,0 +1,354 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>&lt;table&gt;は表作成のhtmlタグ</title>
+<meta name="description" content="tableタグは「縦方向の列」の「tr」と「横方向の行」の「td」を組み合わせて表を作成します。ブラウザによる見え方の違いもありますので注意しましょう。">
+<meta name="keywords" content="table,表,html">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../html/table.html">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>&lt;table&gt;は表作成のhtmlタグ</h1>
+<p>表を作成するには「テーブルタグ」を記入します。</p>
+<p>「tr」と「td」で「縦方向の列」と「横方向の行」を指定していきますが、「<span class="aka">trタグは縦方向 ↓</span>」、「<span class="aka">tdタグは横方向 →</span>」と覚えておくとわかりやすいです。</p><p>この「tr」は「テーブルの列(table row)」のことですが、「row」で「列」という意味になります。一方、「td」は「table data」の略で「行」を表しています。</p>
+<p>例えば、列と行がそれぞれひとつだけのhtmlタグを記述すると…</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;</p>
+<p>このように要素がひとつだけの表が表示されます。</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td>
+</tr>
+</table>
+
+<p><b>横方向「→」に行を追加</b></p>
+<p>上の１行１列の状態をもとにして、横方向に行の要素を追加するには、単純に「tdタグ」を１個追加します。</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;<span class="orange">&lt;td&gt;要素&lt;/td&gt;</span><br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;</p>
+<p>するとこのように、横方向へ行がひとつ増えます。</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td><td><span class="orange">要素</span></td>
+</tr>
+</table>
+<p>２つ追加するには「tdタグ」を２個追加します。</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;<span class="orange">&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;</span><br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;</p>
+<p>すると、横方向へ２つの行が増えます。</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td><td><span class="orange">要素</span></td><td><span class="orange">要素</span></td>
+</tr>
+</table>
+<p><b>縦方向「↓」に列を追加</b></p>
+<p>一方、縦方向へ列を追加する場合は、中に入っているtdタグごとtrを追加する必要があります。一番上の状態を元にして縦方向に追加します。</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+<span class="orange">&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;</span><br />
+&lt;/table&gt;</p><p>するとこのように縦方向へ列が増えます。</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td>
+</tr>
+<tr>
+<td><span class="orange">要素</span></td>
+</tr>
+</table>
+<p><b>縦・横方向に行列を追加して表を作成</b></p>
+<p>これらを組み合わせて表を作成していきます。例えば、上の３つのtdが入っているものを縦に増やすとこのようになります。</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+<span class="orange">&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;</span><br />
+&lt;/table&gt;</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td><td>要素</td><td>要素</td>
+</tr>
+<tr>
+<td><span class="orange">要素</span></td><td><span class="orange">要素</span></td><td><span class="orange">要素</span></td>
+</tr>
+</table>
+<p>ここで、１行目は列がひとつ、２行目は列が３つとかにすると、表としておかしくなってしまうので、trタグごと追加するようにしましょう。</p>
+<p><amp-img src="../../image/table-img.png" layout="intrinsic" alt="おかしなtableタグ" width="314" height="246" style="border: solid 1px #000000;" /></amp-img></p>
+<p>もし追加する場合は、tdの要素を空にして追加することをおすすめします。</p><p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+<span class="orange">&lt;tr&gt;<br />
+&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;&lt;td&gt;要素&lt;/td&gt;<br />
+&lt;/tr&gt;</span><br />
+&lt;/table&gt;</p>
+<table border="1" cellspacing="0">
+<tr>
+<td>要素</td><td></td><td></td>
+</tr>
+<tr>
+<td><span class="orange">要素</span></td><td><span class="orange">要素</span></td><td><span class="orange">要素</span></td>
+</tr>
+</table>
+<br />
+<br /><h2>&lt;table&gt;タグのスタイルシート</h2>
+<p>このテーブルタグはブラウザによって見た目がかなり違ってきます。主に、Internet Explorer（IE6）では崩れて表示されることが多いですので、確認するようにしましょう。</p>
+<p>テーブルタグの背景色を記述する際は、trにこのように記述すると、その行のすべての背景色が変わります。</p>
+<p>&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr style="background-color:#F0F7F9;font-weight:bold;"&gt;<br />
+&lt;td style="padding: 5px;text-align:center;font-size:13px;"&gt;&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;Explorer&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;Firefox&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;バグ&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;多い&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;少ない&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr style="background-color:#E8E3D2;"&gt;<br />
+&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;ユーザー&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;多い&lt;/td&gt;<br />&lt;td style="padding: 5px;
+text-align:center;font-size:13px;"&gt;普通&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;</p>
+<p>このテーブルタグの場合はこのように表示されます。</p>
+<table border="1" cellspacing="0">
+<tr style="background-color:#F0F7F9;font-weight:bold;">
+<td style="padding: 5px;text-align:center;font-size:13px;"></td><td style="padding: 5px;
+text-align:center;font-size:13px;">Explorer</td><td style="padding: 5px;
+text-align:center;font-size:13px;">Firefox</td>
+</tr>
+<tr>
+<td style="padding: 5px;
+text-align:center;font-size:13px;">バグ</td><td style="padding: 5px;
+text-align:center;font-size:13px;">多い</td><td style="padding: 5px;
+text-align:center;font-size:13px;">少ない</td>
+</tr>
+<tr style="background-color:#E8E3D2;">
+<td style="padding: 5px;
+text-align:center;font-size:13px;">ユーザー</td><td style="padding: 5px;
+text-align:center;font-size:13px;">多い</td><td style="padding: 5px;
+text-align:center;font-size:13px;">普通</td>
+</tr>
+</table>
+<p>cellspacingはセルとセルの間の間隔のことですが、1や2の値を記入すると枠線が2重になってしまうので、0で設定することをおすすめします。</p>
+<p>ただ、このようにhtmlに直接記述するのはスマートではないですので、スタイルシートを利用するようにしましょう。</p>
+<p><b>【HTML上での記述】</b></p>
+<p>
+&lt;table border="1" cellspacing="0"&gt;<br />
+&lt;tr class="ex1"&gt;<br />
+&lt;td class="ex2"&gt;&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;Explorer&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;Firefox&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="ex2"&gt;バグ&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;多い&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;少ない&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr class="ex3"&gt;<br />
+&lt;td class="ex2"&gt;ユーザー&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;多い&lt;/td&gt;<br />
+&lt;td class="ex2"&gt;普通&lt;/td&gt;<br />
+&lt;/tr&gt;<br />&lt;/table&gt;</p>
+<p><b>【スタイルシート側での記述】</b></p>
+<p>.ex1 {<br />
+background-color:#F0F7F9;<br />
+font-weight:bold;<br />
+}<br />
+.ex2 {<br />
+padding: 5px;<br />
+text-align:center;<br />
+font-size:13px;<br />
+}<br />
+.ex3 {<br />
+background-color:#E8E3D2;<br />
+}</p>
+<p>個別に指定せず、すべてのテーブルタグに同じ設定をする場合は、次のように単純にCSSを指定するだけでも可能です。</p>
+<p>table {<br />border:solid 1px;<br />border-collapse: collapse;<br />}<br />tr {<br />
+background-color:#F1F1F1;<br />
+}<br />
+td {<br />
+padding: 5px;<br />
+text-align:center;<br />
+font-size:13px;<br />
+border:solid 1px;<br />
+}</p>
+<p>ここで、&lt;table border="1" cellspacing="0"&gt;の部分は、<br /><br />
+table {<br />border:solid 1px;<br />border-collapse: collapse;<br />}<br /><br />のように指定することもできますが、
+cellspacing="0"の部分はブラウザによって解釈が違うので、直接記入した方がはやいと思います。</p><p>セル内の間隔を指定する際は、tdにpaddingを指定するとうまくいきます。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../html/index.html">htmlタグ</a>　&#8260;　<b>&lt;table&gt;は表作成のhtmlタグ</b></div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HTMLタグ",
+        "item": "https://www.homepage-tukurikata.com/html/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "&lt;table&gt;"
+      }]
+    }
+</script>
+</body>
+</html>

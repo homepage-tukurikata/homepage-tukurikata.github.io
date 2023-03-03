@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>画像サイズを縮小する方法</title>
+<meta name="description" content="サイトに掲載する画像サイズを縮小する場合、ペイントやPhotoshopなどのツールで「画像そのものを縮小する方法」と「CSSで縮小して表示する方法」の二つがあります。">
+<meta name="keywords" content="画像サイズ,縮小">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/image-size.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/image-size-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="image-size.html">
+<link rel="amphtml" href="../amp/hp/image-size.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="画像サイズを縮小する方法">
+<meta property="og:description" content="サイトに掲載する画像サイズを縮小する場合、ペイントやPhotoshopなどのツールで「画像そのものを縮小する方法」と「CSSで縮小して表示する方法」の二つがあります。">
+<meta property="og:image" content="../image/iphone-aspect.jpg">
+<meta property="og:url" content="image-size.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/image-size.woff2) format("woff2"),
+url(../fonts/image-size.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/image-size-bold.woff2) format("woff2"),
+url(../fonts/image-size-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+.example{width:240px;height:135px;}
+.aka1 {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+.aka2 {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+</style>
+</head>
+<body><div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>画像サイズを縮小する方法</h1>
+<p>サイトに掲載する画像サイズを縮小する場合、ペイントやPhotoshopなどのツールで「画像そのものを縮小する方法」と「CSSで縮小して表示する方法」の二つがあります。</p>
+<ul>
+<li>画像そのものを縮小する方法</li>
+<li>CSSで縮小して表示する方法</li>
+</ul>
+<p>■<b>画像そのものを縮小する方法</b></p><p>ペイントなどで画像自体を縮小する場合、画像サイズが小さいほどデータ容量も小さくなります。ただし、縮小の仕方によっては画質が劣化することもあります。縮小する際には、必ず元画像のバックアップをして保存しておきましょう。</p><p>■<b>CSSやimgタグで縮小して表示する方法</b></p><p>一方、CSSやimgタグで小さなサイズを指定する場合、元画像のサイズ自体に変化はなく、ブラウザ側で縮小して表示させるため、データ容量は変わりません。そのため、容量の大きな画像の場合、縮小して表示されたとしても通信データ量が大きくなり、サイトが重くなる可能性があります。</p><p>また、ブラウザ側で画像を縮小して表示するアルゴリズムの精度によっては、ぼやけてしまう可能性があります。縮小する際は、幅と高さのアスペクト比を保ったままで縮小しないと歪みますので注意しましょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>ペイントで画像サイズを縮小する方法</h2>
+<p>実際の画像サイズを縮小したい場合、Windows付属ツールの「ペイント」で縦横比を維持したまま簡単に縮小することができます。</p><p>ペイントの「サイズ変更」の箇所から、「縦横比を維持する」にチェックを入れ、縮小したいサイズを入力するとよいでしょう。</p><p><img src="../image/pic-kiritori.png" alt="" width="320" height="200" class="ccc"></p><p>この画像サイズを縮小することで画像のデータ容量も小さくなります。</p><p>あるいは、画像全体ではなく、特定の範囲を決まったサイズにトリミングして縮小したい場合、まずはあらかじめ「ペイント」にて大雑把にトリミングして縮小しておきます。その状態でWindows付属の「ペイント3D」を使い、正確なサイズを指定して切り取ることができます。</p><p>例えば、以下のような「800 × 400」のホームページのキャプ画があったとして、赤丸で囲んだあたりを「320 × 200」の大きさに正確に切り取りたいとします。</p><p><img src="../image/rei-hani.png" alt="" width="320" height="160" class="ccc"></p><p>この場合、あらかじめペイントの「選択」で切り取りたい箇所を大雑把にトリミングしたのち、widthを「322」などの少し大きめのサイズを指定して縮小しておきます。</p><p><img src="../image/pic-henkou.png" alt="" width="320" height="238" class="ccc"></p><p>ここで一旦保存したのち、次に画像を右クリックして「プログラムから開く」→「<span class="aka">ペイント3D</span>」→「トリミング」を選択します。</p><p>この状態で切り取りたい正確なサイズを直接入力してトリミングを実行すればよいでしょう。</p><p><img src="../image/pic-px.png" alt="" width="320" height="200" class="ccc"></p><p>縮小した画像を実際にホームページに掲載する際は、これらの<a href="image-compression.html">画像を圧縮</a>したのち、データ容量を削減してから掲載することをおすすめします。</p><p>どの程度のサイズまで縮小するかについては、以下の点も考慮にいれて自サイトに合った画像サイズを選択されるとよいでしょう。</p>
+<ul>
+<li>サイトのコンテンツ幅の範囲内（※おおむね600px～800px以内）</li>
+<li><a href="../html/ogp.html">OGP画像</a>の最小サイズ以上（※Facebookは200 x 200ピクセル以上）</li>
+<li>スマートフォンのデバイス幅以上（※320pxや375px、あるいは414px以上）</li>
+<li>「記事」構造化データの推奨サイズ以上（※1200px以上）</li>
+</ul>
+<p>当サイトではサイズがバラバラですが、主に「480 × 270」や「640 × 360」あたりを使用することが多いです。スマホ用に最適化する場合、デバイス幅よりも大きな画像を掲載するとはみ出てしまうため、一般的には<a href="../css/max-width.html">max-width:100%;</a>を使い、画像をデバイス幅まで自動で縮小させて最適化することをおすすめします。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>imgタグやCSSで画像を縮小して表示する方法</h2>
+<p>■<b>imgタグで縮小する場合</b></p><p>サイト上で画像を縮小して表示する場合、<span class="aka">imgタグ</span>で「px」を設定するだけ縮小されます。</p><p>例えば、「480 × 270」の画像を半分のサイズに縮小して掲載する場合、imgタグに２分の１の「width=&quot;240&quot; height=&quot;135&quot;」などと指定しておけば、縦横比を保ったまま画質が歪むことなく表示されます。</p><p>&lt;img src=&quot;/example.jpg&quot; alt=&quot;&quot; width=&quot;240&quot; height=&quot;135&quot;&gt;</p><p>このimgタグの詳細については、こちらのページをご参照ください。<br>
+→ <a href="../html/img.html">&lt;img src=は画像を表示するhtmlタグ</a></p><p>ただし、このアスペクト比についてですが、画像サイズにはこれといった決まりはないものの、一般的には「<span class="aka1">アスペクト比が 16x9、4x3、1x1 </span>」の画像を使用することをおすすめします。</p><p>もしデジカメで撮影する場合、設定画面でアスペクト比を選択する箇所があるはずですので、撮影する時点で上記の比率になるように設定しておくと便利です。</p><p>例えば、こちらはiPhoneですが、カメラを起動して上部に表示される「∧」をタップすると以下のようなアスペクト比を選択する箇所があります。</p><p><img src="../image/iphone-aspect.jpg" alt="" width="480" height="270"></p><p>この状態でスマホを横にして撮影すると選択したアスペクト比で撮影できます。</p><p>おおむね、どのカメラでもアスペクト比は選択できますので、「16x9、4x3、1x1」のいずれかで撮影しておき、あとはその比率を保ったまま好みの大きさに縮小して掲載すればよいでしょう。</p><p>■<b>CSSで縮小する場合</b></p><p>CSSで縮小する場合、あらかじめimgタグにclass属性を埋め込んでおき、CSSに<a href="../css/width-height.html">widthとheight</a>を指定することで縮小することができます。</p><p>例えば、上のiphoneの画像の場合、imgタグにexampleなどのクラス属性を埋め込んでおきます。</p><p>&lt;img src=&quot;/image/iphone-aspect.jpg&quot; width=&quot;480&quot; height=&quot;270&quot; class=&quot;example&quot;&gt;</p><p>この状態で、cssには以下のように記述します。</p><p>.example {width:240px;height:135px;}</p><p>すると、このように半分に縮小して表示されます。</p><p><img src="../image/iphone-aspect.jpg" alt="" width="480" height="270" class="example"></p><p>これを応用して、スマホで閲覧した時にだけ縮小させる場合、<a href="responsive.html">レスポンシブウェブデザイン</a>で以下のように指定すれば、PCでは「480 × 270」、モバイル端末では「240 × 135px」で小さく表示されます。</p><p>@media screen and (max-width:480px) {<br>
+.example {width:240px;height:135px;}<br>
+}</p><p>上記の場合、元の画像自体は高解像度のままで編集せず、imgタグやCSSで「<span class="aka">表示のみ</span>」を変更しているため、画質がよくなるメリットがあります。一方、画像のデータ容量については大きいままの状態のため、<a href="../rental-server/transfer-amount.html">データ転送量</a>が大きくなってしまうデメリットもあります。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="image-compression.html">画像の容量を削減する方法</a></li>
+<li class="list-li"><a href="../html/img.html">&lt;img src=は画像を表示するhtmlタグ</a></li>
+<li class="list-li"><a href="best-image-size.html">Article構造化データの画像サイズを比較</a></li>
+<li class="list-li"><a href="image.html">ホームページに画像の貼り方</a></li>
+<li class="list-li"><a href="json.html">構造化データの作り方</a></li>
+<li class="list-li"><a href="300px.html">右サイドバーの幅は300pxが最適</a></li>
+<li class="list-li"><a href="../css/max-width.html">画像の大きさを最適化する max-width:100%;</a></li>
+<li class="list-li"><a href="../css/width-height.html">領域の幅と高さを指定する widthとheight</a></li>
+<li class="list-li"><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li class="list-li"><a href="hp-sozai.html">ホームページ素材に使える画像の購入サイト</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "画像サイズを縮小する方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/iphone-aspect-720.jpg"
+       ],
+      "datePublished": "2021-04-25T11:19:09+09:00",
+      "dateModified": "2021-07-06T00:19:09+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "画像サイズを縮小する方法",
+        "item": "https://www.homepage-tukurikata.com/hp/image-size.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "モバイル端末への最適化",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "画像サイズを縮小する方法",
+        "item": "https://www.homepage-tukurikata.com/hp/image-size.html"
+      }]
+    }
+</script>
+</body>
+</html>

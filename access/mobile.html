@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>モバイル端末に最適化する方法</title>
+<meta name="description" content="WEB全体がモバイルファースト・インデックスへ移行するため、モバイル端末でも適切に表示されるようにホームページを最適化する必要があります。レスポンシブウェブデザインやAMPページ、構造化データ、OGPタグに加え、余裕があれば画像の軽量化やCSSの圧縮などもして、モバイルフレンドリー化しておくとよいでしょう。">
+<meta name="keywords" content="モバイル端末,最適化,モバイルファースト・インデックス">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/mobile.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/mobile-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwaca98.css?202106">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="mobile.html">
+<link rel="amphtml" href="../amp/access/mobile.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="モバイル端末に最適化する方法">
+<meta property="og:description" content="WEB全体がモバイルファースト・インデックスへ移行するため、モバイル端末でも適切に表示されるようにホームページを最適化する必要があります。レスポンシブウェブデザインやAMPページ、構造化データ、OGPタグに加え、余裕があれば画像の軽量化やCSSの圧縮などもして、モバイルフレンドリー化しておくとよいでしょう。">
+<meta property="og:image" content="../image/mobile-first.png">
+<meta property="og:url" content="mobile.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/mobile.woff2) format("woff2"),
+url(../fonts/mobile.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/mobile-bold.woff2) format("woff2"),
+url(../fonts/mobile-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>モバイル端末に最適化する方法</h1>
+<p>当サイトは2018年5月に<span class="aka">モバイルファースト・インデックス</span>に切り替わりましたが、それ以降、GooglebotはPC版ではなく、モバイル版のページをインデックスや検索順位のランキング要素に使用するとのことです。</p><p><img src="../image/mobile-first.png" alt="Search Consoleからのメール通知の抜粋。「Mobile-first indexing means that Googlebot will now use the mobile version of your site for indexing and ranking」" width="480" height="292" class="ccc"></p><p>このモバイルファースト・インデックスに切り替わると、PC版ページでもAMPページでも携帯ページでもなく、<span class="aka">モバイル版のページが評価の対象</span>になります。</p>
+<ul>
+<li>PC版　→　×</li>
+<li>モバイル版　→　〇</li>
+<li>AMP版　→　×</li>
+<li>ガラケー版　→　×</li>
+</ul>
+<p>今までは移行しても影響のないサイトのみが対象となっていましたが、今後はWEB全体が強制的に移行される予定となっています。（※<a href="https://developers.google.com/search/blog/2020/03/announcing-mobile-first-indexing-for?hl=ja" target="_blank" rel="nofollow noopener">2020年9月予定。</a>）そのため、PC版では正常に表示されているものの、モバイル版では簡略化して表示されないコンテンツがある場合、検索順位への悪影響が出てくる可能性があります。</p><p>まだホームページをモバイル端末に最適化していない場合、完全に移行する前にモバイルフレンドリーに対応しておくとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>最適化すべきモバイル端末の種類</h2>
+<p>このモバイル端末には、大きく分けて以下の３種類があります。</p><p><b>（１）スマートフォン（※iPhone、Pixelなど）</b>→　電話＋小型パソコン<br />
+<b>（２）タブレット端末（※iPadなど）</b>→　小型パソコン<br />
+<b>（３）フィーチャー・フォン端末（※ガラケー、ガラパゴス携帯）</b>→　電話</p><p>このうち、「スマートフォン」と「タブレット端末」はフルブラウザ搭載のため、本質的には画面が小さい小型パソコンの扱いとなります。そのため、PCと同じようにホームページを閲覧することができます。また、Googleではデザイン上、タブレット端末もスマートフォンの分類に含んでいるとのことです。</p><p>例えば、こちらはスマホで当ホームページのPC版のページを閲覧したものですが、正常に閲覧はできるものの、最適化していな場合は文字が小さく表示されます。</p><p>■<b>（１）PC版をスマートフォンで閲覧した場合</b></p><p><img src="../image/sumaho-default.jpg" alt="当サイトのPC版をスマホで閲覧した状態。「文字が小さすぎて読めない。」" width="240" height="417" class="ccc"></p><p><span class="aka">→ 文字が小さすぎて読めない！</span></p><p>この状態では文字が小さくて読みにくいため、モバイルフレンドリーテストを実行するとNGが表示されてしまいます。<br>
+→ <a href="https://search.google.com/test/mobile-friendly?hl=ja" target="_blank" rel="nofollow noopener">モバイル フレンドリー テスト - Google Search Console</a></p><p>このようなスマホに最適化されていないサイトは、モバイルフレンドリーではないことが原因で検索順位が下落してしまう可能性があります。</p><p>そのため、モバイル版のページを用意してスマホに最適化する必要があります。</p><p>■<b>最適化されたモバイル版のページ</b></p><p><img src="../image/sumaho-miyasui.jpg" alt="スマホに最適化して読みやすくした状態。" width="240" height="411" class="ccc"></p><p>ただし、このモバイルフレンドリーに合格しても安心してはいけません。</p><p>モバイル版のページを「m.example.com」のような形で別途に作成し、コンテンツを簡略化している場合には注意が必要です。 </p><p>例えば、無料ブログサービスなどではスマホでアクセスした際、見出しのみで簡略化された形で表示されることが多いです。この場合、モバイルフレンドリーではありますが、コンテンツが簡略化されてしまいます。</p><p><img src="../image/fc2-sp.png" alt="モバイル版がタイトルのみで簡略化して表示された無料ブログの事例。" width="320" height="240" class="ccc"></p><p><span class="aka">→ PC版と比べて情報量が少ない</span></p><p>このような場合、以前までは情報量の多いPC版の方でインデックスされていましたが、モバイルファーストインデックスへの完全移行により、そのような配慮はされなくなり、文字数の少ないモバイル版の方で評価されるようになります。その結果としてコンテンツ不足によりインデックスされにくくなり、アクセス数が減少してしまう可能性があります。</p><p>当サイトの場合、モバイル版のページを別途には作成しておらず、PC版のページをそのまま使い、<a href="../hp/responsive.html">レスポンシブウェブデザイン</a>にてCSSのみで表示を最適化しているため、情報量については何も変わらず、特に影響はありませんでした。</p><p>モバイル端末に最適化する場合、レスポンシブウェブデザインで対応するのが一般的ですが、もし無料レンタルサービスの仕様で対応できない場合、独自ドメインを取得してレンタルサーバーに引っ越しされることをおすすめします。</p><p>→ <a href="../hp/moving.html">無料ホームページからレンタルサーバーへの引越方法</a></p><p>■<b>（２）タブレット端末で閲覧した場合</b></p><p><img src="../image/tablet.png" alt="当サイトをタブレット端末で閲覧した状態。" width="320" height="426" class="ccc"></p><p>また、タブレット端末についても同様ですが、こちらもレスポンシブウェブデザインなどで表示を最適化しておく必要があります。</p><p>■<b>（３）フィーチャー・フォン端末で閲覧した場合</b></p><p>一方、フィーチャーフォン端末（※ガラケー）はフルブラウザには対応していないため、ガラケーでPCサイトに直接アクセスしても正常には表示されません。そのため、PC用のサイトとは別にページを用意して情報量を縮小した形でのHTMLファイルを作成する必要があります。</p><p><img src="../image/keitai-view.png" alt="当サイトをガラケー携帯で閲覧した状態。PC版よりも情報量がかなり削減されている。" width="313" height="548" class="ccc"></p><p>ただし、最近ではガラケーの生産自体が終了しており、大手サイトでもほぼフィーチャー・フォン端末へのサポートを終了しています。また、フィーチャーフォン用のGooglebot自体が廃止されているため、モバイルファースト・インデックスにも関係はありません。</p><p>そのため、当サイトではガラケー端末には対応していませんが、ガラケーユーザーのためにも引き続きホームページを最適化しておくのは大切なことだと思います。</p><p>いずれにしても、最低限、スマートフォンとタブレット端末には最適化しておくとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>スマホとタブレット端末に最適化する方法</h2>
+<p>スマートフォンとタブレット端末はフルブラウザ搭載とはいえ、デフォルトの状態では上記のように画面サイズに合わせて縮小して表示されるため、文字が小さくなって表示されます。</p><p>そのため、スマホやタブレット端末で閲覧した際にも適切に表示されるよう、サイト運営者側がホームページを最適化しておく必要があります。</p><p>最適化する際は、以下の点に注意しておくとよいでしょう。</p>
+<ul>
+<li><a href="../hp/responsive.html">レスポンシブウェブデザイン</a></li>
+<li><a href="../hp/amp.html">AMPページ</a></li>
+<li><a href="../hp/json.html">構造化データ</a></li>
+<li><a href="../html/ogp.html">OGPタグ</a></li>
+<li><a href="../hp/image-compression.html">画像の軽量化</a></li>
+<li><a href="../css/minify.html">CSSの圧縮</a></li>
+</ul>
+<p>■<b>レスポンシブウェブデザイン</b></p>
+<p>具体的な方法としては、PC用とまったく同じURLを使用し、閲覧する端末の大きさによって適用するスタイルシートを切り分ける<a href="../hp/responsive.html">レスポンシブウェブデザイン</a>が一般的です。</p><p>スマホの場合はワンカラムのケースがほとんどですが、タブレット端末についてはPC用のレイアウトをそのまま使用するケースもあります。</p><p>また、文字の大きさやリンクをタップしやすいものにするなど、モバイル端末での閲覧時にも適切に表示されるように最適化することをおすすめします。</p><p>■<b>AMPページへの対応</b></p><p>スマホについては、<a href="../hp/amp.html">AMPページ</a>にも対応してランディングページを高速で表示させることをおすすめします。こちらは主にスマートフォンのモバイル検索用になりますが、検索結果で自サイトのURLがクリックされた際にキャッシュで高速に表示されるため、検索経由のアクセスが多い場合はメリットがあります。</p><p>ただし、AMPページ自体は正規ページではないため、モバイルファースト・インデックスは正規化したPC版ページのモバイル版の方が対象になります。</p><p>つまり、「PC版とAMPページのみ」の場合、PC版の方がランキング要素として使用されるため、まずはPC版のページをレスポンシブウェブデザインでモバイル版に対応し、モバイルファースト・インデックスに対応した上で、別途にAMPページを作成するとよいでしょう。</p><p>■<b>構造化データ化</b></p><p><a href="../hp/json.html">構造化データ</a>も設定することにより、モバイル検索の検索結果ではリッチリザルトで表示されるようになります。その際、モバイル版だけではなく、AMPページも作成しておいた方が利用できる機能の幅が広がるため、上記のAMPにも対応しておくとよいでしょう。</p><p>■<b>SNSへの最適化</b></p><p>加えて、TwitterなどのSNSで画像が適切に表示されるよう、<a href="../html/ogp.html">OGPのメタタグ</a>を設置して最適化しておすすめします。</p><p>■<b>画像とCSSの軽量化</b></p><p>さらに<a href="../hp/image-compression.html">画像の容量を削減</a>したり、<a href="../css/minify.html">CSSのMinify化</a>で容量を圧縮することにより、モバイルでの低速な通信環境でも快適に表示されるようにすることをおすすめします。</p><p>軽量化が完了したら、こちらでサイトの速度をチェックするとよいでしょう。<br>
+→ <a href="https://www.thinkwithgoogle.com/intl/ja-jp/feature/testmysite/" target="_blank" rel="nofollow noopener">モバイルサイトの速度を比較しましょう - Think with Google</a></p>
+<p>■<b>URLの正規化</b></p>
+<p>モバイルファーストインデックスによって評価の対象となるのは「モバイル版」へ変更になるため、正規化の&lt;link rel=&quot;canonical&quot;タグについてもモバイル版に変更すべきかといえば、その必要はありません。そのままPC版に正規化しておくことになります。</p>
+<blockquote><p>No changes are necessary for interlinking with separate mobile URLs (m.-dot sites). For sites using separate mobile URLs, keep the existing link rel=canonical and link rel=alternate elements between these versions.<br>
+（※参照：<a href="https://developers.google.com/search/blog/2017/12/getting-your-site-ready-for-mobile" target="_blank" rel="nofollow noopener">Google 検索セントラル ブログ</a>）</p></blockquote>
+<h2>フィーチャーフォン端末への最適化</h2>
+<p>フィーチャーフォン端末のガラケーについては、ヤフーなどの大手サイトは既にサービスを終了しています。また、Googleなどの検索エンジンでもページの存在は確認するものの、クロールやインデックスはされないものと思われます。</p><p>そのため、当サイトでは対応していませんし、あえて対応する意味はないのかなという気もします。</p><p>ただ、ニュースサイトなどではまだ対応しているケースもあります。</p><p><img src="../image/keitai-now.png" alt="NHKオンラインの携帯ページの例" width="320" height="240" class="ccc"></p><p>アクセス数はほとんど発生しないとは思いますが、対応したい人はしておいても損はないかもしれません。</p><p>このガラケー（フィーチャーフォン）携帯への最適化の具体的な方法につきましては、こちらのページをご参照ください。<br />
+→ <a href="../hp/keitai-site.html">携帯サイトの作り方（ガラケーサイト）</a></p><p>ガラケーサイトにつきましては、正規ページに以下のように記載することで携帯ページの存在を通知することができます。</p><p>&lt;link rel="alternate" media="handheld" href="携帯ページのURL"&gt;</p><p>また、AMPページについても、正規ページには以下のように記載してAMPページの存在を通知することができます。</p><p>&lt;link rel=&quot;amphtml&quot; href=&quot;アンプページのURL&quot;&gt;</p><p>一方、モバイル版のページには<a href="../html/rel-canonical.html">&lt;link rel=&quot;canonical&quot;</a>タグを記載してURLを正規化します。</p><p>そのため、携帯ページとAMPは似ているところがあります。</p><p>この携帯ページにまで対応する場合、ひとつのコンテンツにて「PC版」と「モバイル版」、「AMPページ」、「携帯ページ」の４種類を作成する必要が出てくるため、携帯ページについては余裕がある場合に対応されるとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">アクセスアップ</a>　&#8260;　<a href="seo.html">SEO対策</a>　&#8260;　<b>モバイル端末への最適化</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li class="list-li"><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li class="list-li"><a href="../hp/json.html">構造化データの作り方</a></li>
+<li class="list-li"><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li class="list-li"><a href="../hp/keitai-site.html">携帯サイトの作り方（ガラケーサイト）</a></li>
+<li class="list-li"><a href="../hp/image-compression.html">画像の容量を削減する方法</a></li>
+<li class="list-li"><a href="../hp/image-size.html">画像サイズを縮小する方法</a></li>
+<li class="list-li"><a href="../css/minify.html">CSSのMinify化で容量を圧縮</a></li>
+</ul>
+</div>
+
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="index.html">アクセスアップの方法</a></li>
+<li><a href="seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="mobile.html">モバイル端末への最適化</a></li>
+<li><a href="attract.html">ホームページの集客方法</a></li>
+<li><a href="analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "モバイル端末に最適化する方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/mobile-first-1200px.png"
+       ],
+      "datePublished": "2015-04-09T22:13:44+09:00",
+      "dateModified": "2021-04-06T00:14:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセスアップ",
+        "item": "https://www.homepage-tukurikata.com/access/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO対策",
+        "item": "https://www.homepage-tukurikata.com/access/seo.html"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "モバイル端末に最適化する方法",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      }]
+    }
+</script>
+</body>
+</html>

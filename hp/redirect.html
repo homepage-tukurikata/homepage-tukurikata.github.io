@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>リダイレクト設定によるURLの転送方法</title>
+<meta name="description" content="ホームページのURLを変更した際には、301リダイレクト設定をして新しいページへアクセスを転送させましょう。通常は.htaccessで設定しますが、利用できない場合にはメタタグに記述する方法もあります。">
+<meta name="keywords" content="リダイレクト設定,301">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/redirect.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/redirect-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="redirect.html">
+<link rel="amphtml" href="../amp/hp/redirect.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="リダイレクト設定によるURLの転送方法">
+<meta property="og:description" content="ホームページのURLを変更した際には、301リダイレクト設定をして新しいページへアクセスを転送させましょう。通常は.htaccessで設定しますが、利用できない場合にはメタタグに記述する方法もあります。">
+<meta property="og:image" content="../image/htaccess-rei.png">
+<meta property="og:image" content="../image/header-response.png">
+<meta property="og:image" content="../image/ridairekuto-kakunin.png">
+<meta property="og:url" content="redirect.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/redirect.woff2) format("woff2"),
+url(../fonts/redirect.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/redirect-bold.woff2) format("woff2"),
+url(../fonts/redirect-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>リダイレクト設定によるURLの転送方法</h1>
+<p>ホームページのURLを変更した際には、リダイレクト設定をして、古いページから新しいページへアクセスを転送させましょう。</p><p><b>【ケース１：】</b><span class="aka">サイトを引っ越すとき。</span></p><p>URL転送の一番多いパターンは<a href="moving.html">サイトを引越す</a>場合です。無料サービスで運営していたものの、運営元がサービスを終了してしまった場合などは、独自ドメインを取得してレンタルサーバーへ引越すことが多いです。</p><p>例えば、「サイトを引っ越しました。新しいアドレスはこちらです。→　ほにゃらら.com」のようなパターンになりますが、このように<b>元サイトに移転先のURLを貼り付けておくだけというのはＮＧ</b>です。</p><p>人間がみれば「あぁ、引っ越したんだな。」とわかりますが、検索エンジン側では同一のサイトとはみなさず、それぞれを別々のサイトとみなしてしまいます。</p><p>これでは長年運営してきた運営歴や参照されているリンクが引き継がれず、一からのやり直しになりますので、検索順位が低下してしまい、アクセス数が激減してしまう傾向にあります。</p><p>新旧どちらのサイトでも検索結果でヒットしますので、お得なように感じられるかもしれませんが、新サイトひとつに統一した方が検索エンジンではヒットしやすくなります。</p><p>そのため、旧サイトの情報が新サイトにも引き継がれるよう、<span class="aka">301リダイレクト設定</span>をしておきましょう。</p><p><b>301リダイレクトは永久的な転送</b>、<b>302リダイレクトは一時的な転送</b>という違いがありますが、302はサイトのメンテナンス時などに使うケースはあるものの、ほとんど使うことはないので、301リダイレクトの設定方法だけを覚えておくとよいでしょう。</p><p><b>【ケース２：】</b><span class="aka">自サイト内でURLを変更するとき。</span></p><p>ページ数が多くなってきた際には、新しくフォルダ分けをしてファイルを整理することがあります。当サイトも最初はひとつのフォルダ内にすべてのファイルを入れてましたが、現在ではカテゴリごとにそれぞれフォルダを作成してまとめています。</p><p>このような場合でも、URLを変更する際にはリダイレクト設定をしておく必要があります。ドメインの年齢とともにページの年齢もありますので、リダイレクト設定をしておかないと0歳からやりなおしになります。</p><p>加えて、他サイトから参照されている場合もリンク切れになってしまいますので、301リダイレクト設定をして転送させるようにしましょう。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>301リダイレクトの設定方法</h2>
+<p>この301リダイレクトの設定をするには、「.htaccessを使用する方法」と「metaタグを使う方法」があります。</p><p><b>.htaccessを使う方法</b></p><p>まず、リダイレクト元のサーバーのルートディレクトリに「.htaccess」ファイルを作成します。このファイル名は特殊で、拡張子なし、先頭にドット（点）が必要です。たいていのレンタルサーバーではファイルマネージャーでそのまま作れます。</p><p>当サイトの場合はこんな感じで作ってます。</p><p><img src="../image/htaccess-rei.png" width="228" height="170" alt="htaccess" class="ccc" /></p><p>このファイルに以下のように記述して最後に改行を入れます。<br />最後に２、３回改行して空白を入れておけば十分です。</p>
+<left>
+<textarea rows="2" cols="50" style="overflow:auto;" onClick="this.select();" class="width-320">
+Redirect permanent / http://転送先ドメイン/
+</textarea>
+</left>
+<p>例：サイトを www.example.com へ丸ごと引っ越しするとき。</p><p style="word-wrap: break-word;">Redirect permanent / http://www.example.com/</p><p>この意味は「リダイレクトしてください。永久に。すべてのファイル（ / ）を。http://www.example.com/ へ。」になります。</p><p>けれども、この場合、文字どおりすべてのファイルが http://www.example.com/ のトップページへリダイレクトされるわけではなく、<span class="aka">階層を保持しつつリダイレクト</span>されます。</p><p style="word-wrap: break-word;">例えば、/home/about.html のファイルは、この階層を保持したまま、http://www.example.com/home/about.html へと転送されます。</p><p>そのため、特定のページのみを違う場所へ転送させたい場合には、一番最初に書いておくとよいでしょう。</p><p>例えば、apple.html のページのみ、新サイトの ringo.html へリダイレクトしたい場合、この行を先に書いておきます。</p><p style="word-wrap: break-word;">Redirect permanent /apple.html http://www.example.com/ringo.html<br />
+  Redirect permanent / http://www.example.com/</p><p>CSSの場合とは違い、最初に書いてある方が適用されますのでご注意ください。</p><p><b>metaタグを使う方法</b></p>
+<p>無料レンタルサービスなどで上記の「.htaccess」が使えない場合には、転送させたいページのヘッドタグ内の<a href="../access/meta.html">metaタグ</a>に以下のように記述します。</p>
+<left>
+<textarea rows="2" cols="59" style="overflow:auto;" onClick="this.select();" class="width-320">
+&lt;meta http-equiv="refresh" content="0; URL=http://転送先URL/" /&gt;
+</textarea>
+</left>
+<p>サーバーからの反応は「301」ではなく「200 OK」で返ってきますが、「0秒」で指定している場合、検索エンジン側での扱いは301リダイレクトになります。</p>
+<p>けれども、このメタタグの場合、反映されるまでに時間がかかったり、あるいは無視されるケースもありますので、<span class="aka">URL正規化</span>のLINK要素もheadタグ内に設定しておくことをおすすめします。</p>
+<left>
+<textarea rows="2" cols="59" style="overflow:auto;" onClick="this.select();" class="width-320">
+&lt;link rel="canonical" href="http://転送先URL" /&gt;
+</textarea>
+</left>
+<p>この正規化のURLは相対リンクではなく、絶対リンクで設定します。</p><p>メタタグリダイレクトと正規化の「rel="canonical"」タグを併用することの是非はありますが、当サイトではこれで対処しております。</p><p><b>正常にリダイレクトされるかをブラウザで確認</b></p><p>気を付けたいのは、リダイレクト元と先が同一ページの場合、永遠にリダイレクトされ続けて無限ループになってしまうことです。実際にブラウザで元ページにアクセスしてみて、正常に転送されているかを必ず確認するようにしましょう。</p><p><b>HTTPレスポンスの確認</b></p><p>サーバーがブラウザに正常に301リダイレクトを返しているかを確認します。<br />
+<a href="http://web-sniffer.net/" target="_blank" rel="nofollow noopener">Web Sniffer</a>などで確認できます。</p><p><img src="../image/header-response.png" width="356" height="93" alt="httpレスポンス" class="ccc" /></p><p><b>アクセスログでの確認</b></p><p>設定したあと膨大な404エラーが発生するようになった際には、リダイレクト設定がおかしい可能性があります。エラーログを確認してみて、どのページの設定がおかしいのかを確認してみるようにしましょう。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>検索エンジン側で正常にリダイレクトが反映されているかの確認</h2>
+<p>上記で正常にリダイレクト設定が完了したあと、検索エンジンでも正常に反映されているかを確認しましょう。</p><p><b>「info:ドメイン名」でサイト情報の確認</b></p><p>数週間程度あとに、「info:ドメイン名」コマンドを使って確認してみることをおすすめします。info:コマンドで旧サイトのサイト情報を検索し、新しいサイトのドメイン名が表示されていればＯＫです。</p><p>例えば、当サイトはヤフージオシティーズから引っ越してきましたが、旧URLのサイト情報を確認してみると当ドメインの情報が表示されています。</p><p><img src="../image/ridairekuto-kakunin.png" width="258" height="278" alt="infoコマンド" class="ccc" /></p><p><b>「site:ドメイン名」での確認</b></p><p>フォルダ単位など複数のファイルをリダイレクト設定した場合には「site:ドメイン名」で検索し、正しいURLへ転送されているかどうかを確認しましょう。</p><p>当サイトの場合、以前に100ページ以上をリダイレクト設定しましたが、１か月が経過してもインデックスが反映されていないページなどがありました。</p><p>特に、メタタグの0秒リダイレクトで対応したケースでは設定が反映されるまで時間がかかるので、できるだけサーバーの.htaccessを利用するようにしましょう。</p><p><b>ページを明示的に削除</b></p><p>転送設定をしていると、これはもういらないなというページも出てくるかと思います。その場合、ファイルを削除して放置しておけば、いずれはインデックスから削除されることにはなりますが、この場合はエラーページの「404 not found」が表示されます。</p><p>この状態ではエラーでたまたま１時的にページが表示されないのか、それとも削除されたのかは検索エンジン側では判断できませんので、しばらくの間はインデックスが保持されることになります。なので、明示的に削除したという意味の「410 Gone」を設定されることをおすすめします。</p>
+<p>例えば、example.htmlのファイルを削除する際は、転送先を記述せず、単に以下のように記述します。</p>
+<left>
+<textarea rows="2" cols="50" style="overflow:auto;" onClick="this.select();" class="width-320">
+Redirect gone /example.html
+
+</textarea>
+</left>
+<p>設定したファイルにアクセスするとこのように表示されます。</p><p><img src="../image/gone.png" width="264" height="133" class="ccc" /></p><p>間違って設定してしまうと必要なページも全て削除してしまう可能性がありますので、慎重に使用するようにしましょう。</p><p><b>元ページの保持</b></p><p>ドメインを変更した際、リダイレクト設定をして引っ越しが済んだ時点で元のドメインを捨ててしまうケースが多いです。捨ててしまうとリンク切れが多発しますし、リダイレクト設定が無効になりますので検索順位などへも悪影響が出ます。</p><p>ドメインを捨ててしまってから気づいても遅く、他の人が取得してしまった場合は何もできなくなってしまいます。</p><p>たった数千円程度の維持費用をけちったばかりに、代理業者に依頼して譲渡交渉をするとなると数十万円以上のコストがかかるケースもありますし、多額の費用をかけても譲渡に応じてくれるかは相手次第になりますのでご注意ください。</p><p><b>どうしても保持できない場合</b></p><p>無料サービスの終了などで元ページを確保できない場合、閉鎖により元ページが消失してしまう前に新サイトをインデックスさせておくようにしましょう。両方がインデックスされ、<span class="aka">元サイトから新サイトへの一方的なリンク</span>が貼られていれば、新サイトがメインサイトであることを暗に通知することができます。</p><p>この場合でも、元サイトが消失することで被リンクなどは失ってしまうことにはなりますが、元サイトから一方的にリンクすることにより、まったく同じサイトを公開することによる検索エンジンへの悪影響を回避することができます。無料サービスが運営を終了する場合、そのぐらいしか対処する方法はありません。</p><p>もし可能であれば、新旧のサイトを<a href="../access/search-console.html">Search Consoleに登録</a>して、アドレス変更の設定をしておくことをおすすめします。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --></main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+</body>
+</html>

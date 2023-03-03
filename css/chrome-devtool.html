@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>CSSの確認はChromeデベロッパーツールが便利</title>
+<meta name="description" content="ホームページのCSSを簡単にチェックしたい場合、ブラウザのChromeに搭載されているデベロッパーツールを使用すると便利です。">
+<meta name="keywords" content="デベロッパーツール,css,確認">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/devtool.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/devtool-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="chrome-devtool.html">
+<link rel="amphtml" href="../amp/css/chrome-devtool.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSSの確認はChromeデベロッパーツールが便利">
+<meta property="og:description" content="ホームページのCSSを簡単にチェックしたい場合、ブラウザのChromeに搭載されているデベロッパーツールを使用すると便利です。">
+<meta property="og:image" content="../image/css-kakunin.png">
+<meta property="og:image" content="../image/devtools.png">
+<meta property="og:url" content="chrome-devtool.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/devtool.woff2) format("woff2"),
+url(../fonts/devtool.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/devtool-bold.woff2) format("woff2"),
+url(../fonts/devtool-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>CSSの確認はChromeデベロッパーツールが便利</h1>
+<p>ホームページのCSSを簡単にチェックしたい場合、ブラウザのChromeに搭載されている<span class="aka">デベロッパーツール</span>を使用すると便利です。</p><p>デベロッパーツールを使えば、その要素のフォントや文字の大きさ、marginやpadding、あるいはレイアウト構成などを簡単に調べることができます。</p>
+<p><img src="../image/devtools-2.png" alt="" width="320" height="180" class="ccc"></p><p>このデベロッパーツールは、Chromeのデフォルトで利用できる機能のため、拡張機能として別途にインストールする必要はありません。</p><p>Chromeを使用していれば、そのまま利用することができます。<br>
+→ <a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank" rel="nofollow noopener">Google Chrome</a></p><p>また、レスポンシブウェブデザインでスマートフォンに最適化する際も、主要な機種ごとに表示を確認できるので便利です。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>Chromeデベロッパーツールの使い方</h2>
+<p>使い方については、まずはChromeで調べたいページを表示させたのち、「右上の縦３点リーダー」→「その他のツール」→「デベロッパーツール」の順に選択してツールを起動します。</p><p><img src="../image/devtools.png" alt="" width="320" height="233" class="ccc"></p><p>もしくは、調べたい箇所を選択したのち、「右クリック」→「検証」を選択することでも利用することができます。</p><p><img src="../image/kensyou.png" alt="" width="320" height="202" class="ccc"></p><p>次に、「Elements」にて調べる要素を選択したのち、「Styles」や「Computed」の箇所で確認することができます。</p><p><img src="../image/howto-devtool.png" alt="" width="320" height="220" class="ccc"></p>
+<p>■<b>「Styles」と「Computed」の違い</b></p>
+<p>「Styles」ではその要素のCSSが表示されますが、「Computed」の箇所では最終的に適用された結果が表示されます。このcomputeは計算するという意味になりますが、その要素で適用されているフォントや実際の値などをチェックすることができます。</p><p>例えば、「Styles」の箇所で2emなどとなっていた場合、「Computed」の箇所ではこの2emが計算されて32pxなどと表示されるはずです。</p><p>また、「Styles」の箇所では要素の値を変更することもできます。</p><p><img src="../image/devtool-styles.png" alt="" width="320" height="200" class="ccc"></p><p>フォントサイズなどの入力した値がリアルタイムで反映されますので、実際の表示を確認しながら変更したい場合は「Styles」を利用するとよいでしょう。</p>
+<h2>レスポンシブウェブデザインの確認方法</h2>
+<p>サイトを<a href="../hp/responsive.html">レスポンシブウェブデザイン</a>でスマートフォンに最適化している場合、主要な機種ごとに表示を確認することができます。</p><p>「Elements」の横にスマホのマークがありますが、こちらでスマホやタブレット端末での表示を確認することができます。</p><p><img src="../image/devtool-sp1.png" alt="" width="320" height="206" class="ccc"></p><p>以下のような機種を選択する箇所があるため、それぞれ正常に表示されるかをチェックしておきます。</p><p><img src="../image/devtool-sp2.png" alt="" width="320" height="213" class="ccc"></p><p>特にユーザー数の多い「iPhone 5/SE」、「iPhone 6/7/8」、「iPad」については、重点的にチェックしておくとよいかもしれません。</p><p>ただし、アドセンス広告などを利用している場合はリロードしないと正常に表示されないため、掲載していないページで確認することをおすすめします。</p>
+<h2>Lighthouseでホームページの品質をチェック</h2>
+<p>そのほか、Lighthouseの箇所からホームページの品質をチェックすることができます。</p><p><img src="../image/lighthouse-100ten.png" alt="Lighthouseで100点を取ると花火が打ちあがります" width="320" height="200" class="ccc"></p><p>「Device」の箇所で「Mobile」と「Desktop」がありますが、モバイルファーストインデックスに移行している場合は「Mobile」を重点的にチェックした方がよいでしょう。</p><p>「パフォーマンス」については、広告などのサードパーティーも関係してくるため、自サイトのみでは対応しきれない部分があるかと思いますが、改善点があれば修正していくことをおすすめします。</p><p>これらはユーザーエクスペリエンスを測定する際の指標になりますので、問題点を修正することでユーザー体験が向上するはずです。</p><p>例えば、「サイトの表示が速いか」や「クリックした時の反応がよいか」、あるいは広告の表示などで「コンテンツがあっちこっち動きまわらないか」などを測定することができます。いわゆる<a href="../access/core-webvitals.html">Core Web Vitals（コアウェブバイタル）</a>と呼ばれるものですが、これらの品質を改善することで滞在時間やページビューなどが向上するはずです。</p><p>当サイトではダウンロードサイズを抑えるため、画像の圧縮やWebフォントのサブセット化、あるいは.htaccessによるブラウザキャッシュの設定などをしていますが、自サイトでは問題なくても広告の画像やWEBフォントでひっかかるかもしれません。</p><p>そのほか、「アクセスビリティー」や「ベストプラクティス」、「SEO」などについても、問題がある点については指摘してくれますので、それぞれ対応していけばよいと思います。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">CSSの一覧</a>　&#8260;　<b>Chromeデベロッパーツール</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li class="list-li"><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="css-writing.html">スタイルシートの書き方のポイント</a></li>
+<li class="list-li"><a href="padding-margin.html">paddingとmarginの違い</a></li>
+<li class="list-li"><a href="../access/core-webvitals.html">Core Web Vitals（コアウェブバイタル）とは？</a></li>
+<li class="list-li"><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "CSSの確認はChromeデベロッパーツールが便利",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/devtools-2.png"
+       ],
+      "datePublished": "2020-11-24T08:22:29+09:00",
+      "dateModified": "2021-01-20T09:28:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Chromeデベロッパーツール"
+      }]
+    }
+</script>
+</body>
+</html>

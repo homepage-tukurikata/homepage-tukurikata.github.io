@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタイルシートカスタマイズの手順例</title>
+<meta name="description" content="当ホームページでご紹介している、無料サンプルのスタイルシートをカスタマイズする際の手順例です。">
+<meta name="keywords" content="スタイルシート,カスタマイズ,手順">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/r-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/cjk-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../hp-font.css" media="screen and (min-width:768px)">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="css-example.html">
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>スタイルシートカスタマイズの手順例</h1>
+<p>実際に、「レンタルサーバーの比較サイト」を作ることを例に、<a href="css-hp.html">サンプルの無料テンプレート</a>のカスタマイズ方法をご紹介します。</p>
+<p>今回は有料のレンタルサーバーに設定して作成してみましたが、無料ホームページスペースなどで作る際も手順は同じです。</p>
+<p>■<span class="aka">HTMLファイルの修正</span></p>
+<p>スタイルシートでデザインを変更する前に、まずはhtmlファイルでコンテンツの部分を記述していきます。</p>
+<p><b>タイトルの箇所の記入</b></p>
+<p>まずはタイトルの箇所を書き換えましょう。</p>
+<p><img src="../image/tejyunn.png" alt="" width="320" height="162" /></p>
+<p>htmlファイル上では、h1タグの箇所にあたりますが、titleタグやフッターの部分にも同じものを挿入します。</p>
+<p>h1タグの部分は実際にホームページに表示されますが、titleタグの部分はサイト上ではなく、ブラウザのタブの部分などで表示されます。<br />
+<a href="../access/title-keyword.html">タイトルタグの付け方を最適化</a></p>
+<p><img src="../image/tejyunn2.png" alt="" width="320" height="203" /></p>
+<p>ファイルを保存してブラウザを更新すると、このように表示されます。</p>
+<p><img src="../image/tejyunn4.png" alt="" width="320" height="253" /></p>
+<p><b>テキストのボリュームアップ</b></p>
+<p>次に、コンテンツの部分も挿入していきます。</p>
+<p>Pタグの部分に、文章を挿入していきましょう。<br />段落分けをする際にはPタグを使い、単に改行する際にはbrタグを使います。<br />
+<a href="../html/br.html">段落分け&lt;p&gt;タグと改行&lt;br /&gt;の違い</a></p>
+<p>トップページのテキストボリュームは、何文字という決まりはないですが、ある程度のボリューム感があった方が検索エンジンでもヒットしやすくなります。</p>
+<p><img src="../image/tejyunn44.png" alt="" width="320" height="197" /></p>
+<p>テンプレートではh4の見出しまで設定していますが、h2ぐらいまででも十分です。h2タグやサイドバーなどにも挿入するとこんな感じになります。</p>
+<p><img src="../image/tejyunn5.png" alt="" width="320" height="180" /></p>
+<p>これでコンテンツの部分が出来あがりました。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>スタイルシートで色彩などを変更</h2>
+<p>■<span class="aka">CSSファイルの修正</span></p>
+<p>次にスタイルシートのCSSファイルを修正してデザインをカスタマイズします。</p>
+<p>どの部分を変更すると、どの部分の色彩が変わるのかについては、<a href="hp-reiauto.html" target="_blank">こちらのページ</a>を参考に、該当する部分に背景色を指定してください。背景色を白に指定する場合は、background-color:#ffffff;を記入します。</p>
+<p>「<b>background-color:色彩のコード;</b>」という感じです。<br />
+一方、単に「color:色彩コード;」と書かれている場合は文字の色の指定になります。</p>
+<p>たとえば、ホームページ全体の背景色をグレーにする場合、スタイルシートのbodyの部分に、background-color:#EBE9E1;を記入します。</p>
+<p>body {<br />
+background-color:#EBE9E1;<br />
+color:#000000;<br />
+}</p>
+<p>上の場合、background-color(背景色)に#EBE9E1（グレー）を指定し、color:（テキストの文字色）に#000000（黒）を指定していることになります。<br />
+間にはさまっている点々は、左右で微妙に違うので（コロンとセミコロンの違い）、正確に半角英数で記入するようにしましょう。</p>
+<p><a href="styles-css.html" target="_blank">こちらのページ</a>でご紹介している無料ツールなどを使いながら、インターネット上で適当な色彩を採取してみると簡単です。</p>
+<p>上のサイトでは、サイドバーのタイトルの箇所などの背景色を紺色にしたりしてみました。</p>
+<p><img src="../image/tejyunn8.png" alt="" width="245" height="210" /></p>
+<p>保存して更新すると、このようにデザインが変わりました。</p>
+<p><img src="../image/tejyunn10.png" alt="" width="320" height="178" /></p>
+<p><b>枠線などの細かい部分の調節</b></p>
+<p>次に、枠線などの細かい部分を調節しましょう。上のサイトでは、ヘッダー部分に黒い枠線を入れてみました。</p>
+<p>border-top-width: 4px;<br />
+border-top-style: solid;<br />
+border-top-color: #111111;<br />
+</p><p>このようなスタイルシートの場合、上から順に、上の枠線の線幅が４ピクセルで、線のスタイルが実線、色彩に#111111を指定していることになります。</p>
+<p>これをまとめて書くとこのようになります。</p>
+<p>border-top:4px solid #111111;</p>
+<p>同じように、border-bottomやborder-left、border-rightなどで、下枠や右枠などを付けることができます。上下左右のすべてに枠線を付ける場合は単に、border:4px solid #44444;などと記述しましょう。</p>
+<p><b>画像などのリピート素材を指定してのCSSカスタマイズ</b></p><p>背景色は色彩で指定する以外にも、背景にリピート素材などを設定して付ける方法もあります。<br />
+グラデーション素材などがいい感じかと思います。リピート素材のスタイルシートへの指定方法などについてはこちらのページをご覧ください。</p><p><a href="design.html" target="_blank">背景画像を使ってＨＰのデザインをCSSで変更</a></p>
+<p><b>アイコン素材を使ってデザイン変更</b></p>
+<p>最終的に、ホームページ素材なども使用しながら、ホームページをカスタマイズしていくとよいでしょう。画像を配布しているサイトの情報についてはこちらを参考に、、。<br /><a href="hp-sozai.html" target="_blank">ホームページ素材に使える画像の購入サイト</a></p><p>また、ロゴで使用するバナー画像などは自分で作成するとよいかもしれません。<br />
+<a href="banner.html" target="_blank">ＨＰタイトルバナー画像の作り方</a></p>
+<p>あとは、個別ページなども作成し、各ページへの内部リンクをサイドバーへ設置するとよいでしょう。</p>
+<p>ちなみに、デフォルトではどこにもリンクしていないので、自分のホームページのURLを指定してリンクタグを作成しましょう。<br />
+<a href="link.html" target="_blank">ホームページのリンクタグ作り方</a></p>
+<p>だいたい、このような感じでスタイルシートをカスタマイズしながらデザインを変更していくとよいと思います。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><hr />
+<p>戻る：<a href="styles-css.html">スタイルシートでデザインを変更</a></p>
+<hr />
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../html/background-color.html">background-colorで背景色の指定方法</a></li>
+<li class="list-li"><a href="../access/title-keyword.html">タイトルタグの付け方を最適化</a></li>
+<li class="list-li"><a href="../html/br.html">段落分け&lt;p&gt;タグと改行&lt;br /&gt;の違い</a></li>
+<li class="list-li"><a href="design.html">背景画像を使ってＨＰのデザインをCSSで変更</a></li>
+<li class="list-li"><a href="style.html">ホームページファイルの作成方法</a></li>
+<li class="list-li"><a href="hp-sozai.html">ホームページ素材に使える画像の購入サイト</a></li>
+<li class="list-li"><a href="https://blog-tips.net/article/113153954.html" target="_blank">無料画像のブログで使い方</a></li>
+</ul>
+</div>
+</main>
+</div>
+<aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+</body>
+</html>

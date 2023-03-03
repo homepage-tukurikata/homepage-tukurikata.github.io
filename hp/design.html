@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>背景画像でホームページをカスタマイズ</title>
+<meta name="description" content="ホームページのデザインに背景画像を使用したりしてカスタマイズしてみましよう。">
+<meta name="keywords" content="ホームページ,デザイン">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="../sample.css">
+<link rel="icon" href="../image/favicon.ico">
+</head>
+<body>
+<div id="outer">
+<header id="header">
+<h1>背景画像でホームページをカスタマイズ</h1>
+<p class="description">ホームページのデザインの変更方法です。<br />cssで簡単にカスタマイズできます。</p></header>
+<div id="main">
+<div class="content">
+<h2>背景画像を使ってＨＰのデザインをCSSで変更</h2>
+<p>デザインを変更する場合は、ヘッダーやホームページの背景に写真画像をとりいれてカスタマイズすると印象も変わってきます。<br />インターネット上で配布されている無料画像やアイコン素材を探してきて、ホームページの背景画像に設定してみるとよいでしょう。</p><p><a href="hp-sozai.html">ホームページ素材に使える画像の購入サイト</a></p><p>例えば、さくらの無料画像を拾ってきて、CSSで当サイトのヘッダー部分の背景に設定するとこのページのようになります。</p><p>このページの場合は文字と画像がかぶってしまうため、画像素材にグラデーションをかけておりますが、ある程度の空白スペースのあるものを選択してテキストとかぶらないようにするとよいでしょう。</p><p>もし、文字と画像がかぶって見にくくなってしまう場合は、Photoshopや無料のGIMPなどの画像処理ツールを使用して、グラデーションをかけてみるとよいでしょう。<br /><a href="banner.html">タイトルバナーやロゴ画像の作り方</a></p>
+<h3>スタイルシートへの背景画像の設定方法</h3>
+<p>このページのデザインを指定しているスタイルシートはこのような感じで作成しています。</p><p>https://www.homepage-tukurikata.com/sample.css</p><p>さくらの画像やレイアウトの幅、色彩などはすべてこちらのスタイルシートで指定しているのですが、このファイルで背景画像を指定しているのはこの箇所です。</p>
+<p>#header {<br />background-image:url(&quot;https://www.homepage-tukurikata.com/image/sample-sakura.jpg&quot;);<br />background-repeat:no-repeat;<br />
+}</p><p>当サイトでは、この#headerの箇所がヘッダー部分にあたるのですが、そのヘッダー部分の背景画像に<br /><br />https://www.homepage-tukurikata.com/image/sample-sakura.jpg<br /><br />の画像を繰り返さないで表示するという意味になります。</p><p>もし、ヘッダーではなく、サイトの背景の部分に設定するとしたら、bodyの箇所に縦方向に繰り返して表示させる設定にするよいでしょう。</p><p><img src="../image/sakura-repeaty.png" alt="" width="234" height="184" style="border: solid 1px #ccc;" /></p><p>いずれにしても、表示させたい箇所のCSSに、次のような記述をするとうまく設定されるかと思います。</p><p>background-image:url(&quot;画像のurl&quot;);<br />background-repeat:no-repeat;</p>
+<p>スタイルシートへの記述方法の詳細はこちらのページをご参照ください。<br /> → <a href="../css/background.html">背景の指定をするCSS - background</a></p><p><b>画像素材をリピートさせる場合</b></p><p>画像を縦方向へリピートさせる場合は<br />background-repeat:repeat-y;<br /><br />横方向へリピートさせる場合は<br />background-repeat:repeat-x;<br />のように指定します。</p><p>また、<br />background-repeat:repeat;<br />を指定した場合は、縦と横のすべてに敷き詰めるという設定になります。</p><p>このページの例でいいますと、ヘッダーのさくらの画像はリピートさせずに固定させておりますが、背景画像については、こちらのグレーの素材を横方向にリピートさせて設定しております。</p><p><img src="../image/bg-gray.png" alt="" width="8" height="294" border="0" /></p>
+<p>body {<br />background-image:url(&quot;https://www.homepage-tukurikata.com/image/bg-gray.png&quot;);<br />background-repeat:repeat-x;<br />
+}</p><p>大き目の画像を使用してリピートせずに使用したり、小さ目の素材を縦や横方向にリピートして使用するとよいでしょう。</p><hr />
+<p><a href="styles-css.html">スタイルシートでデザインを変更</a>へ戻る</p><hr />
+</div>
+</div>
+<div id="right">
+<div class="title">トップページ</div>
+<div class="side">
+<ul>
+<li><a href="../index.html">ホームページの作り方</a></li>
+</ul>
+</div>
+<div class="title">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="title">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順例</a></li>
+<li><a href="300px.html">右サイドバーの幅は300pxが最適</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">タイトルバナーやロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="web.fc2.html">FC2無料ホームページの作り方</a></li>
+</ul>
+</div>
+<div class="title">ホームページスペース</div>
+<div class="side">
+<ul>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="title">アクセスアップ</div>
+<div class="side">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+</div>
+<footer id="footer"><div class="pagetop"><a href="#outer">このページの先頭へ▲</a></div>
+<div class="copyright"><ul>
+<li><a href="../index.html">トップページ</a></li><li><a href="../sitemap.html">サイトマップ</a></li><li><a href="glossary.html">用語集</a></li><!-- 
+--><li><a href="about.html">About</a></li><li><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2018 www.homepage-tukurikata.com</p>
+</div>
+</footer>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2336808-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

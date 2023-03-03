@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>テンプレートのカスタマイズ方法</title>
+<meta name="description" content="雛形サンプルのテンプレートをカスタマイズして、実際にホームページを作成してみましょう。">
+<meta name="keywords" content="ホームページ,テンプレート,カスタマイズ">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/r-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/cjk-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../hp-font.css" media="screen and (min-width:768px)">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="freesample.html">
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>テンプレートのカスタマイズ方法</h1>
+<p>前のページでサンプルのテンプレートを使用してホームページを作成された方は、うまく表示されましたでしょうか？</p><p><a href="make.html">簡単な無料ホームページの作り方</a></p><p>最終的に画像のようなページが表示されればＯＫなので、タイトルやメタタグなどを記入しながらホームページを作っていきましょう。</p><p>htmlファイルに記入する箇所は、ホームページのタイトルタグやキーワード、サイト説明、あるいは本文のコンテンツの箇所になります。雛形のテンプレートにはＨ１からＨ４までの見出しをとりあえず記入していますが、Ｈ１とＨ２だけでも記入しておけば十分でしょう。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>headタグ内のメタタグを記入する</h2><p>最初に記入する箇所としては、index.html ファイルの head タグ内にあるタイトルタグやキーワードなどの「メタタグ」の部分になります。この head 内のメタタグは実際にホームページとして表示される部分ではなく、検索エンジンやユーザビリティーのために記述しておく一種のお約束事みたいなものです。</p><p><img src="../image/meta.png" alt="headタグ内のメタタグ" width="280" height="205" style="border: solid 1px #000000;" /></p><p>あなたのホームページのタイトルやメインのキーワード、サイト説明を記入していきます。<br />キーワードはだいたい３つぐらい、サイト説明はそのページの説明文を短すぎず長すぎずの80文字数ぐらいで記入するとよいでしょう。</p><p><a href="../access/meta.html" target="_blank">メタタグの最適化</a></p><p>ここまでの<span class="aka">メタタグの部分を変えても、サイトの表示自体は変わりません。</span>実際にインターネット上にホームページとして表示される部分は、次の body タグ以降からとなります。</p><p>body タグ以降の div 要素が、実際のホームページのどの箇所に対応するのかついてはこちらのページをご参照ください。</p><p><a href="hp-reiauto.html">テンプレートのレイアウト構成</a></p>
+<h3>見出しのＨ１、Ｈ２タグやコンテンツの本文を記入する</h3><p>head 内の meta タグが終わったら、次にＨ１やＨ２の見出しの部分を記入しましょう。<br />Ｈ１にはそのページ全体のタイトルを、ページによってさらに話題が変わる場合はＨ２やＨ３を記入しながら作成していくとよいでしょう。</p><p>たとえばこのページを例にすると、Ｈ１からＨ３まで３つの見出しを作成していますが、必要のない見出しタグは削除してしまいましょう。</p><p><a href="../html/h1-h2.html" target="_blank">&lt;h1&gt;、&lt;h2&gt;タグは見出しを記述するHTML</a></p><p><img src="../image/sanpuru-h1.png" alt="" width="340" height="219" style="border: solid 1px #000000;" /></p>
+<p>htmlファイルでは、以下の箇所が該当します。</p>
+<p><img src="../image/midasi.png" alt="見出し要素" width="320" height="231" style="border: solid 1px #000000;" /></p>
+<p>また、コンテンツの本文にあたる「文章あれこれ」の部分は<a href="../html/br.html">Ｐタグ（段落わけ）</a>を使いながら作成していくとよいでしょう。</p>
+<p>これらの見出しタグやＰタグで囲まれたコンテンツの部分が、実際にホームページとして表示される箇所になります。対応する箇所の文章を書き換えたらファイルを保存し、ブラウザの表示を更新すれば、実際に変更されていることを確認できます。</p><p>また、「Ｈ１タグ」をサイトのタイトルに指定する場合、Ｈ１のリンクが切れていますので、<a href="link.html">リンクタグの作り方</a>を参照しながらトップページへとつなげておくとよいでしょう。</p><p>無料ブログで作成する場合は、このメタタグの説明文やＨ１の見出し要素などは固定されているケースが多いですが、無料ホームページの場合は個別ページごとに好きなタイトルや説明文を記述することができます。</p><p>この自由度の高さがブログよりもホームページで作成する際のメリットのひとつといえますので、ページごとに最適なメタタグや見出しを記述するとよいでしょう。</p><p>さらに、ホームページの場合は、<a href="name.html">記事ごとに自由にURLをつける</a>ことが出来る点もメリットになります。htmlサイトならではのアドバンテージをフル活用しながら作成していくと、SEO対策にもつながりますので、アクセス数も増えていきやすい傾向にあります。</p><p>ここまでは index.html ファイルですが、次のページでは色彩やレイアウトのデザイン面を変更するためのスタイルシート（ＣＳＳ）の修正方法についてご紹介します。</p>
+
+<hr /><p class="breadcrumb">次のページ：<a href="styles-css.html">スタイルシートでホームページのデザインを変更</a></p>
+<hr /><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="styles-css.html">スタイルシートでホームページのデザインを変更</a></li>
+<li class="list-li"><a href="css-example.html">スタイルシートカスタマイズの手順例</a></li>
+<li class="list-li"><a href="style.html">ホームページファイルの作成方法</a></li>
+<li class="list-li"><a href="../html/h1-h2.html">&lt;h1&gt;、&lt;h2&gt;タグは見出しを記述するHTML</a></li>
+<li class="list-li"><a href="../access/title-keyword.html">タイトルタグの付け方を最適化</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@font-face{font-family:"Roboto";
+font-style: normal;font-weight: 700;
+src:url(fonts/r-hp.woff2) format("woff2"),
+url(fonts/r-hp.woff) format("woff");font-display: swap;}
+@font-face{font-family:"Noto Sans CJK JP";
+font-style: normal;font-weight: 700;
+src:url(fonts/cjk-hp.woff2) format("woff2"),
+url(fonts/cjk-hp.woff) format("woff");font-display: swap;}
+h1,h2 {font-family:"Roboto","Noto Sans CJK JP";font-weight: 700;font-synthesis: none;}

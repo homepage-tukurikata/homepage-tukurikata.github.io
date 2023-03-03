@@ -1,0 +1,355 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>SSL設定後のホームページ修正方法</title>
+<meta name="description" content="SSLを設定した後、「保護されていません」などの表示が出てくる場合は「混合コンテンツ」が原因です。サイトで読み込むリソースは「https:ページ」からのみに修正する必要があります。また、.htaccessによるリダイレクト設定をして常時SSLに対応するようにしましょう。">
+<meta name="keywords" content="SSL,混合コンテンツ,修正方法">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../rental-server/mixed-content.html">
+<link rel="prev" href="../../rental-server/howto-ssl.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SSL設定後のホームページ修正方法">
+<meta property="og:description" content="SSLを設定した後、「保護されていません」などの表示が出てくる場合は「混合コンテンツ」が原因です。サイトで読み込むリソースは「https:ページ」からのみに修正する必要があります。また、.htaccessによるリダイレクト設定をして常時SSLに対応するようにしましょう。">
+<meta property="og:image" content="../../image/https-error.png">
+<meta property="og:image" content="../../image/https-tikan.png">
+<meta property="og:image" content="../../image/ssl-cache.png">
+<meta property="og:url" content="../../rental-server/mixed-content.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>SSL設定後のホームページ修正方法</h1>
+<p>審査を通過してSSLの設定が完了したのち、「https:のアドレス」にアクセスするとサイトが表示されますが、そのままの状態では「保護されていません」などの表示が出てくるかと思います。</p><p><amp-img src="../../image/https-error.png" width="320" height="175" layout="intrinsic" alt="「保護されていません」の表示" class="ccc"></amp-img></p><p>この原因についてですが、ブラウザが画面にサイトを表示する際、HTMLファイルやCSSのほか、画像やフォントなど様々なリソースを読み込んだ上で最終的にサイトが表示されます。</p><p>その際、すべてのリソースが「HTTPS」ページから読み込まれる必要がありますが、HTMLファイルやCSSが「HTTPS」に対応していたとしても、画像などのリソースが「HTTP」ページから読み込まれていた場合はエラーが表示されてしまうからです。</p><p>このように、サイトのリソースが「HTTPS」と「HTTP」の両方から読み込まれている場合、いわゆる「<span class="aka">混合コンテンツ</span>」となり、これらを修正する必要があります。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step1">混合コンテンツの修正方法</h2>
+<p>混合コンテンツで修正する箇所は「<span class="aka">httpsではないページ</span>」から読み込んでいるリソースになりますが、おそらくは<a href="../../html/img.html">&lt;img src=&quot;http://&quot;の画像タグ</a>がメインになるかと思います。</p><p>サイトを表示する際、HTMLファイルだけではなく、スタイルシートや画像なども読み込んでブラウザで表示されますが、画像についても安全なhttpsページから読み込んでいないとエラーが表示されてしまいます。</p><p>これは自サイト内の画像のみならず、外部サイトから読み込むアフィリエイトのバナー画像やアクセス解析の「1px」の小さな画像についてもhttpsに対応する必要があります。</p><p>また、「自サイトの内部リンク」についてはリソースを読み込んでいるわけではありませんが、こちらについてもそのままの状態だとhttpのページへと遷移してしまうため、内部リンクもすべてhttps:付きに修正する必要があります。</p><p>ただし、「他サイトへの外部リンク」については、その他サイトがhttpsに対応していなければリンク切れになってしまうため、こちらはhttpのままで問題ありません。</p><p>■<b>https:に修正する箇所</b></p>
+<ul>
+<li><span class="aka">読み込んでいる画像などのリソースの箇所（自サイト＋外部サイト）</span></li>
+<li>リンク（自サイト内の内部リンクのみ、外部リンクはhttpのままで可）</li>
+<li>その他、httpの外部サイトからのプラグインなど</li>
+</ul>
+<p>この実際の修正方法については、「http://www.example.com」などのURLを「s付き」の「https://www.example.com」へ一括で置換してしまえば、該当箇所はすべて修正されるはずです。</p><p><amp-img src="../../image/https-tikan.png" width="320" height="197" layout="intrinsic" alt="URLをs付きのhttpsに置換" class="ccc"></amp-img></p><p>これはhtmlファイルだけではなく、cssに記載されている画像なども修正する必要があります。</p><p>これら、すべて修正したら緑色で安全な接続と表示されるはずです。</p><p><amp-img src="../../image/https-ok.png" width="320" height="176" layout="intrinsic" alt="「安全な接続」の表示" class="ccc"></amp-img></p><p>修正したものの、なかなか正常に反映されない場合、ブラウザの「キャッシュ」を消去してから再度アクセスしてみるとよいでしょう。</p><p><amp-img src="../../image/ssl-cache.png" width="320" height="233" layout="intrinsic" alt="ブラウザの「キャッシュ」の消去" class="ccc"></amp-img></p><p>ほか、サイトマップやロボットテキスト、.htaccessなどに記載しているURLについても、全てhttpsへと修正しておくことをおすすめします。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step2">サーチコンソールとグーグルアナリティクスの修正</h2>
+<p>次に、グーグル関係のツールを修正しておくことをおすすめします。</p>
+<ul>
+<li><a href="../../access/search-console.html">サーチコンソール</a></li>
+<li><a href="../../access/google-analytics.html">Googleアナリティクス</a></li>
+<li>グーグルアドセンス</li>
+</ul>
+<p>このうち、アドセンスについてはドメイン単位での登録になるため、サイトをSSL化しても特に修正の必要はありません。タグについても基本的にはデフォルトでSSL対応しているため、かなり古いコードをそのまま使っているのでなければ、張り替える必要はないです。</p><p>もしコードを確認してみて、http://で始まっている古いタグの場合には新しいタグに取り換えるとよいでしょう。</p><p>また、アナリティクスについても、単にプロパティの箇所をhttpsに変更するだけなので、タグなどを張り替える必要はありません。</p><p><amp-img src="../../image/https-track.png" width="320" height="283" layout="intrinsic" alt="Googleアナリティクスのhttpsへの変更" class="ccc"></amp-img></p><p>面倒なのはサーチコンソールですが、https:に対応したサイトを別途に追加で登録する必要があります。</p><p><amp-img src="../../image/member.png" width="320" height="358" layout="intrinsic" alt="４つのURLパターンを登録" class="ccc"></amp-img></p><p>当サイトの場合、httpの「wwwあり・なし」で２つ、httpsの「wwwあり・なし」で２つの合計４つを登録しています。ドメインで認証していれば、全て認証されるため、こちらの必要はないかもしれません。また、使用するURLを指定する機能は廃止されたため、単に登録しておくだけで問題ありません。</p><p>ただし、「wwwなし」のコモンネームでSSL申請した場合、https:の「wwwあり」でアクセスしても表示されませんので、この場合はサイト登録をすることができず、２つ、もしくは３つになると思います。</p><p>そのほか、アフィリエイトを利用している場合もASP側でサイト登録のURLを修正しておき、SSL対応のコードに張り替えておくとよいでしょう。</p>
+<p>■<b>サイトシールの貼り付け</b></p><p>こちらは当サイトがもらったシールになりますが、このようなサイトシールがもらえる場合、どこかに貼付しておくとよいかもしれません。</p>
+<p>（※サイトシールはPCサイトで表示しております。）</p>
+<p>文言については「あなたの個人情報はSSL通信による暗号化で安全に保護されています。」など、安全に配慮している旨の内容を書いておけばよいかと思います。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step3">301リダイレクトと常時SSLの設定</h2>
+<p>SSLに申し込んだ時点では「http:」と「https:」の両方でアクセス可能な状態のため、これを常にhttps:で表示されるようにして<span class="aka">常時SSL化</span>しておくことをおすすめします。</p><p>具体的には、httpからhttpsへと301リダイレクトすることになりますが、.htaccessで設定しておくとよいでしょう。</p><p>例えば、当サイトの場合は以下のように記述しておりますが、様々な書き方があり、個々のサイトの状況によって違いますのでご注意ください。</p><p>■<b>一般的な301リダイレクトの記述例</b></p><p>
+<pre><code>RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]</code></pre>
+</p><p>ロリポップなどのレンタルサーバーのヘルプページには設定方法が記載されていますが、お使いのサーバー会社のヘルプページなども参照されることをおすすめします。</p>
+<h2 id="step4">HSTSを設定する際の注意点</h2>
+<p>また、強制的にHTTPS接続を使用する「HSTS」（HTTP Strict Transport Security）の設定もありますが、こちらも.htaccessに記述しておくべきと思います。</p><p>ただし、当サイト運営者の場合、SSL対応した後にサブドメインが表示されなくなってしまい、このHSTSが原因ではないかといろいろ調べることになりました。</p><p>結果的には、このHSTSは関係なかったのですが、なかにはHSTSの「includeSubDomains」の設定が原因で、通常のhttpで運営しているサブドメインまでが強制的にhttpsページへと接続されてしまい、サイトが表示されなくなってしまうケースもあります。</p><p>特に、ネット上の「HSTS Preload list」に登録している場合、ブラウザのキャッシュの削除だけではなく、このリストからも削除する必要が出てきてしまうため、かなり時間がかかってしまうケースもあり、途方に暮れているサイト運営者もネット上で見受けられます。</p><p>HSTSも設定しておくべきとは思いますが、「サブドメイン」を通常のhttp:にて運営する場合には注意されることをおすすめします。</p>
+<ul class="pagination">
+<li><a href="../../rental-server/howto-ssl.html">前へ</a></li>
+<li><a href="../../rental-server/ssl.html">1</a></li>
+<li><a href="../../rental-server/howto-ssl.html">2</a></li>
+<li class="this">3</li>
+<li class="pre">次へ</li>
+</ul><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../rental-server/ssl.html">独自SSL</a>　&#8260;　<b>SSL設定後の修正方法</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li class="list-li"><a href="../../rental-server/howto-ssl.html">サイトにSSLを導入する際の実際の手順</a></li>
+<li class="list-li"><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html"
+      },
+      "headline": "SSL設定後のホームページ修正方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/https-error-1200.png"
+       ],
+      "datePublished": "2019-12-05T00:14:14+09:00",
+      "dateModified": "2021-09-03T13:29:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "SSL設定後のホームページ修正方法",
+      "description": "SSLを設定した後、「保護されていません」などの表示が出てくる場合は「混合コンテンツ」が原因です。サイトで読み込むリソースは「httpsページ」からのみに修正する必要があります。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/https-error.png",
+        "height": "175",
+        "width": "320"
+      }, "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": ".htaccessファイル"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "一括置換ツール"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html#step1",
+          "name": "混合コンテンツの修正方法",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "「HTTP」から読み込んでいる画像などのリソースを「HTTPS」に修正します。また、内部リンクも「HTTPS」に修正します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/https-tikan.png",
+            "height": "197",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "サーチコンソールとグーグルアナリティクスの修正",
+          "url": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "アクセス解析などGoogle関連への登録をHTTPSに修正します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/https-track.png",
+            "height": "283",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "301リダイレクトと常時SSLの設定",
+          "url": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": ".htaccessに301リダイレクトを設定し、HTTPページへのアクセスをHTTPSページに転送します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "「HSTS」の設定をします",
+          "url": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html#step4",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": ".htaccessにはHSTSも設定します。ただし、「サブドメイン」を通常のhttpページでにて運営する場合には注意が必要です。"
+          }]
+        }],
+      "totalTime": "P1D"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "独自SSL",
+        "item": "https://www.homepage-tukurikata.com/rental-server/ssl.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SSL設定後の修正方法",
+        "item": "https://www.homepage-tukurikata.com/rental-server/mixed-content.html"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>borderは要素の外枠を指定するCSS</title>
+<meta name="description" content="borderは要素の上下左右に「外枠」を表示する際に使用します。単に「下線」を引く場合はhtmlタグのuタグを使用するとよいでしょう。">
+<meta name="keywords" content="border,css">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/border.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/border-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="border.html">
+<link rel="amphtml" href="../amp/css/border.html">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/border.woff2) format("woff2"),
+url(../fonts/border.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/border-bold.woff2) format("woff2"),
+url(../fonts/border-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>borderは要素の外枠を指定するCSS</h1>
+<p>borderは要素に<span class="aka">外枠</span>を表示する際に使用します。</p><p>{border: 線種 太さ 色;}</p><p>例えば、見出し要素の「h2」に、h2 {border:solid 1px #000000;}などと指定したとします。この場合、h2の見出し要素の外側にsolid(１本の実線)で、1pxの太さの枠を、#000000（黒色）で表示する」ことを意味します。</p><p><img src="../image/border-midasi.png" alt="border 見出しの外枠" width="258" height="46" /></p><p>このborderは見出しタグのほか、サイト全体の外枠を指定する場合などでもよく使われます。サイト全体の外枠を指定する場合は、outerやwrapper、あるいはcontainerなど、一番外側の要素にborderを指定しておくとよいでしょう。</p><p>■<b>下の枠線のみを引く</b></p><p>単にborderとだけ書いた場合、上下左右の四方の外枠すべてを指定することになりますが、「下の枠線」を引きたい場合には「border-bottom」を使用します。</p><p>例えば、h2 {border-bottom:solid 1px #000000;}などと指定すると、下の枠線のみが表示されます。</p><p><img src="../image/border-bottom.png" alt="border-bottom" width="264" height="49" /></p><p>同じように、上の枠線だけを引く場合には「border-top」を、左や右に枠線を引く場合には「border-left」や「border-right」を指定します。</p><p>h2などの見出し要素に下線を引く場合、文字との距離が近くなってしまいますので、<a href="padding-margin.html">paddingやmargin</a>なども合わせて指定し、適切な間隔をとるようにするとよいでしょう。また、外枠や下線の色は#ccccccなどの薄めの色で設定されているケースが多いです。</p><p>上の見出しにpaddingと下線の色を指定すると以下のようになります。</p><p><img src="../image/border-new.png" alt="border 薄めの色" width="255" height="49" /></p><p>■<b>2重線の double は3px以上で指定する</b></p><p>線の種類で２重線にする場合、solidの代わりにdoubleを指定し、{border: double 3px #000000;}などと記述しますが、この3pxは「内線の太さ＋外線の太さ＋隙間」の合計値になります。なので、1pxを指定した際は２重にはなりません。</p><p>2pxでも隙間分のpxがないため、1pxの線が重なって2pxの太さの線で表示されます。3px目からようやく、1pxの線2本分と隙間1px分で3pxという形で2重に表示されます。doubleを指定する際は3px以上を指定するようにしましょう。</p><p>■<b>下線の&lt;u&gt;タグとの違い</b></p><p>「外枠」ではなく、文章中の文字に「下線」を引く場合、<a href="../html/u.html">&lt;u&gt;&lt;/u&gt;のhtmlタグ</a>を引けば、その箇所に下線を引くことができます。この&lt;u&gt;タグのuは、under-lineの意味かと思いますが、スタイルシートのborderが「外枠」であるのに対し、htmlタグの&lt;u&gt;は「下線」を意味しています。</p><p>【例：&lt;u&gt;タグの例】</p><p>uタグは<u>下線を引くhtmlタグ</u>で外枠ではありません。</p><p>文中で単に下線を引く場合、borderを使用するのは不自然ですので、できるだけ&lt;u&gt;タグを使うとよいでしょう。</p><p>■<b>文中の区切りとしての横線は&lt;hr&gt;タグ</b></p><p>文中の文字単位ではなく、区切りとして単に横線を引く場合は<a href="../html/hr.html">&lt;hr&gt;タグ</a>を使用します。この&lt;hr&gt;タグは前後で改行されますので、uタグのように文字単位では使用できません。</p><p>このような「区切りの線」になりますので、こちらも外枠のborderとは違います。</p>
+<hr /><p>見出しやサイドバーなどのボックス要素の外枠については、スタイルシートでborderを指定し、文中で下線を引く場合にはhtmlタグの&lt;u&gt;を、文中で区切りとして横線を引く場合には&lt;hr&gt;タグを使用するとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>borderを使わずに外枠を指定する方法</h2>
+<p>四角のボックスを並べる際、一般的には<a href="../html/table.html">tableタグ</a>を使用しますが、スマホ用サイトなどで<a href="../html/ul-li.html">リストタグ</a>をblock化して、横並びに<a href="float.html">フロート</a>させるケースもあるかと思います。</p><p>このような場合、単に「border:1px #999 solid;」などと指定すると、各ボックスの接する枠線が重なってしまい、二重に太く表示されてしまいます。</p><p><img src="../image/border-bold.png" width="320" height="123" alt="" /></p><p>この場合、ボックスごとにidやclassを指定して、外枠を「上下左右」や「上と右だけ」などと個別に指定すると重なるのは回避できます。</p><p><img src="../image/border-bold2.png" width="320" height="123" alt="" /></p><p>けれども、この場合は各ボックスにidやclassなどを割り振る必要がありますし、それぞれにborder-bottomやborder-topなどを指定する必要が出てくるため、HTMLソースやCSSがごちゃごちゃになってしまいます。</p><p>また、外枠の1px分だけwidth幅が広がりますので、びったりとwidth幅を指定する必要がある場合、box-sizing: border-box;などを指定して、外枠をwidth幅や高さに含めないなどの指定もしなくてはいけません。</p><p>何とか無理やり指定することはできますが、あまりスマートな方法とはいえません。</p><p>このような場合、外枠に指定したい色でその領域に背景色を指定し、各ボックスの背景色を白にしてボックス間の<a href="padding-margin.html">margin</a>を0.5pxで指定します。</p><p><img src="../image/border-bold3.png" width="291" height="108" alt="" /></p><p>こうすることで、ボックス間の隙間から背景色が表示されますので、見た目上は1px分の外枠ができたのと同じように表示させることができます。</p><p>４つ程度のボックスならidやclassを指定して、それぞれにborder-topなどと指定しても手間はかかりませんが、大量に指定する際には上記のような方法も検討してみるとよいでしょう。</p><p>ただし、1px分の隙間を意図的に作るため、びっちりwidthを指定している場合などは崩れてしまうことがありますので注意しましょう</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">CSSの一覧</a>　&#8260;　<b>border</b></div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "border"
+      }]
+    }
+</script>
+</body>
+</html>

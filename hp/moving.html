@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>無料ホームページからレンタルサーバーへの引越方法</title>
+<meta name="description" content="ジオシティーズやニフティなどの無料ホームページスペースから、独自ドメインを取得してレンタルサーバーへとサイトを引越す際の手順についてご紹介しております。">
+<meta name="keywords" content="無料ホームページ,引越">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/moving.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/moving-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="moving.html">
+<link rel="amphtml" href="../amp/hp/moving.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="無料ホームページからレンタルサーバーへの引越方法">
+<meta property="og:description" content="ジオシティーズやニフティなどの無料ホームページスペースから、独自ドメインを取得してレンタルサーバーへとサイトを引越す際の手順についてご紹介しております。">
+<meta property="og:image" content="../image/ridairekuto-kakunin.png">
+<meta property="og:url" content="moving.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/moving.woff2) format("woff2"),
+url(../fonts/moving.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/moving-bold.woff2) format("woff2"),
+url(../fonts/moving-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>無料ホームページからレンタルサーバーへの引越方法</h1>
+<p>ジオシティーズやニフティなどの<a href="../rental-server/free-space.html">無料ホームページスペース</a>から、独自ドメインを取得してレンタルサーバーへサイトを引越す際の手順についてご紹介します。</p><p>以下の例は無料ホームページで作成していた「<span class="aka">静的なHTMLサイト</span>」の手順のため、「.html」形式ではない動的な無料ブログの場合は以下の手順では移転できません。</p>
+<ul>
+<li><span class="aka">無料ホームページ「.html」　→　独自ドメイン「.html」へ</span></li>
+<li>無料ブログ「/blog」や「/?=p123」など　→　WordPressがおすすめ</li>
+</ul>
+<p>動的なサイトの場合、データベースの引っ越しが必要となるため、<a href="mt.html">WordPressなどのCMS</a>をサーバーに設置して移転することをおすすめします。WordPressの場合、URLの形式をカスタマイズできるため、現在のサイトと同じURL形式で運営できるはずです。</p><p>■<b>WordPressの例</b></p><p><img src="../image/wp-permalink.png" alt="" width="320" height="240" class="ccc"></p><p>どのみち移転元のURLが使えなくなる場合、新しいドメインへ転送設定をしてもリンク切れの発生は避けられないため、それほどこだわる必要はないかと思いますが、同じ形式にした方がスムーズに移転できるはずです。</p><p>以下、無料ホームページスペースからの移転方法についてご紹介します。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2 id="step1">移転先の新URLとなるドメインの取得とサーバー契約</h2>
+<p>まずは、引越先のURLとなる<span class="aka">ドメインの取得</span>と<span class="aka">サーバー契約</span>を済ませておきましょう。</p><p>無料ホームページスペースから引越しをする場合、運営側から提供されていたURLは使用できなくなるため、自分でドメインを取得して新しいURLを自分で確保する必要があります。</p><p>【<b>引越先のサイト側</b>】</p><p>①新サイトのドメイン（URL）を取得する<br />→ <a href="../domain/index.html">独自ドメインの取得方法</a><br />
+②新サイトのレンタルサーバー（ホームページスペース）を契約する<br />→ <a href="../rental-server/index.html">個人向けレンタルサーバー比較</a><br />③ドメインのDNS設定を済ませておく<br />
+→ <a href="../domain/nameserver.html">独自ドメインの設定方法</a></p><p>レンタルサーバーを契約した場合でも、無料ホームページスペースと同様にサーバー会社からサブドメイン（URL）を無料で提供されるケースもあるため、独自ドメインの取得は必ずしも必須ではありません。</p><p>その場合でもURLをサーバー会社から借りて使用することになるため、いずれそのサーバーを引っ越す際には、再度、サイトのURLが変更になってしまいます。その点、自分でドメインを取得してさえいれば、サイトのURLが変更になることはありませんので、必ず自分でドメインを所有されることをおすすめします。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>引越先のサーバーへホームページファイルをアップロード</h2>
+<p id="step2">用意した引越先のサーバーへ、旧無料ホームページのファイルをアップロードすることになりますが、まずは旧無料ホームページのファイルをパソコン側へダウンロードしておきましょう。</p><p>【<b>旧サイト側</b>】</p><p>④無料ホームページからFTP接続などでファイルをダウンロードする<br />
+→ <a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></p><p>公式サイトのヘルプページなどでFTP接続の設定方法が公開されているはずです。</p><p><img src="../image/geo-ffftp.png" alt="" width="320" height="192" class="ccc"></p><p id="step3">このダウンロードした旧ホームページファイルについては、<span class="aka">移転先のサーバーではURLや階層が変わる</span>ため、そのままではアップロードできません。</p><p>例えば、無料ホームページスペースにてサブフォルダのURLが提供されていた場合、サイトのトップページは「www.example.com/サイト名/」などとなっているはずです。</p><p>けれども、自分でドメインを取得した場合はサブフォルダではなく、ルートディレクトリの「www.example.com」にそのまま作成することになります。</p><p>当サイトの場合、以前まではジオシティーズの「www.geocities.jp/サイト名/」で作成しておりましたが、現在はレンタルサーバーを契約して「www.homepage-tukurikata.com」のドメインを取得しURLを変更しております。</p><p>そのため、移転先では「www.homepage-tukurikata.com/サイト名/」のように、/サイト名/にてフォルダ分けをせず、「www.homepage-tukurikata.com/」のドメインをそのまま使用することになるため<span class="aka">階層がひとつ上</span>になります。</p> <p>この場合、相対リンクでトップページへのリンクを「../」などと指定していた場合、階層がひとつずれるため、コンマひとつで「./」のように修正しないと<span class="aka">リンク切れ</span>が発生してしまいます。そのため、一括置換のツールなどを使い、内部リンクをすべてひとつ上の階層に修正してからアップロードするとよいでしょう。</p><p>⑤新サイトのドメインに合わせ、フォルダの階層を修正する<br />→ <a href="folder.html">フォルダ分けによる階層化</a><br />→ <a href="toppage.html">index.htmlとトップページの関係</a><br />
+→ <a href="public-html.html">public_htmlフォルダとは？</a></p><p>加えて、相対リンクではなく、絶対リンクで内部リンクを指定していた場合も、旧サイトのファイルをそのままアップロードしてしまうと内部リンクが旧サイトのURLのままとなってしまうため、すべて修正する必要があります。</p><p>⑥内部リンクのURLを新しいURLに書き換える</p><p>例えば、トップページへの内部リンクを絶対リンクで「http://www.geocities.jp/サイト名/」などと指定していた場合、新しく取得したドメインの「http://www.homepage-tukurikata.com」へと書き換える必要があります。</p><p>また、<a href="../access/make-sitemap.html">sitemap.xml</a>を設定している場合も新しいURLに修正してからアップロードしておきましょう。<span class="aka">新サイト側には旧URLがひとつも含まれない</span>よう、一括置換ツールなどを使って全て修正されることをおすすめします。</p><p>【<b>引越先のサイト側</b>】</p><p id="step4">修正が終わりましたら、移転先のレンタルサーバーへファイルをアップロードします。</p><p>⑦修正済みファイルを新サーバーへアップロードする</p><p>取得した<a href="../domain/nameserver.html">ドメインの設定</a>が正しく済んでいれば、この時点で新しいサイトが表示されるはずです。（※ドメインの設定がネット上に反映するまでに数日程度かかることもあります。）</p><h3 class="black">外部サイトからのリンクを新しいURLへ修正してもらう</h3><p>新サイトが表示されましたら、友人のサイトなどにURLを変更した旨をつたえ、新しいURLへリンクを変更してもらうことをおすすめします。自分で管理しているサイトからのリンクについても、できるだけURLを変更しておきましょう。</p><p>また、ヤフーカテゴリに登録されている場合なども、URL変更の申請もしておくことをおすすめします。</p>
+<h2 id="step5">旧サイト側での301リダイレクト設定</h2>
+<p>この時点では新旧ふたつのホームページがネット上に重複して存在してしまうため、旧サイトに301リダイレクトによるアクセスの転送設定をして新サイトに統一しておくことをおすすめします。</p><p>「新サイトはこちら」のような形で旧サイトに新サイトのURLを張っておくだけでは、今までの被リンクやサイト運営年数などの資産が受け継がれません。</p><p>必ず301リダイレクト設定をしておくようにしましょう。</p><p>【<b>旧サイト側</b>】</p><p>旧サイト側で.htaccessやメタタグを書き換え、新サイト側へリダイレクト設定をして統一します。</p><p><img src="../image/htaccess-rei.png" alt="" width="228" height="170" class="ccc"></p><p>無料ホームページスペースによっては、<b>.htaccessによる301リダイレクトが使用できない</b>ケースもあります。その場合は多少の手間がかかりますが、<span class="aka">metaタグによる「0秒」リダイレクト</span>で転送設定をしておくことをおすすめします。</p><p>さらに、<a href="../html/rel-canonical.html">URL正規化の「rel="canonical"」タグ</a>も旧サイト側に設定しておくとよいでしょう。</p><p>⑧旧サイトから新サイトへ301リダイレクト設定をする<br />
+→ <a href="redirect.html">リダイレクト設定によるURLの転送方法</a></p><p>この301リダイレクト設定をしておけば、旧サイトに訪問者がアクセスした際、自動的に新サイトへと転送されるようになります。また、旧サイトへ張られていた被リンクについても新サイトへ受け継がれることになります。</p><p>もし旧サイトからの転送設定をしなかった場合、コンテンツの重複による検索エンジンペナルティーや検索順位下落などの原因ともなり、アクセス数が減少してしまう可能性があるので注意しましょう。</p><p>ちなみに、Google Search Consoleの<a href="https://support.google.com/webmasters/answer/9370220?hl=ja" target="_blank" rel="nofollow noopener">アドレス変更ツール</a>を使用すれば、サイトを移転したことを明確に通知できますので、こちらも合わせて設定しておくとよいでしょう。<br />
+→ <a href="../access/search-console.html">Google Search Consoleに登録して最適化</a></p><p>Google Search Consoleにて新旧両方のサイトを登録し、旧サイトの方へ移転した設定をしておけば、グーグルへ明確にサイトの引越を伝えることができます。</p>
+<h3 class="black">追記：ヤフージオシティーズが2019年3月末でサービス終了の予定</h3><p>ヤフージオシティーズが終了となりますが、「2019年3月末」でホームページが表示されなくなるため、上記のhtmlファイルに直接記述した場合のリダイレクト設定はその時点で解除されるはずです。</p><p>けれども、公式ホームページ上から「ホームページの転送設定」をした場合、サイトが表示されなくなった以降も「2019年9月30日」までは転送してくれるようです。</p><p>詳細はこちらのページをご参照ください。<br>→ <a href="../rental-server/geocities-transfer.html">ヤフージオシティーズ終了後の転送設定</a>
+</p><h3 class="black">移転後も旧無料ホームページは削除しない</h3><p>上記の301リダイレクト設定をした<span class="aka">旧無料ホームページも必ず保持</span>しておきましょう。</p><p>旧サイトを削除してしまうとリダイレクト設定が解除され、旧サイトへ張られたリンクがリンク切れになってしまいます。この場合、サイトの被リンクや運営歴が引き継がれなくなってしまうので注意しましょう。</p><p>けれども、サービス終了でサイトが削除されてしまう場合などはこの301リダイレクト設定ができません。</p><p><a href="../rental-server/nifty.html">2016年にニフティの無料ホームページが終了</a>となりましたが、移転通知機能が用意されていたとしても、深い階層のページではリンク切れとなってしまうケースもありますので、サービス終了でサイトが削除される場合は検索順位の下落やアクセス数が減少してしまうケースが多いです。</p>
+<h2 id="step6">ホームページ引越し後の確認方法</h2>
+<p>訪問者へホームページを引越したことを伝えるには301リダイレクトで転送設定をしておくだけで十分ですが、検索エンジン側でも正しく認識されているかどうかを確認する必要があります。</p><p>これを確認するには２週間から１か月程度の時間をおき、グーグルで「info:旧ホームページのURL」で検索してみてください。<span class="aka">サイト情報に新しいホームページのURL</span>が表示されていれば、引越が完了です。</p><p><img src="../image/ridairekuto-kakunin.png" width="258" height="278" alt="サイト情報の確認" class="ccc"></p><p>【<b>追記：2019年3月でこの「info:コマンド」は廃止になりました。</b>】</p><p>また、グーグルで「site:新しいドメインのURL」で検索すれば、どのくらいのページ数が登録されているのかチェックすることができます。詳細は<a href="../access/seach.html">こちらのページ</a>をご参照ください。</p><p>サイトのページボリュームが多い場合、旧サイトから新サイトへ完全に置き換わるまでには時間がかかりますので、時間をおいてからチェックするとよいでしょう。</p><p>加えて、Google Analyticsのアクセス解析を使用している場合、アナリティクス側でURLの変更もしておきます。旧サイトで使っていた解析用のタグについては張り替える必要はありません。</p><p>新しく登録してタグを張り替えてもよいかと思いますが、旧サイトのタグをそのまま使用すれば、以前までのデータを引き継げるので、新サイトでもそのまま使用されることをおすすめします。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>レンタルサーバーへの引越方法</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../rental-server/geocities-transfer.html">ヤフージオシティーズ終了後の転送設定</a></li>
+<li class="list-li"><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li class="list-li"><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li class="list-li"><a href="wordpress-moving.html">WordPressの引越方法</a></li>
+<li class="list-li"><a href="movabletype.html">MovableTypeでの作り方</a></li>
+<li class="list-li"><a href="wordpress.html">WordPressでの作り方</a></li>
+<li class="list-li"><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li class="list-li"><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li class="list-li"><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+<li class="list-li"><a href="sakurablog-moving.html">さくらのブログからの引越方法</a></li>
+<li class="list-li"><a href="geocities.html">米のヤフージオシティーズは2009年中にサービス終了</a></li>
+<li class="list-li"><a href="../rental-server/nifty.html">ニフティの無料ホームページが2016年にサービス終了</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "無料ホームページからレンタルサーバーへの引越方法",
+      "description": "ジオシティーズやニフティなどの無料ホームページスペースから、独自ドメインを取得してレンタルサーバーへサイトを引越す際の手順についてご紹介します。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/ridairekuto-kakunin.png",
+        "height": "278",
+        "width": "258"
+      }, "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "独自ドメイン"
+        }, {
+          "@type": "HowToSupply",
+          "name": "レンタルサーバー比較"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "FTP接続ソフト"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step1",
+          "name": "移転先の新URLとなるドメインの取得とサーバー契約",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "まずは引越先の新URLとなるドメインを取得して、レンタルサーバーを契約します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "旧無料ホームページのファイルをダウンロード",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "次に、旧サイトのホームページファイルをFTP接続などでパソコン側へダウンロードします。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/geo-ffftp.png",
+            "height": "192",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "フォルダの階層や内部リンクを修正する",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "移転先のサイトでは階層やURLが変わるため、ファイル内容を書き変えます。内部リンクについても新サイト側には旧サイトのURLがひとつも含まれないよう、一括置換ツールなどを使って全て修正します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "移転先のレンタルサーバーへファイルをアップロード",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step4",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "修正が終わりましたら、移転先のレンタルサーバーへファイルをアップロードします。ドメインの設定が正しく済んでいれば、この時点で新しいサイトが表示されます。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "旧サイト側での301リダイレクト設定",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step5",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "旧サイト側に.htaccessを設定し、301リダイレクトによるアクセスの転送設定をして新サイトに統一します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/htaccess-rei.png",
+            "height": "170",
+            "width": "228"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "検索エンジン側でも正しく認識されているかを確認する",
+          "url": "https://www.homepage-tukurikata.com/hp/moving.html#step6",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "２週間から１か月程度の時間をおき、検索エンジン側でも正しく認識されているかを「siteコマンド」で確認します。"
+          }]
+        }],
+      "totalTime": "P1D"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "無料ホームページからレンタルサーバーへの引越方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/geo-ffftp-1200.png"
+       ],
+      "datePublished": "2015-09-15T00:00:00+09:00",
+      "dateModified": "2021-08-13T00:00:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "無料ホームページからレンタルサーバーへの引越方法",
+        "item": "https://www.homepage-tukurikata.com/hp/moving.html"
+      }]
+    }
+</script>
+</body>
+</html>

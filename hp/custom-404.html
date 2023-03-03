@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>カスタム404ページの作り方</title>
+<meta name="description" content="カスタム404ページには「ページは見つかりませんでした」などの日本語で表示し、サイトマップやトップページへのリンク、あるいは検索窓などを設定しておくと親切です。">
+<meta name="keywords" content="カスタム404,ソフト404エラー,ErrorDocument">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/custom-404.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/custom-404-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="custom-404.html">
+<link rel="amphtml" href="../amp/hp/custom-404.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="カスタム404ページの作り方">
+<meta property="og:description" content="カスタム404ページには「ページは見つかりませんでした」などの日本語で表示し、サイトマップやトップページへのリンク、あるいは検索窓などを設定しておくと親切です。">
+<meta property="og:image" content="../image/custom-404.png">
+<meta property="og:image" content="../image/default-404.png">
+<meta property="og:image" content="../image/soft-404.png">
+<meta property="og:image" content="../image/404-access.png">
+<meta property="og:url" content="custom-404.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/custom-404.woff2) format("woff2"),
+url(../fonts/custom-404.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/custom-404-bold.woff2) format("woff2"),
+url(../fonts/custom-404-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>カスタム404ページの作り方</h1>
+<p>当サイトのデフォルトの「404 Not Found エラー」はこのようになっており、ファイルの存在しないページにアクセスされた場合にはこちらの画面が表示されます。</p><p><img src="../image/default-404.png" alt="デフォルトの404ページ" width="320" height="203" class="ccc"></p><p>これでは英語での表示で不親切なため、当サイトでは404ページをカスタマイズしてこのように作成しています。</p><p><img src="../image/custom-404.png" alt="カスタム404ページ" width="320" height="218" class="ccc"></p><p>このカスタム404ページには「ページは見つかりませんでした」などの表示をしておき、サイトマップやトップページへのリンク、あるいは検索窓なども設定しておくと親切かと思います。</p><p>このカスタム404ページの作り方は簡単で、「404.html」や「error.html」などのページを作成したのち「.htaccess」に以下のように記述します。</p><p>ErrorDocument 404 /404.html</p><p>具体的な書き方については、Apacheの<a href="https://httpd.apache.org/docs/2.0/mod/core.html#errordocument" target="_blank" rel="nofollow noopener">ErrorDocumentディレクティブ</a>の箇所を参照されるとよいでしょう。</p><p>上記Apacheのページの例では「cgi-bin」のフォルダ内にファイルを設置していますが、こちらはCGIプログラム用のフォルダになるため、「404.html」はできるだけルートディレクトリなどに設置しておくことをおすすめします。</p><p>また、記述する際は「http://www.example.com/404.html」のような絶対パスのURLではなく、「/404.html」のような<span class="aka">相対URLで記述する</span>ようにしましょう。</p><p>ErrorDocument 404 /404.html　→　ＯＫ<br>
+ErrorDocument 404 http://www.example.com/404.html　→　ソフト404</p><p>絶対URLで指定するとソフト404エラーになってしまうため、相対URLで作成することをおすすめします。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>ソフト404エラーとは何か？</h2>
+<p>上記のようにErrorDocumentを絶対パスのURLにて記載すると、サーバーはエラーコードの「404」ではなく、「200」を送信してしまうため、<span class="aka">ソフト404エラー</span>と呼ばれる状態になってしまいます。</p><p>例えば、ブラウザで「domain」を「domein」と打ち間違えてしまい、当サイトの存在しないページにアクセスしてしまったとします。</p><p>この場合、相対パスで正常に「404」のエラーコードが返っていれば、誤ったURLのままでそのまま表示されます。</p><p>■<b>相対パスの場合「404」</b><br>
+ErrorDocument 404 /404.html</p><p><img src="../image/soutai-case.png" alt="404 相対パス" width="320" height="211" class="ccc"></p><p>このように相対パスで記載している場合、誤ったURLのままで正常に「404」が返りますが、これが正しいエラーになります。</p><p>■<b>絶対パスの場合「200」</b>（※ソフト404エラー）<br>
+ErrorDocument 404 http://www.example.com/404.html</p><p><img src="../image/zettai-case.png" alt="ソフト404エラー" width="320" height="213" class="ccc"></p><p>一方、絶対パスで記載している場合、「domein」と打ち間違えると「404.html」へと<a href="redirect.html">リダイレクト</a>されてしまい、「404.html」が「200」で正常に送信されます。そのため、エラーコードの「404」ではなく、正常に送信されたという意味の「200」が返ってくることになります。</p><p>これが「ソフト404エラー」になりますが、こちらは完全に誤っているとはいえないものの、「404」が返らないという点では不十分です。</p><p>ソフト404でも表示されるページ自体は同じなため、サイト訪問者にとっては特に何も変わりはありませんが、検索エンジンのクローラーには「200」が返ってしまうため、混乱させてしまうかもしれません。</p><p>Search Consoleにて「送信された URL はソフト 404 エラーのようです」と通知が来ることがありますが、おそらくは上記のように正常に「404」が返っていないものと思われます。</p><p><img src="../image/soft-404.png" alt="ソフト404エラー" width="320" height="241" class="ccc"></p><p>このような場合、ErrorDocumentの箇所を絶対パスで記載していないかをチェックしてみるとよいでしょう。</p><h2>404エラーページのファイル容量を削減</h2>
+<p>この404エラーのページには<a href="../access/crawler-list.html">Webクローラー</a>によるアクセスも多く、他のページと比較するとアクセスされる回数は多いです。当サイトでもセキュリティーの脆弱性を探るようなクロールが多発しており、そのような存在しないページへのアクセスは全て404が返りますが、回数自体が膨大なため転送量も多くなる傾向にあります。</p><p><img src="../image/404-access.png" alt="404多発" width="320" height="214" class="ccc"></p><p>そのため、このカスタム404ページをファイルサイズの大きなHTMLで作成してしまうと、短時間のうちに集中的なアクセスがあった際に<span class="aka">サーバーに負担がかかってしまう</span>かもしれません。できるだけ軽めのサイズでシンプルに作成しておくことをおすすめします。</p><p>例えば、当サイトのアクセスログで上記の「デフォルト404ページ」と「カスタム404ページ」を比較するとファイルの転送量に違いがあります。</p><p><img src="../image/404-size.png" alt="" width="255" height="38" class="ccc"></p><p>デフォルトの場合は転送量がほんの「202」バイトであるのに対し、カスタム404ページの場合は「1655」バイトとなっており、デフォルトの方が軽めになっています。</p><p>これはカスタマイズした404ページにはアクセス解析のタグなども設置しており、ファイルサイズが大きくなっているためですが、できるだけテキストやHTMLタグなどを減らしてシンプルに作成することをおすすめします。</p><p>一方で、あまりにファイルサイズが小さくても、<span class="aka">IEのブラウザ</span>では「フレンドリー・エラーメッセージ」が表示されてしまうため、自分で作成したカスタム404ページが表示されない可能性があります。概ね、エラーページは513バイト～2000バイト程度で作成しておくとよいでしょう。</p>
+
+<h2>IEの「フレンドリー・エラーメッセージ」とは？</h2>
+<p>IEのブラウザには「フレンドリー・エラーメッセージ」のシステムがあり、単に「Not Found」などのメッセージが表示される場合、ブラウザが代わりに親切なメッセージを返してくれます。</p><p>例えば、「Firefoxのブラウザ」でアクセスした際、デフォルトでサーバーが返す404エラーがこちらだったとします。</p><p><img src="../image/default-404.png" alt="デフォルトの404ページ" width="320" height="203" class="ccc"></p><p>この場合、英語なのでよく意味が分からず、どちらかというと不親切なメッセージといえます。</p><p>この点、「IEのブラウザ」にはフレンドリー・エラーメッセージの機能があるため、サーバーが返す上記のメッセージの代わりに、ブラウザ側でこのような親切なメッセージを自動で表示してくれます。</p><p><img src="../image/ie-404.png" alt="IE 404" width="320" height="207" class="ccc"></p><p>そのため、自分で404エラーのページをカスタマイズして作成していても、文字数が少ない場合は表示されないかもしれません。</p><p>この「フレンドリー・エラーメッセージ」について、Microsoftのサポートページには以下のような記述があります。</p><p>「ただし、これらのフレンドリ・エラーメッセージは、クライアントに送信される応答が指定されたしきい値以下の場合にのみ表示されます。たとえば、HTTP 500応答の正確なテキストを表示するには、コンテンツの長さが<span class="aka">512バイト</span>を超えている必要があります。」</p><p><img src="../image/ie-512byte.png" alt="フレンドリー・エラーメッセージ" width="320" height="331" class="ccc"></p><p>こちらには404応答のしきい値についての記載はありませんが、当サイト運営者が実際に確認したところ、511バイトや512バイトではフレンドリー・エラーメッセージが表示されるのに対し、513バイトからはカスタム404ページが表示されました。</p><p>そのため、自分が作成したカスタム404ページをIEでも表示させるには、513バイト以上で作成することをおすすめします。</p><p>ただし、IEのブラウザのみですし、フレンドリー・エラーメッセージでも上記のように親切なページが表示されますので、あまり気にする必要はないかと思います。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>カスタム404ページ</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="redirect.html">リダイレクト設定によるURLの転送方法</a></li>
+<li class="list-li"><a href="../access/log.html">サーバー生ログのアクセス解析の方法</a></li>
+<li class="list-li"><a href="../access/user-agent.html">クローラーアクセスの確認方法</a></li>
+<li class="list-li"><a href="../access/crawler-list.html">Webクローラーの比較一覧</a></li>
+<li class="list-li"><a href="breadcrumb.html">ぱんくずリストの作り方</a></li>
+<li class="list-li"><a href="favicon.html">「favicon.ico」でファビコンの作り方</a></li>
+<li class="list-li"><a href="pagination.html">ページネーションの作り方</a></li>
+<li class="list-li"><a href="apple-touch-icon.html">apple-touch-icon.pngの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "カスタム404ページの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/custom-404-1200.png"
+       ],
+      "datePublished": "2020-03-18T09:00:00+09:00",
+      "dateModified": "2021-08-03T16:39:44+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "カスタム404ページ",
+        "item": "https://www.homepage-tukurikata.com/hp/custom-404.html"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>独自SSLの設定でHTTPS化</title>
+<meta name="description" content="グーグルがhttps対応を検索順位のランキング要素にすると発表したことで、個人サイトでもSSL対応でHTTPSサイトにする必要性が高まってきています。">
+<meta name="keywords" content="SSL対応,https,メリット,デメリット">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/ssl.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/ssl-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../pagination.css">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="ssl.html">
+<link rel="amphtml" href="../amp/rental-server/ssl.html">
+<link rel="next" href="howto-ssl.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="独自SSLの設定でHTTPS化">
+<meta property="og:description" content="グーグルがhttps対応を検索順位のランキング要素にすると発表したことで、個人サイトでもSSL対応でHTTPSサイトにする必要性が高まってきています。">
+<meta property="og:image" content="../image/ssl-browser.png">
+<meta property="og:image" content="../image/ssl-ng.png">
+<meta property="og:url" content="ssl.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/ssl.woff2) format("woff2"),
+url(../fonts/ssl.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/ssl-bold.woff2) format("woff2"),
+url(../fonts/ssl-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>独自SSLの設定でHTTPS化</h1>
+<p>ホームページに<span class="aka">SSL（Secure Sockets Layer）</span>を導入することで、ブラウザとサーバー間の通信を暗号化することができます。これにより、第三者に通信が盗聴されても内容を解読できなくなるため、サイトの改ざんやなりすましといった行為を防ぐことができます。</p><p>現在ではこの「SSL」がバージョンアップした「TLS」（Transport Layer Security）の技術が採用されていますが、昔からあるSSLの名称が広く普及しているため、今でもそのままSSLと呼ばれています。あるいは「SSL/TLS」などと呼ばれることもあります。</p><p>ホームページがこのSSL通信に対応している場合、通常の「http」にセキュアの「s」が付いた「<span class="aka">https</span>」のURLで表示されます。</p><p>また、ブラウザ上で鍵マークをクリックすることでも確認できます。</p><p>(例：Firefoxの場合)</p><p><img src="../image/ssl-browser.png" width="320" height="218" alt="ブラウザの鍵マーク" class="ccc"></p><p>このSSLについては、以前までは金銭を扱う金融機関やクレジット決済のショッピングサイト、あるいはメールフォームで個人情報を入力する企業サイトぐらいしか対応していませんでした。</p><p>けれども、2014年にグーグルがhttps対応を検索順位のランキング要素にすると発表したことで、個人サイトでもSEO対策上の理由で導入する人が多くなってきています。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>共有SSLと独自SSLの違い</h2>
+<p>レンタルサーバーによっては「<b>共有SSL</b>」を無料で利用できることもありますが、この共有SSLはレンタルサーバー会社提供のURLになるため、他サイトのURLで表示されることになり、SSLの信頼性としてはいまいちです。</p><p>一方、この共有SSLに対し、自サイトのドメイン名でSSLに対応することは「<span class="aka">独自SSL</span>」などと呼ばれています。現在、「共有SSL」はほとんど利用されなくなってきており、この「独自SSL」が主流になっています。</p><p>自分のサイトを独自SSLに対応する場合、具体的には認証された「SSLサーバー証明書」をサーバーにインストールして利用することになります。</p><p>サーバーでの証明書になるため、基本的にはドメインの取得事業者ではなく、<b>お使いのレンタルサーバー会社でSSLの申込みをする</b>のが一般的です。</p><p>この独自SSLの利用料金には幅があり、SSLブランドや認証の難易度によって<span class="aka">年間で無料～数十万円程度の違い</span>があります。</p><p>利用料金にかなり差がある理由については、「専用IPアドレス付与の有無」や「サイトシールの有無」、「携帯サイトへの対応率」、「ブランドイメージ」、あるいは「認証レベルの違い」によるものです。</p><p>また、最近では無料で利用できる「Let's Encrypt」なども出てきていますが、無料でも有料でも暗号化についての技術的な違いはほぼなく、安全性が劣るということはありません。</p><p>ただし、認証のプロセスにおいて、自動で認証されるよりもメール認証や電話などによる実在確認をしている方がやはり信頼性は高いです。</p><p>無料SSLの場合、たとえ技術的には安全に通信できたとしても、そもそも相手が悪意のあるユーザーであるかまでは確認できないため、信頼性はいまいちになってしまう側面があります。企業サイトではできるだけ有名ブランドのSSLを選択されることをおすすめします。</p>
+
+<h2>SSLブランドの種類による利用料金の違い</h2>
+<p>有名なSSLブランドには、シマンテック（旧ベリサイン）やグローバルサイン、あるいはジオトラストなどがありますが、知名度の高いブランドは簡単なメール認証によるタイプでも利用料金は高額になりがちです。</p><p>■<b>有名ブランドのSSL</b></p>
+<ul>
+<li>シマンテック（旧ベリサイン）</li>
+<li>グローバルサイン</li>
+<li>ジオトラスト</li>
+<li>セコム</li>
+<li>サイバートラスト</li>
+</ul>
+<p>基本的には「ひとつのIPアドレスにひとつのSSL証明書」しか発行されないため、レンタルサーバー側からSSL専用のIPアドレスが渡されることになり、これが元で費用が高額になる傾向があります。</p><p>一方、格安のSSLブランドには「RapidSSL」や「CoreSSL」などがあり、年間数千円程度でも利用することができます。また、最近は無料の「Let's Encrypt」にも人気が集まっています。</p><p>■<b>格安のSSLブランド</b></p>
+<ul>
+<li>RapidSSL</li>
+<li>CoreSSL</li>
+<li>Let's Encrypt（無償）</li>
+</ul>
+<p>高額なSSLブランドではひとつのIPアドレスにひとつの証明書しか発行されませんが、これらの格安SSLや無料SSLの多くは<span class="aka">「SNI」と呼ばれるネームベースでのSSL</span>となっており、他のユーザーも同じIPアドレスを使うことになります。</p><p>個人サイトの場合は無料や格安の独自SSLでも特に問題はないため、「Let's Encrypt」などに対応しているレンタルサーバーを利用されるとよいでしょう。</p><p>■<b>「無料独自SSL」対応のレンタルサーバー一覧</b></p>
+<ul>
+<li><a href="xserver.html">エックスサーバー</a>（Let's Encrypt、CoreSSL、Rapid SSLなど）</li>
+<li><a href="sakura-server.html">さくらインターネット</a>（Let's Encrypt、Rapid SSLなど）</li>
+<li><a href="rensaba.html">お名前.comレンタルサーバー</a>（Let's Encrypt、アルファSSLなど）</li>
+<li><a href="lolipop.html">ロリポップ</a>（Let's Encrypt）</li>
+<li><a href="firebird.html">スターサーバー</a>（Let's Encrypt）</li>
+<li><a href="coreserver.html">コアサーバー</a>（Let's Encrypt）</li>
+<li><a href="heteml.html">ヘテムル</a>（Let's Encrypt）</li>
+<li><a href="webarena.html">WebARENA（ウェブアリーナ）</a> （Let's Encrypt）</li>
+<li><a href="extrem.html">エクストリム</a> （Let's Encrypt）</li>
+<li><a href="jsn.html">JSNレンタルサーバー</a> （Let's Encrypt）</li>
+</ul>
+<p>できるだけ専用IPアドレスが付与されるタイプがベストですが、利用料金が高額になる傾向があるため、個人サイトの場合はSNIベースの格安SSLや無料SSLでも特に問題はないでしょう。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>独自SSL設定後にはサイト全体の修正が必要</h2>
+<p>SSLを正常に設定するには、そのページで<span class="aka">読み込むリソース</span>についても「HTTPS」に対応している必要があるため、大規模なサイトを修正する場合には手間がかかります。</p><p>ホームページの画像についても「HTTPS」のURLから読み込むように修正したり、外部プラグインについても「HTTPS」に対応したものを使用するなど、適切な修正がされていないとブラウザ上で安全性が確立されていないと出てしまいます。</p><p><img src="../image/ssl-ng.png" width="320" height="128" alt="この接続は安全ではありません" class="ccc" /></p><p>いわゆる「<span class="aka">混合コンテンツ</span>」と呼ばれるものになりますが、「HTTP」と「HTTPS」の両方から読み込まれている場合はSSL通信の意味がなくなってしまうため、「HTTPS」のみに統一する必要があります。</p><p>この場合の具体的な修正方法については、こちらのページをご参照ください。<br>
+→ <a href="mixed-content.html">SSL設定後のホームページ修正方法</a></p><p>せっかくSSLを導入したとしても、このような黄色い警告が表示されてしまうとかえって逆効果になってしまいます。大規模サイトの場合、サイト内の全ページを修正するには時間がかかるため、タイミングを見てSSLを導入されることをおすすめします。</p><p>特に、<a href="../hp/koukoku-syuunyuu.html">アフィリエイト広告</a>を掲載している場合、アクセス数の計測で「1px」の小さな画像がASPのサーバーから読み込まれるのが一般的です。</p><p>ASPによってはこの小さな画像が「HTTPS」に対応していないことが多く、通常の「HTTPページ」から読み込まれてしまうため、現時点では広告がSSLに非対応のケースも多いです。そのため、広告掲載はしずらくなるデメリットもあるかもしれません。</p><p>（※追記：2019年の現在、各ASPにてHTTPSにほぼ対応しています。）</p><p>SSLを導入する際は、上記のようなデメリットについても事前によく確認しておくようにしましょう。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>SSLサーバ証明書の認証方法による違い</h2>
+<p>一般的に、SSL証明書の認証レベルには「ドメイン認証」と「企業認証」、そして「EV認証」の3種類があります。</p>
+<ul><li><p><b>ドメイン認証</b><br />
+ドメイン認証は、wohis情報にメールを送信するなどしてドメインの所有権を認証するものです。格安SSLなどで多い簡易的な認証方法になります。</p></li><li><p><b>企業認証</b><br />
+企業情報データベースや電話連絡などで企業の法的な実在性を確認する認証方法になります。</p></li><li><p><b>EV認証</b><br />
+大企業の場合など、実際の組織内の担当者レベルまで調査するため、非常に信頼性が高い認証方法になります。</p></li></ul>
+<p>このうち、「企業認証」と「EV認証」については法人でしか利用できないため、<span class="aka">個人ユーザーは簡易的な「ドメイン認証」を利用する</span>のが一般的です。</p><p>簡易的なドメイン認証の場合、たとえ暗号化されて安全に通信できたとしても、そもそもの通信する相手が悪意のあるユーザーである可能性は否定できません。悪意のある人でもSSLを利用できてしまうため、他と比較すると信頼性について多少は劣ってしまうかもしれません。</p><p>けれども、ドメイン認証でもHTTP対応で通信が暗号化されることにより、少なくとも第三者によるなりすましや改ざん、盗聴といった行為は防ぐことができます。個人サイトの場合は実在認証までは必要ないため、簡易的なドメイン認証でも十分といえるでしょう。</p>
+<h2>SSL対応のメリットとデメリット</h2>
+<p>■<b>メリット</b></p><p>このSSLへの対応は、個人情報を扱う企業サイトやクレジット決済が必要なショッピングサイトでは必須の要素といえます。盗聴されてクレジットカードなどの個人情報が流出したり、あるいは注文情報が改ざんされて大量の注文がされるなどのリスクがあるため、通信を暗号化して安全性を確立しておく必要があります。</p><p>このSSLに対応することにより、ユーザーは安心して購入することができるため、<span class="aka">購入率がアップするメリット</span>が期待できます。</p><p>また、2014年にグーグルが「<a href="https://webmaster-ja.googleblog.com/2014/08/https-as-ranking-signal.html" target="_blank" rel="nofollow noopener">HTTPS をランキング シグナルに使用します</a>」と発表したことで、<span class="aka">SEO対策上のメリット</span>も期待できます。この<a href="../access/seo.html">SEO対策</a>の理由により、最近では企業サイトのみならず、個人サイトでもSSLを導入するホームページが増えてきました。</p><p>現在のところ、このhttpsページ対応による検索順位への影響は1%未満にすぎず、SEO効果のメリットはほんのわずかではありますが、今後は長い時間をかけて強化されていくとのことです。</p><p>■<b>デメリット</b></p><p>デメリットについては、正しく設定しておかないと「安全ではない」という表示がされてしまうため、かえって逆効果になってしまう可能性があります。</p><p>加えて、SSLブランドや認証レベルによっては、数万円～数十万円程度の高額な費用がかかってしまうこともあります。</p><p>また、スマートフォンへの対応率はよいものの、フィーチャーホン（いわゆるガラケー）への対応率が低いブランドもあり、<a href="../hp/keitai-site.html">ガラケー対応の携帯サイト</a>を作成している運営者にとっては、アクセス数が減少してしまう可能性もあります。</p><p>さらに、SSLに対応した後にサーバーを移転するとなった際、移転先のサーバーでも再度認証が必要となるため、認証が済むまではHTTPSページが表示されなくなり、場合によっては数日間サイトがダウンしてしまう可能性も出てきます。</p><p>いずれにしても、SEO対策上の理由により、今後はSSL導入は必須になるものと思われます。</p>
+<p class="nextpage">次のページ → <a href="howto-ssl.html">サイトにSSLを導入する際の実際の手順</a></p>
+<ul class="pagination">
+<li class="pre">前へ</li>
+<li class="this">1</li>
+<li><a href="howto-ssl.html">2</a></li>
+<li><a href="mixed-content.html">3</a></li>
+<li><a href="howto-ssl.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="howto-ssl.html">サイトにSSLを導入する際の実際の手順</a></li>
+<li class="list-li"><a href="mixed-content.html">SSL設定後のホームページ修正方法</a></li>
+<li class="list-li"><a href="index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li class="list-li"><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "独自SSLの設定でHTTPS化",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/ssl-browser-1200.png"
+       ],
+      "datePublished": "2016-04-05T00:00:00+09:00",
+      "dateModified": "2021-07-26T23:58:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "独自SSL",
+        "item": "https://www.homepage-tukurikata.com/rental-server/ssl.html"
+      }]
+    }
+</script>
+</body>
+</html>

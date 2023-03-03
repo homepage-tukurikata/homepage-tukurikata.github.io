@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>AMPページの作り方</title>
+<meta name="description" content="AMPページを作成する際、AMPのルールに沿ってHTMLファイルを作成する必要があります。ただし、AMP独自のHTMLタグはそれほど多くはないため、既存ページをそのまま流用することで簡単に対応できます。">
+<meta name="keywords" content="ampページ,作成,作り方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/amp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/amp-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="amp.html">
+<link rel="amphtml" href="../amp/hp/amp.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AMPページの作り方">
+<meta property="og:description" content="AMPページを作成する際、AMPのルールに沿ってHTMLファイルを作成する必要があります。ただし、AMP独自のHTMLタグはそれほど多くはないため、既存ページをそのまま流用することで簡単に対応できます。">
+<meta property="og:image" content="../image/amp-speed.png">
+<meta property="og:image" content="../image/amp.png">
+<meta property="og:image" content="../image/amp-cache.png">
+<meta property="og:url" content="amp.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/amp.woff2) format("woff2"),
+url(../fonts/amp.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/amp-bold.woff2) format("woff2"),
+url(../fonts/amp-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>AMPページの作り方</h1>
+<p>ホームページを<span class="aka">AMP（アンプ、Accelerated Mobile Pages）</span>に対応すると、モバイル環境で閲覧した際にサイトの表示が高速化されます。</p><p>当ホームページでもAMPには対応していますが、自サイト内の平均読み込み時間で比較するとAMPページは「-76％」となっており、かなり高速で表示されるようになりました。</p><p><img src="../image/amp-speed.png" alt="" width="320" height="200" class="ccc"></p><p>AMPは当ホームページでご紹介しているような静的なHTMLサイトと相性がよく、シンプルで軽量なHTMLとCSSで作成することにより、ウェブサイトを高速化することができます。</p><p>実際に作成する際、外部CSSは使えないなどの「<span class="aka">AMP HTML</span>」のルールに沿って作成する必要がありますが、「HTML5」とほぼ同様の仕様となっており、AMP独自のタグはそれほど多くはありません。既存ページをそのまま流用することで簡単に対応できますので、日本語にも対応しているAMPプロジェクトの公式サイトの手順に沿ってAMP化していくことをおすすめします。</p><p>→ <a href="https://amp.dev/ja/" target="_blank" rel="nofollow noopener">https://amp.dev/ja/</a></p>
+<p><a href="https://webmaster-ja.googleblog.com/2016/09/8-tips-to-amplify-your-clients.html" target="_blank" rel="nofollow noopener">Googleの公式ブログ</a>では、「3. サイト全体を AMP 化（#AMPlify）する必要はない」とあるため、サイト内の１部のページのみをAMPに対応するのでも問題はありません。</p><p>また、「<span class="aka">6. 検索結果のランキングに影響はない</span>」とありますが、当サイトでも検索順位への影響は全くありませんでした。高速で表示されることで軽微なSEO効果ぐらいはあるだろうと期待していましたが、現状では全くの無風状態です。</p><p>モバイルファースト・インデックスは、正規化しているページのモバイル版が評価の対象となるため、AMPページについては評価の対象外になるものと思います。</p><p>ただし、<a href="json.html">構造化データ</a>のリッチリザルトでは、非AMPページよりもAMPページの方がより魅力的な形で検索結果では表示されるため、クリック率の改善で間接的な影響はあるかもしれません。アクセスの入口となるランディングページについては重点的に対応していくとよいでしょう。</p> <!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>AMPページ作成と「Google AMPキャッシュ」の関係</h2>
+<p>AMPページを作成しておくと、GoogleにAMPページのキャッシュが作成され、Googleのサーバーからキャッシュページが直接表示されるようになります。</p><p><img src="../image/amp-cache.png" alt="" width="320" height="209" class="ccc"></p><p>（※参照：<a href="https://developers.google.com/amp/cache/overview" target="_blank" rel="nofollow noopener">概要 | Google AMP キャッシュ | Google Developers</a>）
+</p><p>PCサイトでもキャッシュがありますが、こちらは正規ページのキャッシュになります。</p><p>■<b>正規ページのキャッシュ</b></p><p><img src="../image/pc-kensaku-cahce.png" alt="" width="320" height="208" class="ccc"></p><p>こちらはその正規ページのキャッシュを表示したものです。</p><p><img src="../image/pc-cache.png" alt="" width="320" height="183" class="ccc"></p><p>「Google AMPキャッシュ」は、この正規ページのキャッシュではなく、作成した「AMPページのキャッシュ」になりますが、モバイル環境ではこちらが直接表示されることで高速で表示されるようになります。</p><p>■<b>AMPページのキャッシュ</b></p><p><img src="../image/amp-google-cache.png" alt="" width="320" height="301" class="ccc"></p><p>そのため、配信されるドメインはGoogleのURLになります。</p><p>仮に、自サイトでは重たい格安サーバーを利用していたとしても、Googleが管理しているサーバーから配信されるため、サイトの表示が高速化されるメリットがあります。</p><p>一方で、自サーバー内に作成したAMPページに訪問者が直接アクセスされることはほとんどないかもしれません。</p><p>AMPはGoogleが中心となって開発されたプロジェクトのため、W3CでのValidatorではエラーが出ますし、上記のように異なるドメインから配信されるため、基本は正規ページを「HTML5 ＋ レスポンシブウェブデザイン」で作成しつつも、高速化したいページのみをAMP化させていくことをおすすめします。</p>
+<ul>
+<li>正規ページ：PC＋タブレット端末＋スマホ（※HTML5の<a href="responsive.html">レスポンシブウェブデザイン</a>で作成）</li>
+<li>AMPページ：スマホ（※AMP HTMLで作成）→ <span class="aka">Google AMPキャッシュ</span></li>
+</ul>
+<p>また、Google 検索セントラルでは以下の記載があり、AMPページについてもレスポンシブ デザインが推奨されています。</p><p>「AMP ページ自体はどの種類のデバイスでも表示できるため、<span class="aka">レスポンシブ デザインで AMP ページを作成すること</span>をおすすめします。」</p><p>パソコンやタブレット端末ではGoogle AMPキャッシュは配信されず、あまり高速化されないとは思いますが、AMPはGoogleだけで利用できる機能ではないため、PCサイトでもタブレット端末でも閲覧できるようにしておいた方がよいかもしれません。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>ホームページをAMP化する際の手順</h2>
+<p>まずはAMPページを入れておく専用の「amp」フォルダを作成し、カテゴリ分けのフォルダなどもPC用と同じように作成しておきます。</p><p>次に、作成したフォルダにオリジナルページのHTMLファイルをコピーし、以下の10カ所程度を修正することでAMPに対応することができます。</p><p id="step1">■<b>AMP化の手順</b></p><p>（１）DTDの&lt;html ⚡ lang=&quot;ja&quot;&gt;の箇所<br>
+（２）&lt;link rel=&quot;canonical&quot;でオリジナルページへ正規化<br>
+（３）外部CSSは使えないため、&lt;link rel=&quot;stylesheet&quot;を削除<br>
+（４）&lt;style amp-custom&gt;&lt;/style&gt;内に外部CSSを置き換え<br>
+（５）&lt;style amp-boilerplate&gt;～の定型文の記載<br>
+（６）&lt;script async src=&quot;https://cdn.ampproject.org/v0.js&quot;&gt;&lt;/script&gt;の定型文の記載<br>
+（７）&lt;img&gt;タグを&lt;amp-img&gt;&lt;/amp-img&gt;に置き換え<br>
+（８）javascriptの使用は制限があるため、アクセス解析や広告などを削除<br>
+（９）オリジナルの元のページに&lt;link rel=&quot;amphtml&quot;を記載してAMPページを通知<br>
+（10）チェックツールでエラーを修正　→　<a href="https://search.google.com/test/amp?hl=ja" target="_blank" rel="nofollow noopener">AMPテスト</a></p><p>上記の公式サイトではサンプルコードが公開されていますが、順序なども含め、ほぼ、そちらの通りに作成していけば問題ありません。</p><p><img src="../image/amp.png" alt="" width="320" height="202" class="ccc"></p><p>■<b>&lt;html ⚡ lang=&quot;ja&quot;&gt;の記載</b></p><p>稲妻マークの絵文字に戸惑うかもしれませんが、そのまま記載します。また、lang=&quot;en&quot;&gt;の箇所は日本語のlang=&quot;ja&quot;&gt;に書き変えておくことをおすすめします。</p><p><img src="../image/amp-tag1.png" alt="" width="320" height="210" class="ccc"></p>
+
+<p id="step2">■<b>AMPページの指定とオリジナルへの正規化</b></p><p>AMPページは昔の<a href="keitai-site.html">ガラケー携帯サイトの作り方</a>と似ていますが、PC用のオリジナルページには &lt;link rel=&quot;amphtml&quot; を記載します。これにより、AMP版のページが存在することをGoogleやTwitterなどに通知することができます。</p><p>一方、AMPページの方には <span class="aka">&lt;link rel=&quot;canonical&quot;</span> を記載して元のオリジナルページへと正規化します。</p><p><img src="../image/amp-tag2.png" alt="" width="320" height="210" class="ccc"></p><p> この &lt;link rel=&quot;canonical&quot; についてはPC用のオリジナルのページにも記載し、自分自身に正規化して明示しておくのもよいかと思います。</p><p>■<b>CSSの記載</b></p><p>外部CSSは使えないため、&lt;link rel=&quot;stylesheet&quot;の記載は削除します。スタイルシートは<span class="aka">&lt;style amp-custom&gt;&lt;/style&gt;</span>内にまとめて記載しますが、正規ページの外部CSSと同じものをそのまま記載しておけば問題ないかと思います。</p><p><img src="../image/style-amp-custom.png" alt="" width="320" height="205" class="ccc"></p><p>Google 検索セントラルでは、AMPページはレスポンシブ デザインで作成することが推奨されているため、正規ページのレスポンシブ対応のCSSをそのまま使用するよいと思います。</p><p>ただし、AMPはモバイル端末での表示がメインとなるため、PC表示用のスタイルシートについては簡素化した方が高速化されるかもしれません。メディアクエリのブレイクポイントで600pxあたりまでのスマホに対応しておけば問題ないかと思います。</p><p>また、できるだけ<a href="../css/minify.html">CSSのMinify化</a>で半角スペースや改行などを削除し、ファイルの容量を圧縮しておくことをおすすめしますが、Google AMPキャッシュでの利用については自動で変換してくれるようです。</p><p><img src="../image/g-amp.png" alt="" width="320" height="200" class="ccc"></p><p>（参照：<a href="https://developers.google.com/amp/cache/overview?hl=ja#html-sanitization" target="_blank" rel="nofollow noopener">HTML のサニタイズ</a>）</p><p>■<b>定型文の記載</b></p><p>（５）と（６）の定型文のコードは長いので、このページでは省略してますが、何も考えずに公式サイトの通りにそのまま記載して問題ありません。</p><p><img src="../image/teikei-amp.png" alt="" width="320" height="205" class="ccc"></p><p>上記5カ所の記載がメインになりますが、AMP広告も掲載する際は「amp-ad」のタグが必要となり、さらにアクセス解析も設置する際は「amp-analytics」関連でのタグが必要になります。</p><p>■<b>画像タグの修正</b></p><p>難易度が高いのは&lt;img&gt;タグの&lt;amp-img&gt;&lt;/amp-img&gt;への置き換えですが、AMPページでは終了タグの&lt;/amp-img&gt;が必要なため、一括での置換は難しいかもしれません。</p><p>また、画像に layout=&quot;responsive&quot; を指定することでコンテナ要素の幅と同じになるように自動で拡大、縮小されます。ただし、ロゴなどに設定してしまいますとロゴが巨大化してしまいます。</p><p>そのため、はみ出る場合は縮小されつつ、なおかつ通常の場合は原寸大で表示される layout=&quot;intrinsic&quot; を指定しておくことをおすすめします。</p><p>■<b>内部リンク</b></p><p>AMPページに記載する内部リンクは、オリジナルの正規ページを指定しているケースが多いと感じています。オリジナルページでのキャッシュも確認して、そちらと同じ構造になるようにしておくことをおすすめします。</p><p>■<b>その他</b></p><p>大手ニュースサイトなどの場合、<a href="json.html">構造化データ</a>も作成して検索結果のリッチリザルトにも対応した方がよいと思いますが、こちらについては省略できます。</p><p>AMP化しないと利用できないリッチリザルト機能があるものの、そもそもAMPによる「モバイルサイト高速化」と構造化データによる「検索結果のリッチリザルト化」は別の機能です。とりあえずはAMP化した上で、余力があれば対応することをおすすめします。</p>
+<ul>
+<li>AMP → モバイル環境での高速表示</li>
+<li>構造化データ → 検索結果でのリッチリザルト表示</li>
+</ul>
+<p>ちなみに、このページでは「HowTo」の構造化データを記載していますが、タイミングによってはモバイル検索でこのようなリッチリザルトが表示されます。</p><p><img src="../image/rich-result2.png" alt="" width="320" height="300" class="ccc"></p><p>ただし、この構造化データのリッチリザルトはAMP化しなくても利用できるものも多いため、AMPに関わらず、通常のホームページでも対応しておくとよいかもしれません。</p><p>また、OGPタグはPC用のオリジナルのものをそのまま使用してよいと思いますが、細かい点は大手メディアなどのAMPページを参考にされるとよいかと思います。</p><p>WEBフォントについては、Google AMPキャッシュではフォントもキャッシュする必要があるため、サーバー内に設置しているフォントについてはダウンロード可能な状態に設定しておくことをおすすめします。</p><p>もし表示されない場合、.htaccessでMIMEタイプを設定しておくことをおすすめします。<br>
+→ <a href="../css/web-font.html">@font-faceでWEBフォントの指定方法</a></p><p>AdSense広告の場合、amp-adのスクリプトを&lt;head&gt;&lt;/head&gt; タグの間に貼り付けたのち、AMP対応のAdSenseタグをコンテンツ中に貼り付ける形になります。</p><p>Google Analyticsについては「<a href="https://developers.google.cn/analytics/devguides/collection/amp-analytics?hl=ja" target="_blank" rel="nofollow noopener">AMP ページにアナリティクスを追加する</a>」の箇所に書かれていますが、実際に設定する際は<a href="https://developers.google.com/tag-platform/gtagjs/amp?technology=gtagjs" target="_blank" rel="nofollow noopener">こちらのページ</a>と見比べながら設定するとよいかと思います。ただし、次世代の Google アナリティクス（GA4）はまだ未対応のようですし、個別のケースで異なるかもしれません。</p><p id="step3">■<b>AMPチェック</b></p><p>あとはAMPのチェックツールを使い、エラーが出てこないか確認します。</p><p>こちらはこのページのAMPページをチェックしたものですが、問題ない場合はこのように表示されます。</p><p><img src="../image/amp-ok.png" alt="" width="320" height="224" class="ccc"></p><p>プレビュー機能もあり、イナズママークがあれば、AMPページということになります。</p><p><img src="../image/amp-ok2.png" alt="" width="320" height="278" class="ccc"></p><p>チェックツールについては、<a href="../css/chrome-devtool.html">Chromeデベロッパーツール</a>やAMPの公式ページの<a href="https://validator.ampproject.org/" target="_blank" rel="nofollow noopener">The AMP Validator</a>などもありますが、上記のGoogleのAMPテストが使いやすかったです。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>AMPページの内部リンクには正規URLを記載する</h2>
+<p>AMPページでは左上のマークをタップすると正規化のURLを確認できますが、この表示されているAMPページ自体はキャッシュのため、配信されるURLについてはGoogleのURLになります。</p><p><img src="../image/amp-google-cache.png" alt="" width="320" height="301" class="ccc"></p><p>例えば、このページのAMPバージョンの場合、Google AMPキャッシュのURLは以下のようになっていましたが、httpsやhttpなどでも違いがあり、おそらく、/amp/s/の「s」はhttpsのsかと思います。</p><p><span class="aka">https://www.google.co.jp/amp/s/</span>www.homepage-tukurikata.com/amp/hp/amp.html</p><p>URLがGoogleのため、AMPページの内部リンクを相対パスで指定すると、内部リンクもGoogleのURLで表示されるかといえば、PCページ版のキャッシュと同様、きちんと自サイトのURLで表示されていました。</p><p>上記の「HTML のサニタイズ」の箇所には以下の記載がありますが、このことを指しているのではないかと思われます。</p><p>「ドキュメントがサイト運営者からではなく Google AMP キャッシュから提供される場合でも外部へのリンクを引き続き使用できるよう、外部へのリンクが絶対リンクに設定されます。」</p>
+<p>また、AMPページの内部リンクには、「自サイト内のAMPページ」でも「GoogleのAMPページのキャッシュ」でもなく、「正規のオリジナルページ」で内部リンクを記載するのが一般的です。</p><p>■<b>AMPページに記載する内部リンク → PC版の正規URLを指定</b></p><p>そのため、「GoogleのAMPページのキャッシュ」から、内部リンクを経由して自サイト内を巡回する際はオリジナルの正規ページへとアクセスされることになり、自サイト内のAMPページに直接アクセスされることはないかもしれません。</p>
+<ul>
+<li>自サイト内のAMPページ　→　実際は直接アクセスされない</li>
+<li>GoogleのAMPページのキャッシュ（GoogleのURL）→　モバイル検索のランディングページ</li>
+<li>正規のオリジナルページ → PC検索のランディングページ</li>
+</ul>
+<p>また、AMPページの内部リンクには自サイトの正規URLが記載されるため、ランディングページ自体は高速化されたとしても、そこからサイト内を巡回する場合は正規のオリジナルページへ移動となります。</p><p>そのため、検索結果から飛んだ最初のランディングページについては高速化されたとしても、そこからサイト内を巡回する場合は遅く表示されるはずです。</p><p>全てのページを高速化する場合、内部リンクまでを含め、全てのページをGoogle AMPキャッシュのURLで指定する必要がありますが、そもそもAMPはGoogleのプロダクトではありませんし、AMPページを利用できるサービスはGoogleのみではないため、一般的なサイトではそういった形での運用はされていないようです。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>AMPページ</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li class="list-li"><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li class="list-li"><a href="keitai-site.html">携帯サイトの作り方（ガラケーサイト）</a></li>
+<li class="list-li"><a href="json.html">構造化データの作り方</a></li>
+<li class="list-li"><a href="best-image-size.html">Article構造化データの画像サイズを比較</a></li>
+<li class="list-li"><a href="../css/minify.html">CSSのMinify化で容量を圧縮</a></li>
+<li class="list-li"><a href="../css/chrome-devtool.html">CSSの確認はChromeデベロッパーツールが便利</a></li>
+<li class="list-li"><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li class="list-li"><a href="../access/core-webvitals.html">Core Web Vitals（コアウェブバイタル）とは？</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "AMPページの作り方",
+      "description": "AMPページを作成する際、AMPのルールに沿ってHTMLファイルを作成する必要があります。ただし、AMP独自のHTMLタグはそれほど多くはないため、既存ページをそのまま流用することで簡単に対応できます。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/amp-ok2.png",
+        "height": "278",
+        "width": "320"
+      },
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "AMPボイラープレートコード"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "テキストエディタ"
+        },{
+          "@type": "HowToTool",
+          "name": "AMP Validator"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "AMP HTMLファイルの作成",
+		  "url": "https://www.homepage-tukurikata.com/hp/amp.html#step1",
+          "itemListElement": [
+		  {
+            "@type": "HowToDirection",
+            "text": "AMPページ専用の「amp」フォルダを作成し、オリジナルページをコピーします。"
+          },
+		  {
+            "@type": "HowToDirection",
+            "text": "DTDやCSS、amp用のimgタグを書き変え、AMP固有の定型文を追加します。"
+          }, 
+		  {
+            "@type": "HowToDirection",
+            "text": "<link rel=を使い、オリジナルページとAMPページを双方向にリンクします。"
+          } ,{
+            "@type": "HowToTip",
+            "text": "構造化データは必須ではありませんが、記載するとリッチリザルトで表示されるようになります。"
+          }
+		  ],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/amp.png",
+            "height": "202",
+            "width": "320"
+          }
+        },
+		 {
+          "@type": "HowToStep",
+          "name": "AMPページの通知と正規化",
+		  "url": "https://www.homepage-tukurikata.com/hp/amp.html#step2",
+          "itemListElement": [
+		  {
+            "@type": "HowToDirection",
+            "text": "オリジナルページにはlinkタグで「amphtml」を指定し、AMPページの存在を通知します。"
+          },
+		   {
+            "@type": "HowToDirection",
+            "text": "AMPページにはlinkタグで「canonical」を指定し、オリジナルページに正規化します。"
+          }
+		  ]
+        },
+		 {
+          "@type": "HowToStep",
+          "name": "チェックツールでエラーの修正",
+		  "url": "https://www.homepage-tukurikata.com/hp/amp.html#step3",
+          "itemListElement": [
+		  {
+            "@type": "HowToDirection",
+            "text": "各種のAMPチェックツールを使い、エラーがあれば修正します。"
+          },
+		   {
+            "@type": "HowToDirection",
+            "text": "Googleの「AMP」テストでプレビューを表示し、実際の表示を確認します。"
+          }]
+		  ,
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/amp-ok.png",
+            "height": "224",
+            "width": "320"
+          }
+        }
+      ],
+      "totalTime": "PT1H"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AMPページの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/amp-speed-640px.png"
+       ],
+      "datePublished": "2021-01-05T17:50:54+09:00",
+      "dateModified": "2021-02-11T00:09:44+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AMPページの作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/amp.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "モバイル端末への最適化",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AMPページの作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/amp.html"
+      }]
+    }
+</script>
+</body>
+</html>

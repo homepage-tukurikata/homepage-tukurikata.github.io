@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>コアサーバーやXREAのドメイン設定方法</title>
+<meta name="description" content="バリュードメインのレンタルサーバーにはコアサーバーやXREAなどがありますが、他社と比較するとサーバーの設定方法が複雑です。ネームサーバーやwwwあり・なしの設定方法をご紹介しています。">
+<meta name="keywords" content="コアサーバー,XREA,ドメイン,設定方法,同期設定">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/coredns.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/coredns-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="coreserver-dns.html">
+<link rel="amphtml" href="../amp/domain/coreserver-dns.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="コアサーバーやXREAのドメイン設定方法">
+<meta property="og:description" content="バリュードメインのレンタルサーバーにはコアサーバーやXREAなどがありますが、他社と比較するとサーバーの設定方法が複雑です。ネームサーバーやwwwあり・なしの設定方法をご紹介しています。">
+<meta property="og:image" content="../image/gmo-name.png">
+<meta property="og:image" content="../image/core-dns.png">
+<meta property="og:url" content="coreserver-dns.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/coredns.woff2) format("woff2"),
+url(../fonts/coredns.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/coredns-bold.woff2) format("woff2"),
+url(../fonts/coredns-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>コアサーバーやXREAのドメイン設定方法</h1>
+<p>バリュードメインのレンタルサーバーには、<a href="../rental-server/coreserver.html">コアサーバー</a>や<a href="../rental-server/xrea.html">XREA</a>などがありますが、他社と比較するとドメインの設定方法が少し複雑です。</p><p>一般的なレンタルサーバーの場合、ネームサーバーを指定すれば、DNSについては自動で設定されるため、通常は特に変更する必要はありません。エックスサーバーなどでもDNSレコードの編集はできますが、こちらは上級者向けの機能となっています。</p><p><img src="../image/dns-jyoukyuu.png" alt="" width="320" height="200" class="ccc"></p><p>けれども、バリュードメイン系のコアサーバーやXREA、VALUE-SERVERでは、このDNS設定も自分でする必要があるため、多少は複雑になっています。</p><p><img src="../image/dns-settei.png" alt="" width="320" height="200" class="ccc"></p><p>ネームサーバーの指定 → <span class="aka">DNS設定</span></p><p>とはいえ、こちらも使用しているサーバーを選択すれば自動で設定されるため、一般的なレンタルサーバーと大した違いはありません。</p><p>ここではコアサーバーを例に設定方法をご紹介していますが、以下の手順を参考にされるとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2 id="step1">ドメインのネームサーバーやDNSの設定</h2>
+<p>こちらはレンタルサーバー側ではなく、<span class="aka">ドメインの取得事業者側</span>で設定する項目になります。</p>
+<h3 class="blue">ドメインの管理が「バリュードメイン」の場合</h3>
+<p>・<b>ネームサーバーを設定する</b></p><p>バリュードメインで取得した場合、登録レジストラについては「eNom」や「GMO」などの違いがあります。</p><p><img src="../image/v-registrar.png" width="124" height="159" alt="レジストラの種類" class="ccc" /></p><p>バリュードメインはGMOグループになったため、最近はデフォルトで「GMO」での登録になるケースが多いと思いますが、以前から利用している場合は「eNom」のケースもあると思います。</p><p>ログインしたのち、サイドバーの「<b>ドメイン</b>」→「<b>ドメインの設定操作（登録済みドメイン一覧）</b>」の箇所から、「<b>GMO</b>」などのレジストラを選んで検索すれば、該当するドメインが一覧で表示されるはずです。</p><p><img src="../image/gmo-name.png" alt="" width="320" height="200" class="ccc"></p><p>次に、変更したいドメインの横にある「ネームサーバー」の箇所をクリックして、ネームサーバーの設定をします。</p><p>■<b>登録レジストラが「GMO」の場合</b></p><p>通常、<a href="nameserver.html">ドメインを設定</a>する場合、上記の「ネームサーバー」をクリックして遷移した画面にて、エックスサーバーやさくらインターネットなどのネームサーバーを手動で入力します。</p><p><img src="../image/name-sitei.png" alt="" width="320" height="200" class="ccc"></p><p>けれども、<span class="aka">コアサーバーやXREAは「バリュードメインのサービス」</span>のため、以下の箇所を選択すれば、自動で入力してくれます。</p><p><img src="../image/ns-2.png" alt="" width="320" height="163" class="ccc"></p><p>いくつかの選択肢がありますが、バリュードメインで利用できるネームサーバーには以下の４種類があります。</p>
+<ul>
+<li><span class="aka">VALUE-DOMAIN独自（NS1 ～ NS5.VALUE-DOMAIN.COM）</span></li>
+<li>VALUE-DOMAIN独自（NS11 ～ NS13.VALUE-DOMAIN.COM）</li>
+<li>eNom（DNS1 ～ DNS5.NAME-SERVICES.COM）</li>
+<li>GMO（01 ～ 04.dnsv.jp）</li>
+</ul>
+<p>このうち、バリュードメイン独自のネームサーバーには「ns1～5」と「ns11～13」の２種類がありますが、いずれも大幅に強化されているため、どちらでもよいと思います。</p><p>その下の「転送機能付き上位レジストラ」の方を選択すると、上記GMO提供の「01 ～ 04.dnsv.jp」のネームサーバーになりますが、こちらでもよいと思います。</p><p>当サイト運営者は一括して「ns1～5」を使用していますが、この「ns1～5」は以下の意味になります。</p><p>NS1.VALUE-DOMAIN.COM<br />
+NS2.VALUE-DOMAIN.COM<br />
+NS3.VALUE-DOMAIN.COM<br />
+NS4.VALUE-DOMAIN.COM<br />
+NS5.VALUE-DOMAIN.COM</p><p>以前までは「ns1～3」で３本でしたが、現在は２本増量で「ns1～5」になっています。</p><p>また「ns11～13」は以下の意味になりますが、こちらでもよいかもしれません。</p><p>NS11.VALUE-DOMAIN.COM<br>
+NS12.VALUE-DOMAIN.COM<br>
+NS13.VALUE-DOMAIN.COM</p><p>いずれかのネームサーバーの選択して設定を保存します。</p><p>上記のURLは変更になっている可能性もあるため、直接は入力せず、管理画面の自動入力で設定することをおすすめします。</p>
+<p>・<b>DNSを設定する</b></p>
+<p>次にDNSの設定をしますが、サイドバーにある「<b>DNS情報／URL転送の設定</b>」の箇所から、利用しているレンタルサーバーを選択して自動で設定します。</p><p><img src="../image/core-dns.png" width="303" height="222" alt="自動DNS設定" class="ccc" /></p><p>保存して終了したら、あとは<a href="coreserver-dns.html#step2">コアサーバーやXREA側でドメインの設定</a>をします。</p><p>■<b>登録レジストラが「eNom」だった場合</b></p><p>もし「eNom」で登録していた場合、「当サービス標準のネームサーバー（eNom）」か「VALUE-DOMAIN独自のネームサーバー（国内）」で設定します。</p><p><img src="../image/bd-name.png" alt="" width="320" height="200" class="ccc"></p><p>eNomを選択した場合、ネームサーバーは「DNS1 ～ DNS5.NAME-SERVICES.COM」になるかと思いますが、VALUE-DOMAIN独自の「ns1～5」でもよいと思います。</p><p>設定したのち、上記と同様に「DNS情報／URL転送の設定」の箇所からDNS設定をします。</p><p>ちなみに、画像の「他社提供/自前ネームサーバー」については、他社のさくらインターネットやエックスサーバーなどで使用する際に使います。</p>
+<h3 class="blue">ドメインの管理がムームーやFC2など「他社」の場合</h3>
+<p>他社で管理しているドメインをコアサーバーなどで使用する場合、バリュードメインのサイドバーの箇所にある<span class="aka">無料ネームサーバー</span>を利用して登録します。</p><p><img src="../image/tasya-name.png" width="235" height="129" alt="他社管理のドメインを登録" class="ccc" /></p><p>ドメインの登録が完了したら、ムームーやFC2ドメインなどの管理画面に戻り、バリュードメインの無料ネームサーバーを設定します。</p><p> 設定するネームサーバーのURLについてはこちらの下部をご参照ください。<br /> 
+→ <a href="https://www.value-domain.com/userguide/manual/freedns" target="_blank" rel="nofollow noopener">ネームサーバーの設定</a></p><p>現在、上記ページにて公開されているネームサーバーは以下のようになっていました。</p><p>NS1.VALUE-DOMAIN.COM<br />NS2.VALUE-DOMAIN.COM<br />NS3.VALUE-DOMAIN.COM<br />NS4.VALUE-DOMAIN.COM<br />
+NS5.VALUE-DOMAIN.COM</p><p>こちらのネームサーバーをムームーやFC2などの管理画面にて指定します。こちらは変更されている可能性もあるため、公式サイトにて最新の情報を確認してから設定されることをおすすめします。</p>
+<p>■<b>自動DNS設定で契約サーバーを指定</b></p>
+<p>ネームサーバーの設定が終わったら、次にDNSの設定をします。</p><p>バリュードメインの「無料ネームサーバー - ドメインのDNS設定」の箇所から編集するとよいでしょう。上記で指定した「NS1～NS5.VALUE-DOMAIN.COM」のネームサーバーが表示されているかと思いますので、こちらで設定します。</p><p><img src="../image/value-dns.png" width="320" height="194" alt="NS1～5.VALUE-DOMAIN.COM" class="ccc"></p><p>利用しているサーバー名を選択すれば、自動で設定されるはずです。</p><p><img src="../image/core-dns.png" width="303" height="222" alt="自動DNS設定" class="ccc" /></p><p>こちらについては、契約したコアサーバーやXREAの管理画面にて自分のサーバー名を確認してから選択するとよいでしょう。</p><p>保存したらコアサーバーやXREA側でドメインの設定をします。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2 id="step2">コアサーバーやXREA側でのドメイン設定</h2>
+<p>次に、<span class="aka">レンタルサーバー側</span>でドメインの設定をしますが、wwwあり・なしの２パターンを設定しておくことをおすすめします。</p><p>１行目はblankにて、２行目以降にドメインを設定していきます。</p><p><img src="../image/core-arinasi.png" width="263" height="166" alt="コアサーバー wwwあり・なし" class="ccc" /></p><p>下部の「ドメイン設定」をクリックして保存しますが、反映されてないなどの理由ですぐに設定できない場合、時間をおいてから設定されるとよいでしょう。</p><p>もしくは、設定に間違いのない自信がある場合、「<span class="aka">すべてのドメインでAレコードのチェックを行わない(強制設定)</span> 」 にチェックを入れて強制的に設定します。</p><p>設定が完了したら、ファイルマネージャーの「public_html」内に、wwwあり・なしのそれぞれのドメイン名でフォルダが作成されているはずです。</p><p><img src="../image/core-folder.png" width="246" height="117" alt="wwwあり・なしのフォルダ" class="ccc" /></p><p>HTMLやCSSなどのホームページファイルをこれらのフォルダ内にアップロードしていくことになりますが、それぞれのドメインにアクセスした際、各フォルダ内のホームページが表示されることになります。</p><p>概ね、数時間程度ならまだ反映されず、サイトが表示されないケースも多いですが、１日～２日程度の時間をおくとほぼ反映されていることが多いです。</p><p id="step3">■<b>wwwあり・なしの「同期設定」</b></p><p>さくらインターネットなどの通常のレンタルサーバーの場合、「wwwなし」でドメインを設定すれば、「wwwあり」の方でアクセスしても同一サイトが表示されます。一般的には、これがデフォルトの状態かと思います。</p><p>けれども、コアサーバーやXREAの場合は<span class="aka">同期設定</span>をしておかないと両方でサイトは表示されません。</p><p><img src="../image/v-arinasi.png" width="300" height="180" alt="コアサーバーの同期設定" class="ccc" /></p><p>wwwあり・なしの両方のフォルダに同じファイルをアップロードしたり、片方にリダイレクト設定をして対応することもできますが、どちらか一方のフォルダを参照するように同期設定をしておくとよいでしょう。</p><p>例えば、「wwwあり」（同期先）でアクセスしたら、「wwwなし」（同期元）と同じフォルダを参照するように同期設定しておきます。</p><p><img src="../image/core-douki.png" width="305" height="47" alt="同期設定の表示" class="ccc" /></p><p>この「同期先」と「同期元」がまぎらわしいですが、<span class="aka">同期先のディレクトリ内容は削除</span>されるので注意しましょう。逆にいえば、削除してもよいフォルダのドメインを同期先に指定すればよいでしょう。</p><p>上の例でいえば、オリジナルの同期元を「example.com」、同期先を「www.example.com」とした場合、「www.example.com」のフォルダは削除されて表示されなくなり、「example.com」のフォルダだけが残るようになります。</p><p>矢印の「- &gt;」で判断すればよいかと思いますが、どちらのURLでアクセスした場合でも「example.com」内のファイルが参照され、同一のサイトが表示されるようになります。念のため、ファイルをバックアップしてから設定することをおすすめします。</p>
+<h3 class="blue" id="step4">コアサーバーでの無料独自SSLの設定方法</h3>
+<p>無料独自SSLの設定については旧コントロールパネルでは設定が難しいです。管理画面がリニューアルされましたので、新しいコンパネの「サイト設定」の箇所から設定されるとよいでしょう。</p><p><img src="../image/core-free-ssl.png" width="320" height="276" alt="コアサーバーの無料独自SSL設定" class="ccc"></p><p>設定したいドメインの「アクション - 設定変更」の箇所からこちらの画面に移動し、「無料SSL」を選択して保存します。</p><p><img src="../image/muryou-ssl.png" width="320" height="198" alt="無料独自SSL設定の設定" class="ccc"></p><p>当サイト運営者もいくつか設定していますが、一般的な「Let's Encrypt」で設定されるはずです。無料の「Let's Encrypt」の場合、それほどの時間はかからず、たいていは１～２時間程度で反映されているケースが多いです。時間を置いて確認してみるとよいでしょう。</p><p>同様に「wwwあり・なし」の両方で設定しておくことをおすすめします。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../rental-server/coreserver.html">コアサーバーはxreaの上位プラン</a></li>
+<li class="list-li"><a href="../rental-server/xrea.html">XREAのレンタルサーバー</a></li>
+<li class="list-li"><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="index.html">独自ドメインの取得方法</a></li>
+<li class="list-li"><a href="nameserver.html">独自ドメインの設定方法</a></li>
+<li class="list-li"><a href="domain-mail.html">独自ドメインでのメールアドレスの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+{"@context": "http://schema.org","@type": "HowTo","name": "コアサーバーやXREAのドメイン設定方法","description": "バリュードメインのレンタルサーバーには、コアサーバーやXREAなどがありますが、他社と比較するとドメインの設定方法が少し複雑です。ここではコアサーバーを例に設定方法をご紹介していますが、以下の手順を参考にされるとよいでしょう。","image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/core-dns.png","height": "222","width": "303"},"supply": [{"@type": "HowToSupply","name": "コアサーバー、XREAなど"}],"tool": [{"@type": "HowToTool","name": "ブラウザ"}],"step": [{"@type": "HowToStep","name": "ドメインのネームサーバーやDNSの設定","url": "https://www.homepage-tukurikata.com/domain/coreserver-dns.html#step1","itemListElement": [{"@type": "HowToDirection","text": "バリュードメインで管理している場合、ログインしたのち、サイドバーの「ドメイン」→「ドメインの設定操作（登録済みドメイン一覧）」の箇所から、「GMO」などのレジストラを選んで検索し、該当するドメインを一覧で表示します。"},{"@type": "HowToDirection","text": "次に、変更したいドメインの横にある「ネームサーバー」の箇所をクリックします。下部に「ns1～5」と「ns11～13」、あるいは「転送機能付き上位レジストラ」などと表示されているため、いずれかのネームサーバーを選択して自動入力された設定を保存します。"}, {"@type": "HowToDirection","text": "次にDNSの設定をしますが、サイドバーにある「DNS情報／URL転送の設定」の箇所から、利用しているコアサーバーやXREAなどのレンタルサーバーを選択して自動で設定します。"} ,{"@type": "HowToTip","text": "もし他社で管理しているドメインをコアサーバーなどで使用する場合、バリュードメインのサイドバーの箇所にある「無料ネームサーバー」を利用されるとよいでしょう。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/gmo-name.png","height": "200","width": "320"}},{"@type": "HowToStep","name": "コアサーバーやXREA側でのドメイン設定","url": "https://www.homepage-tukurikata.com/domain/coreserver-dns.html#step2","itemListElement": [{"@type": "HowToDirection","text": "次に、コアサーバーやXREA側でドメインの設定をしますが、wwwあり・なしの２パターンを設定しておくことをおすすめします。１行目はblankにて、２行目以降にドメインを設定していきます。"},{"@type": "HowToDirection","text": "設定が完了したら、ファイルマネージャーの「public_html」内に、wwwあり・なしのそれぞれのドメイン名でフォルダが作成されているはずです。HTMLやCSSなどのホームページファイルをこれらのフォルダ内にアップロードしていきます。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/core-arinasi.png","height": "166","width": "263"}},{"@type": "HowToStep","name": "wwwあり・なしの「同期設定」","url": "https://www.homepage-tukurikata.com/domain/coreserver-dns.html#step3","itemListElement": [{"@type": "HowToDirection","text": "「wwwあり」（同期先）でアクセスしたら、「wwwなし」（同期元）と同じフォルダを参照するように同期設定します。この「同期先」と「同期元」がまぎらわしいですが、同期先のディレクトリ内容は削除されるので注意しましょう。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/v-arinasi.png","height": "180","width": "300"}},{"@type": "HowToStep","name": "コアサーバーでの無料独自SSLの設定方法","url": "https://www.homepage-tukurikata.com/domain/coreserver-dns.html#step4","itemListElement": [{"@type": "HowToDirection","text": "新しいコンパネの「サイト設定」の箇所から、設定したいドメインの「アクション - 設定変更」の「無料SSL」を選択して保存します。"},{"@type": "HowToDirection","text": "同様に「wwwあり・なし」の両方で設定しておくことをおすすめします。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/muryou-ssl.png","height": "198","width": "320"}}],"totalTime": "PT1H"}
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "コアサーバーやXREAのドメイン設定方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/gmo-name-800.png"
+       ],
+      "datePublished": "2016-02-11T16:14:19+09:00",
+      "dateModified": "2021-05-03T23:45:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "ドメイン",
+        "item": "https://www.homepage-tukurikata.com/domain/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "コアサーバーやXREAのドメイン設定方法",
+        "item": "https://www.homepage-tukurikata.com/domain/coreserver-dns.html"
+      }]
+    }
+</script>
+</body>
+</html>

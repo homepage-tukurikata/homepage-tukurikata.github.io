@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタイルシートでホームページのデザインを変更</title>
+<meta name="description" content="スタイルシートでホームページのデザインを変更しましょう。色彩やレイアウト、文字の大きさなどはCSSファイルでカスタマイズできます。">
+<meta name="keywords" content="ホームページ,css,スタイルシート">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/r-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/cjk-hp.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../hp-font.css" media="screen and (min-width:768px)">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="styles-css.html">
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>スタイルシートでホームページのデザインを変更</h1><p>ホームページの色彩やレイアウトなどのデザインを変更する場合は<strong>スタイルシート</strong>で一括して変更しましょう。スタイルシートは、index.cssなどの拡張子が「<span class="aka">.css</span>」になっているファイルのことで、htmlファイルの<b>headタグ内</b>でそのURLが指定されています。</p>
+<p>例えば、このページで使用するスタイルシートは以下の箇所で指定されています。</p>
+<p>&lt;link rel="stylesheet" href="/entry.css" type="text/css" /&gt;</p>
+<p><img src="../image/css-basyo.png" alt="" width="396" height="256" style="border: solid 1px #000000;" /></p> 
+<p>これはつまり、こちらのファイルのことです。</p>
+<p>https://www.homepage-tukurikata.com/entry.css</p>
+<p>このファイルの内容を変更することで、このページのデザインを変更することができます。</p>
+<p>もし、サイト内の全てのページで同じスタイルシートを指定していれば、そのCSSファイルひとつを修正するだけで、全てのページのデザインを一括して変更することができます。<br />これがスタイルシートを使用する最大のメリットといえます。</p><p>実際にCSSを作成する際には、ファイル名を「<span class="aka">任意の英数.css</span>」にして作成し、それを適用するhtmlファイルのhead内に、上記のようにて記述して設定すればＯＫです。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>CSSにカラーコードを指定して色彩の変更する</h2>
+<p>前のページの<a href="make.html">無料テンプレート</a>のスタイルシートには、このサイトと同じものが入っているので、色彩やレイアウトを変更して、オリジナル感あふれるホームページを作成しましょう。</p><p>このスタイルシートで色彩を指定している箇所は、#E9F6F4; など、シャープのあと６桁の数字になっています。この６桁の数字を変更することで色彩を変更することができます。</p><p>色彩の数字コードがわからない場合は<a href="https://www.vector.co.jp/soft/dl/win95/art/se187189.html" rel="nofollow noopener" target="_blank">パワースポイト</a>などの無料の色彩採取ツールをダウンロードして、こんな色にしたいという色彩の数字コードを調べてみると分かりやすいです。<br />採取したい色彩にカーソルをあわせ、スペースキーを押せば数字コードが表示されます。</p><p>body の <a href="../html/background-color.html">background-color</a> やタイトルであるH1の色彩、font-size の大きさを変更するだけでもかなり印象が違ってくるでしょう。</p><p><img src="../image/csscolor.png" alt="cssスタイルシートで色彩を変更" width="244" height="171" style="border: solid 1px #000000;"></p>
+<p>例えば、背景色を紺色の「background-color:#2D526D;」に変えた場合、このようになります。</p>
+<p><img src="../image/gray4.png" alt="cssスタイルシートで色彩を変更" width="355" height="191" style="border: solid 1px #000000;"></p>
+<p><b>【実際のカスタマイズ手順の例】</b></p><p>当ホームページのサンプルを使って、デザインをカスタマイズする際の実際の手順をこちらのページでご紹介しています。</p><p><a href="css-example.html">スタイルシートカスタマイズの手順例</a></p><p><b>【スタイルシートカスタマイズの例：その２】</b></p><p><img src="../image/simple-example.png" alt="" width="346" height="210" style="border: solid 1px #000000;"></p><p>シンプルな感じのスタイルシートもおすすめです。サイドバーなどをなくして、テキストコンテンツがメインのシンプルなCSSにするのもよいでしょう。</p><p><a href="css-example2.html">スタイルシートカスタマイズの例：その２</a></p><h3>CSSに背景画像を設定してデザインを変更する</h3><p>ヘッダーの背景画像を挿入したり、アイコン素材を挿入することによっても、ホームページのイメージを大きく変えることができます。</p>
+<p>デジカメで撮影した画像や写真をホームページ背景に設定してみるのもよいでしょう。</p><p>写真画像を差し込む場合は読みにくくらならい程度にヘッダーあたりに挿入するのがおすすめです。このホームページにヘッダー画像を挿入してデザイン変更するとこのような感じになります。</p>
+<p><img src="../image/sakura-saku.png" width="315" height="165" /></p>
+<p><a href="design.html">背景画像でホームページをカスタマイズ</a></p><p>また、デジカメをもっていなくて写真画像がない人でも、<a href="hp-sozai.html">ホームページ素材</a>をネット上で購入できます。あるいは、グラデーション素材をホームページの背景画像に設定するとわりとおしゃれな感じに仕上がるかもしれません。</p><p><a href="gradation.html">グラデーション素材</a>の箇所も参考に、自分で作成したり、ウェブ上で無料配布されているものを使用されてみるとよいでしょう。</p><h3>ファビコン使用で個性のあるホームページ作り</h3><p>ホームページを閲覧するときには、ブラウザ上にファビコンが表示されているサイトもあるかと思います。あるいは、お気に入りに登録しておくと表示されるアイコンみたいなのがファビコンになります。</p><p><img src="../image/fabicon.png" alt="ブラウザに表示されるファビコン" width="272" height="46"></p>
+<p>これは拡張子が「.ico」の画像ファイルを作成し、そのURLをhead内に指定することで表示されるようになります。</p>
+<p>ただ、ブラウザによっては見えないこともありますし、なくても大したデメリットはありませんので、設定していないサイトも多いです。</p><p>ロゴマーク的な意味合いのものになりますが、気が向いた時にでも作成してみるとよいかもしれません。ファビコンはウィンドウズに付属しているペイントなどを使用することで簡単に作成できます。</p><p><a href="https://blog-tips.net/article/101711560.html" target="_blank">無料ブログにファビコン作り方</a></p>
+
+<h3>ホームページタイトルのバナー画像の作り方</h3><p>タイトルがテキストのものだと味気ないものですが、画像を使うとおしゃれです。<br />Photoshopやgimpなどのツールを使うと、このようなバナーを簡単に作成することができます。</p>
+<p><img src="../image/title-banner1.png" alt="ホームページのタイトルロゴ" width="302" height="31" border="0" /></p>
+<p><img src="../image/rei-bana.png" alt="" width="278" height="44" border="0" /></p><p><img src="../image/logo-sample.png" alt="" width="217" height="53" border="0" /></p>
+<p>作り方についてはこちら。<br /><a href="banner.html">サイトのロゴ画像の作り方</a></p><p>画像が完成しましたら、ロゴマークとしてトップページにリンクしておくとよいでしょう。ただ、検索エンジンは画像の文字が判別できませんので、画像の「alt」の部分には、テキストでもサイトタイトルを入力しておくことをおすすめします。</p><h3>cssスタイルシートでレイアウト幅を変更</h3><p>次にcssスタイルシートで、サイドバーやコンテンツの部分のレイアウト幅を変更することができます。</p><p>ヘッダーやコンテンツの部分、あるいはサイドバーなどについては、<a href="hp-reiauto.html">こちらのページ</a>をご参照ください。各要素に対応する箇所をスタイルシート上で探し、その箇所のwidthで指定されている横幅の長さの値を変更するとよいでしょう。</p>
+<p>例えば、当サイトのサイドバーの部分は、html上では&lt;div id="sidebar"&gt;の部分にあたりますが、この箇所のデザイン面を指定しているのはCSSファイル上の#sidebar{width:300px;}の箇所にあたります。このwidthの値を大きくすれば、横幅が広くなりますし、小さくすれば狭くなります。</p>
+<p>ただし、大きくする場合は、このサイドバー自体を格納しているホームページ全体のouterの部分の横幅も広げないと、はみ出したり、くずれたりしてしまいますので注意しましょう。</p>
+<p>概ね、横幅の長さは900px～1000px程度の長さが主流になってきておりますが、サイドバーなしで１コラムだけのシンプルな場合は600px～700px程度でも十分かと思います。サイドバーにバナー広告を掲載する場合、<a href="300px.html">サイドバーの幅を300pxに設定</a>しておくと、掲載可能なバナーも多くなるかと思います。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><hr /><p class="breadcrumb">次のページ：<a href="css-hp.html">最新版のテンプレートサンプル</a></p>
+<hr />
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>リダイレクト設定によるURLの転送方法</title>
+<meta name="description" content="ホームページのURLを変更した際には、301リダイレクト設定をして新しいページへアクセスを転送させましょう。通常は.htaccessで設定しますが、利用できない場合にはメタタグに記述する方法もあります。">
+<meta name="keywords" content="リダイレクト設定,301">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../hp/redirect.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="リダイレクト設定によるURLの転送方法">
+<meta property="og:description" content="ホームページのURLを変更した際には、301リダイレクト設定をして新しいページへアクセスを転送させましょう。通常は.htaccessで設定しますが、利用できない場合にはメタタグに記述する方法もあります。">
+<meta property="og:image" content="../../image/htaccess-rei.png">
+<meta property="og:image" content="../../image/header-response.png">
+<meta property="og:image" content="../../image/ridairekuto-kakunin.png">
+<meta property="og:url" content="../../hp/redirect.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>リダイレクト設定によるURLの転送方法</h1>
+<p>ホームページのURLを変更した際には、リダイレクト設定をして、古いページから新しいページへアクセスを転送させましょう。</p><p><b>【ケース１：】</b><span class="aka">サイトを引っ越すとき。</span></p><p>URL転送の一番多いパターンは<a href="../../hp/moving.html">サイトを引越す</a>場合です。無料サービスで運営していたものの、運営元がサービスを終了してしまった場合などは、独自ドメインを取得してレンタルサーバーへ引越すことが多いです。</p><p>例えば、「サイトを引っ越しました。新しいアドレスはこちらです。→　ほにゃらら.com」のようなパターンになりますが、このように<b>元サイトに移転先のURLを貼り付けておくだけというのはＮＧ</b>です。</p><p>人間がみれば「あぁ、引っ越したんだな。」とわかりますが、検索エンジン側では同一のサイトとはみなさず、それぞれを別々のサイトとみなしてしまいます。</p><p>これでは長年運営してきた運営歴や参照されているリンクが引き継がれず、一からのやり直しになりますので、検索順位が低下してしまい、アクセス数が激減してしまう傾向にあります。</p><p>新旧どちらのサイトでも検索結果でヒットしますので、お得なように感じられるかもしれませんが、新サイトひとつに統一した方が検索エンジンではヒットしやすくなります。</p><p>そのため、旧サイトの情報が新サイトにも引き継がれるよう、<span class="aka">301リダイレクト設定</span>をしておきましょう。</p><p><b>301リダイレクトは永久的な転送</b>、<b>302リダイレクトは一時的な転送</b>という違いがありますが、302はサイトのメンテナンス時などに使うケースはあるものの、ほとんど使うことはないので、301リダイレクトの設定方法だけを覚えておくとよいでしょう。</p><p><b>【ケース２：】</b><span class="aka">自サイト内でURLを変更するとき。</span></p><p>ページ数が多くなってきた際には、新しくフォルダ分けをしてファイルを整理することがあります。当サイトも最初はひとつのフォルダ内にすべてのファイルを入れてましたが、現在ではカテゴリごとにそれぞれフォルダを作成してまとめています。</p><p>このような場合でも、URLを変更する際にはリダイレクト設定をしておく必要があります。ドメインの年齢とともにページの年齢もありますので、リダイレクト設定をしておかないと0歳からやりなおしになります。</p><p>加えて、他サイトから参照されている場合もリンク切れになってしまいますので、301リダイレクト設定をして転送させるようにしましょう。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>301リダイレクトの設定方法</h2>
+<p>この301リダイレクトの設定をするには、「.htaccessを使用する方法」と「metaタグを使う方法」があります。</p><p><b>.htaccessを使う方法</b></p><p>まず、リダイレクト元のサーバーのルートディレクトリに「.htaccess」ファイルを作成します。このファイル名は特殊で、拡張子なし、先頭にドット（点）が必要です。たいていのレンタルサーバーではファイルマネージャーでそのまま作れます。</p><p>当サイトの場合はこんな感じで作ってます。</p><p><amp-img src="../../image/htaccess-rei.png" width="228" height="170" layout="intrinsic" alt="htaccess" class="ccc" /></amp-img></p><p>このファイルに以下のように記述して最後に改行を入れます。<br />最後に２、３回改行して空白を入れておけば十分です。</p>
+
+<textarea rows="2" cols="50" style="overflow:auto;" class="width-320">
+Redirect permanent / http://転送先ドメイン/
+</textarea>
+
+<p>例：サイトを www.example.com へ丸ごと引っ越しするとき。</p><p style="word-wrap: break-word;">Redirect permanent / http://www.example.com/</p><p>この意味は「リダイレクトしてください。永久に。すべてのファイル（ / ）を。http://www.example.com/ へ。」になります。</p><p>けれども、この場合、文字どおりすべてのファイルが http://www.example.com/ のトップページへリダイレクトされるわけではなく、<span class="aka">階層を保持しつつリダイレクト</span>されます。</p><p style="word-wrap: break-word;">例えば、/home/about.html のファイルは、この階層を保持したまま、http://www.example.com/home/about.html へと転送されます。</p><p>そのため、特定のページのみを違う場所へ転送させたい場合には、一番最初に書いておくとよいでしょう。</p><p>例えば、apple.html のページのみ、新サイトの ringo.html へリダイレクトしたい場合、この行を先に書いておきます。</p><p style="word-wrap: break-word;">Redirect permanent /apple.html http://www.example.com/ringo.html<br />
+  Redirect permanent / http://www.example.com/</p><p>CSSの場合とは違い、最初に書いてある方が適用されますのでご注意ください。</p><p><b>metaタグを使う方法</b></p>
+<p>無料レンタルサービスなどで上記の「.htaccess」が使えない場合には、転送させたいページのヘッドタグ内の<a href="../../access/meta.html">metaタグ</a>に以下のように記述します。</p>
+
+<textarea rows="2" cols="59" style="overflow:auto;" class="width-320">
+&lt;meta http-equiv="refresh" content="0; URL=http://転送先URL/" /&gt;
+</textarea>
+
+<p>サーバーからの反応は「301」ではなく「200 OK」で返ってきますが、「0秒」で指定している場合、検索エンジン側での扱いは301リダイレクトになります。</p>
+<p>けれども、このメタタグの場合、反映されるまでに時間がかかったり、あるいは無視されるケースもありますので、<span class="aka">URL正規化</span>のLINK要素もheadタグ内に設定しておくことをおすすめします。</p>
+
+<textarea rows="2" cols="59" style="overflow:auto;" class="width-320">
+&lt;link rel="canonical" href="http://転送先URL" /&gt;
+</textarea>
+
+<p>この正規化のURLは相対リンクではなく、絶対リンクで設定します。</p><p>メタタグリダイレクトと正規化の「rel="canonical"」タグを併用することの是非はありますが、当サイトではこれで対処しております。</p><p><b>正常にリダイレクトされるかをブラウザで確認</b></p><p>気を付けたいのは、リダイレクト元と先が同一ページの場合、永遠にリダイレクトされ続けて無限ループになってしまうことです。実際にブラウザで元ページにアクセスしてみて、正常に転送されているかを必ず確認するようにしましょう。</p><p><b>HTTPレスポンスの確認</b></p><p>サーバーがブラウザに正常に301リダイレクトを返しているかを確認します。<br />
+<a href="http://web-sniffer.net/" target="_blank" rel="nofollow noopener">Web Sniffer</a>などで確認できます。</p><p><amp-img src="../../image/header-response.png" width="356" height="93" layout="intrinsic" alt="httpレスポンス" class="ccc" /></amp-img></p><p><b>アクセスログでの確認</b></p><p>設定したあと膨大な404エラーが発生するようになった際には、リダイレクト設定がおかしい可能性があります。エラーログを確認してみて、どのページの設定がおかしいのかを確認してみるようにしましょう。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>検索エンジン側で正常にリダイレクトが反映されているかの確認</h2>
+<p>上記で正常にリダイレクト設定が完了したあと、検索エンジンでも正常に反映されているかを確認しましょう。</p><p><b>「info:ドメイン名」でサイト情報の確認</b></p><p>数週間程度あとに、「info:ドメイン名」コマンドを使って確認してみることをおすすめします。info:コマンドで旧サイトのサイト情報を検索し、新しいサイトのドメイン名が表示されていればＯＫです。</p><p>例えば、当サイトはヤフージオシティーズから引っ越してきましたが、旧URLのサイト情報を確認してみると当ドメインの情報が表示されています。</p><p><amp-img src="../../image/ridairekuto-kakunin.png" width="258" height="278" layout="intrinsic" alt="infoコマンド" class="ccc" /></amp-img></p><p><b>「site:ドメイン名」での確認</b></p><p>フォルダ単位など複数のファイルをリダイレクト設定した場合には「site:ドメイン名」で検索し、正しいURLへ転送されているかどうかを確認しましょう。</p><p>当サイトの場合、以前に100ページ以上をリダイレクト設定しましたが、１か月が経過してもインデックスが反映されていないページなどがありました。</p><p>特に、メタタグの0秒リダイレクトで対応したケースでは設定が反映されるまで時間がかかるので、できるだけサーバーの.htaccessを利用するようにしましょう。</p><p><b>ページを明示的に削除</b></p><p>転送設定をしていると、これはもういらないなというページも出てくるかと思います。その場合、ファイルを削除して放置しておけば、いずれはインデックスから削除されることにはなりますが、この場合はエラーページの「404 not found」が表示されます。</p><p>この状態ではエラーでたまたま１時的にページが表示されないのか、それとも削除されたのかは検索エンジン側では判断できませんので、しばらくの間はインデックスが保持されることになります。なので、明示的に削除したという意味の「410 Gone」を設定されることをおすすめします。</p>
+<p>例えば、example.htmlのファイルを削除する際は、転送先を記述せず、単に以下のように記述します。</p>
+
+<textarea rows="2" cols="50" style="overflow:auto;" class="width-320">
+Redirect gone /example.html
+
+</textarea>
+
+<p>設定したファイルにアクセスするとこのように表示されます。</p><p><amp-img src="../../image/gone.png" width="264" height="133" layout="intrinsic" alt="" class="ccc" /></amp-img></p><p>間違って設定してしまうと必要なページも全て削除してしまう可能性がありますので、慎重に使用するようにしましょう。</p><p><b>元ページの保持</b></p><p>ドメインを変更した際、リダイレクト設定をして引っ越しが済んだ時点で元のドメインを捨ててしまうケースが多いです。捨ててしまうとリンク切れが多発しますし、リダイレクト設定が無効になりますので検索順位などへも悪影響が出ます。</p><p>ドメインを捨ててしまってから気づいても遅く、他の人が取得してしまった場合は何もできなくなってしまいます。</p><p>たった数千円程度の維持費用をけちったばかりに、代理業者に依頼して譲渡交渉をするとなると数十万円以上のコストがかかるケースもありますし、多額の費用をかけても譲渡に応じてくれるかは相手次第になりますのでご注意ください。</p><p><b>どうしても保持できない場合</b></p><p>無料サービスの終了などで元ページを確保できない場合、閉鎖により元ページが消失してしまう前に新サイトをインデックスさせておくようにしましょう。両方がインデックスされ、<span class="aka">元サイトから新サイトへの一方的なリンク</span>が貼られていれば、新サイトがメインサイトであることを暗に通知することができます。</p><p>この場合でも、元サイトが消失することで被リンクなどは失ってしまうことにはなりますが、元サイトから一方的にリンクすることにより、まったく同じサイトを公開することによる検索エンジンへの悪影響を回避することができます。無料サービスが運営を終了する場合、そのぐらいしか対処する方法はありません。</p><p>もし可能であれば、新旧のサイトを<a href="../../access/search-console.html">Search Consoleに登録</a>して、アドレス変更の設定をしておくことをおすすめします。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --></main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+</body>
+</html>

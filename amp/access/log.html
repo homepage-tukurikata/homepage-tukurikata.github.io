@@ -1,0 +1,239 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>サーバー生ログのアクセス解析の方法</title>
+<meta name="description" content="アクセスログ（生ログ）に書かれている内容とその見方をご紹介しています。メモ帳でも閲覧できますが、ExcelやApachelogviewerなどのアクセス解析ツールを使用することをおすすめします。">
+<meta name="keywords" content="サーバー,ログ,アクセス解析">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../access/log.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="サーバー生ログのアクセス解析の方法">
+<meta property="og:description" content="アクセスログ（生ログ）に書かれている内容とその見方をご紹介しています。メモ帳でも閲覧できますが、ExcelやApachelogviewerなどのアクセス解析ツールを使用することをおすすめします。">
+<meta property="og:image" content="../../image/nama-log.jpg">
+<meta property="og:image" content="../../image/kugiri.png">
+<meta property="og:image" content="../../image/narabekae.png">
+<meta property="og:image" content="../../image/senni.png">
+<meta property="og:url" content="../../access/log.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}.nextpage {text-align:left;padding: 24px 10px 24px 10px;font-size: 13px;background-color:#fafafa;border-radius: 4px;border:#e3e3e3 solid 1px;}.nextpage a{display:block;font-weight:bold;text-decoration:none;}.nextpage a:hover{text-decoration:underline;}.pagination {padding-bottom:20px;text-align:center;}.pagination li {display: inline-block;height:40px;line-height:40px;width:40px;text-align:center;border:1px #ccc solid;color:#000053;border-radius: 5px / 5px;}.pagination .pre {background-color:#efefef;color:#333;}.pagination .this {background-color:#777;color:#fff;}.pagination li a{display:block;text-decoration: none;}.pagination li a:hover {color: #fff;text-decoration: none;background-color: #003396;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer"><header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>サーバー生ログのアクセス解析の方法</h1>
+<p>レンタルサーバー会社によって違いはありますが、管理画面でデータの保存設定をすることで<span class="aka">アクセスログ</span>(サーバーログ、生ログ)を閲覧することができます。不正アクセスや検索エンジンのクローリングを調べるには、このサーバー側のアクセスログを確認することでその詳細がわかります。</p><p>一般的には、サーバーの管理画面で<a href="../../rental-server/log-settei.html">アクセスログの保存設定</a>を有効にしたのち、保存期間なども指定することでデータが蓄積されていきます。レンタルサーバーに「log」などのフォルダが作成されている場合、その場所にログが保存されていることが多いです。</p><p>たいていは「.log」というファイル名で保存されているはずですが、中身はただのテキストファイルのためメモ帳などで開いてみることができます。</p><p><amp-img src="../../image/nama-log.jpg" layout="intrinsic" alt="生ログ" width="269" height="168" class="ccc"></amp-img></p><p>もしログのファイルに拡張子が付いていない場合、「.log」などの拡張子を追加して閲覧するとよいでしょう。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>アクセスログに書かれている内容とその意味</h2>
+<p>一見すると無数の情報が書かれているように見えますが、アクセスがある度に以下のような単純な情報が繰り返し書き加えられていきます。</p>
+<hr /><p>111.11.11.11 - - [15/Jan/2001:00:05:12 +0900] <br />"GET https://www.homepage-tukurikata.com/hp/folder.html HTTP/1.1" 200 - <br />"https://www.homepage-tukurikata.com/" <br />"Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1)"</p><hr />
+<p>この場合、IPアドレス111.11.11.11の訪問者が、日本時間（+0900）の2001年1月15日の午前0時5分12秒に、https://www.homepage-tukurikata.com/hp/folder.html のファイルの取得をサーバーにリクエストして、200ＯＫで正常に送信されたという意味になります。</p><p>この「+0900」は、世界標準時間から９時間進めたものが日本の標準時となっているため、このような書き方になってます。また、ファイルが見つからなかった場合などは、200ではなく、404などが記載されることになります。</p><p>また、リクエストした元のページがhttps://www.homepage-tukurikata.com/ となっているため、トップページから移動してきたことになり、そのうしろにはブラウザ情報なども記載されています。</p><p>このIPアドレスの人が、次のページに行った場合にも同じようにアクセスログが追加されていくため、その時間差からそのページでの滞在時間を調べることができます。また、最後にアクセスしたページから、どのページで離脱したのかも判断することができます。</p><p>けれども、デザインなどで使用している画像素材などのファイル（.pngや.jpg、.gifなど）へのアクセスもその都度ログに記載されることになりますし、グーグルなどの<a href="../../access/user-agent.html">クローラーによるアクセス</a>も記載されるため、ログ自体は膨大なファイルになりがちです。</p><p>そのため、このアクセスログを調べる際は、膨大なデータのなかから画像やクローラーなどのアクセスを取り除いて調べる必要があります。</p><p>例えば、１ページ内で画像やCSSなどのファイルを10個使用していた場合、その１ページを閲覧する際にも各ファイルへのアクセスが10個発生してしまうため、実際のアクセスよりも10倍のヒット数が計測されてしまいます。</p><p>そのため、アクセスログで実際の訪問者のアクセス数を計測する場合、一般的には「.html」などのファイルのみをカウントして１ページビューとカウントすることになります。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>アクセスログをExcelで閲覧する方法</h2>
+<p>アクセスログはメモ帳で開いても閲覧できますが、そのままではデータの並べ替えができないため、Excelやgoogleスプレッドシートなどでデータを処理してから閲覧することをおすすめします。データの行数が多い場合、Excelを利用した方が動作は軽いと思います。</p><p>例えば、ログをメモ帳で開いてコピペでExcelに貼り付けたのち、「データ - 区切り位置」の箇所から「&quot;」や半角スペースなどを指定して、<span class="aka">IPアドレスや時間ごとに列を分割</span>していきます。</p><p><amp-img src="../../image/kugiri.png" layout="intrinsic" alt="データ - 区切り位置" width="320" height="262" class="ccc"></amp-img></p><p>何回かに分けて分割する場合、増える列の分だけ右側の列が上書きされてしまうため、「ホーム - 挿入」の箇所から列を追加しながら分割していくことをおすすめします。</p><p>あとはアクセスされたURLの列を指定して並べ替えていきます。</p><p><amp-img src="../../image/narabekae.png" layout="intrinsic" alt="並べ替え" width="320" height="233" class="ccc"></amp-img></p><p>この状態で画像やフォント、CSS、robots.txtなどの行をまとめて削除すれば、「.html」ファイルのみを確認することができます。「408」が大量に発生している場合、これはブラウザでサイトにアクセスしっぱなしの際などに発生しますが、こちらも削除してしまうとよいでしょう。</p><p><amp-img src="../../image/delete-img.png" layout="intrinsic" alt="画像などの行を削除" width="320" height="248" class="ccc"></amp-img></p><p>そのほか、検索エンジンなどの<a href="../../access/crawler-list.html">クローラーロボット</a>のアクセスも削除しておくと見やすいです。</p><p>あとはIPアドレスで並べ替えれば、どのように遷移がされたのかを確認することができます。</p><p>例えば、画像などを削除してこのような履歴があったとします。</p><p><amp-img src="../../image/senni.png" layout="intrinsic" alt="アクセスの遷移" width="320" height="212" class="ccc"></amp-img></p><p>この訪問者さまの場合、当サイトのトップページを4分半閲覧してhpのページに移動し、移動先で10秒ほど閲覧してから、さらに無料ホームページスペースのページに移動したことになります。その次のページへのアクセスは記録されていないため、そこが離脱ページとなり、この最後のページの滞在時間については不明になります。</p><p>また、その他のリファラやIPアドレス、ユーザーエージェントの情報から、東京都にお住まいの訪問者さまが、Windows7のデスクトップPCにてIE11のブラウザを使い、グーグル検索経由で訪問されたと想定されます。</p><p>そのほか、IPアドレスを逆引きした際のホスト名で会社名が分かることもありますが、それ以上のことはアクセスログでは分かりません。</p><p>ただ、このようにExcelを利用して調べるのは不審なアクセスが発生した時ぐらいなもので、通常は何らかのアクセス解析ツールを利用するのが一般的です。</p>
+<h2>アクセスログの解析ツール一覧</h2>
+<p>アクセスログのデータ解析を自動的に行い、視覚的に見やすく表示してくれるアクセス解析ソフトが<a href="../../rental-server/index.html">レンタルサーバー</a>に付属していることが多いです。付属していない場合でも公式サイトから自分でソフトをダウンロードして使用することもできますが、インストールはかなり難しいです。</p><p>■<b>レンタルサーバー付属のアクセスログ解析ツール</b><br />
+→　Webalizer（ウェブアライザー）、AWStats（エーダブリュー・スタッツ）など</p><hr />
+<p>＜Webalizerの例＞</p><p><amp-img src="../../image/webalizer.png" width="320" height="342" layout="intrinsic" alt="Webalizerの解析画面" class="ccc"></amp-img></p><p>このWebalizerについてはさくらインターネット系のサーバーで設置されているかと思います。かなり古いソフトのため、AWStatsの方が見やすいかもしれません。</p>
+<hr /><p>＜<a href="http://www.awstats.org/" target="_blank" rel="nofollow noopener">AWStats</a>の例＞</p><p><amp-img src="../../image/awstats.png" width="320" height="274" layout="intrinsic" alt="AWStats" class="ccc"></amp-img></p><p>エックスサーバー系ではこのツールが設置されているかと思います。</p><hr /><p>＜<b>Analog</b>の例＞</p>
+<p><amp-img src="../../image/analog.png" width="320" height="258" layout="intrinsic" alt="Analog" class="ccc"></amp-img></p><p>Analogもかなり古いツールですが、コアサーバー系で設置されています。もう開発はしていないようです。</p><hr />
+<p>上記３つのなかでは「AWStats」が一番使いやすいと思います。次に「Webalizer」、最後に「Analog」といった順かと思います。</p><p>そのほか、サーバー会社が独自で開発した解析ツールを利用できるケースもあります。</p><p>また、これらのツールをレンタルサーバーで利用できない場合でも、ログをパソコンにダウンロードして解析できるツールもあります。</p><p>■<b>アクセスログをパソコンにダウンロードして解析</b><br />
+→　Apachelogviewerなど</p><p>＜<a href="https://www.vector.co.jp/soft/win95/net/se252609.html" target="_blank" rel="nofollow noopener">Apachelogviewer</a>の例＞</p><p><amp-img src="../../image/apachelog.png" width="320" height="254" layout="intrinsic" alt="Apachelogviewerの解析画面" class="ccc"></amp-img></p><p>いずれのツールを使う場合でも、サーバーに保存されているアクセスログのデータ自体は同じですので、ほぼ同じ結果が表示されるかと思います。</p><p>けれども、これらの「サーバーのアクセスログの解析」とページ内にタグを埋め込んで計測する一般的な「<a href="../../access/analysis.html">JavaScriptのアクセス解析</a>」では同じ結果にはなりません。</p>
+<h2>サーバーのログとJavaScriptのアクセス解析の違い</h2>
+<p>一般的にはサーバーのアクセスログよりも、グーグルアナリティクスなどJavaScriptタイプのアクセス解析の方が計測はより正確といえます。</p><p>サーバーのアクセスログの場合、検索エンジンロボットなどのクローラーによるアクセスについても計測してしまうのに対し、JavaScriptタイプのアクセス解析ではカウントしません。そのため、<span class="aka">人間による実質的なアクセス解析</span>については、グーグルアナリティクスなどのWebビーコン型のアクセス解析の方がより正確といえます。</p><p>一方で、グーグルアナリティクスなどのアクセス解析の場合、ユーザーがブラウザでJavaScriptの使用をオフに設定しているとカウントされません。また、タグを最下部に設定している場合などは読み込まれる前にページを離脱するとカウントされないケースもあります。</p><p>そのため、JavaScriptタイプのアクセス解析であっても、必ずしも正確な数字とはいえませんが、どちらかといえば、グーグルアナリティクスなどのアクセス解析の方が正確といえます。</p><p>ただし、不審なクローラーなどのアクセスについては、一般的なJavaScriptなどのアクセス解析では把握できないため、ロボットによる不審なアクセスが膨大にあったとしても、JavaScriptによるアクセス解析では気づかないままになってしまう可能性があります。</p><p>それぞれにメリット・デメリットがあるといえますが、通常はアナリティクスなどのタグをページ内に埋め込むJavaScriptタイプのアクセス解析を利用し、定期的にサーバー側のアクセスログもチェックしておくとよいでしょう。</p>
+
+<p class="nextpage">次のページ → <a href="../../rental-server/log-settei.html">サーバーアクセスログの設定方法</a></p>
+<ul class="pagination">
+<li class="pre">前へ</li>
+<li class="this">1</li>
+<li><a href="../../rental-server/log-settei.html">2</a></li>
+<li><a href="../../access/user-agent.html">3</a></li>
+<li><a href="../../access/crawler-list.html">4</a></li>
+<li><a href="../../rental-server/log-settei.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+<li class="list-li"><a href="../../access/user-agent.html">クローラーアクセスの確認方法</a></li>
+<li class="list-li"><a href="../../access/crawler-list.html">Webクローラーの比較一覧</a></li>
+<li class="list-li"><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li class="list-li"><a href="../../access/search-console.html">Google Search Consoleに登録して最適化</a></li>
+<li class="list-li"><a href="../../access/google-analytics.html">Googleアナリティクスの設定方法</a></li>
+<li class="list-li"><a href="../../rental-server/log-settei.html">サーバーアクセスログの設定方法</a></li>
+<li class="list-li"><a href="../../access/log-ipaddress.html">ログのIPアドレスから個人情報を特定できる？</a></li>
+<li class="list-li"><a href="../../access/keyword.html">キーワードの月間検索回数を調べる方法</a></li>
+<li class="list-li"><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../../rental-server/transfer-amount.html">レンタルサーバーの「転送量」とは？</a></li>
+<li class="list-li"><a href="../../hp/apple-touch-icon.html">apple-touch-icon.pngの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセス解析",
+        "item": "https://www.homepage-tukurikata.com/access/analysis.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "アクセスログ",
+        "item": "https://www.homepage-tukurikata.com/access/log.html"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ぱんくずリストの作り方</title>
+<meta name="description" content="ぱんくずリストは、サイト全体から見た現在の位置を把握するためのナビゲーションです。大規模サイトの場合は必ず設置するようにしましょう。">
+<meta name="keywords" content="ぱんくずリスト,作り方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/breadcrumb.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/breadcrumb-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="breadcrumb.html">
+<link rel="amphtml" href="../amp/hp/breadcrumb.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ぱんくずリストの作り方">
+<meta property="og:description" content="ぱんくずリストは、サイト全体から見た現在の位置を把握するためのナビゲーションです。大規模サイトの場合は必ず設置するようにしましょう。">
+<meta property="og:image" content="../image/pankuzu-list2.png">
+<meta property="og:image" content="../image/pankuzu-example.png">
+<meta property="og:image" content="../image/pankuzu-1.png">
+<meta property="og:url" content="breadcrumb.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/breadcrumb.woff2) format("woff2"),
+url(../fonts/breadcrumb.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/breadcrumb-bold.woff2) format("woff2"),
+url(../fonts/breadcrumb-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+.aka1 {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>ぱんくずリストの作り方</h1>
+<p>ぱんくずリストは、サイト内で現在の位置を把握するためのナビゲーションです。</p><p>例えば、当サイトではトップページから深い階層へ移動するに従い、「CSSの一覧」や「max-width」などの文字列が出現していきますが、こちらが「<span class="aka">ぱんくずリスト</span>」になります。</p><p><img src="../image/pankuzu-list2.png" alt="当サイトのぱんくずリストの例" width="480" height="270" class="ccc"></p><p>この場合、「トップページ」内の「CSSの一覧」のカテゴリ内にある「max-width」のページが現在地という意味になります。</p><p>もし、そのページに求める情報がなかった場合、分岐点の「CSSの一覧」に戻り、違うページを探すことができます。ヘンゼルとグレーテルの童話のように、通った道にぱんくずを残しつつ、迷子にならずに深い階層のページへと移動するためのものです。</p><p>ページ数が多い公官庁やポータルサイトなどの大規模サイトの場合、たいていはこのぱんくずリストが設置されています。</p><p><img src="../image/pankuzu-example.png" alt="公官庁のぱんくずリストの例" width="480" height="270" class="ccc"></p><p>一方、全ページを<a href="folder.html">ルートディレクトリ</a>に設置しているような、詳細なカテゴリ分けをしていないサイトでは特に設置する必要はありません。数ページ程度の<a href="kaisya-hp.html">会社ホームページ</a>などでは迷子になることはないため、特に設置する必要はないでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>ぱんくずリストの設置場所やリンクの文言</h2>
+<p>ぱんくずリストの設置場所は、一般的には記事タイトルの上部が多いですが、ページの下部に設置しても問題はありません。</p><p>また、サイト全体のスタート地点であるトップページ自体には設置せず、階層が深くなるにつれて「カテゴリ名」でキーワードを増やしていくのが一般的です。</p><p><span class="aka">トップページ / カテゴリ名1 / カテゴリ名2 / 個別ページ名</span></p><p>トップページへのリンクの文言については、「ホーム」や「トップ」あるいは「Home」など、サイト運営者によってまちまちです。</p><p>加えて、現在地の「個別ページ名」についてはリンク（パーマリンク）をせず、上記の「max-width」のようにキーワードのみを記載するケースが多いです。CMSの仕様によっては記事タイトル全文が出力されることもありますが、長くなる場合は省略しても問題ありません。</p>
+<ul>
+<li>設置場所はページ上部、もしくはページ下部</li>
+<li>スタート地点のトップページには設置しないのが一般的</li>
+<li>トップページへのリンクは「ホーム」や「トップ」、「Home」などまちまち</li>
+<li>上の階層には主に「カテゴリ名」でリンクする</li>
+<li>現在地にはリンク（パーマリンク）をしない</li>
+<li>現在地の文言はキーワードのみか記事タイトル全文、もしくは省略も可</li>
+<li>リスト間は「 / 」や「 &gt; 」などで区切る</li>
+</ul>
+<p>複数のカテゴリに当てはまり、そのページに至る経路が複数ある場合、「トップページ &gt; カテゴリA・カテゴリB  &gt; 個別ページ名」などのように両方を記載するか、もしくはそのファイルが入っているカテゴリ名のみを掲載しておくとよいでしょう。</p><p>実際の作り方については、&lt;div&gt;や&lt;nav&gt;などにid属性を割り当てて設置するだけです。属性名には「pankuzu」や英語の「breadcrumb」など、わかりやすい名前をつけるとよいでしょう。</p><p>&lt;div id=&quot;pankuzu&quot;&gt;トップページ / カテゴリ名&lt;/div&gt;</p><p>あとはCSS側で文字サイズを小さ目に調整しておくことをおすすめします。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>URLとぱんくずリストの関係</h2>
+<p>ぱんくずリストは、サイトのURLの構造と対応させるのが望ましいです。</p><p>■<b>URL</b><br />www.example.com/カテゴリ名1/カテゴリ名2/個別ページ名.html</p><p>■<b>ぱんくずリスト</b><br />
+トップページ / カテゴリ名1 / カテゴリ名2 / 個別ページ名</p><p>訪問者のなかには、そのカテゴリの先頭部分へと移動する際、URLから直接アクセスする人も多いです。</p><p>上記の例でいえば、「カテゴリ名1」の先頭部分へと移動する際、ブラウザのURLから「カテゴリ名2」以下の部分を削除してページを更新し、「www.example.com/カテゴリ名1/」のURLへ直接アクセスする方法になります。</p><p>つまり、ぱんくずリストがなくても、URLの構造自体がその代わりになります。</p><p>当サイト運営者もぱんくずリストが設置されていない場合、上記のようなアクセスの仕方をしますが、たまに404が返ってくるサイトもあります。</p><p>例えば、Movable TypeなどのCMSで作成した場合、デフォルトで割り振られるパーマリンクのURLは「www.example.com/12/06/hoge.html」などの月別になるため、カテゴリ名とは無関係にURLが振られていることがあります。</p><p>また、ブログやCMSの仕様によっては、「news」や「article」など一つのフォルダに記事が一括で分類されており、そのページにたどり着くまでの経路とURLパスとの間に関連性がないことも多いです。</p>
+<p>できるだけ、「ぱんくずリスト」と「<a href="folder.html">フォルダ分け</a>」を対応させておくのが望ましいですが、関連性がない場合にはURLのパスとは関係なしに、そのページにたどり着くまでの一般的な経路で作成するようにしましょう。</p>
+<h2>構造化データによるパンくずリストの作成方法</h2>
+<p>上記のようにサイト内に設置するほか、<a href="json.html">構造化データ</a>のぱんくずリストも作成しておくと、検索結果での表示を調整することができます。</p><p>例えば、構造化データを何も設定していないデフォルトの状態の場合、検索結果での当ホームページのぱんくずリストは以下のようになっています。</p><p>■<b>デフォルトの状態</b></p>
+<p><img src="../image/pankuzu-1.png" alt="検索結果でのデフォルトのぱんくずリスト" width="320" height="225" class="ccc"></p><p>ちなみに、上記ページのURLはこちらです。<br>
+https://www.homepage-tukurikata.com/html/span-style.html</p><p>おそらくではありますが、デフォルトの状態の場合、GoogleではURLパスの構造から検索結果のパンくずリストを自動的に作成しているものと推測できます。</p><p>例えば、URLが以下のようになっていたとします。<br>
+www.example.com/sample/hoge.html</p><p>すると、このように表示されるケースが多いです。<br>
+www.example.com &gt; sample &gt; hoge ▾<br>
+「記事タイトル名」</p><p>当サイトでは、上記のURL構造でも「html」フォルダ経由の「span-style」ということで、ほぼ意図した通りに表示されてはいますが、これを調節して以下のようにしたいと考えたとします。</p><p>www.homepage-tukurikata.com &gt; HTMLタグ &gt; span style ▾<br>
+「span styleで文字色と背景色の指定方法 - ホームページの作り方」</p><p>そのため、構造化データを使って、各階層の「&quot;name&quot;」を以下のように設定しました。</p><p>１階層目．トップ<br>
+２階層目．HTMLタグ<br>
+３階層目. span style</p><p>この構造化データの実際のテンプレートについては、Googleの公式サイトをご参照ください。<br>
+→ <a href="https://developers.google.com/search/docs/advanced/structured-data/breadcrumb?hl=ja" target="_blank" rel="nofollow noopener">パンくずリスト | Google 検索セントラル | Google Developers</a></p><p>けれども、実際のパンくずリストは以下のように表示されます。</p><p>■<b>構造化データを設定した状態</b></p><p><img src="../image/pankuzu-2.png" alt="構造化データのぱんくずリスト" width="320" height="153" class="ccc"></p><p>デフォルトの状態と比べると、「span style」の箇所が抜けてしまいましたが、スペース的な関係のためか、構造化データではこのように表示されるのかもしれません。</p><p>おそらく、３階層目（※最後の階層）については「記事タイトル」をそのまま記入するケースが多いはずですので、以下のようにすると冗長になってしまい、表示スペースがなくなるのだろうと思います。</p><p>１階層目．ホーム<br>
+２階層目．サンプル<br>
+３階層目. 記事タイトル名</p><p>www.example.com &gt; サンプル &gt; <span class="aka">記事タイトル名</span> ▾<br>
+「<span class="aka">記事タイトル名</span>」</p><p>そのため、構造化データでパンくずリストを作成した場合、おおむね検索結果では以下のように、最後の階層の「name」で指定した文字列が省略されて表示されるものと思います。</p><p>www.example.com &gt; サンプル ▾<br>
+「記事タイトル名」</p><p>ただし、場合によっては「記事タイトル」で表示されているケースもあるため、詳細な仕様は不明ですが、スペースに余裕がない場合は省略されて表示されるはずです。</p><p>また、実際のサイト上ではぱんくずリストを作成せず、構造化データのパンくず通りに通っても行き止まりだった場合、構造化データの設定は無視されることが多いと感じています。そのような場合、サイト内に通れる経路を作るなりして対応するとよいでしょう。</p>
+<h2>ぱんくずリスト設置によるSEO対策への影響</h2>
+<p>ぱんくずリストを設置する際、トップページへの<a href="link.html">アンカーテキスト</a>に注意することをおすすめします。「トップページ」や「ホーム」などの文字で全ページからリンクされるため、このアンカーテキストの影響を受けてしまうケースがあります。</p><p>自サイトを検索エンジンで検索してみて、通常の「個別ページ名 - <span class="aka">サイト名</span>」ではなく、「個別ページ名 - <span class="aka">トップページ</span>」などのような形で表示されていたとしたら、このぱんくずリストが悪影響を与えている可能性があります。</p><p>つまり、自サイトが「トップページ」という名前のサイト名として認識されてしまっていることになります。</p><p>特に、サイトタイトル名をテキストではなく、画像ロゴを使用している場合などはこのケースになることがたまにあります。画像のalt属性にサイトタイトル名を記述していても、テキストで記述されたぱんくずリストの方が強めに認識されてしまう傾向があります。</p><p>この場合、ぱんくずリストのアンカーテキストを単に「トップページ」とするのではなく、「サイト名 トップ」のような形で変更してみることをおすすめします。あるいは、英語の「Top」や「Home」などの形でずらしてみるのもよいかもしれません。</p><p>もしくは、リンクタグにtitle属性を付け加えるのも良いと思います。</p><p>&lt;a href=&quot;http://www.example.com/&quot; title=&quot;あなたのサイト名&quot;&gt;ホーム&lt;/a&gt;</p><p>または、head内の<a href="../access/title-keyword.html">タイトルタグ</a>に「個別ページ名 - サイト名」と明確に記述するのでもよいかと思いますが、この場合でも「個別ページ名 - サイト名 - トップページ」などと表示されてしまうケースがあります。</p><p>いずれにしても、上記のように表示されてしまう場合は検索エンジンに「サイト名」がきちんと認識されていないことになります。</p><p>上記のような現象が実際に生じてしまうことから、<a href="../access/seo.html">検索エンジン対策</a>とぱんくずリストは無関係ではないため、カテゴリ名の文言には注意して付けるとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>ぱんくずリスト</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li class="list-li"><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li class="list-li"><a href="json.html">構造化データの作り方</a></li>
+<li class="list-li"><a href="pagination.html">ページネーションの作り方</a></li>
+<li class="list-li"><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li class="list-li"><a href="../access/title-keyword.html">タイトルタグの付け方を最適化</a></li>
+<li class="list-li"><a href="custom-404.html">カスタム404ページの作り方</a></li>
+<li class="list-li"><a href="favicon.html">「favicon.ico」でファビコンの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ぱんくずリスト",
+        "item": "https://www.homepage-tukurikata.com/hp/breadcrumb.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ぱんくずリストの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/pankuzu-list2-960.png"
+       ],
+      "datePublished": "2016-05-09T18:32:19+09:00",
+      "dateModified": "2021-07-16T17:20:44+09:00"
+    }
+</script>
+</body>
+</html>

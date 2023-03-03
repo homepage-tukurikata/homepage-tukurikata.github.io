@@ -1,0 +1,382 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>レスポンシブサイトの作り方</title>
+<meta name="description" content="スマホやタブレット端末にサイトを最適化する場合、PC用のサイトをそのまま使い、レスポンシブ・ウェブデザインで閲覧環境に応じて表示を切り替えることをおすすめします。">
+<meta name="keywords" content="レスポンシブ,スマホ,タブレット,viewport">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../hp/responsive.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="レスポンシブサイトの作り方">
+<meta property="og:description" content="スマホやタブレット端末にサイトを最適化する場合、PC用のサイトをそのまま使い、レスポンシブ・ウェブデザインで閲覧環境に応じて表示を切り替えることをおすすめします。">
+<meta property="og:image" content="../../image/sumaho-default.jpg">
+<meta property="og:image" content="../../image/default-viewport.png">
+<meta property="og:url" content="../../hp/responsive.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner"><h1>レスポンシブサイトの作り方</h1>
+<p>スマホやタブレット端末にサイトを最適化する場合、別途にスマホ専用のページを作成するのではなく、PC用のサイトをそのまま使い、<span class="aka">レスポンシブ・ウェブデザイン</span>で閲覧環境に応じて表示を切り替えることをおすすめします。</p><p>このレスポンシブ・ウェブデザインに対応するには、HTMLファイルに「viewport」を設定したのち、CSSにスマホ用のメディアクエリを記述する必要があります。</p><p><b>（１）HTMLファイルに「viewport」を設定する</b><br>
+<b>（２）CSSにスマホ用のメディアクエリを記述する</b></p><p>これにより、PCやタブレット端末、スマホなどの閲覧環境に応じて表示を最適化することができます。</p><p>実際に作業をする際、スマホでの表示を確認しながら最適化する必要がありますが、<a href="../../css/chrome-devtool.html">Chromeデベロッパーツール</a>を使うと実機がなくてもPC上から表示を確認することができて便利です。ブラウザ・Chromeの「その他ツール - デベロッパーツール」からスマホ画面をクリックすれば、ほぼすべての端末での表示を確認することができます。</p><p><amp-img src="../../image/chrome.png" width="320" height="339" layout="intrinsic" alt="chrome スマホ確認" class="ccc" /></amp-img></p><p>アクセス解析を確認し、アクセス数の多い端末については重点的に対応していくとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2>「viewport」を設定しないデフォルトの状態</h2>
+<p>当ホームページをスマートフォン（iPhone5）で閲覧してみると、viewportを設定していないデフォルトの状態ではこのように表示されます。</p><p><amp-img src="../../image/sumaho-default.jpg" layout="intrinsic" alt="スマホのデフォルトでの表示" width="240" height="417" class="ccc" /></amp-img></p><p>これでは文字が小さく読みにくいです。</p><p> この原因についてですが、iPhoneのSafariではサイトを閲覧した際、デフォルトの状態では<a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html" target="_blank" rel="nofollow noopener">横幅の表示領域を980px</a>とした上で、それをスマホの解像度まで縮小して表示するからです。</p><p><amp-img src="../../image/default-viewport.png" layout="intrinsic" alt="" width="320" height="231" class="ccc"></amp-img></p><p>つまり、Safariでは一般的なサイトの横幅を「<span class="aka">980px</span>」とみなし、それを端末のデバイス幅まで縮小して表示させることで、どのサイトでも無難に表示する仕様になっています。</p><p>公式サイトによると、これでほとんどのウェブページでうまく機能するとのことですが、横幅はサイトによってバラバラですので、中には表示が狭くなってしまうケースもあるようです。また、本来「980px」のサイトをスマホのデバイス幅の320px～414pxあたりまで縮小して表示させるため、デフォルトの状態では文字が小さく表示されます。</p><p>当サイトについては、レイアウト幅は810pxのため、表示領域がデフォルトの「980px」の状態では左右に余白があきます。</p><p><amp-img src="../../image/sumaho-default.jpg" layout="intrinsic" alt="スマホのデフォルトでの表示" width="240" height="417" class="ccc" /></amp-img></p><p>また、スマホのデバイス幅まで自動で縮小して表示されるため、デフォルトの状態では<span class="aka">縮小されたもの</span>を閲覧していることになります。</p><p>これでもピンチアウトで拡大すればかろうじて読めはしますが、できるだけレスポンシブ・ウェブデザインで表示を最適化し、こちらのように縮小せずに表示させると見やすいサイトになります。</p><p>■<b>レスポンシブサイトの例</b></p><p><amp-img src="../../image/sumaho-miyasui.jpg" layout="intrinsic" alt="見やすいスマホサイトの完成" width="240" height="411" class="ccc" /></amp-img></p>
+<p>■<b>pxの表示について</b></p><p>※このページの「px」は「csspx」の意味で使っています。iPhone5の仕様は「1,136 x 640ピクセル」となっていますが、高解像度のRetinaディスプレイで２倍となっているため、このページでは640pxの半分でデバイス幅を「320px」としています。また、スマホはiPhoneだけではありませんが、便宜上、iPhoneを例にご紹介しております。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step1">「viewport」のメタタグで980pxのデフォルト設定を解除</h2>
+<p>レスポンシブ・ウェブデザインで縮小せずに最適化する方法としては、まずはデフォルトの「横幅980pxでの表示領域の設定」を解除し、スマホの実際の横幅で表示領域をとるようにします。</p><p>例えば、iPhone5の場合は「320px」、iPhone6の場合は「375px」などとなりますが、デバイスの横幅でそのまま表示領域をとるようにします。</p><p>この場合、HTMLファイルのheadタグ内に「viewport」の<a href="../../html/meta-name.html">メタタグ</a>を追加して設定しますが、仮に320pxで設定する場合は以下のように記述します。</p><p>&lt;meta name="viewport" content="width=320"&gt;</p><p>けれども、スマホによって解像度が異なり、320pxとは限らないため、実数ではなく「端末の幅」を意味する「<span class="aka">device-width</span>」で記述するのが一般的です。</p><p>■<b>「viewport」のメタタグ</b></p><p>&lt;meta name="viewport" content="width=device-width"&gt;</p><p>例えば、このページではheadタグ内のこの箇所に設定しています。</p><p><amp-img src="../../image/viewport.png" layout="intrinsic" alt="" width="320" height="221" class="ccc"></amp-img></p><p>「content="width=device-width"」で「<b>width（幅）</b>」を「<b>device-width（閲覧する端末の幅）</b>」で表示する意味になるため、320pxの小型iPhoneで閲覧すれば「width=320px」となり、768pxのiPadで閲覧すれば「width=768px」で表示されます。</p><p>以下は空白のhtmlファイルになりますが、viewportに「device-width」を設定した場合、以下のように閲覧する端末によってwidthに違いが出てきます。</p><p>■<b>viewportなし</b></p><p>まず、viewportを何も設定していないデフォルトの状態は上記のように980pxです。</p><p><amp-img src="../../image/non-viewport.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>■<b>width=device-width、iPhone5</b></p><p>次に、viewportに「width=device-width」を設定した場合、iPhone5で閲覧した際の表示領域はデバイス幅の320pxになります。</p><p><amp-img src="../../image/iphone5-320.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>■<b>width=device-width、iPad</b></p><p>iPadで閲覧した場合は768pxで表示されます。</p><p><amp-img src="../../image/ipad-768.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>■<b>width=1000、iPhone5</b></p><p>一方、「content=&quot;width=1000&quot;」などのように、実数で決め打ちすることもできますが、この場合はどの端末で閲覧しても1000pxで固定されることになります。</p><p><amp-img src="../../image/iphone5-1000.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>そのため、閲覧する端末に応じてレスポンシブに表示されるよう、実数ではなく「device-width」を設定しておくことをおすすめします。</p>
+<hr />
+<p>当サイトを例にしますと、上記のようにviewportを何も設定していないデフォルトの状態は980pxになります。</p><p><amp-img src="../../image/non-viewport.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>この980pxに対し、レイアウト幅810pxでサイトを作るとこのようになります。</p><p><amp-img src="../../image/site-810.png" layout="intrinsic" alt="" width="320" height="212" class="ccc"></amp-img></p><p>上記の当サイトのデフォルトの状態は、これをセンタリングしたものです。</p><p><amp-img src="../../image/sumaho-default.jpg" layout="intrinsic" alt="スマホのデフォルトでの表示" width="240" height="417" class="ccc" /></amp-img></p><p>また、サイトのレイアウト幅を810pxではなく、サイドバーのfloatを解除した上でワンコラムのコンテンツ幅「320px」で作るとこのようになります。</p><p><amp-img src="../../image/site-320.png" layout="intrinsic" alt="" width="320" height="201" class="ccc"></amp-img></p><p>これにviewportでwidth=320を指定して表示領域を980pxではなく、320pxにすれば、縮小されずに表示されるようになります。</p><p><amp-img src="../../image/responsive-site.png" layout="intrinsic" alt="" width="320" height="205" class="ccc"></amp-img></p><p>実際の表示はこのようになりますが、縮小されずに見やすく表示されるようになります。</p><p><amp-img src="../../image/sumaho-miyasui.jpg" layout="intrinsic" alt="見やすいスマホサイトの完成" width="240" height="411" class="ccc" /></amp-img></p><p>けれども、閲覧する端末によっては320pxとは限らないため、viewportに「width=320」ではなく、「device-width」を設定してどの端末でも対応できるようにします。また、サイトのレイアウト幅も320pxで決め打ちするのではなく、「<span class="aka">width:100%;</span>」を指定してレスポンシブに表示させる必要があります。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step2">メディアクエリでサイトの横幅を「width:100%;」に設定</h2>
+<p>上記の「viewport」を設定した状態でサイトのfloatの回り込みなどを解除し、コンテンツやサイドバー、ヘッダーなどの横幅をデバイス幅「width:100%;」に設定すれば、縮小されずにそのまま表示されるため、文字が小さくなることもありません。</p><p>例えば、こちらはiPhone5で閲覧した際ですが、viewportをdevice-widthで設定しているため、iPhone5では表示領域が「320px」になります。また、サイトの横幅もCSSではwidth:100%;に設定しているため、「320px」で表示されています。</p><p><amp-img src="../../image/sumaho-miyasui.jpg" layout="intrinsic" alt="見やすいスマホサイトの完成" width="240" height="411" class="ccc" /></amp-img></p><p>この場合、viewportで設定した表示領域と実際の横幅が320pxで合致しますので、拡大も縮小もされない <b>initial-scale=1</b> の状態で表示され、文字も小さくならずに表示されます。</p><p>また、iPadで閲覧した際は表示領域が768pxになりますが、CSSで「width:100%;」と設定しているため、サイトのレイアウト幅もレスポンシブに自動で調節されて768pxで表示されます。</p><p>この「width:100%;」の設定をするには、CSSの下部に以下のメディアクエリを追加し、スマホで閲覧した際にだけ適用されるスタイルシートを設定しておきます。</p><p>■<b>CSSのメディアクエリ</b></p>
+<p>@media screen and (max-width: 767px) {<span class="aka">スマホ用のCSSを記述</span>}</p>
+<p>この場合、デバイス幅が最大767pxまでのスマートフォンの端末で閲覧した際に、この箇所のスタイルシートを上書きで適用してくださいという意味になります。ただし、パソコンなど767pxを超える解像度の大きな端末で閲覧した際はこの記述は無視されます。</p><p>この「767px」の部分は<span class="aka">ブレイクポイント</span>と呼ばれており、スマホやタブレット端末、PCなど、何pxで表示を切り分けるかの変更点になります。このブレイクポイントはサイト運営者によってバラバラで、480pxの人もいれば、600pxの人もいますし、これといった決まりはありません。</p>
+<h2 id="step3">ブレイクポイントの設定方法</h2>
+<p>■<b>スマホのブレイクポイント</b></p><p>当サイトではスマホのブレイクポイントを「<b>767px</b>」で設定しています。</p><p>これは単純に、ユーザー数の多いiPadが「768  × 1024」からになるため、iPadよりも小さいデバイス幅は全てスマホと見なしたからです。Android系で600px程度のタブレット端末もありますが、全てスマホとさせてもらいました。</p><p>大型スマホのiPhone 12 Pro Maxでも「428 x 926」のため、ブレイクポイントを「767px」以下とした場合、縦向きの「428px」の場合はこれで収まることになります。横向きで使用した場合は「926px」で外れてしまいますが、この場合はタブレット端末の設定で表示するようにしています。</p><p>ただ、シェアは低いものの、600px程度のタブレット端末もあるため、「599px」以下をスマホ、「600px」以上をタブレット端末と考えるのもよいかもしれません。</p><p>以下のサイトからCSVデータをダウンロードして確認してみますと、タブレット端末の１割程度は600px前後の大きさとなっています。</p><p>参考：<a href="https://gs.statcounter.com/screen-resolution-stats/tablet/japan" target="_blank" rel="nofollow noopener">Tablet Screen Resolution Stats Japan | StatCounter Global Stats</a></p><p><amp-img src="../../image/wariai.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>このあたりはサイト運営者によると思いますが、解像度のシェアやスマホの横向きでの使用なども考え、総合的に判断されることをおすすめします。</p><p>■<b>タブレット端末のブレイクポイント</b></p><p>タブレット端末については、PCサイトと同じ「２カラムや３カラムで表示する方法」とスマホと同じ「ワンカラム」で表示する方法があります。</p><p>当サイトではタブレット端末もスマホと同じワンカラムで表示してはいますが、デザイン的にはPCサイトに近く、PC用の設定を流用したかったため、「スマホ用 → PC用 → タブレット端末」の順で記載しています。</p><p>もしスマホに近い場合、「スマホ用 → タブレット端末 → PC用」の順で記載した方が効率的と思います。</p><p>■<b>PCのブレイクポイント</b></p><p>当サイト運営者のパソコンの解像度を確認してみますと、最小サイズは「800 × 600」となっていましたが、現在、PCでは「1920 × 1080」の解像度が主流となっており、「800 × 600」は除外しても良いと思います。</p><p><amp-img src="../../image/pc-break.png" layout="intrinsic" alt="" width="320" height="177" class="ccc"></amp-img></p><p>そのため、当サイトではPCのブレイクポイントを「<b>1024 × 768</b>」として切り分けましたが、もう少し大きめで設定してもよいかもしれません。</p><p>ただし、タブレットのシェアではiPadの「768 × 1024」の割合が多いため、iPadを横向きで使用した場合は「1024」のPC用の設定で表示されるものと思います。</p><p>上記のブレイクポイントで設定する場合、一般的にはCSSに以下のように記述します。</p><p>■<b>一般的なブレイクポイントのサンプル</b></p><p>スマホ用の設定<br>
+@media screen and (min-width: 768px) {タブレット用の設定}<br>
+@media screen and (min-width: 1024px)  {PC用の設定} </p><p>この場合、もし解像度が「1600 × 900」のPCサイトからアクセスした場合、まずはスマホ用の設定を読み込み、次に768px以上の条件にも当てはまるため、タブレット用の設定も読み込んでスマホ用の設定を上書きします。さらに1024px以上の条件にも当てはまるため、こちらも上書きで適用されて最終的にはPC用の設定で表示されます。</p><p>一方、スマホからアクセスした場合はスマホ用の設定しか条件が合わないため、最初のスマホ用の設定のみが適用されることになります。</p><p>あるいは、600px程度のタブレットも考慮に入れて以下のように記載するのでもよいかと思います。</p><p>
+スマホ用の設定<br>
+@media screen and (min-width: 600px) {タブレット用の設定}<br>
+@media screen and (min-width: 1024px)  {PC用の設定} </p><p>以前まではPC用の設定を先に記述し、スマホ用の設定を後に記述するのが一般的でしたが、現在はスマホがメインの<span class="aka">モバイルファースト</span>が主流のため、「スマホ用（※メディアクエリなし） → タブレット端末 → PC用」の順で指定することをおすすめします。</p><p>ちなみに、当サイトでは以下のように設定しています。</p><p>■<b>当サイトのブレイクポイント</b></p><p>スマホ、PC、タブレットの共通部分の設定<br>
+@media screen and (max-width: 767px) {スマホ用の設定}<br>
+@media screen and (min-width: 768px) {PC用の設定}<br>
+@media screen and (min-width: 1900px) {高解像度PC用の設定}<br>
+@media screen and (min-width: 768px) and (max-width: 1023px) {タブレット用の設定}</p><p>あまり上書きしたくない場合、共通する部分のみを最初に書いておき、それぞれを個別に設定するのでもよいと思います。</p>
+<p id="step4">最終的にうまく機能しているかを、こちらのモバイルフレンドリーテストでチェックしてみるとよいでしょう。<br />  
+→ <a href="https://search.google.com/test/mobile-friendly?hl=ja" target="_blank" rel="nofollow noopener">モバイルフレンドリーテスト</a></p><p><amp-img src="../../image/mobile-friendly.png" layout="intrinsic" alt="" width="320" height="178" class="ccc"></amp-img></p><p>「このページはモバイル フレンドリーです」と表示されれば、問題ありません。</p><p>もしスマホでくずれて表示されている場合、画像や要素など、サイト内で横幅が320px以上で設定されているものがあるはずです。width幅を実数で指定するのではなく、width:100%;などと指定することをおすすめします。</p><p>また、特に画像でくずれてしまうことが多いため、img {max-width: 100%;height: auto;}なども記述して縮小しておくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../hp/index.html">作り方</a>　&#8260;　<b>レスポンシブサイト</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li class="list-li"><a href="../../hp/keitai-site.html">携帯サイトの作り方（ガラケーサイト）</a></li>
+<li class="list-li"><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li class="list-li"><a href="../../css/chrome-devtool.html">CSSの確認はChromeデベロッパーツールが便利</a></li>
+<li class="list-li"><a href="../../access/meta.html">メタタグ（metaタグ）とは？</a></li>
+<li class="list-li"><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="../../css/padding-margin.html">paddingとmarginの違い</a></li>
+<li class="list-li"><a href="../../css/max-width.html">画像の大きさを最適化する max-width:100%;</a></li>
+<li class="list-li"><a href="../../hp/300px.html">右サイドバーの幅は300pxが最適</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "レスポンシブサイトの作り方",
+      "description": "スマホやタブレット端末にサイトを最適化する場合、PC用のページをそのまま使い、レスポンシブ・ウェブデザインで閲覧環境に応じて表示を切り替えることをおすすめします。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/sumaho-miyasui.jpg",
+        "height": "411",
+        "width": "240"
+      }, "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "CSSファイル"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Chromeデベロッパーツール"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/hp/responsive.html#step1",
+          "name": "「viewport」のメタタグで980pxのデフォルト設定を解除",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "閲覧する端末に応じてレスポンシブに表示されるよう「viewport」に「device-width」を設定します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/viewport.png",
+            "height": "221",
+            "width": "320"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "メディアクエリでサイトの横幅を「width:100%;」に設定",
+          "url": "https://www.homepage-tukurikata.com/hp/responsive.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "「viewport」を設定した状態でサイトのfloatの回り込みなどを解除し、スマホ用の設定を記述します。CSSのスマホ用のメディアクエリでコンテンツやサイドバー、ヘッダーなどの横幅をデバイス幅「width:100%;」に設定します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/sumaho-miyasui.jpg",
+            "height": "411",
+            "width": "240"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "ブレイクポイントを設定し、PCとスマホ、タブレットで表示を切り分ける",
+          "url": "https://www.homepage-tukurikata.com/hp/responsive.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "PCとスマホ、タブレットでブレイクポイントを設定し、スマホ用と同様、タブレット用やPC用のCSSもメディアクエリを使って切り分けます。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/wariai.png",
+            "height": "200",
+            "width": "320"
+          }
+        }, 
+		{
+          "@type": "HowToStep",
+          "name": "モバイルフレンドリーテストでチェック",
+          "url": "https://www.homepage-tukurikata.com/hp/responsive.html#step4",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "設定が完了したら、モバイルフレンドリーテストでうまく機能しているかをチェックします。「このページはモバイル フレンドリーです」と表示されれば完了です。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/mobile-friendly.png",
+            "height": "178",
+            "width": "320"
+          }
+        }],
+      "totalTime": "PT2H"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/hp/responsive.html"
+      },
+      "headline": "レスポンシブサイトの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/chrome-1200.png"
+       ],
+      "datePublished": "2014-06-14T00:00:00+09:00",
+      "dateModified": "2021-08-13T00:00:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "レスポンシブサイト",
+        "item": "https://www.homepage-tukurikata.com/hp/responsive.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "モバイル端末への最適化",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "レスポンシブサイトの作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/responsive.html"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>@font-faceでWEBフォントの指定方法</title>
+<meta name="description" content="WEBフォントの使い方は、まずは「woff」や「woff2」などのフォントファイルをサーバーにアップロードします。次に、CSSで「@font-face」を記載してファイルのURLとフォント名を指定します。あとは実際に使用したい箇所で「font-family」に指定したフォント名を記述して使うとよいでしょう。">
+<meta name="keywords" content="WEBフォント,使い方,css,指定">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../css/web-font.html">
+<link rel="next" href="../../hp/webfont-service.html">
+<link rel="prev" href="../../hp/what-webfont.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="@font-faceでWEBフォントの指定方法">
+<meta property="og:description" content="WEBフォントの使い方は、まずは「woff」や「woff2」などのフォントファイルをサーバーにアップロードします。次に、CSSで「@font-face」を記載してファイルのURLとフォント名を指定します。あとは実際に使用したい箇所で「font-family」に指定したフォント名を記述して使うとよいでしょう。">
+<meta property="og:image" content="../../image/font-folder.png">
+<meta property="og:image" content="../../image/ogp-400.png">
+<meta property="og:url" content="../../css/web-font.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}@font-face {font-family: "sample";src: url(https://www.homepage-tukurikata.com/fonts/sample.woff);}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}.nextpage {text-align:left;padding: 24px 10px 24px 10px;font-size: 13px;background-color:#fafafa;border-radius: 4px;border:#e3e3e3 solid 1px;}.nextpage a{display:block;font-weight:bold;text-decoration:none;}.nextpage a:hover{text-decoration:underline;}.pagination {padding-bottom:20px;text-align:center;}.pagination li {display: inline-block;height:40px;line-height:40px;width:40px;text-align:center;border:1px #ccc solid;color:#000053;border-radius: 5px / 5px;}.pagination .pre {background-color:#efefef;color:#333;}.pagination .this {background-color:#777;color:#fff;}.pagination li a{display:block;text-decoration: none;}.pagination li a:hover {color: #fff;text-decoration: none;background-color: #003396;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>@font-faceでWEBフォントの指定方法</h1>
+<p>CSSに「<span class="aka">@font-face</span>」を指定することで、ホームページ上で<a href="../../hp/what-webfont.html">WEBフォント</a>を使うことができます。「.woff」や「.woff2」などのフォントファイルをサーバーにアップロードしたのち、CSS側で「@font-face」を記載しておくとよいでしょう。</p>
+<p><amp-img src="../../image/at-fontface.png" layout="intrinsic" alt="" width="640" height="360" class="ccc"></amp-img></p>
+<p id="step1">例えば、Google無料フォントの「<a href="https://fonts.google.com/noto" target="_blank" rel="nofollow noopener">Noto Fonts</a>」などをダウンロードし、圧縮された<a href="../../hp/what-webfont.html#woff2">WOFF形式のファイルに変換</a>したのち、自サイトに「fonts」などのフォルダを作成してアップロードします。</p><p><amp-img src="../../image/font-folder.png" width="206" height="156" layout="intrinsic" alt="フォントフォルダ" class="ccc"></amp-img></p><p>次に、CSS側で「@font-face」を記載して、アップロードしたWEBフォントのfont-familyを指定します。書き方は「@font-face」の後にフォントファイルのある場所とそのfont-familyを設定するだけです。</p><p>@font-face {<br />
+font-family: &quot;sample&quot;;<br />
+src: url(https://www.homepage-tukurikata.com/fonts/sample.woff);<br />
+}</p><p>後は、実際にフォントを使いたい箇所でこの「<a href="../../css/font-family.html">font-family</a>」を指定するとよいでしょう。</p><p>例えば、このように記述したとします。</p><p>&lt;p style=&quot;font-family: 'sample';&quot;&gt;ホームページの作り方&lt;/p&gt;</p><p>すると、このような「Noto」のWEBフォントで表示されます。</p><p style="font-family:'sample';font-size:24px;">ホームページの作り方</p><p>もしくは、CSSに記載する際はこのようになるかと思います。</p><p>.example {font-family: &quot;sample&quot;;}</p><p>「font-family」で指定する前の段階でWEBフォントを読み込む必要がありますので、「@font-face」をCSSの最初の方で指定しておくとよいでしょう。</p><p>この「CSS3」や「CSS2」の違いについてですが、<a href="../../html/dtd.html">htmlのようなバージョンの違い</a>ではなく、レベルの違いのため、「CSS3」を使用する際に何か特殊な指定や宣言をする必要はありません。</p><p>この「@font-face」については古いブラウザでも対応しているため、今あるCSSにそのまま指定するだけで特に問題なく表示されるはずです。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+
+<h2>CSSでの「@font-face」の記載方法</h2>
+<p id="step2">CSSでの実際の指定方法については、W3Cの「<a href="https://www.w3.org/TR/css-fonts-3/#font-face-rule" target="_blank" rel="nofollow noopener">4.1 The @font-face rule</a>」の箇所に例文が書いてありますので、そちらをご参照ください。</p><p><span class="aka">@font-face</span>のあとにフォント名を登録させ、そのあとにフォントファイルのある場所を指定するとよいでしょう。</p><p>@font-face {<br />  font-family: Gentium;<br />  src: url(http://example.com/fonts/Gentium.woff);<br />
+}</p><p>また、「font-display: swap;」も指定しておくことをおすすめします。フォントのダウンロードに時間がかかるとき、ブラウザはFOIT（flash of invisible text）で見えない文字を表示することでテキストを非表示にします。そのため、「font-display: swap;」を記載し、とりあえずでもシステムフォントですぐに表示するとユーザビリティーの向上につながります。</p><p>@font-face {<br />
+font-family: Gentium;<br />
+src: url(http://example.com/fonts/Gentium.woff);<br>
+font-display: swap;<br />
+}</p><p>あるいは、フォントを「&lt;link rel=&quot;preload&quot;」で事前にダウンロードする方法もありますが、事前にダウンロードしたものの、結局は使わなかったというケースもあるため、できるだけ「preload」の使用は避けた方がよいと思います。</p><p id="step3">次に、実際に使いたい場所でそのフォント名を指定し、表示されなかった場合のためにメイリオなどの代替フォントを指定しておくとよいかもしれません。</p><p>p {font-family: Gentium, Meiryo, sans-serif;}</p><p>上の例文を参考にして、使いたいフォント名に置き換えれて使用すればよいでしょう。</p><p>@font-face {<br />  font-family: 使いたいフォント名;<br />  src: url(フォントファイルのある場所);<br />
+}</p><p>p {font-family: 使いたいフォント名;}</p><p>ちなみに、この「@font-face」の場所については、CSSの先頭部分で「@charset &quot;UTF-8&quot;;」などの文字コードを指定した直後に書かれていることが多いです。できるだけフォントを先に読み込む形にしておいた方がよいかと思います。</p><p>■<b>複数を指定する場合</b></p><p>上記ページの「4.3. Font reference: the src descriptor」の箇所に例がありますが、WOFF2なども指定する場合は「src: A,B,C;」の形で以下のように記述すればよいでしょう。</p><p>@font-face {<br>
+font-family: bodytext;<br>
+src: <span class="aka">url(ideal-sans-serif.woff2) format(&quot;woff2&quot;)</span>,<br>
+url(good-sans-serif.woff) format(&quot;woff&quot;),<br>
+url(basic-sans-serif.ttf) format(&quot;opentype&quot;);<br>
+}</p><p>コメント内に「load WOFF2 font if possible, otherwise WOFF, else use OpenType font」とありますので、この場合は「WOFF2が可能ならそれを読み込み、そうでなければWOFF、そのほかの場合はOpenType font」を読み込む形になります。</p><p>一般的なCSSのような後方の上書きルールではなく、前方から合致したものが一個だけ読み込まれるため、適用したいものを前に記述するようにしましょう。 </p><p>■<b>ローカルフォントが利用可能か参照する場合</b></p><p>上記の箇所のすぐ下にローカルフォントに関する記述がありますが、PC内にフォントがインストールされている場合、そちらを使うように指定した方がよいでしょう。</p><p>@font-face {<br>font-family: MyGentium;<br>src: <span class="aka">local(Gentium)</span>,<br>url(Gentium.woff);<br>
+}</p><p>src: local(Gentium)の箇所になりますが、まずはlocal(フォント名)でパソコン内のフォントを利用可能かを一応は参照し、もし利用できなければ、url(Gentium.woff)にてWEBフォントをダウンロードする設定にしておくと効率的です。</p><p>例えば、メイリオならlocal(&quot;メイリオ&quot;)などといった形になりますが、日本語の場合は引用符で囲むことをおすすめします。また、ブラウザやOSによって表記が違うため、local(Meiryo)などの英語表記も指定しておくとよいかと思います。</p><p>ただし、フォントによっては著作権があるはずなので、サーバーにWEBフォントとしてアップロードして使用する際にはライセンスの購入が必要になるかもしれません。</p><p>「ユーザーのPC内にあるローカルフォント」を利用するようCSSで指定するのは問題ありませんが、WEBフォントとしてサーバーにアップロードして利用する際には著作権の問題があるため、よく確認してから利用するようにしましょう。</p>
+<h2>WEBフォントが表示されない場合の対処方法</h2>
+<p>もしWEBフォントが正常に表示されない場合、サーバー側でフォントの拡張子の関連付けがうまくいってないのかもしれません。その場合、.htaccessでMIMEタイプを設定すると表示されるかもしれません。</p><p>例えば、当ホームページが使用しているレンタルサーバー会社では以下のようなMIME設定例がありましたが、以下のような記載になります。</p><p><amp-img src="../../image/mime-woff2.png" layout="intrinsic" alt="" width="320" height="130" class="ccc"></amp-img></p><p>■<b>当サイトの例</b></p><p>AddType application/font-woff2 .woff2<br>AddType application/font-woff .woff</p><p>Apacheの<a href="https://httpd.apache.org/docs/2.2/ja/mod/mod_mime.html#addtype" target="_blank" rel="nofollow noopener">AddTypeディレクティブ</a>の箇所が参考になるかと思いますが、お使いのレンタルサーバー会社へ問い合わせてみるとよいでしょう。</p>
+<p><a href="../../hp/amp.html">AMPページ</a>などでは、画像のほかフォントも配信サーバーにキャッシュされる必要があるため、WEBフォントが利用できない状態では正常に表示されない可能性があります。</p><p>また、CSS側で引用符&quot;&quot;の書き忘れやweight指定などもチェックしてみることをおすすめします。もともと太めのWEBフォントを使用していたとしても、見出しのhタグなどはデフォルトの状態でboldのため、ブラウザ側で気をきかせてさらに太めに表示してしまうことがあります。</p><p>そのような場合は「font-synthesis: none;」を指定しておくとよいでしょう。</p><p>加えて、wwwなしでは表示されるのに、wwwありでは表示されない場合など、「Access-Control-Allow-Origin」でブロックされている可能性もあります。その場合、CSSやウェブフォントのURLを相対URLで指定するとうまくいくかもしれません。</p><p>もしWEBフォントの表示がにじむ場合、サブセット化の過程で付属情報などが削除されたのかもしれません。その場合、Pythonをパソコンにインストールして、fonttoolsのsubsetでサブセット化するときれいに表示されるはずです。→ <a href="../../hp/what-webfont.html#subset">詳細</a></p><p>もしくは、Webフォントサービスを利用すると簡単にきれいに表示されるかと思います。</p>
+<p class="nextpage">次のページ → <a href="../../hp/webfont-service.html">Webフォントサービスを比較</a></p>
+<ul class="pagination">
+<li><a href="../../hp/what-webfont.html">前へ</a></li>
+<li><a href="../../hp/what-webfont.html">1</a></li>
+<li class="this">2</li>
+<li><a href="../../hp/webfont-service.html">3</a></li>
+<li><a href="../../hp/webfont-service.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><div class="navi"><a href="../../index.html">トップページ</a> &#8260;　<a href="../../css/index.html">CSSの一覧</a>　&#8260;　<b>@font-face</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li class="list-li"><a href="../../hp/webfont-service.html">Webフォントサービスを比較</a></li>
+<li class="list-li"><a href="../../css/color.html">「文字」のCSSを指定 colorやfont-size</a></li>
+<li class="list-li"><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li class="list-li"><a href="../../css/font-family.html">「font-family」で文字の書体を指定</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "@font-faceでWEBフォントの指定方法",
+      "description": "CSSに「@font-face」を指定してWEBフォントを使うことができます。「.woff」や「.woff2」などのフォントファイルをアップロードしたのち、CSS側で「@font-face」を記載しておくとよいでしょう。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/at-fontface.png",
+        "height": "360",
+        "width": "640"
+      },
+	  "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "「Noto」などの無料フォント"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "WOFF変換ツール"
+        }
+      ],
+      "step": [
+           {
+          "@type": "HowToStep",
+          "name": "フォントをWOFF形式に変換してアップロード",
+          "url": "https://www.homepage-tukurikata.com/css/web-font.html#step1",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "無料フォントの「Noto Fonts」などをダウンロードし、圧縮されたWOFF形式のファイルに変換したのち、自サイトにアップロードします。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/font-folder.png",
+            "height": "156",
+            "width": "206"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "CSS側で「@font-face」を記載",
+          "url": "https://www.homepage-tukurikata.com/css/web-font.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "CSSの「@font-face」でWEBフォントのfont-familyを設定し、アップロードしたフォントのURLを指定します。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "使いたい場所でfont-familyを指定",
+          "url": "https://www.homepage-tukurikata.com/css/web-font.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "実際に使いたい場所で設定した「font-family」を指定します。表示されなかった際のために代替フォントも指定します。"
+          }]
+        }],
+      "totalTime": "PT3H"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/css/web-font.html"
+      },
+      "headline": "@font-faceでWEBフォントの指定方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/at-fontface.png"
+       ],
+      "datePublished": "2015-06-29T09:04:14+09:00",
+      "dateModified": "2021-01-20T09:37:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "@font-faceでWEBフォントの指定方法"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "WEBフォント",
+        "item": "https://www.homepage-tukurikata.com/hp/what-webfont.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "@font-faceでWEBフォントの指定方法"
+      }]
+    }
+</script>
+</body>
+</html>

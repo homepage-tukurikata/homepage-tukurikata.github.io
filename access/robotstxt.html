@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>「robots.txt」の記述例とサンプル</title>
+<meta name="description" content="「robots.txt」の記述例とそのサンプルです。配置場所はドメインのルートディレクトリに設置しましょう。">
+<meta name="keywords" content="ロボットテキスト,サンプル,例">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/robotstxt.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/robotstxt-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="robotstxt.html">
+<link rel="amphtml" href="../amp/access/robotstxt.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「robots.txt」の記述例とサンプル">
+<meta property="og:description" content="「robots.txt」の記述例とそのサンプルです。配置場所はドメインのルートディレクトリに設置しましょう。">
+<meta property="og:image" content="../image/crawl.png">
+<meta property="og:image" content="../image/houjisareru.png">
+<meta property="og:url" content="robotstxt.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/robotstxt.woff2) format("woff2"),
+url(../fonts/robotstxt.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/robotstxt-bold.woff2) format("woff2"),
+url(../fonts/robotstxt-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>「robots.txt」の記述例とサンプル</h1>
+<p>「robots.txt」は、検索エンジンなどのロボットのアクセスを制御するためのテキストファイルのことです。検索エンジンなどのロボットは<span class="aka">クローラー（Crawler）</span>とも呼ばれていますが、自動化されている機械的なプログラムのため、人間による実際のアクセスではありません。</p><p>例えば、当ホームページのアクセス解析をのぞいてみると、このようなクローラーによるアクセスが確認できます。</p><p><img src="../image/crawl.png" width="298" height="224" alt="" class="ccc" /></p><p>GoogleやBingなどの検索エンジンをはじめ、海外Yahoo!やAmazon、Facebookなど様々なクローラーがサイトにやってきます。検索エンジンや広告、SEO関連、研究機関など、<a href="https://www.robotstxt.org/db.html" target="_blank" rel="nofollow noopener">クローラーには約300程度の種類</a>が存在しますが、大半は検索エンジンのアクセスが多いかと思います。</p><p>これらのクローラーが新しいページを探してサイト内をクロールし、新しいページを発見すると検索エンジンのデータベースに登録していきます。そして、登録されたページがグーグルなどの検索結果で表示され、人間による実際のアクセスへとつながっていきます。</p><p>けれども、「robots.txt」でクローラーのアクセスを拒否していると検索エンジンにインデックスされなくなってしまうため、検索結果でもヒットしなくなってしまいます。また、TwitterやFacebookなどのクローラーも拒否しているとSNSできれいに表示されないこともあります。</p><p>そのため、「robots.txt」にてクローラーのアクセスを許可しておくことをおすすめします。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>「robots.txt」でクローラーのアクセスを許可する方法</h2>
+<p>デフォルトの状態でクローラーのアクセスは「<b>許可</b>」されているため、あえてrobots.txtを設定しなくても特に問題はありません。</p><p>■<b>ロボットアクセスを許可する方法</b></p><p>クローラーのアクセスを許可する場合、以下の方法があります。</p><p>①<span class="aka">何も設置しない</span> → 一番多い<br />
+②Disallowのスラッシュなしで許可 → わりと多い<br />
+③Allowで明示的に許可 → 少数派<br />
+④空のrobotsファイルを作成 → 少数派</p>
+<hr />
+<p>①アクセスを許可する一番確実な方法は「robots.txt」を設置しないことです。実際に大手サイトなどでrobots.txtを確認してみると、設置していないケースも多いかと思います。</p>
+<p>②についてですが、robotstxt.orgの<a href="https://www.robotstxt.org/robotstxt.html" target="_blank" rel="nofollow noopener">こちらのページ</a>の中段あたりにて、許可する場合の書き方（To allow all robots complete access）が掲載されています。一応はこちらが正式な書き方かと思われます。</p>
+<p>つまり、全てのロボット「*」に対して、クロールを許可しない（<b>disallow</b>）ページは何もないという意味で、全部許可するという意味になります。</p>
+<left>
+<textarea rows="2" cols="49" onclick="this.select();">
+User-agent: *
+Disallow:
+</textarea>
+</left>
+<p>ただし、スラッシュを入れてしまうと全てのページ「/」で「許可しない」という、全く逆の拒否の意味になってしまうので注意が必要です。</p>
+<p>③についてですが、②の方法は何かと紛らわしいため、「許可する」の(<b>allow</b>)を使って明示的に書いているサイトもあります。</p>
+<left>
+<textarea rows="2" cols="49" onclick="this.select();">
+User-agent: *
+Allow: /</textarea>
+</left>
+<p>意味は全てのロボット「*」に対して、全てのページ「/」のアクセスを許可(<b>allow</b>)するという意味になります。</p><p>Googleのヘルプでは、許可する際の例としてこちらの方法が紹介されています。<br>
+→ <a href="https://developers.google.com/search/docs/advanced/robots/create-robots-txt?hl=ja" target="_blank" rel="nofollow noopener">robots.txt ファイルを作成する</a></p><p><img src="../image/google-allow.png" alt="" width="320" height="216" class="ccc"></p><p>また、④の空のファイルを作成する方法については、上記のrobotstxt.orgには以下のような記述がありますが、空のファイルでも「許可」の意味になります。</p><p> (<b>or just create an empty &quot;/robots.txt&quot; file</b>, or don't use one at all)</p><p>いずれにしても、アクセスを許可する場合の一番確実な方法は①の何も設置しないことです。</p>
+<p>■<b>sitemap付きの「robots.txt」</b></p><p>また、sitemapの場所についてもrobots.txtに記載することができます。この場合、②の方法と合わせて、このように記述しているケースが多いです。</p>
+<left>
+<textarea rows="3" cols="49" onclick="this.select();">
+User-agent: *
+Disallow:
+
+Sitemap: http://www.example.com/sitemap.xml
+</textarea>
+</left>
+<p>この「http://www.example.com/sitemap.xml」の箇所は、あなたのホームページのサイトマップのあるURLを指定します。</p>
+<h2>クローラーロボットのアクセスを拒否する方法</h2>
+<p>一方、<span class="aka">アクセスを拒否</span>する場合はスラッシュを入れて以下のように記述します。</p>
+<left>
+<textarea rows="2" cols="49" onclick="this.select();">
+User-agent: *
+Disallow: /</textarea>
+</left>
+
+<p>意味は全てのロボット「*」に対して、全てのページ「/」へのアクセスを許可しない(<b>disallow</b>)という意味です。これは上記②の許可の方法と似ているため注意しましょう。</p><p>また、「User-agent」で個別にクローラーを指定して拒否する場合は以下のように記述します。</p><p>■<b>例：GoogleとBingで「secret」のディレクトリを拒否する場合</b></p><p>User-agent: Googlebot<br>
+User-agent: bingbot<br>
+Disallow: /secret/</p><p>この場合、他のクローラーによるアクセスは許可されますし、Googlebotやbingbotについても/secret/以外の場所は許可されます。</p><p>このクローラーの「User-agent」のリスト一覧についてはこちらをご参照ください。<br>
+→ <a href="crawler-list.html">Webクローラーの比較一覧</a></p>
+<hr />
+<p>ちなみに、このrobots.txtは<span class="aka">強制ではない</span>ため、クローラーロボットによってはこの記述を完全に無視する場合もあります。概ね、大手の場合はほぼrobots.txtを尊重してくれますが、中小、個人のクローラーの場合はそもそも書いてることをちゃんと読んでくれないことも多いです。</p><p>また、Googleなどの大手検索エンジンの場合でも、まれに検索結果に表示されたり、インデックスされてしまうこともあり、検索結果にはこのような形で表示されます。</p><p><img src="../image/houjisareru.png" alt="" width="350" height="163" class="ccc" /></p><p>そのため、robots.txtでの拒否は不確実性が残るため、より確実に拒否するには「.haccess」で対応するとよいでしょう。「.htaccess」のAllowとDenyで強制的にクローラーを拒否する方法については、こちらのページをご参照ください。<br>
+→ <a href="user-agent.html">クローラーアクセスの確認方法</a></p><h2>設置する場所はルートディレクトリ</h2>
+<p>設置する場所はそのドメインや<a href="../domain/domein.html">サブドメイン</a>の一番上の階層の<span class="aka">ルートディレクトリ</span>になります。</p><p>www.example.com/robots.txt</p><p>そのため、ディレクトリ下でフォルダ分けをして作成している「サブディレクトリタイプ」のサイトの場合、「robots.txt」を設置することはできません。このフォルダ分けのサイトは無料ブログなどに多いですが、ジオシティーズなどの無料ホームページスペースでも設置できないことがあります。</p><p>http://www.geocities.jp/robots.txt　→ 設置可能<br />
+  http://www.geocities.jp/<span class="aka">サイト名</span>/robots.txt　→ <b>ＮＧ</b></p><p>http://blog.livedoor.com/robots.txt　→ 設置可能<br />
+  http://blog.livedoor.com/<span class="aka">ブログ名</span>/robots.txt → <b>ＮＧ</b></p><p>ＮＧというか、設置しても意味がないということです。</p><p>一方、「サブドメインタイプ」の場合はルートディレクトリに設置することができます。ただし、なくても特に問題はないため、「robots.txt」を設置できないからといって何かデメリットがあるというわけでもありません。</p>
+  
+<h2>SEO対策上、robots.txtの有無はあまり重要ではない</h2>
+<p>「robots.txt」を設置しなくても勝手にクロールはされますので、意図的にクローラーのアクセスを拒否していない限り、SEO対策上の意味はほとんどありません。</p><p>ただし、不必要なページがインデックスされている場合には、そのページへのアクセスを拒否しておくことをおすすめします。</p><p>例えば、テストで作成した意味のないページがインデックスされてしまった場合など、質の低いページがインデックスされてしまうとサイト全体にもSEO的な影響が出る可能性があります。</p><p>そのようなページへのクロールは拒否しておくとよいでしょう。</p><p>特定のページ「example.html」へのアクセスを拒否する場合は以下のように記述します。</p>
+<left>
+<textarea rows="2" cols="49" onclick="this.select();">
+User-agent: *
+Disallow: /example.html</textarea>
+</left>
+<p>また、特定のディレクトリ全体「/example/」を拒否する場合は以下のように記述します。</p>
+<left>
+<textarea rows="2" cols="49" onclick="this.select();">
+User-agent: *
+Disallow: /example/</textarea>
+</left>
+<p>この場合、その他の拒否していないページについてはクロールされます。</p><p>また、「クローラーのアクセス回数」と「実際の検索エンジン経由のアクセス数」は比例する傾向にあります。そのため、クローラーのアクセス回数が増えれば増えるほど、結果として検索エンジン経由のアクセスアップにもつながるといえます。</p><p>何度アクセスしても新しいページがない場合、そのうちクローラーもやってこなくなってしまうため、定期的に最新情報を追加して更新しておくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><hr />
+<p class="breadcrumb">次のページ：<a href="../hp/redirect.html">リダイレクト設定によるURLの転送方法</a></p><hr />
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li class="list-li"><a href="log.html">サーバー生ログのアクセス解析の方法</a></li>
+<li class="list-li"><a href="user-agent.html">クローラーアクセスの確認方法</a></li>
+<li class="list-li"><a href="crawler-list.html">Webクローラーの比較一覧</a></li>
+<li class="list-li"><a href="analysis.html">アクセス解析の設置方法</a></li>
+<li class="list-li"><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li class="list-li"><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li class="list-li"><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="index.html">アクセスアップの方法</a></li>
+<li><a href="seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="mobile.html">モバイル端末への最適化</a></li>
+<li><a href="attract.html">ホームページの集客方法</a></li>
+<li><a href="analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセス解析",
+        "item": "https://www.homepage-tukurikata.com/access/analysis.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ロボットテキスト"
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>スタイルシートカスタマイズの例：その２</title>
+<meta name="keywords" content="スタイルシート,カスタマイズ,シンプル" />
+<meta name="description" content="ホームページのスタイルシートカスタマイズの例その２です。" />
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="../image/simple-sample.css" type="text/css" />
+</head>
+<body>
+<div id="outer">
+<div id="header">
+<h1>スタイルシートカスタマイズの例：その２</h1>
+<p class="description">シンプルなワンカラムのスタイルシートもおすすめです。</p>
+</div>
+<div id="main">
+<div class="content">
+<h2>シンプルなホームページのスタイルシート</h2>
+<p>コンテンツボリュームが少ない場合、シンプルなワンカラムのスタイルシートで設定するのもよいでしょう。広告表示のサイドバーなどをなくし、テキストのみでホームページを作成することでコンテンツ部分が読まれやすくなります。</p><p>また、デジカメなどで撮影した画像を掲載する場合でも、背景色を白に設定し、シンプルにしたサイトの方が写真画像の栄えもよくなるでしょう。</p><p>こちらは<a href="make.html">簡単な無料ホームページの作り方</a>の箇所でご紹介しているサンプルと同じものですが、以下のようにスタイルシートの「float」の設定を解除し、サイドバーをなくすだけでカスタマイズすることができます。</p>
+<span style="text-align:left;">
+<textarea rows="15" cols="50" onclick="this.select();">
+body {
+margin:0;
+padding:0;
+}
+#outer {
+margin:0 auto;
+width:620px;
+padding:0;
+}
+#header {
+padding:0;
+height:100px;
+}
+.description {
+line-height:130%;
+font-size:87.5%;
+}
+#main {
+}
+.content {
+padding:0 0 10px 0;
+margin-bottom:4px;
+}
+ul {
+margin: 0 0 0 1em;
+padding: 0;
+}
+li {
+list-style:disc; 
+}
+p {
+line-height:150%;
+font-size:97%;
+color:#333;
+margin:1em 0;
+}
+img{
+border:0;
+}
+hr {
+border-width: 1px 0 0 0;
+border-style: solid;
+border-color: #ccc;
+height: 1px;
+}
+a{
+font-weight:normal;
+color: #00C;
+}
+h1 {
+font-size:18px;
+color: #033;
+padding:34px 0 0 0;
+margin:0;
+font-family: 'メイリオ', Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+h1 a{
+color:#033;
+text-decoration:none;
+}
+h1 a:hover{
+text-decoration:underline;
+}
+h2 {
+font-size:22px;
+margin:0;
+padding:9px 0 4px 0;
+border-bottom:1px solid #999;
+font-family: 'メイリオ', Meiryo,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+}
+#footer {
+color:#666;
+font-size:12px;
+height:100px;
+text-align:center;
+}
+.pagetop {
+padding-top:10px;
+font-size:16px;
+text-align:right;
+}
+blockquote{
+border:1px solid #ccc;
+padding:5px;
+margin:10px;
+}
+ @media screen and (max-device-width: 480px) {
+#outer {width:100%;}
+h1 {padding:20px 0 0 0;}
+#header, #main, #footer {padding: 0 10px;}
+}
+</textarea>
+</span>
+<p>背景色を白色（#ffffff）、もしくはグレーなどの薄い色合いで統一して、瞳にやさいホームページにすると読みやすくなり、コンテンツのテキスト部分のみに集中がいくようになります。あるいは、シンプルな壁紙素材などを背景素材としてリピート設定しているケースも多いです。</p>
+<p>掲示板や古くから運営されているホームページの場合も、ワンカラムでシンプルに作成されているケースが多いです。内部リンクについては、サイドバーなどのリンクをなくす代わりに、フッターなどのコンテンツの終わりにトップページや関連ページへの移動先を設定させておく必要があります。</p>
+<p>けれども、ページボリュームの多いホームページの場合には、やはり、サイドバーなどを設定して内部リンクを充実させる作り方にした方がよいでしょう。</p>
+<p>■ サンプルＨＰのカスタマイズ方法について<br /><a href="freesample.html">テンプレートのカスタマイズ方法</a></p>
+<p>■ スタイルシートによるデザインの変更方法<br /><a href="styles-css.html">スタイルシートでデザインを変更</a></p>
+<p>■ スタイルシートカスタマイズの手順例について<br /><a href="css-example.html">スタイルシートカスタマイズの手順例</a></p>
+<p>■ 最新のスタイルシートのサンプル情報<br /><a href="css-hp.html">最新版のテンプレートサンプル</a></p>
+<p>■ シンプルなテンプレートはこちらにも。<br /><a href="https://template.homepage-tukurikata.com/simple.html">シンプルな無料テンプレートの一覧</a></p>
+<hr />
+<p><a href="../index.html">トップページへ</a></p>
+</div>
+</div>
+<div id="footer"><div class="pagetop"><a href="#outer">このページの先頭へ▲</a></div><p>&copy;2018 www.homepage-tukurikata.com</p></div>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2336808-16', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

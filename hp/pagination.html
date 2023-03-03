@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ページネーションの作り方</title>
+<meta name="description" content="ページを分割する際、ページネーション（pagination）やページング（paging）などと呼ばれる「ページ送り」をコンテンツ下部に設定しておくのが一般的です。">
+<meta name="keywords" content="ページネーション,作り方,サンプル">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/pagination.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/pagination-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="pagination.html">
+<link rel="amphtml" href="../amp/hp/pagination.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ページネーションの作り方">
+<meta property="og:description" content="ページを分割する際、ページネーション（pagination）やページング（paging）などと呼ばれる「ページ送り」をコンテンツ下部に設定しておくのが一般的です。">
+<meta property="og:image" content="../image/pagination.png">
+<meta property="og:image" content="../image/google-tweet.png">
+<meta property="og:url" content="pagination.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/pagination.woff2) format("woff2"),
+url(../fonts/pagination.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/pagination-bold.woff2) format("woff2"),
+url(../fonts/pagination-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+.example li {display:inline;font-size:16px;}
+.example2 {padding-top:10px;padding-bottom:10px;}
+.example2 li {display: inline;padding:10px 15px;border:1px #ccc solid;color:#000053;border-radius: 5px / 5px;}
+.example2 .this {background-color:#777;color:#fff;}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>ページネーションの作り方</h1>
+<p>１ページが長文で縦長のコンテンツになってしまう場合、ページを分割して適切な長さに短くすることをおすすめします。</p><p>縦長コンテンツの場合、訪問者が最後まで閲覧する前に離脱してしまうことが多いため、記事下広告などの視認率が低下する傾向にあります。また、読まれていないページ下部のコンテンツはそもそも設置しても意味がないため、適切な長さに分割して露出度を増やすとよいでしょう。</p><p>このページを分割する際、<span class="aka">ページネーション（pagination）</span>や<span class="aka">ページング（paging）</span>などと呼ばれる「ページ送り」をコンテンツ下部に設定しておくのが一般的です。</p><p>例えば、ヤフーニュースでは番号付きの内部リンクが設置されています。</p><p><img src="../image/pagination.png" alt="ページネーション" width="320" height="182" class="ccc"></p><p>また、この番号付きの内部リンクに加え、「次のページへのリンク」も設定されていることが多いです。</p><p>概ね、検索結果で使用されていますが、個人サイトの場合は「<span class="aka">特集ページ</span>」などの続きもののコンテンツで「1ページ目、２ページ目…」などとグループ化する使い方になるかと思います。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>ページネーションのHTMLとCSSのサンプル</h2>
+<p>このページネーションの作り方には様々な方法がありますが、一番シンプルなのは「<a href="../html/ul-li.html">リストタグのli</a>」を「<a href="../css/display-inline.html">display:inline;</a>」で横並びにする方法です。</p><p>■<b>「display:inline;」で作る場合</b></p><p>例えば、１番や２番などの内部リンクをリスト化し、これをdisplay:inline;で横並びにします。</p><p>&lt;ul class=&quot;example&quot;&gt;<br>
+&lt;li&gt;前へ&lt;/li&gt;<br>
+&lt;li&gt;1&lt;/li&gt;<br>
+&lt;li&gt;2&lt;/li&gt;<br>
+&lt;li&gt;3&lt;/li&gt;<br>
+&lt;li&gt;次へ&lt;/li&gt;<br>
+&lt;/ul&gt;</p><p>.example li {display:inline;}</p><p>この場合、実際にはこのように表示されます。</p>
+<ul class="example">
+<li>前へ</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>次へ</li>
+</ul>
+<p>■<b>背景色や枠線も付ける場合</b></p><p>これでは物足りない場合、paddingで間隔を空けてborderで枠線を付け、border-radiusで角を丸くしてみることをおすすめします。また、現在閲覧中のページ番号に背景色を指定する場合は任意のclass属性を付けるなどして設定します。</p><p>&lt;ul class=&quot;example2&quot;&gt;<br>
+&lt;li&gt;前へ&lt;/li&gt;<br>
+&lt;li class=&quot;this&quot;&gt;1&lt;/li&gt;<br>
+&lt;li&gt;2&lt;/li&gt;<br>
+&lt;li&gt;3&lt;/li&gt;<br>
+&lt;li&gt;次へ&lt;/li&gt;<br>
+&lt;/ul&gt;</p><p>.example2 li {<br>
+display: inline;<br>
+padding:10px 15px;<br>
+border:1px #ccc solid;color:#000053;<br>
+border-radius: 5px / 5px;<br>
+}</p><p>.example2 .this {background-color:#777;color:#fff;}</p><p>この場合、実際にはこのように表示されます。</p>
+<ul class="example2">
+<li>前へ</li>
+<li class="this">1</li>
+<li>2</li>
+<li>3</li>
+<li>次へ</li>
+</ul>
+<p>■<b>「a:hover」も指定する場合</b></p><p>一方、リンクをマウスでポイントした際に背景色を枠線いっぱいまで広げる際、「li」にpaddingを一括で指定してしまうと「a:hover」の分と合算されてしまいます。</p><p>そのため、「li」からはpaddingを削除し、インライン要素でありながらブロック要素的な機能をする「display: inline-block;」を「li」に指定して高さと幅を出すことをおすすめします。「display:inline;」のままではインライン要素のため、高さや幅は指定できないので注意しましょう。</p><p>最終的に「li」のリンクタグの「a」に「<a href="../css/display-block.html">display:block:</a>」を指定すれば、リンク可能な範囲を枠線いっぱいにまで広げることができます。</p><p>&lt;ul class=&quot;example3&quot;&gt;<br>
+&lt;li class=&quot;pre&quot;&gt;前へ&lt;/li&gt;<br>
+&lt;li class=&quot;this&quot;&gt;1&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;page-2.html&quot;&gt;2&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;page-3.html&quot;&gt;3&lt;/a&gt;&lt;/li&gt;<br>
+&lt;li&gt;&lt;a href=&quot;page-2.html&quot;&gt;次へ&lt;/a&gt;&lt;/li&gt;<br>
+&lt;/ul&gt;</p><p>.example3 li {<br>
+display: inline-block;<br>
+height:40px;line-height:40px;<br>
+width:40px;text-align:center;<br>
+border:1px #ccc solid;color:#000053;<br>
+border-radius: 5px / 5px;<br>
+}</p><p>.example3 .pre {background-color:#ccc;color:#333;}<br>
+.example3 .this {background-color:#777;color:#fff;}<br>
+.example3 li a{display:block;text-decoration: none;}<br>
+.example3 li a:hover {color: #fff;text-decoration: none;background-color: #003396;}</p><p>この場合、カーソルを合わせた際にクリック可能な範囲が青く表示されます。</p><p><img src="../image/paging-a.png" alt="ページング カーソルを合わせた際" width="275" height="84" class="ccc"></p><p>後はこのページネーションの上部に、「次のページ：ほにゃらら」のような内部リンクを設置して２ページ目に誘導しておくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>ページネーションに「rel=prev/next」は必要か？</h2>
+<p>ページネーションといえば、以前までは&lt;head&gt;タグ内に「rel=prev/next」を設定するのが暗黙の了解でしたが、現在、Google検索では既にサポートが終了しています。</p><p><img src="../image/google-tweet.png" alt="rel prev next廃止" width="320" height="288" class="ccc"></p><p>そのため、記入していても特にSEO対策上のメリットはありませんが、やはり「rel=prev/next」がないとしっくりこないので記入しておくのもよいかと思います。</p><p>書き方については、最初のページにrel=nextで「次のページ」の指定をし、最後のページにはrel=prevで「前のページ」のみを指定します。そして、その間のページでは両方を指定する形になります。</p><p>■<b>最初のページ</b>（rel=nextのみ）</p><p>&lt;link rel="next" href="/page-2.html"&gt;</p><p>■<b>２番目のページ</b>（rel=nextとrel=prevの両方）</p><p>&lt;link rel=&quot;next&quot; href=&quot;/page-3.html&quot;&gt;<br>
+&lt;link rel=&quot;prev&quot; href=&quot;/page-1.html&quot;&gt;</p><p>■<b>3番目のページ</b>（rel=nextとrel=prevの両方）</p><p>&lt;link rel=&quot;next&quot; href=&quot;/page-4.html&quot;&gt;<br>
+&lt;link rel=&quot;prev&quot; href=&quot;/page-2.html&quot;&gt;</p><p>■<b>以降のページ</b>（rel=nextとrel=prevの両方）</p><p>上記と同様に両方を指定。</p><p>■<b>最後のページ</b>（rel=prevのみ）</p><p>&lt;link rel=&quot;prev&quot; href=&quot;/page-3.html&quot;&gt;</p><p>上記のように、これを設置してもGoogleではサポートが終了しているため、各ページが独立したコンテンツとして扱われます。そのため、各ページでまとまりのあるコンテンツになるように分割されることをおすすめします。</p><p>ちなみに、アクセスを一番最初のページに集約する意図で<a href="../html/rel-canonical.html">&lt;link rel=&quot;canonical&quot;</a>を設置して、最初のページに正規化する必要はありません。&lt;link rel=&quot;canonical&quot;は設定しないようにしましょう。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">作り方</a>　&#8260;　<b>ページネーション</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../css/display-inline.html">リストタグを横並びにする display:inline;</a></li>
+<li class="list-li"><a href="../css/display-block.html">タップ可能な範囲を広げる display:block;</a></li>
+<li class="list-li"><a href="../html/ul-li.html">箇条書きリストのhtmlタグ &lt;ul&gt;&lt;li&gt;</a></li>
+<li class="list-li"><a href="breadcrumb.html">ぱんくずリストの作り方</a></li>
+<li class="list-li"><a href="custom-404.html">カスタム404ページの作り方</a></li>
+<li class="list-li"><a href="../html/rel-canonical.html">&lt;link rel=&quot;canonical&quot;でURLを正規化</a></li>
+<li class="list-li"><a href="link.html">リンクタグの作り方</a></li>
+<li class="list-li"><a href="../css/a-css.html">リンクのCSS -「a:hover」と「a:visited」</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ページネーションの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/google-tweet-1200.png"
+       ],
+      "datePublished": "2019-12-04T00:00:00+09:00",
+      "dateModified": "2021-08-13T00:00:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ページネーション",
+        "item": "https://www.homepage-tukurikata.com/hp/pagination.html"
+      }]
+    }
+</script>
+</body>
+</html>

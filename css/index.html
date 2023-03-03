@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>CSSの一覧 - ホームページの作り方</title>
+<meta name="description" content="スタイルシート・プロパティーの一覧です。ホームページ作成の際、使用頻度が高く、実用的なものだけご紹介しております。">
+<meta name="keywords" content="css,スタイルシート,一覧">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/csstop.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/csstop-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="index.html">
+<link rel="amphtml" href="../amp/css/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSSの一覧 - ホームページの作り方">
+<meta property="og:description" content="スタイルシート・プロパティーの一覧です。ホームページ作成の際、使用頻度が高く、実用的なものだけご紹介しております。">
+<meta property="og:image" content="../image/ogp-400.png">
+<meta property="og:url" content="index.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/csstop.woff2) format("woff2"),
+url(../fonts/csstop.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/csstop-bold.woff2) format("woff2"),
+url(../fonts/csstop-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>CSSの一覧</h1>
+<p class="htarrow"><b>文字のデザインを指定する colorとfont-size</b></p>
+<p>CSSで文字の色彩や大きさを指定する場合は color や font-size を使用します。そのほか、line-height では行の間隔、text-align では左詰め、右詰めなどの指定ができます。<br />
+<a href="color.html">「文字」のCSSを指定 colorやfont-size</a></p><hr />
+<p class="htarrow"><b>内側と外側に余白を空ける paddingとmargin</b></p>
+<p>要素の内側に間隔を空ける場合は {padding:0px 0px 0px 0px;}、外側に余白を空ける場合は {margin:0px 0px 0px 0px;}を設定しましょう。<br /><a href="padding-margin.html">paddingとmarginの違い</a></p><hr />
+<p class="htarrow"><b>背景色や背景画像の指定 background</b></p><p>背景色を色彩コードで指定する際は「background-color」を使用し、画像で指定する際は「background-image」を使用します。また、まとめて一括で指定する際は「background」を使いましょう。<br />
+<a href="background.html">背景の指定をするCSS - background</a></p><hr />
+<p class="htarrow"><b>幅と高さを指定する widthとheight</b></p>
+<p>&lt;div&gt;領域などに幅と高さを指定する際は「width」や「height」を使用します。このwidthとheightは、paddingやborderの値と同時に設定するとサイトが崩れてしまうケースがあります。内側に&lt;div&gt;をもうひとつかませるなどして別々に設定するとよいでしょう。<br />
+<a href="width-height.html">領域の幅と高さを指定する widthとheight</a></p>
+<hr />
+<p class="htarrow"><b>左寄せや中央寄せをする {text-align:left;}</b></p><p>文字や画像を左寄せや右寄せにするには「text-align」で指定します。一方、width幅を指定したブロック要素をセンタリングする際は「margin:0 auto;」を使いましょう。<br /><a href="text-align.html">左寄せや中央寄せを指定するtext-align</a></p>
+<hr />
+<p class="htarrow"><b>文字の書体を指定する　{font-family: sans-serif;}</b></p><p>CSSで文字の書体を指定する際は「font-family」を使用します。フォントは太字やイタリックなどで違いがありますが、それらがセットになったフォントファミリー名で指定します。<br /><a href="font-family.html">「font-family」で文字の書体を指定</a></p>
+<hr />
+<p class="htarrow"><b>外枠を表示する {border:solid 1px #000000;}</b></p>
+<p>上下左右のすべてに外枠を表示する際はborderを指定し、「下の外枠」のみを表示する場合はborder-bottomを指定します。一方、文中で単に「下線」を引く場合は、htmlタグの&lt;u&gt;を使うとよいでしょう。<br /><a href="border.html">borderは要素の外枠を指定するCSS</a></p>
+<hr />
+<p class="htarrow"><b>枠線の角を丸くする {border-radius: 10px 10px 10px 10px;}</b></p>
+<p>CSSで枠線の角を丸める際、「border-上下-左右-radius」で左上や右上の角などを指定したのち、「水平方向の半径」と「垂直方向の半径」の二つの値を指定します。単に「border-radius」と書いた場合、４つの角をまとめて丸くすることができます。<br /><a href="border-radius.html">枠線の角を丸くする「border-radius」</a></p>
+<hr />
+<p class="htarrow"><b>リンクの色彩や下線などの指定</b></p><p>リンクにカーソルを合わせた際の指定は「a:hover」、訪問済みのリンクの色彩などは「a:visited」で指定します。<br /><a href="a-css.html">リンクのCSS -「a:hover」と「a:visited」</a></p>
+<hr />
+<p class="htarrow"><b>font-sizeに合わせた最適なwidth幅</b></p>
+<p>コンテンツ部分のwidthをスタイルシートで指定する際、font-sizeやfont-familyなどに応じてwidth幅を合わせると文章の右端がガタガタにならずに表示されます。font-familyで等幅フォントを指定した状態で、１行の文字数からwidthを計算するとよいでしょう。<br /><a href="font-width.html">font-sizeに合わせた最適なwidth幅</a></p>
+<hr />
+<p class="htarrow"><b>行の高さや行間を指定する {line-height: 150%;}</b></p>
+<p>行と行の間隔を空ける際は「line-height」で指定します。line-heightの値を150%程度に設定して適度に行間を空けるのが一般的です。<br /><a href="line-height.html">行の高さや行間を指定する line-height</a></p>
+<hr />
+<p class="htarrow"><b>リストタグを横並びにする display:inline;</b></p>
+<p>リストタグを横並びにする場合はCSSで「display:inline;」を指定しましょう。リストアイテム間に隙間が生じる場合はhtmlソースで改行せずに記述して回避します。<br /><a href="display-inline.html">リストタグを横並びにする display:inline;</a></p>
+<hr />
+<p class="htarrow"><b>タップ可能な範囲を広げる display:block;</b></p>
+<p>スマホでの閲覧時にメニュー部分のリンクをタップしやすくする際、CSSで「display: block;」を指定しておくとタップ可能な範囲が広がります。<br /><a href="display-block.html">タップ可能な範囲を広げる display:block;</a></p>
+<hr />
+<p class="htarrow"><b>サイドバーや画像を回り込ませる float</b></p>
+<p>2カラムなどでサイドバーを右や左に回り込ませるには、CSSに「float」を指定してあとに続く要素を回り込ませます。また、clearを忘れずに指定してfloatを解除しておきましょう。<br /><a href="float.html">floatは回り込みのCSS</a></p>
+<hr />
+<p class="htarrow"><b>画像の大きさを最適化する max-width:100%;</b></p>
+<p>スマホ閲覧時に画像がはみ出て表示されてしまう場合、スタイルシートのimgに「max-width:100%;」を指定することで自動で大きさを最適化することができます。合わせて「height:auto;」も設定しておきましょう。<br /><a href="max-width.html">画像の大きさを最適化する max-width:100%;</a></p>
+<hr />
+<p class="htarrow"><b>CSSで記号や文字を表示する 要素:before {content:&quot;記号や文字&quot;;}</b></p>
+<p>HTML上に記号や文字などを記述したくない場合、「要素:before」や「要素:after」を使えば、CSSで要素の前後に記号や文字を表示させることができます。<br />
+<a href="before-content.html">CSSで記号や文字を表示する「:before」と「:after」</a></p>
+<hr />
+<p class="htarrow"><b>WEBフォントを指定する @font-face</b></p>
+<p>WEBフォントを使用する際、「woff」や「woff2」などのフォントファイルをサーバーにアップロードしたのち、CSSに「@font-face」を記載してファイルのURLとフォント名を指定します。<br /><a href="web-font.html">@font-faceでWEBフォントの指定方法</a></p>
+<hr />
+<p class="htarrow"><b>CSSファイルの作り方</b></p><p>スタイルシートは拡張子「.css」にて、「任意の英数小文字.css」でファイルを作成します。作成したファイルはルートディレクトリに設置しておくとよいでしょう。<br />
+<a href="howto-css.html">スタイルシートの作り方</a></p><hr />
+<p class="htarrow"><b>スタイルシートの書き方</b></p><p>スタイルシートを書く際は、ショートハンドなどを活用して冗長になるのを避け、シンプルで分かりやすく記述していきましょう。<br /><a href="css-writing.html">スタイルシートの書き方のポイント</a></p><hr />
+<p class="htarrow"><b>Minify化で圧縮</b></p><p>CSSをMinify（ミニファイ）して圧縮することでサイトの表示を高速化することができます。一般的には半角スペースや改行を削除することでファイル容量を削減することができます。<br />
+<a href="minify.html">CSSのMinify化で容量を圧縮</a></p><hr />
+<p class="htarrow"><b>CSSの確認ツール</b></p><p>ホームページのCSSを簡単にチェックする際、ブラウザのChromeで利用できるデベロッパーツールを使用すると便利です。<br /><a href="chrome-devtool.html">CSSの確認はChromeデベロッパーツールが便利</a></p>
+<div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<b>CSSの一覧</b></div>
+<br /><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --></main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      }]
+    }
+</script>
+</body>
+</html>

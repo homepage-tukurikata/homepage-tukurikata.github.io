@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>「font-family」で文字の書体を指定</title>
+<meta name="description" content="CSSで文字の書体を指定する際は「font-family」を使用します。フォントは太字やイタリックなどで違いがありますが、それらがセットになったフォントファミリー名で指定します。">
+<meta name="keywords" content="フォント,font-family,css">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/family.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/family-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="font-family.html">
+<link rel="amphtml" href="../amp/css/font-family.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="「font-family」で文字の書体を指定">
+<meta property="og:description" content="CSSで文字の書体を指定する際は「font-family」を使用します。フォントは太字やイタリックなどで違いがありますが、それらがセットになったフォントファミリー名で指定します。">
+<meta property="og:image" content="../image/sans-serif.png">
+<meta property="og:image" content="../image/serif.png">
+<meta property="og:image" content="../image/arial.png">
+<meta property="og:url" content="font-family.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/family.woff2) format("woff2"),
+url(../fonts/family.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/family-bold.woff2) format("woff2"),
+url(../fonts/family-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>「font-family」で文字の書体を指定</h1>
+<p>CSSで文字の書体を指定する際は「<span class="aka">font-family</span>」を使用します。</p><p>フォントは同じ書体でも太字やイタリックなどの違いがありますが、それらがセットになったフォントファミリー名で指定します。</p><p>body {font-family: フォントファミリー名;}</p><p>例えば、山田家に太郎くんや花子さんがいた場合、{font-family: 山田 太郎;}ではなく、{font-family: 山田;}といったファミリー名で指定します。</p><p>こちらはメイリオのファミリーたちですが、フォントによっては細字や太字、ミディアムや極太など多くの書体が用意されている場合もあります。</p><p><img src="../image/fontfamily-mei.png" alt="メイリオのfont-familyの詳細" width="480" height="270" class="ccc"></p><p>この場合、{font-family: "メイリオ レギュラー";}ではなく、{font-family: "メイリオ";}などと指定するのが一般的です。</p><p>書体の太さも指定したい場合、ファミリー名を指定したあと、使用したい箇所にfont-weight:bold;やfont-weight:500;などと個別に指定すると「メイリオ ボールド」の書体で表示されます。</p><p>この「font-family:」のあとの半角スペースについては、あってもなくても正常に表示されます。また、font-familyを何も指定しないデフォルトの場合、OSやブラウザによって違いはあるものの、Windowsではおおむねメイリオ、Macではヒラギノの書体で表示されることになります。</p><p>そのページで適用されている書体を調べる場合、<a href="chrome-devtool.html">Chromeデベロッパーツール</a>を使い、「Elements」→「Computed」の箇所からチェックされるとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>表示させたい優先順に複数のフォント名を指定</h2>
+<p>CSSでフォントを指定しても、閲覧者の環境でそのフォントがインストールされてない場合は正常に表示されません。そのため、表示されなかった場合のために、コンマ（,）で区切って複数のフォント名を左から順に指定しておきます。</p><p>body {font-family: Helvetica, Arial, Meiryo, sans-serif;}</p><p>場所については、bodyタグに設定しておけば、ページ全体に適用されます。</p><p>Dreamweverのソフトで「font-family:」と入力するといくつかの候補が表示されますが、「明朝体」はあまり使用されていないため、一般的には「ゴシック体」の「ヒラギノ角ゴ Pro W3」や「メイリオ」を選択されることをおすすめします。</p><p><img src="../image/dw-fontfamily.png" alt="Dreamweverのfont-familyの例" width="320" height="200" class="ccc"></p><blockquote><p>■<b>Dreamweverの例</b></p><p>font-family: &quot;ヒラギノ角ゴ Pro W3&quot;, &quot;Hiragino Kaku Gothic Pro&quot;, &quot;メイリオ&quot;, Meiryo, Osaka, &quot;ＭＳ Ｐゴシック&quot;, &quot;MS PGothic&quot;, sans-serif;</p></blockquote>
+<p>ゴシック体には「ＭＳ Ｐゴシック」などもありますが、こちらは少し古いタイプになるため、Mac用に「ヒラギノ角ゴ Pro W3」を指定し、Windows用に「メイリオ」をメインに指定しておけば十分かと思います。</p>
+<h2>一般的な総称フォント名はfont-familyの最後に記述する</h2>
+<p>上記のうち、「ヒラギノ角ゴ Pro W3」や「メイリオ」などのフォントは「ゴシック体」になりますが、CSSでfont-familyを指定する際には、「ゴシック体」のような<span class="aka">一般的な総称フォント名</span>を最後に記述するようにします。</p><p>「コーラをください。なかったら他の炭酸系の飲み物をください。」のように、まずは個別のフォント名を記載したのち、汎用性の高い一般的な総称フォント名を後ろに記述するようにします。</p><p>この一般的な総称フォントには、以下の５つがあります。</p>
+<ul>
+<li>sans-serif（ゴシック体）</li>
+<li>serif（明朝体）</li>
+<li>cursive（筆記体）</li>
+<li>fantasy（ファンタジー）</li>
+<li>monospace（モノスペース）</li>
+</ul>
+<p>このなかで使用頻度が高いのはゴシック体の「<span class="aka">sans-serif</span>」です。</p><p>上記のDreamweverの例でも最後に「sans-serif」が指定されていますが、この「sans」はフランス語で「なし」の意味で、「sans-serif」だと「セリフ（ヒゲ）がない」書体という意味になります。</p><p><a href="https://www.w3.org/TR/2018/REC-css-fonts-3-20180920/#generic-font-families" target="_blank" rel="nofollow noopener">W3Cのサイト</a>では、このsans-serifのサンプルとしてVerdanaなどが紹介されていますが、メイリオも「sans-serif」のひとつです。</p><p>■<b>サンセリフ（ゴシック体）の例</b></p><p><img src="../image/sans-serif.png" alt="サンセリフ（ゴシック体）の例" width="320" height="200" class="ccc"></p><p>そのため、優先順としては具体的なフォント名を指定したのち、もし使えない場合には似たような書体という意味で、後ろの方に一般的な総称の「sans-serif」などを指定しておくことをおすすめします。</p><p>例えば、「メイリオください。なかったら他のサンセリフ系のフォントをください。」のように指定する際、以下のように記述します。</p><p>body {font-family: Meiryo, sans-serif;}</p><p>一方、セリフの例としては「ＭＳ Ｐ明朝」が紹介されています。</p><p>■<b>セリフ（明朝体）の例</b></p><p><img src="../image/serif.png" alt="セリフ（明朝体）の例" width="320" height="207" class="ccc"></p><p>この書道っぽいヒゲのあるセリフ調（明朝体）のサイトはあまり見かけることはなく、大手メディアのfont-familyを見ても「serif」を指定しているケースはあまり見たことがないです。他の筆記体の「cursive」や「fantasy」もまず見たことがないので、通常は「sans-serif」一択で問題ないかと思います。</p><p>Wikipediaでは「body{font-family: sans-serif}」とのみ指定されていますが、「sans-serif」だけを指定するのでもよいかと思います。</p>
+
+<h2>欧文フォントは日本語フォントよりも前に指定</h2>
+<p>欧文フォントを使用する際は、<span class="aka">日本語フォントよりも順序を前に指定</span>することをおすすめします。</p><p>日本語フォントの場合、漢字、カタカナ、ひらがな、英語などがセットになっていますが、例えば、日本語フォントのメイリオのアルファベットはこのようになっています。</p><p>■<b>メイリオの中身</b></p><p><img src="../image/meiryo.png" alt="メイリオのアルファベット" width="320" height="208" class="ccc"></p><p>このメイリオは日本語フォントのため、漢字やひらがなのフォントも含まれています。</p><p><img src="../image/meiryo-kanji.png" alt="メイリオの漢字やひらがなのフォント" width="320" height="210" class="ccc"></p><p>一方、欧文フォントの場合は英語のみになりますが、例えば、「Arial」の場合のアルファベットは以下のようになっており、「メイリオ」のアルファベットとは表示に違いがあります。</p><p>■<b>Arialの中身</b></p><p><img src="../image/arial-nakami.png" alt="Arialのアルファベット" width="320" height="203" class="ccc"></p><p>ここで、英語についてはクオリティー高めのArialのフォントを使い、日本語についてはメイリオのフォントを使いたい場合、CSSではArialを先に指定したのちにメイリオを指定する形になります。</p><p>{font-family: Arial, Meiryo;}</p><p>このようにすることで、まずは英語についてはArialが適用されますが、日本語についてはArialでは対応するフォントがないため、次のメイリオが適用されることになります。逆に、{font-family:  Meiryo, Arial;}のように日本語フォントを前に設定してしまうと、英語も日本語もメイリオが適用されてしまい、欧文フォントが表示されないので注意しましょう。</p><p>この「Arial（エイリアル、アリアル）」と「メイリオ」で英語での表示を比較してみますと、Arialは「e」や「a」のカーブが繊細で上品な印象を感じます。</p><p><img src="../image/arial.png" alt="「メイリオ」と「Arial」の表示を比較" width="320" height="200" class="ccc"></p><p>Googleの検索結果などでは「{font-family: arial, sans-serif;}」などと指定されていますが、この場合、英語の箇所は「arial」、日本語の箇所はWindowsの環境だとサンセリフのメイリオで表示されるはずです。</p><p>メイリオも綺麗ですが、Arialは英語での表示がクオリティー高めになりますし、WindowsとMacの両方で標準フォントとなっているので使いやすいかと思います。</p><p>そのほか、欧文フォントではHelvetica（ヘルベチカ）の人気も高く、おおむねarialと同じようなフォントと感じていますが、Helveticaも設定しておくとよいかもしれません。</p><p>{font-family: Helvetica, Arial, sans-serif;}</p><p>これに日本語フォントとして、Macでのヒラギノ、Windowsでのメイリオも指定しますと、以下のような設定になります。</p><p>{font-family: Helvetica, Arial, &quot;Hiragino Kaku Gothic ProN&quot;, Meiryo, sans-serif;}</p><p>ただし、メイリオと比較すると、Arialは上記のようにフォントの幅が狭いため、両方が混在するとサイト全体の統一感が失われてしまうかもしれません。その場合は日本語フォントのみで設定することをおすすめします。</p>
+<!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<h2>font-familyのフォント名に空白などを含む場合の引用符</h2>
+<p>フォント名に空白を含む場合や日本語の場合は引用符で囲むことをおすすめします。</p><p>body {font-family:  Helvetica, Arial, <span class="aka">&quot;</span>Hiragino Kaku Gothic ProN<span class="aka">&quot;</span>, <span class="aka">&quot;</span>メイリオ<span class="aka">&quot;</span>, sans-serif;}</p><p>引用符のシングルクォート（'）とダブルクォート（&quot;）はどちらでも構いませんが、pタグなどにstyle属性で直接指定する際はダブルクォートが重複してしまうため、シングルクォートを使用することをおすすめします。</p><p>&lt;p style=&quot;font-family: <span class="aka">'</span>メイリオ<span class="aka">'</span>;&quot;&gt;</p><p>一方、CSSにはダブルクォートで記述している人が多い印象があります。</p><p>p {font-family: <span class="aka">&quot;</span>メイリオ<span class="aka">&quot;</span>;}</p><p>ただし、引用符を付けなくても大抵のブラウザでは正常に表示されるはずです。</p><p>また、古いブラウザでは&quot;メイリオ&quot;, Meiryo,のように、英語表記と日本語表記によって表示される、されないの違いがあり、認識されないときのために以下のように両方を書く人もいます。</p><p>body {font-family:  Helvetica, Arial, &quot;ヒラギノ角ゴ ProN W3&quot;, &quot;Hiragino Kaku Gothic ProN&quot;, &quot;メイリオ&quot;,  Meiryo, sans-serif;}</p><p>加えて、フォントファミリー名はOSによっても違いがあり、游ゴシック体についてはWindowsでは「游ゴシック」、Macでは「游ゴシック体」などの違いがあるため、どのように記述するのかはサイト運営者によってバラバラです。</p><p>全ての閲覧環境を考慮して指定するのが面倒な場合、総称フォントファミリー名の{font-family: sans-serif;}のみを指定するだけでも無難に表示されるものと思います。</p>
+<h2>WEBフォントの「Noto Sans JP」がおすすめ</h2>
+<p>当サイトでは<a href="../hp/what-webfont.html">WEBフォント</a>の「Noto Sans JP」を設定している箇所が多いですが、メイリオと比較すると以下のような違いがあります。</p><p><img src="../image/noto-meiryo.png" alt="「Noto Sans JP」と「メイリオ」の表示を比較" width="320" height="200" class="ccc"></p><p>アップにした場合、メイリオもきれいですが、Notoの方がきれいと感じています。一方で、メイリオは小さい文字でもはっきりくっきり明瞭に表示されます。メイリオの由来は「明瞭」から来ているようですが、可読性の高さは非常に高いものがあります。</p><p>あくまで個人の感想ですが、16pxあたりまではメイリオ、それより大きな文字はNoto、iPhoneなどのスマホではヒラギノあたりが最適かもしれません。</p><p>もしNotoを使用する場合、等幅フォントのMonoも入って種類の多い「Noto Sans CJK JP」版の方にDemiLight（font-weight: 300;）がありますが、一般的な「Noto Sans JP」のRegular（font-weight: 400;）よりも、DemiLightの方が使いやすいと感じています。</p><p>（※追記：Noto Sans CJK JPはダウンロードできなくなったみたいです。）</p><p>■<b>DemiLightのサンプル</b></p><p><img src="../image/dl.png" alt="Noto DemiLightのサンプル" width="320" height="200" class="ccc"></p><p>■<b>Regularのサンプル</b></p><p><img src="../image/nr.png" alt="Noto Regularのサンプル" width="320" height="200" class="ccc"></p><p>Regularと大した違いはありませんが、DemiLightの方がなめらかなため、当サイト運営者は主にこちらを使用しています。タイトルなど太字の箇所については、40px～50pxあたりのフォントサイズの場合はBlackがおすすめですが、通常はBoldあたりで十分と感じています。</p>
+<h2>游ゴシックは太字が美しい</h2>
+<p>游ゴシックはWindowsとMacの標準フォントなので使いやすいです。</p><p>Windowsの場合、「スタート」を右クリック、「設定」→「個人用設定」→「游ゴシック」の箇所で表示を確認することができます。</p><p><img src="../image/yu-gothic.png" alt="Windowsで「游ゴシック」の表示を確認する方法" width="320" height="240" class="ccc"></p><p>Windowsではフォント名が「游ゴシック」のため、{font-family: &quot;游ゴシック&quot;;}を指定します。一方、Macでは「游ゴシック体」のため、Macでも指定する場合は以下のように設定します。</p><p>body {font-family: &quot;游ゴシック&quot;,&quot;游ゴシック体&quot;;}</p><p>ただし、このままの状態ではWindowsでの表示が「Regular」になってしまい、かすれてスカスカして読みにくいです。そのため、一般的には「Medium」で表示されるよう、<span class="aka">font-weight:500;</span>も設定することになります。</p><p>当サイト運営者の環境の場合、font-weight:300;で「Light」、400で「Regular」、500で「Medium」、600以上だと「Bold」で表示されました。メイリオの場合も500で「Regular」、600で「Bold」のため、font-weight:500;を指定しておけば、游ゴシックが無くてメイリオが適用された場合でも太字になることはありません。</p><p>また、&quot;游ゴシック Medium&quot;などと直接指定する方法もありますが、ブラウザによって効かないケースもあるのでfont-weight:500;がおすすめです。</p><p>当サイト運営者の個人的な印象では、この「Medium」でも少しかすれた印象がありますが、太字の場合は綺麗に表示されると感じています。</p><p>■<b>游ゴシック Mediumのサンプル</b></p><p><img src="../image/yuu.png" alt="游ゴシック Mediumのサンプル" width="320" height="200" class="ccc"></p><p>Macではヒラギノの書体が綺麗だと思いますので、&quot;游ゴシック&quot;のみを指定して&quot;游ゴシック体&quot;は指定しないのもありかもしれません。</p><p>body {font-family: &quot;游ゴシック&quot;,sans-serif;font-weight:500;}</p><p>游ゴシックはfont-weight:500;の設定で少し複雑になりますが、WindowsとMacの標準フォントである点でメリットが多いと思います。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">CSSの一覧</a>　&#8260;　<b>font-family</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li class="list-li"><a href="web-font.html">@font-faceでWEBフォントの指定方法</a></li>
+<li class="list-li"><a href="../hp/webfont-service.html">Webフォントサービスを比較</a></li>
+<li class="list-li"><a href="color.html">「文字」のCSSを指定 colorやfont-size</a></li>
+<li class="list-li"><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="css-writing.html">スタイルシートの書き方のポイント</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "「font-family」で文字の書体を指定",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/fontfamily-1200.png"
+       ],
+      "datePublished": "2021-01-06T00:51:29+09:00",
+      "dateModified": "2022-03-04T15:26:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "「font-family」で文字の書体を指定"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "WEBフォント",
+        "item": "https://www.homepage-tukurikata.com/hp/what-webfont.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "「font-family」で文字の書体を指定"
+      }]
+    }
+</script>
+</body>
+</html>

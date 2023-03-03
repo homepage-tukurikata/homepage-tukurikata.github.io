@@ -1,0 +1,299 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>構造化データの作り方</title>
+<meta name="description" content="ホームページに構造化データを作成すると、検索エンジンでコンテンツ内容が認識されやすくなり、検索結果がリッチリザルトで表示されるようになります。このページでは「JSON-LD」形式で構造化データを作成する際の手順についてご紹介しています。">
+<meta name="keywords" content="構造化データ,JSON-LD,作り方">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../hp/json.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="構造化データの作り方">
+<meta property="og:description" content="ホームページに構造化データを作成すると、検索エンジンでコンテンツ内容が認識されやすくなり、検索結果がリッチリザルトで表示されるようになります。このページでは「JSON-LD」形式で構造化データを作成する際の手順についてご紹介しています。">
+<meta property="og:image" content="../../image/json-sample.png">
+<meta property="og:image" content="../../image/json-howto.png">
+<meta property="og:url" content="../../hp/json.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>構造化データの作り方</h1>
+<p>ホームページに<span class="aka">構造化データ</span>を作成すると検索エンジンでコンテンツ内容が認識されやすくなり、検索結果がリッチリザルトで表示されやすくなります。</p><p>例えば、「カサブランカ」のページの場合、それが花の名前を意味するのか、レストランの名前を意味するのか、あるいはモロッコの地名や映画のタイトルを意味するのかが分かりにくいです。</p><p>そのような場合、映画の場合は「Movie」、レストランの場合は「ローカルビジネス」、あるいは花の栽培方法なら「ハウツー」など、それぞれのタイプに合った構造化データを作成することでコンテンツ内容が正確に認識されやすくなります。</p><p>この構造化データはセマンティック・ウェブに関するものになりますが、コンテンツの意味内容を正確に認識してもらいやすくなるメリットがあります。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>構造化データ作成による「リッチリザルト」のメリット</h2>
+<p>構造化データを作成することにより、検索結果では画像付きなどの<span class="aka">リッチリザルト</span>で表示されやすくなるメリットがあります。</p><p>例えば、当サイトではホームページの作り方に関するハウツー情報を公開しているため、構造化データについては主に「HowTo」タイプを選択しており、このような&lt;script&gt;形式で作成した構造化データをフッター部分に差し込んでいます。</p><p><amp-img src="../../image/json-howto.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p><b>&quot;@type&quot;: &quot;HowTo&quot;</b>と記載していますが、この場合は<span class="aka">「ハウツー」タイプ</span>の構造化データになり、検索結果が通常よりも表現力豊かな形式で表示されるようになります。</p><p><amp-img src="../../image/json-sample.png" layout="intrinsic" alt="" width="320" height="569" class="ccc"></amp-img></p><p>あるいは、<b>&quot;@type&quot;: &quot;Article&quot;</b>で作成すれば、<span class="aka">「記事」タイプ</span>の構造化データとなり、検索結果ではこのように表示されるかもしれません。</p><p><amp-img src="../../image/amp-article.png" layout="intrinsic" alt="" width="320" height="292" class="ccc"></amp-img></p><p>もしくは、<b>&quot;@type&quot;: &quot;Question&quot;</b>を選択すれば、<span class="aka">「よくある質問」</span>でこのように表示されるようになります。</p><p><amp-img src="../../image/json-situmon.png" layout="intrinsic" alt="" width="320" height="207" class="ccc"></amp-img></p><p>加えて、<b>&quot;@type&quot;: &quot;BreadcrumbList&quot;</b>を選択すれば、URLに<span class="aka">「パンくずリスト」</span>が表示されるようになります。</p><p><amp-img src="../../image/pankuzu-json.png" layout="intrinsic" alt="" width="320" height="207" class="ccc"></amp-img></p><p>１ページに複数の構造化データを設置することができますので、全ページに「パンくずリスト」や「記事タイプ」を作成しつつ、「ハウツー」や「よくある質問」については当てはまるページのみ個別に対応しておくとよいでしょう。</p><p>ちなみに、「ハウツー」のなかでも料理の作り方に関するハウツーについては「レシピ」を選択する必要があり、意味や意図の違いを考えて最適なタイプを選択されることをおすすめします。</p><p>CMSサイトの場合は個別ページでの対応はなかなか難しいと感じていますが、一般的な「HTMLサイト」ならJSON-LD形式の&lt;script&gt;を作成して挿入するだけで簡単に対応できます。</p><p>また、AMP化していなくても構造化データの機能は利用できますが、AMPに対応しておいた方がより多彩なリッチリザルト機能を利用できるようになります。</p><p>→ <a href="../../hp/amp.html">AMPページの作り方</a></p><p>実際に構造化データの作る際、HTMLタグ属性を利用する「microdata」や「RDFa」などもありますが、Googleが推奨している「<span class="aka">JSON-LD（ジェイソン-エルディー）</span>」形式で作成するのがおすすめです。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2 id="step1">構造化データの機能タイプを選択</h2>
+<p>構造化データのタイプには、レシピやハウツー、ニュース、レビュー、ローカルビジネスなど多岐にわたっていますので、まずは自サイトにあった構造化データを選択します。</p><p><amp-img src="../../image/kouzouka-data.png" layout="intrinsic" alt="" width="320" height="242" class="ccc"></amp-img></p><p>Google検索セントラルの公式サイトではギャラリーが公開されていますので、そちらの「スタートガイド」を参考にされるとよいでしょう。</p><p>→ <a href="https://developers.google.com/search/docs/advanced/structured-data/search-gallery?hl=ja" target="_blank" rel="nofollow noopener">検索ギャラリーとリッチリザルトを見る  |  Google 検索セントラル </a></p><p>一般的なサイトの場合、以下のタイプを選択できるかもしれません。</p><p id="step1">■<b>レシピ</b></p><p>料理関連のレシピを公開している場合は「レシピ」を選択します。料理関連ではない作り方の場合は「レシピ」ではなく、「HowTo」を選択することをおすすめします。</p><p>■<b>ぱんくずリスト</b></p><p>通常、検索結果でのぱんくずリストはURLで表示されますが、その名前をカスタマイズしたり、複数のカテゴリに当てはまる記事に設定することができます。</p><p>■<b>ローカルビジネス</b></p><p>お店などを運営しているローカルビジネスの場合、「Googleマイビジネス」と同様、「ローカルビジネス」の構造化データも作成しておくとよいでしょう。</p><p>■<b>ハウツー</b></p><p>作り方や方法などのハウツー情報を公開しているコンテンツに使用します。ただし、料理の作り方の場合は「レシピ」を選択します。</p><p>■<b>Article</b></p><p>大手ニュースサイトの場合は「Article」を利用するとよいかもしれません。ただし、Seach Consoleにて大きな画像が必要とエラーが出てくるため、画像を用意するのが難しいかもしれません。</p><p><amp-img src="../../image/article-gazou.png" layout="intrinsic" alt="" width="320" height="209" class="ccc"></amp-img></p><p><a href="../../hp/best-image-size.html">Article構造化データの画像サイズ</a>については、「1200px × 675px」や「1200px × 900px」あたりの大きなサイズを用意することをおすすめします。</p><p>加えて、「datePublished」の公開日時の指定は必須ですが、当サイト運営者の場合、公開日時の代わりにファイルの作成日を指定しています。この「作成日」についてはファイルを右クリックし、「プロパティ」の箇所で調べることができます。</p><p><amp-img src="../../image/create-date.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>もしファイル数が多い場合、以下のコマンドでチェックするとよいでしょう。</p><p>PowerShell &quot;Get-ChildItem | Select-Object Name, @{Name=\&quot;CreationTime\&quot;; Expression={$_.CreationTime.ToString(\&quot;yyyy-MM-ddTHH:mm:ss+09:00\&quot;)}} | Sort-Object CreationTime&quot; </p><p>調べたいフォルダに移動し、パスの窓の箇所に「cmd」と入力してエンターを押し、コマンドプロンプトを起動して上記のコマンドを実行するだけです。</p><p><amp-img src="../../image/cmd-enter.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>すると、ファイルの「作成日」が以下のような一覧で表示されます。</p><p><amp-img src="../../image/cr-date.png" layout="intrinsic" alt="" width="320" height="200" class="ccc"></amp-img></p><p>一方、「更新日」で表示する場合、上記の「CreationTime」の箇所を「LastWriteTime」に書き変えて実行すれば出てくるはずです。</p><p>これらをテキストファイルで出力する場合、上記コマンドの最後に「 &gt; sample.txt」を加えて実行すれば、同じフォルダ内にテキストファイルで出力されるはずです。</p><p>ただし、パソコンの買い替えなどでファイルを移転した場合、コピーした日時が作成日となるため、その場合は更新日の方が近いかもしれません。上記の画像でも作成日が2012年3月13日となっていますが、アクセス解析上は2008年10月10日からデータが残っており、正確な日時をチェックするのは難しいと思います。</p><p>同様に、「dateModified」の更新日については必須ではありませんが、現在の時刻を入力しておくとよいでしょう。</p>
+<p>■<b>よくある質問</b></p><p>こちらもビジネスサイトで設定しておくことをおすすめします。</p><p>これらの「タイプ」を選択したのち、「スタートガイド」のテンプレートを参考に、それぞれの構造化データをJSON-LD形式で作成していきます。</p><p>当ホームページでも５つほど対応しており、Search Consoleの「拡張」の箇所から確認できますが、「Article」の画像の大きさについては「AMP」の箇所から警告が来ていました。</p><p><amp-img src="../../image/kakutyou.png" layout="intrinsic" alt="" width="320" height="300" class="ccc"></amp-img></p><p>「ぱんくずリスト」や「Article」の構造化データは簡単に作成できますが、「レシピ」や「ハウツー」については、材料や費用、所要時間、手順、画像などで設定する項目が多く、少し面倒かもしれません。</p>
+
+<h2 id="step2">JSON-LDテンプレートを参考に&lt;script&gt;を作成</h2>
+<p>QAやレストラン、映画、お店やサービスなどの場合、「構造化データ マークアップ支援ツール」を利用すると便利です。</p><p>→ <a href="https://www.google.com/webmasters/markup-helper/" target="_blank" rel="nofollow noopener">構造化データ マークアップ支援ツール</a></p>
+<p><amp-img src="../../image/json-sientool.png" layout="intrinsic" alt="構造化データ マークアップ支援ツール" width="320" height="220" class="ccc"></amp-img></p><p>マークアップしたい箇所を選択し、タグ付けをすることでのJSON-LDコードを作成することができます。</p><p>もし利用したいタイプがない場合、上記Google検索の公式サイトにて、それぞれテンプレートのサンプルが掲載されていますので、そちらを参考にJSON-LDの&lt;script&gt;を作成します。</p><p>ぱんくずリストが分かりやすいかと思いますが、テンプレートではパンくずの一つの階層が波括弧でこのようになっているはずです。</p><p>{ほにゃ}</p><p>これを階層ごとにカンマで続けて並んでいます。</p><p>{ほにゃ１},{ほにゃ２},{ほにゃ３}</p><p>これを角括弧で括るとこのようになります。</p><p><span class="aka">[</span>　{ほにゃ１},{ほにゃ２},{ほにゃ３}　<span class="aka">]</span></p><p>これをさらに波括弧で括ってこのようになっています。</p><p>{　ほにゃらら <span class="aka">[</span>　{ほにゃ１},{ほにゃ２},{ほにゃ３}　<span class="aka">]</span>　}</p><p>複数を指定する場合は、これを複数作成し、さらにカンマで続けて角括弧で括る感じになります。</p><p>「レシピ」や「ハウツー」、あるいは「ローカルビジネス」の場合は複雑になりますが、おおむね波括弧と角括弧、カンマの組み合わせとなっているため、あらかじめメモ帳などに必要な要素を書き出してから作成することをおすすめします。</p><p>「レシピ」や「ハウツー」、あるいは「ローカルビジネス」の場合、あらかじめメモ帳などに必要な要素を書き出してから作成することをおすすめします。</p><p>例えば、このページの場合は以下のようになります。</p><p>■<b>「ハウツー」の例</b></p>
+<hr/><p><b>タイトル：</b>構造化データの作り方<br>
+<b>説明：</b>構造化データの作成する際、HTMLタグ属性を利用する「microdata」形式や「RDFa」形式などがありますが、Googleが推奨している「JSON-LD」形式で作成することをおすすめします。</p><p><b>費用：</b>なし<br>
+<b>素材：</b>テンプレートサンプル<br>
+<b>道具：</b>なし</p><p><b>ステップ１：</b>構造化データの機能タイプを選択<br>
+指示：Google検索セントラルのギャラリーを参考に、レシピやハウツー、ニュース、レビュー、ローカルビジネスなど、自サイトにあった構造化データのタイプを選択します。</p><p><b>ステップ２：</b>テンプレートを参考にscriptを作成<br>
+指示：各タイプの「スタートガイド」にテンプレートのサンプルが掲載されていますので、そちらを参考にscriptを作成します。</p><p><b>ステップ３：</b>フッターなどにJSON-LDのコードを挿入<br>
+指示：HTMLファイルに作成したコードを挿入します。場所はフッターなどでも機能します。</p><p><b>ステップ４：</b>リッチリザルトテストでエラーの確認<br>
+指示：「リッチリザルトテスト」でエラーがないか確認します。また、Search Consoleでも警告が出ていないかを確認します。</p><p><b>所要時間：</b>１時間</p>
+<hr/>
+<p>また、ページ内のステップの箇所の見出しタグなどに「id属性」を埋め込んでおき、「#step1」などの形で指定します。</p><p>レシピの場合は時間の単位が難しいかもしれません。</p><p>Pは「Period」の略で継続時間の意味になりますが、P1Mで一カ月間（Month）の意味になります。分（Minutes）もMですが、この場合はタイムのTを付けてPT1Mで１分間の意味になります。PT1M30Sで１分30秒、PT2H30Mで２時間半、１日半でP1DT12Hなどとなりますが、Pのあと「年月日」と「時分秒」の間にはTを入れます。</p><p>そのため、「&quot;prepTime&quot;: &quot;PT20M&quot;,&quot;cookTime&quot;: &quot;PT30M&quot;,&quot;totalTime&quot;: &quot;PT50M&quot;,」などとあった場合、下ごしらえ（prepare）で20分、調理時間で30分、合計50分などといった意味になります。</p><p>あとは、テンプレートにそのまま埋め込んでいけばJSON-LDコードの完成です。</p><p>
+<amp-img src="../../image/howto-json.png" layout="intrinsic" alt="" width="320" height="228" class="ccc"></amp-img></p><p id="step3">■<b>JSON-LDスクリプトの貼り付け位置</b></p><p>公式サイトにて動画で解説されていますが、コードの貼り付け位置はHEADタグ内の終わりでもBODYタグの終わりでも機能するとのことです。リッチリザルトは検索結果での表示機能のため、直ちにコードを読み込む必要はないと思いますので、当サイト運営者はサイトの表示を優先させて一番最後に置いています。</p>
+<h2 id="step4">リッチリザルトテストでエラーを確認</h2>
+<p>コードの貼り付けが完了しましたら、リッチリザルトテストでエラーが出ないかを確認します。</p><p>→ <a href="https://search.google.com/test/rich-results?hl=ja" target="_blank" rel="nofollow noopener">リッチリザルトテスト</a></p><p><amp-img src="../../image/richresults-ok.png" layout="intrinsic" alt="" width="320" height="217" class="ccc"></amp-img></p><p>また、プレビュー機能でどのように表示されるかも確認します。「記事」タイプなどで画像が表示されない場合、画像を推奨サイズまで大きくすることをおすすめします。</p><p>ただし、実際の検索結果では必ずしもリッチリザルトで表示されないこともあるため、表示されるされないは検索キーワードなどによっても違うと思います。</p><p>また、時間を置いてSearch Consoleでも警告が出ていないかを確認します。</p><p><amp-img src="../../image/keikoku.png" layout="intrinsic" alt="" width="320" height="206" class="ccc"></amp-img></p><p>できるだけ、画像なども設定して完全な形で公開することをおすすめします。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../hp/index.html">作り方</a>　&#8260;　<b>構造化データ</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li class="list-li"><a href="../../hp/best-image-size.html">Article構造化データの画像サイズを比較</a></li>
+<li class="list-li"><a href="../../hp/breadcrumb.html">ぱんくずリストの作り方</a></li>
+<li class="list-li"><a href="../../hp/image-compression.html">画像の容量を削減する方法</a></li>
+<li class="list-li"><a href="../../html/html5.html">HTML5とXHTML 1.0の違い</a></li>
+<li class="list-li"><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li class="list-li"><a href="../../access/ymyl.html">YMYL領域のSEO対策は難易度が高い</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "HowTo","name": "構造化データの作り方","description": "構造化データの作成する際、HTMLタグ属性を利用する「microdata」形式や「RDFa」形式などがありますが、Googleが推奨している「JSON-LD」形式で作成することをおすすめします。","image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/json-howto.png","height": "228","width": "320"},
+"supply": [{"@type": "HowToSupply","name": "JSON-LDテンプレート"}],
+"tool": [{"@type": "HowToTool","name": "リッチリザルトテスト"}],
+"step": [
+{"@type": "HowToStep","url": "https://www.homepage-tukurikata.com/hp/json.html#step1","name": "構造化データの機能タイプを選択","itemListElement": [{"@type": "HowToDirection","text": "Google検索セントラルのギャラリーを参考に、レシピやハウツー、ニュース、レビュー、ローカルビジネスなど、自サイトにあった構造化データのタイプを選択します。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/kouzouka-data.png","height": "242","width": "320"}}, 
+{"@type": "HowToStep","name": "テンプレートを参考にscriptを作成","url": "https://www.homepage-tukurikata.com/hp/json.html#step2","itemListElement": [{"@type": "HowToDirection","text": "各タイプの「スタートガイド」にテンプレートのサンプルが掲載されていますので、そちらを参考にscriptを作成します。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/howto-json.png","height": "228","width": "320"}},
+{"@type": "HowToStep","name": "フッターなどにJSON-LDのコードを挿入","url": "https://www.homepage-tukurikata.com/hp/json.html#step3","itemListElement": [{
+"@type": "HowToDirection","text": "HTMLファイルに作成したコードを挿入します。場所はフッターなどでも機能します。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/json-howto.png.png","height": "228","width": "320"}},
+{"@type": "HowToStep","name": "リッチリザルトテストでエラーの確認","url": "https://www.homepage-tukurikata.com/hp/json.html#step4","itemListElement": [{         "@type": "HowToDirection","text": "「リッチリザルトテスト」でエラーがないか確認します。また、Search Consoleでも警告が出ていないかを確認します。"}],"image": {"@type": "ImageObject","url": "https://www.homepage-tukurikata.com/image/richresults-ok.png","height": "217","width": "320"}}
+],
+"totalTime": "PT2H"
+}
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/hp/json.html"
+      },
+      "headline": "構造化データの作り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/json-howto-1200.png"
+       ],
+      "datePublished": "2021-01-15T00:00:00+09:00",
+      "dateModified": "2021-08-13T00:00:00+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "構造化データの作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/json.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "モバイル端末への最適化",
+        "item": "https://www.homepage-tukurikata.com/access/mobile.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "構造化データの作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/json.html"
+      }]
+    }
+</script>
+</body>
+</html>

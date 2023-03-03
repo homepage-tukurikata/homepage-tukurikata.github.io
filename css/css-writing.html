@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>スタイルシートの書き方のポイント</title>
+<meta name="description" content="スタイルシートを書く際は、ショートハンドなどを活用して冗長になるのを避け、シンプルで分かりやすく記述していきましょう。">
+<meta name="keywords" content="スタイルシート,css,書き方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/writing.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/writing-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="css-writing.html">
+<link rel="amphtml" href="../amp/css/css-writing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="スタイルシートの書き方のポイント">
+<meta property="og:description" content="スタイルシートを書く際は、ショートハンドなどを活用して冗長になるのを避け、シンプルで分かりやすく記述していきましょう。">
+<meta property="og:image" content="../image/default-css.png">
+<meta property="og:url" content="css-writing.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/writing.woff2) format("woff2"),
+url(../fonts/writing.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/writing-bold.woff2) format("woff2"),
+url(../fonts/writing-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka,.blue {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>スタイルシートの書き方のポイント</h1>
+<p>スタイルシートに何も記述しない場合、ブラウザのデフォルトの状態で表示されますので、そこから必要な箇所だけ書いていくことをおすすめします。</p><p>例えば、このページでCSSに何も記述しない場合はこのように表示されます。</p><p><img src="../image/default-css.png" alt="" width="320" height="200" class="ccc"></p><p>Chromeのデベロッパーツールなどで、この何も設定していないデフォルトの状態を調べてみますと、h1のフォントサイズが2em、上下のmarginが0.67em、font-weightがboldなどとなっていることが分かります。</p><p><img src="../image/h1-default.png" alt="" width="320" height="200" class="ccc"></p><p>このデフォルトの状態にて、行間や余白、あるいは見出しタグの大きさなどは既に最適化されているため、自分で独自に設定してしまうとかえって不自然な仕上がりになるかもしれません。ブラウザのデフォルトの状態をベースにしつつ、必要な箇所だけ記述していくとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --> 
+<h2>CSSを書く際の基本事項</h2>
+<p>実際に書いていく際には以下の点に注意することをおすすめします。</p>
+<h3 class="blue">半角英数で書く</h3>
+<p>基本的に全て<span class="aka">半角英数</span>で書いていきます。</p><p>例外として、フォントファミリーの箇所で「font-family: &quot;メイリオ&quot;;」などと日本語の全角文字で指定する際はクォートで囲って記述します。</p>
+<h3 class="blue">見やすいように整えて書く</h3>
+<p>スタイルシートは見やすいように改行して形を揃えて書くのが一般的です。インデントで字下げする際はタブではなく、半角スペースを使うようにしましょう。</p><p>p {font-size:14px;}を改行した場合、このようになります。</p>
+<p>p {<br />
+　 font-size: 14px;<br />
+}</p>
+<p>インデントについての関連ページ：<br />
+→ <a href="../html/source.html">HTMLソースの書き方</a></p>
+<p>ただし、単に見やすくなるだけですので、改行してもサイトの表示には影響ありません。</p>
+<h3 class="blue">コメントアウトで注記する</h3>
+<p>共同で作業をする場合、「ここからヘッダー部分」など、他の人にもわかりやすいようにコメントを挿入しておくとよいでしょう。</p>
+<p>/* コメント部分 */</p>
+<p>この箇所の記述は無効になるので全角文字で記述しても問題ありません。複数の人で管理している場合や一時的に無効にしたい部分などに使用すると便利です。</p>
+<h3 class="blue">複数の指定をする</h3>
+<p>２つ以上を指定をする場合、半角英数のセミコロン「;」を使ってまとめて書くのが一般的です。</p>
+<p>p {<br />
+  font-size: 14px;<br />
+  color: #000000;<br />
+  }</p>
+<p>この最初の「（:）コロン」と後ろの「（;）セミコロン」についてですが、最初の（:）コロンについては、値を指定するためのものですので省略するとエラーになります。</p><p>一方、後ろの（;）セミコロンについては「<span class="aka">複数の指定をする際の区切り</span>」になるため、「一つのみを指定する場合」は省略することができます。</p><p>p {font-size:14px}<br>
+p {color:#000000}</p><p>このふたつを合体させる場合、セミコロン（<span class="aka">;</span>）でつなげて以下のように記述します。</p><p>p {font-size:14px<span class="aka">;</span>color:#000000}</p><p>これを整形するとこのようになります。</p>
+<p>p {<br />
+font-size:14px<span class="aka">;</span><br />
+color:#000000<br />
+}</p>
+<p>そのため、一番最後のセミコロンについては省略できますが、後からさらに追加する際など、セミコロンの記述忘れでエラーになる可能性もありますので、すべてを省略しないで書くことをおすすめします。</p><p>p {<br />
+font-size: 14px<span class="aka">;</span><br />
+color: #000000<span class="aka">;</span><br />
+}</p>
+<h3 class="blue">「0」の値にはpxなどの単位を付けない</h3>
+<p>padding: 0px;　→　padding: 0;</p>
+<p>ただし、付けてもサイトの表示には影響ありません。</p>
+<h3 class="blue">デフォルトの値は記述しない</h3>
+<p>何も指定しないデフォルトの状態では、背景色は白、文字色は黒、フォントサイズは16pxです。<br />
+この状態で指定する場合、background-color: #ffffff;やcolor:#000000;などとあえて指定する必要はありません。</p><p>ただし、<a href="padding-margin.html">margin</a>についてはデフォルトでは「0」ではないため、「0」を指定するのとしないのとではブラウザによって表示方法に違いが出てきます。</p><p>例えば、デフォルトの状態でh1のmarginは上下に0.67em、h2は上下に0.83emなどとなっているため、何も記述しない場合はブラウザ側で自動で間隔をとってしまうのに対し、「0」を指定した場合は間隔がびっちり詰まるので注意しましょう。</p>
+<h3 class="blue">アルファベット順で書く</h3>
+<p>htmlソースの上から下へ読み込まれる順序にて記載しますが、カッコ内についてはabcのアルファベット順で書きましょう。</p><p>body {<br />
+<span class="aka">b</span>order: ほにゃらら;<br />
+<span class="aka">c</span>olor: ほにゃらら;<br />
+<span class="aka">f</span>ont-family: ほにゃらら;<br />
+}</p><p>a {<br>
+<span class="aka">c</span>olor: ほにゃらら;<br>
+<span class="aka">f</span>ont-family: ほにゃらら;<br>
+}</p><p>
+アルファベット順でなくてもサイトの表示には特に影響ありません。</p>
+<h3 class="blue">コロンの後とかっこの前に半角スペースを入れる</h3>
+<p>見やすくするため、コロンの後とかっこの前に半角スペースを挿入するのが一般的です。</p><p>text-align:center;　→　text-align:<span style="background-color:#FCC;"> </span>center;<br />
+.example{ほにゃ　→　.example<span style="background-color:#FCC;"> </span>{ほにゃ</p><p>この半角スペースについてはなくても表示には影響はありません。</p>
+<h3 class="blue">半角スペースと改行を削除して容量を削減</h3>
+<p>逆に、<a href="minify.html">CSSをMinify化</a>してファイルサイズを少しでも削減したい場合、以下のかっこ直前とコロンの後の赤い半角スペースは省略できます。</p><p><img src="../image/syouryaku.png" alt="" width="320" height="80" class="ccc"></p><p>#content<span style="background-color:#FCC;"> </span>{padding:<span style="background-color:#FCC;"> </span>20px 0 10px 0;} → #content{padding:20px 0 10px 0;} <br>
+#content a<span style="background-color:#FCC;"> </span>{color: #000;} → #content a{color:#000;}</p><p>ただし、かっこ直前以外の部分で #contenta{color:#000;} などとしてしまうとエラーになるので注意しましょう。</p><p>修正箇所が多い場合、CSSをメモ帳などにコピペして置換すれば、一括で削減することができます。</p><p><img src="../image/css-tikan.png" alt="" width="320" height="200" class="ccc"></p><p>半角スペースのみで置換してしまうとエラーになるため、半角スペースありの「 {」や「 :」を半角スペースなしの「{」や「:」に置換するとうまくいくはずです。</p><p>また、「}」を次の行の先頭まで含めて選択したうえで置換ボタンを押し、「}」に置換すれば、改行も削除できます。</p><p>最終的にはこのようになりますので、このページの下部でご紹介しているCSSのvalidatorでチェックしたのち、問題がなければ、実際に使用されることをおすすめします。</p><p><img src="../image/css-tikango.png" alt="" width="320" height="205" class="ccc"></p><p>ちなみに、CSS validatorでチェックした際、見やすく整形されたCSSが下部に表示されますので、元に戻したい場合はそちらをコピペして使用されるとよいでしょう。</p><p><img src="../image/css-seikei.png" alt="" width="320" height="233" class="ccc"></p><p>日本語などは文字化けする箇所もあるため、できるだけ元のCSSはバックアップをとってから削減することをおすすめします。</p>
+<h3 class="blue">クォーテーションマーク</h3>
+<p>URLに引用符は必要ありません。</p><p>
+background-image: url('img/bg.png');<br />
+→　background-image: url(img/bg.png);</p>
+<p>font-familyの場合、空白を含む場合などは引用符で囲む必要があり、ダブルクォートでもシングルクォートでも可能ですが、W3Cでは以下のような事例が紹介されています。</p><p><img src="../image/font-quote.png" alt="" width="320" height="162" class="ccc"></p><p>上記のように、CSSに記述する際はダブルクォートでもよいかと思います。<br>
+→　p {font-family: <span class="aka">&quot;</span>ヒラギノ角ゴ Pro W3<span class="aka">&quot;</span>;}</p>
+<p>ただし、htmlに直接スタイルを記述する場合、「style=&quot;&quot;」のダブルクオートと重なってしまうため、シングルクォートで記述することをおすすめします。<br />
+→　&lt;p sytle=&quot;font-family: <span class="aka">'</span>ヒラギノ角ゴ Pro W3<span class="aka">'</span>, serif;&quot;&gt;</p>
+<h3 class="blue">ショートハンドで簡略化する</h3>
+<p>paddingやmarginの値は<a href="padding-margin.html#shorthand">ショートハンド</a>で簡略化して書くことができます。</p><p>例えば、#example {padding: 4px 4px 4px 4px;}は、#example {padding: 4px;}と同じ意味になるため、できるだけ簡略化して記述するようにしましょう。</p>
+<p>また、カラーコードについても「#00ffcc」を「#0fc」などと省略して書くことができます。そのほか、<a href="background.html">背景のbackground</a>など、まとめて書ける場合はショートハンドして簡略化しましょう。</p>
+<h3 class="blue">同じ記述はまとめて書く</h3><p>同じ記述の箇所はカンマで区切ってまとめて書きましょう。</p><p>例えば、以下の例では「background-color: #cccccc;」の部分が共通しています。</p>
+<p>.example {font-size: 94%; <span class="aka">background-color: #cccccc;</span>}<br />.content {<span class="aka">background-color: #cccccc;</span>}
+<br /> 
+#footer {<span class="aka">background-color: #cccccc;</span>}</p>
+<p>共通している部分はカンマ（,）で区切って以下のようにまとめて書くことができるため、CSSの行数を短くすることができます。</p>
+<p>.example {font-size: 94%;}
+<br />
+.example, .content,#footer {<span class="aka">background-color: #cccccc;</span>}</p>
+<h3 class="blue">親要素の指定などは避ける</h3><p>CSSを計算する際、単一のクラスの方が計算は簡単になります。</p><p>.text-innner  {font-size:16px;}</p><p>一方、親要素を指定した場合、以下の例では.textを親要素にもつ.innerを探す必要があり、計算がより複雑になります。</p><p>.text  .inner {font-size:16px;}</p><p>結果として、サイトのレンダリングが遅くなる可能性があるため、できるだけシンプルに記載することをおすすめします。</p>
+<h3 class="blue">上から下へ、流れるように書く</h3>
+<p>例外はありますが、基本的に親要素で指定されている内容は子要素にも継承されます。そのため、個別にそれぞれ指定するのではなく、代表となる大きな親要素に１回だけ指定し、シンプルに記述するようにしましょう。</p><p>例えば、ヘッダーとコンテンツ、フッターのそれぞれの箇所で、文字の大きさを14pxに指定するとします。</p><p>この場合、#header {font-size:14px;}や#content{font-size:14px;}など、すべての要素にそれぞれ記述することもできますが、これらをすべて含む親要素のbodyや#outerに１回だけ記述しておくとすべてに適用されます。</p><p>また、htmlソースの上から下へ読み込まれる順序にて、スタイルシートでも上から下へ流れるように設定します。フッターの箇所を一番上に、ヘッダーの箇所を一番下になどと書いておくと修正する際に探すのにも手間がかかってしまいます。</p><p>加えて、<span class="aka">同一箇所の指定は後に記述したものが優先され、前の箇所は上書きされる</span>ため、順序を考えて書くようにしましょう。
+</p><p>例えば、以下のように記述した場合、前の14pxは上書きされて後に記述した20pxが適用されます。</p><p>#header {<br>
+font-size:14px;<br>
+font-size:20px;<br>
+}</p>
+
+<h3 class="blue">複数の属性を指定する</h3>
+<p>class属性やid属性に半角スペースを入れて、複数の属性を追加で指定することができます。</p>
+<p>例えば、サイドバーなどで&lt;div class=&quot;side&quot;&gt;と指定していた箇所が複数あったとします。</p><p>&lt;div class=&quot;side&quot;&gt;ほにゃらら&lt;/div&gt;<br>
+&lt;div class=&quot;side&quot;&gt;ほげほげ&lt;/div&gt;</p><p>そのなかのひとつにだけ、上との間にmarginの値を10pxで指定したい場合、半角スペースで区切って&lt;div class=&quot;side example&quot;&gt;などと追加して複数指定することができます。</p><p>&lt;div class=&quot;side <span class="aka">example</span>&quot;&gt;ほにゃらら&lt;/div&gt;<br>
+&lt;div class=&quot;side&quot;&gt;ほげほげ&lt;/div&gt;</p>
+<p>この場合、CSS側では、共通の.side {ほにゃらら}のあとに、その箇所にだけ指定したい.example {margin-top: 10px;}などを追加で書き、順番に記述していくとよいでしょう。</p>
+<p>.side {font-size:13px;}<br />
+.example {margin-top: 10px;}</p>
+<p>それぞれをまったく別の属性で個別に指定することもできますが、共通している箇所は同じCSSを重複して書くことになってしまうため、冗長になってしまいます。共通部分については一括で指定するとよいでしょう。</p>
+<h3 class="blue">@charsetで文字コードを宣言</h3><p>CSSの一番最初の冒頭で使用する文字コードを宣言しておくとよいでしょう。</p><p>@charset &quot;UTF-8&quot;;</p><p><img src="../image/css-charset.png" alt="" width="320" height="200" class="ccc"></p><p>文字コードの箇所は大文字と小文字を区別しませんので、「@charset &quot;utf-8&quot;;」でもよいかと思いますが、「@charset」については小文字で書く必要があります。</p><p><a href="https://www.w3.org/TR/CSS2/syndata.html#charset" target="_blank" rel="nofollow noopener">W3C</a>によると、文字コードを判定する際の優先順位の５番目で「UTF-8」が想定されていますので、UTF-8で保存する場合はこの記述は特に必要ないとは思います。けれども、「Shift_JIS」などで保存する際は「@charset &quot;Shift_JIS&quot;;」などと指定しておくことをおすすめします。</p><p>また、この宣言した文字コードでファイルを保存する必要がありますので、@charsetで「UTF-8」で宣言した場合は「UTF-8」で保存するようにしましょう。</p>
+<h3 class="blue">CSSのValidatorでチェック</h3>
+<p>CSSの書き方が正しいかどうかについては、<a href="../access/w3c-valid.html">htmlのvalidator</a>と同様、こちらのW3CのCSS検証サービスを利用してみるとよいでしょう。<br />
+→ <a href="http://jigsaw.w3.org/css-validator/" target="_blank" rel="nofollow noopener">The W3C CSS Validation Service - Jigsaw Demo Site</a></p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">CSSの一覧</a>　&#8260;　<b>スタイルシートの書き方のポイント</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li class="list-li"><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li class="list-li"><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li class="list-li"><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li class="list-li"><a href="../html/html5.html">HTML5とXHTML 1.0の違い</a></li>
+<li class="list-li"><a href="minify.html">CSSのMinify化で容量を圧縮</a></li>
+<li class="list-li"><a href="chrome-devtool.html">CSSの確認はChromeデベロッパーツールが便利</a></li>
+<li class="list-li"><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "CSS",
+        "item": "https://www.homepage-tukurikata.com/css/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "書き方のポイント"
+      }]
+    }
+</script>
+</body>
+</html>

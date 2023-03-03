@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>HTML5への修正方法</title>
+<meta name="description" content="ホームページを「xhtml」から「html5」へ修正する際の実際の手順についてご紹介しています。何らかの「一括置換ツール」を使用して、サイト内のファイルを修正するとよいでしょう。">
+<meta name="keywords" content="HTML5,修正,置換">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/howtohtml5.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/howtohtml5-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../pagination.css">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="howto-html5.html">
+<link rel="amphtml" href="../amp/html/howto-html5.html">
+<link rel="next" href="newtag-html5.html">
+<link rel="prev" href="html5.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5への修正方法">
+<meta property="og:description" content="ホームページを「xhtml」から「html5」へ修正する際の実際の手順についてご紹介しています。何らかの「一括置換ツール」を使用して、サイト内のファイルを修正するとよいでしょう。">
+<meta property="og:image" content="../image/brackets.png">
+<meta property="og:url" content="howto-html5.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/howtohtml5.woff2) format("woff2"),
+url(../fonts/howtohtml5.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/howtohtml5-bold.woff2) format("woff2"),
+url(../fonts/howtohtml5-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.blue,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>HTML5への修正方法</h1>
+<p>ホームページを「xhtml」から「<a href="html5.html">HTML5</a>」へ修正するには、サイト全体のファイルを一括で置換できるツールを使うと便利です。</p><p>ここでは<span class="aka">Dreamweaverの「検索/置換」機能</span>を例にご紹介しますが、何らかの置換ツールを利用することをおすすめします。</p><p>無料エディタの「Brackets」などにも複数のファイルに渡る置換機能はありますが、改行を含んだ複数の行の置換作業には対応していないため、できるだけ有料のソフトを利用して対応されるとよいでしょう。</p><h2>HTML5に修正する前の事前準備</h2>
+<p>実際にホームページを修正する前に、まずはバックアップしておくことをおすすめします。また、必要のないページまで修正してしまわないように、<span class="aka">修正対象となるファイル数</span>を確認しておきましょう。</p><p>昔のフィーチャーフォン向けの携帯ページなどはHTML5には対応していないため、そのようなフォルダがある場合にはあらかじめ修正対象から除外しておきます。また、sitemap.xmlなどの「xmlファイル」についても除外しておくとよいでしょう。</p><p class="blue">修正するファイル数の確認</p>
+<p>修正漏れを防ぐために、まずはサイト内のファイル数を確認しておきます。</p><p>各ページで一つしか使用されていない&lt;body&gt;タグなどで検索すると「～個ヒットしました」と出ますが、その数がHTML5に修正すべきサイト内のページ数になります。</p><p>例えば、当ホームページでは<a href="../hp/soft.html">Dreamweaver</a>を使用してますが、&lt;body&gt;で検索すると「201件」がヒットします。</p><p><img src="../image/201.png" width="300" height="153" alt="「201件」の検索結果" class="ccc" /></p><p>一方、<a href="dtd.html">DTD</a>の部分などで検索すると「202件」で数が合わないのですが、これは&lt;body&gt;タグのないsitemap.xmlのページもヒットしたためで、このようなページは除外しておきます。そのほか、ヘッダー部分やフッター部分などでも検索して修正すべきファイル数を確認しておきましょう。</p><p>結局、当ホームページでは以下のファイル数になりました。</p>
+<ul>
+<li>DTD部分の修正：201ページ（sitemap.xmlを除外）</li>
+<li>&lt;header&gt;、&lt;footer&gt;、&lt;main&gt;、&lt;aside&gt;への修正：201ページ</li>
+</ul>
+<p>一括で置換していく際、修正結果がこの数にならないと<span class="aka">修正漏れのページ</span>が発生するので注意しましょう。</p><p class="blue">無料エディタのBracketsの場合</p>
+<p>ちなみに、無料ツールの<a href="https://brackets.io/" target="_blank" rel="nofollow noopener">Brackets</a>でもここまでは同様の結果がでます。</p><p><img src="../image/brackets.png" width="320" height="259" alt="Bracketsでの結果" class="ccc"></p><p>けれども、以下の実際の置換作業をする際、改行を含んだ<span class="aka">複数行での置換作業</span>や「特定のタグ」を指定しての複雑な置換には対応していません。複数行での置換ができる無料ツールなどもネット上ではいくつかあるので、それらを組み合わせて修正されるとよいでしょう。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>DTDやmetaタグなどhead部分の修正方法</h2>
+<p>以下、当ホームページを例に実際のHTML5への修正方法をご紹介します。</p><p>まずはDTDやメタタグなどheadタグの部分の修正になりますが、このhead部分はサイト運営者によるタグの使い方に大きな違いはありません。</p><p>このあたりは機械的に修正していくとよいでしょう。</p><p class="blue">DTDの箇所の修正</p><p>HTML5のDTDについてですが、Dreamweaverのテンプレートで「HTML5」を選択すると以下のDTDが自動で挿入されます。</p><p>&lt;!doctype html&gt;</p><p>けれども、ネット上で大手メディアをチェックしてみますと、概ねこの「doctype」は大文字で書いているサイトが多数派かと思います。xhtmlとは違い、このDTDの大文字と小文字はどちらでもかまいませんが、当サイトでは大文字で設定することにしました。</p><p>&lt;!DOCTYPE html&gt;</p><p>まずはDTDの箇所をこのタグに一括で置換するとよいでしょう。修正する箇所は&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;も含めた以下の箇所になります。</p><p><img src="../image/dtd-tikann.png" width="320" height="90" alt="DTDの一括置換" class="ccc" /></p>
+<hr />
+<p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</p><p>　　↓一括置換</p><p>&lt;!DOCTYPE html&gt;</p><hr /><p>Dreamweaverの「検索/置換」機能ではこのようになります。「テキスト」ではなく、「ソースコード」で置換するようにしましょう。</p><p><img src="../image/ikkatu-tikann.png" width="320" height="173" alt="Dreamweaverでの検索と置換" class="ccc"></p><p>置換結果が「201件」となりましたので、漏れなく修正することができました。</p><p>以下、同様に他のタグについても修正していきます。</p><p class="blue">&lt;html&gt;の箇所の修正</p><p>&lt;html&gt;の部分も簡略化されており、書き方にはいくつかのパターンがありますが、一般的には以下のように修正するとよいでしょう。</p><hr /><p>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;ja&quot; lang=&quot;ja&quot;&gt;</p><p>　　　↓一括置換</p><p>&lt;html lang=&quot;ja&quot;&gt;</p><hr /><p>ここで置換結果が「201件」のはずが「203件」となってしまったのですが、フィーチャーフォン携帯サイト用のモバイルページも置換されていたようです。その2ページについては元に戻しました。</p><p class="blue">metaタグ「文字コード」の修正</p>
+<p>メタタグの文字コードの部分も簡略化されています。文字コードは「utf-8」が一般的ですが、以下のように修正するとよいでしょう。</p><hr /><p>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</p><p>　　　↓一括置換</p><p>&lt;meta charset="UTF-8"&gt;</p><hr />
+<p>この文字コード指定の箇所の修正ですが、「Shift_JIS」から「utf-8」などへ以前と違う文字コードに一括置換する場合、<span class="aka">文字化けしてしまう</span>かと思います。これは文字コードの指定だけではなく、実際にファイル自身の文字コードも保存しなおす必要があるからです。</p><p>無料ツールを使えば、全てのファイルを一括で違う文字コードに保存しなおすことも可能ですが、間違えると文字化けが修正不能となってしまうかもしれません。</p><p>もし以前と違う文字コードに変更する場合、<b>必ずバックアップを取っておく</b>ことをおすすめします。</p><p>当サイト運営者の場合、まずはDreamweaverにてHTMLファイル上の文字コードの指定を「UTF-8」へ一括置換しました。次に、文字コードの変換の無料ツールを使い、実際のファイルの文字コードについても「UTF-8」へ一括変換するとうまくいきました。</p><p>このUTF-8へ変換する際の「BOMあり・なし」ですが、通常は「BOMなし（UTF-8N）」で変換するのが一般的です。</p>
+<p class="blue">metaタグ「http-equivの指定」の削除</p><p>type属性の初期値が「text/css」や「text/javascript」となりましたので、metaタグで記載していたstyleタイプの「Content-Style-Type」とscriptタイプの「Content-Script-Type」の記述はできなくなりました。</p><p>そのため、以下の２つの行は<span class="aka">削除</span>します。</p><hr /><p>&lt;meta http-equiv=&quot;Content-Style-Type&quot; content=&quot;text/css&quot; /&gt;<br>
+&lt;meta http-equiv=&quot;Content-Script-Type&quot; content=&quot;text/javascript&quot; /&gt;</p><p>　　　↓</p><p>　　<span class="aka">削除する</span></p><hr />
+<p>この削除する場合の置換方法ですが、そのまま何も指定しないで置換すると改行が入ってしまうため、直下のタグも含めて改行するとうまくいくはずです。</p><p>例えば、&lt;meta&gt;を削除する場合、直下の&lt;title&gt;も含めて&lt;meta&gt;&lt;title&gt;を&lt;title&gt;などと置換すれば、必要のない改行が入らずに&lt;meta&gt;の部分だけがそのまま削除されます。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><p class="blue">metaタグとlinkタグの閉じタグの修正</p><p>HTML5での空要素は<span class="aka">半角スペースとスラッシュなし</span>で書くのが一般的です。</p><p>かなり昔の「HTML4.01」の場合、改行タグなどの空要素は&lt;br&gt;と書く必要がありましたが、その後に主流となった「xhtml」では半角スペースとスラッシュを入れて&lt;br /&gt;のように閉じる必要がありました。</p><p>ただし、「HTML5」は実質的に「HTML4」の後継版になるため、「HTML5」での空要素については昔の「HTML4.01」と同様、&lt;br&gt;と書くのが本来の正しい書き方になります。</p><p>けれども、既に主流となっている「xhtml 1.0」からの移行がしやすいように配慮がされており、「HTML5」では&lt;br /&gt;と書いても問題はありません。</p><p>「HTML4」→ &lt;br&gt;<br>
+「Xhtml」→ &lt;br /&gt;<br>
+「HTML5」→ &lt;br&gt;でも&lt;br /&gt;でも可</p><p>そのため、メタタグの&lt;meta /&gt;や&lt;link /&gt;も半角スペースとスラッシュは必要なくなりましたが、あっても問題はないため、<span class="aka">特に修正する必要はない</span>かと思います。</p><p>とはいえ、一応修正して統一する場合には直後のタグを含めて「 &quot;&gt;&lt;meta 」を「&gt;&lt;meta」などと置換するとうまくいくはずです。</p><p><img src="../image/meta-toji.png" width="300" height="219" alt="空要素の閉じタグの修正" class="ccc"></p><p>metaタグのキーワードや説明文の箇所はページによって個別に違うため、うまい具合に修正されるように置換作業を繰り返すとよいでしょう。</p><p class="blue">linkタグの「type=&quot;text/css&quot;」の削除</p><p>上記のように、type属性の初期値が「text/css」となりましたので、スタイルシート指定の「type=&quot;text/css&quot;」の部分も省略が可能になっています。</p><hr /><p>&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; type=&quot;text/css&quot; /&gt;</p><p>　　　↓一括置換</p><p>&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt;</p><hr /><p class="blue">linkタグの「shortcut icon」の修正</p><p>ファビコンを指定する「shortcut icon」も「icon」に変更となりました。</p><hr /><p>&lt;link rel=&quot;shortcut icon&quot; href=&quot;/favicon.ico&quot; /&gt;</p><p>　　↓一括置換</p><p>&lt;link rel="icon" href="/favicon.ico"&gt;</p><hr />
+<p class="blue">HTML5への修正前後の違い</p><p>上記をひととおり修正して、その前後を比較するとHTMLソースがすっきりしているはずです。</p><p>■<b>BEFORE</b></p><p><img src="../image/html5-before.png" width="320" height="160" alt="HTML5修正前のHTMLソース" class="ccc"></p><p>■<b>AFTER</b></p><p><img src="../image/html5-after.png" width="320" height="132" alt="HTML5修正後のHTMLソース" class="ccc"></p><p><a href="https://validator.w3.org/" target="_blank" rel="nofollow noopener">W3CのValidチェック</a>でも特にエラーはありませんでした。</p><p>以上がヘッダー部分の修正になりますが、コンテンツ部分とは違い、このヘッダー部分は機械的に修正できるため特に迷うことはないかと思います。</p><p>一方、コンテンツ部分の修正については、&lt;header&gt;や&lt;article&gt;、&lt;nav&gt;などのHTML5で新しく追加されたタグを使って修正していきます。これらのタグについては、サイト運営者による意図の違いで使い方に違いが出てくるかもしれません。</p>
+<p class="nextpage">次のページ → <a href="newtag-html5.html">HTML5の新しいタグの使い方</a></p>
+<ul class="pagination">
+<li><a href="html5.html">前へ</a></li>
+<li><a href="html5.html">1</a></li>
+<li class="this">2</li>
+<li><a href="newtag-html5.html">3</a></li>
+<li><a href="newtag-html5.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">htmlタグ</a>　&#8260;　<b>HTML5への修正方法</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="newtag-html5.html">HTML5の新しいタグの使い方</a></li>
+<li class="list-li"><a href="html5.html">HTML5とXHTML 1.0の違い</a></li>
+<li class="list-li"><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li class="list-li"><a href="dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li class="list-li"><a href="../hp/soft.html">おすすめのホームページ作成ソフト</a></li>
+<li class="list-li"><a href="section.html">&lt;section&gt;はアウトラインを明示するタグ</a></li>
+<li class="list-li"><a href="ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li class="list-li"><a href="programming-school.html">プログラミングスクール一覧</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside>
+</div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HTMLタグ",
+        "item": "https://www.homepage-tukurikata.com/html/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HTML5"
+      }]
+    }
+</script>
+</body>
+</html>

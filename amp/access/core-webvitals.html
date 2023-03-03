@@ -1,0 +1,244 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Core Web Vitals（コアウェブバイタル）とは？</title>
+<meta name="description" content="Core Web Vitals（コアウェブバイタル）は、サイト上で優れたユーザーエクスペリエンスを提供するのに不可欠な指標です。PageSpeed InsightsやLighthouseなどでのスコアをチェックして改善していくとよいでしょう。">
+<meta name="keywords" content="Core Web Vitals,コアウェブバイタル">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../access/core-webvitals.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Core Web Vitals（コアウェブバイタル）とは？">
+<meta property="og:description" content="Core Web Vitals（コアウェブバイタル）は、サイト上で優れたユーザーエクスペリエンスを提供するのに不可欠な指標です。PageSpeed InsightsやLighthouseなどでのスコアをチェックして改善していくとよいでしょう。">
+<meta property="og:image" content="../../image/search-vital.png">
+<meta property="og:image" content="../../image/psi.png">
+<meta property="og:url" content="../../access/core-webvitals.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer"><header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>Core Web Vitals（コアウェブバイタル）とは？</h1>
+<p>サイトのユーザー体験の良しあしを測定する指標に<span class="aka">Web Vitals（ウェブバイタル）</span>があります。</p><p>「Vital」は生命のという意味ですが、転じて命に関わるぐらい不可欠なという意味があります。ウェブバイタルは、サイト上で優れたユーザーエクスペリエンスを提供するのに不可欠な指標になるため、スコアをチェックして改善していくとよいでしょう。</p><p>具体的には、「ページの読み込み速度」や「クリックしたときの応答の速さ」、あるいは「広告表示などでコンテンツがずれないか」など様々な指標があり、その品質を数値で測定することができます。</p><p><amp-img src="../../image/psi.png" layout="intrinsic" alt="PageSpeed Insightsでの測定結果" width="480" height="270" class="ccc"></amp-img></p><p>この数値は<a href="https://pagespeed.web.dev/"rel="nofollow noopener" target="_blank">PageSpeed Insights</a>や<a href="../../css/chrome-devtool.html">Chromeデベロッパーツール</a>のLighthouseなどでチェックできますが、測定結果には改善点なども表示されるため、そちらを参考にしながら修正していくことをおすすめします。</p><p>これらウェブバイタルの数値を改善することでユーザー満足度が高くなるため、結果として、ページビューの増加や滞在時間が長くなるメリットが期待できます。当サイトの場合、ウェブバイタルに注力してからセッションが4％程度増加しました。</p><p>加えて、今後は検索エンジンのランキング要素にも組み込まれるため、SEO対策上のメリットも期待できます。</p><p><amp-img src="../../image/webvitals-seo.png" layout="intrinsic" alt="2021年6月中旬からランキング要素へ" width="480" height="270" class="ccc"></amp-img></p><p>ウェブバイタルのなかでも、コアになる主要な<span class="aka">Core Web Vitals（コアウェブバイタル）</span>については特に重要な指標になるため、こちらの方を重点的にチェックしていくとよいでしょう。</p>
+<!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<h2>Core Web Vitalsの改善方法</h2>
+<p>コアウェブバイタルには、以下の３つの指標があります。</p>
+<ul>
+<li>LCP（Largest Contentful Paint） → ページの読み込みスピード</li>
+<li>CLS（Cumulative Layout Shift） → ページ表示の安定性</li>
+<li>FID（First Input Delay） → クリックした際などの応答性</li>
+</ul>
+<p>感覚的には、ページにアクセスした際にパッと表示され、ぶれずにビシッと表示され、クリックなどにもパパっと反応する、そのようなイメージになるかと思います。</p><p>ただし、サードパーティーの広告スクリプトなども影響してくるため、まずは広告の掲載していない状態でチェックしてみることをおすすめします。</p><h3 class="blue">LCPについて ─ 「2.5 秒以下」が良好</h3><p>LCPは、ビューポート内で表示される最大の画像、またはテキスト段落のレンダリングが完了するまでの時間のことです。この「ビューポート内」というのは、サイトにアクセスした際、スクロールせずに見える表示領域（ファーストビュー）のことを指しています。</p><p>つまり、サイトにアクセスして最初に表示される画面で、一番大きな（Largest）メインコンテンツ（Contentful）が表示（Paint）されるまでの時間が長いか、短いかの時間の指標になります。</p><p>例えば、このページの場合、ファーストビューでの一番大きなコンテンツは以下の画像になります。</p><p><amp-img src="../../image/lcp-thispage.png" layout="intrinsic" alt="このページの最大コンテンツ" width="480" height="270" class="ccc"></amp-img></p><p>あなたがこのページにアクセスした際、この画像が表示されたかと思いますが、この表示が完了するまでの時間（LCP）が「1.3秒」になります。ブログなどの場合、画像ではなく、テキストの段落の要素が一番大きなコンテンツになるかもしれません。</p><p>一般的に、このLCPは「2.5 秒以下」が良好とされているため、このページの「1.3秒」はまずまず良好といえるかもしれません。これが「4秒」ぐらいかかってしまうと、主要なコンテンツが表示されるのに時間がかかってしまい、なかなか読み始めることができず、ユーザー体験の満足度が低下してしまうことになります。</p><p>この読み込みスピードの「LCP」については、<a href="../../hp/image-compression.html">画像の容量を削減</a>したり、<a href="../../hp/what-webfont.html#subset">WEBフォントをサブセット化</a>するなどしてダウンロードサイズを削減すれば、読み込み時間が速くなるはずでです。</p><p><amp-img src="../../image/lcp.png" layout="intrinsic" alt="Lighthouseでのダウンロードサイズの内訳" width="480" height="270" class="ccc"></amp-img></p><p>あるいは、ブラウザがキャッシュを保持する期間を長くして対応するとよいでしょう。</p><p>そのほか、<a href="../../css/minify.html">CSSをMinify化</a>して容量を圧縮する方法もありますが、そもそもCSSの容量自体が少ないため、メンテナンス性を悪くしてまで削減する意味はないかもしれません。</p><p>ただ、リソースのロード時間については、最終的には利用しているレンタルサーバーのスペックによるかと思います。<a href="../../rental-server/index.html">レンタルサーバーを比較</a>して、ワンランク上のサーバーへの引越も検討されてみることをおすすめします。</p>
+<h3 class="blue">CLSについて ─ 「0.1以下」が良好</h3><p>CLSは、最初にコンテンツが表示されてからレンダリングが完了するまでに、レイアウトがどれだけ動いてシフトしたかをチェックする指標です。</p><p>例えば、本文を読み始めていたものの、ヘッダー部分に巨大な広告が表示されて下の方に移動してしまい、スクロールする羽目になった経験があるかと思います。特に、リンクをクリックしようとしたときに下に動いてしまい、違うリンクをクリックしてしまったような場合、ユーザーエクスペリエンスが低下してしまいます。</p><p>そのため、だるまさん転んだみたいな、動いたらダメという指標になりますが、どれだけ動いたのかをCLSで測定します。</p><p>こちらの<a href="https://web.dev/cls/"rel="nofollow noopener" target="_blank">Cumulative Layout Shift (CLS)</a>のページに計算式がありますが、小さな範囲がほんの少しだけ動いた場合はスコアは小さくなり、それほど影響はありません。一方、ページ全体が大幅に動いた場合はスコアが大きくなり、改善が必要になります。</p><p>例えば、動きのあった可視領域が75％だったとして、25％下に動いた場合、レイアウトシフトスコアは「0.75 × 0.25 = 0.1875」となります。一方、大幅に80％動いた場合は「0.6」となり、動いた距離や範囲が大きければ、スコアが大きくなります。</p><p>この個々のレイアウトシフトスコアを累積したもの（Cumulative）が「Cumulative Layout Shift」となり、つまりCLSになりますが、この数値は「0.1」以下が良好とされています。上記のLCPはファーストビューのみでしたが、こちらのCLSについては時間の経過とともに累積したものである点で違いがあります。</p><p>ただし、以前までは単純に合計していたものが、セッションごとに計算するなど、仕様や計算方法については変更されています。最新の情報については、上記のページで確認されることをおすすめします。</p><p>このCLSの改善方法については、画像にwidthやheight属性を記載するなどして対応するしかないかもしれません。もしくは、広告の影響などもチェックしてみることをおすすめします。</p>
+<h3 class="blue">FIDについて ─ 「100 ミリ秒以下」が良好</h3><p>FIDについては、訪問者がクリックやタップをした際、ブラウザが応答するまでの時間です。反応が遅いサイトの場合、ユーザーエクスペリエンスが低下するため、速度がはやい方が満足度が高くなります。</p><p>このFIDについては、「100 ミリ秒以下」が良好とされています。</p><p>ただし、当サイト運営者の印象では、「FID」や「CLS」については対応できることが限られていると感じています。当サイトでは特に何もしていませんが、「FID」や「CLS」については問題がないと感じています。</p><p>ちなみに、各ページをひとつづつチェックしていくのは大変かと思いますので、「Search Console」で確認すると便利です。エクスペリエンスの「ウェブに関する主な指標」の箇所から「レポートを開く」を選択し、「不良」や「改善が必要」などのページがあれば、修正していくことをおすすめします。</p><p><amp-img src="../../image/search-vital.png" layout="intrinsic" alt="Search Console「ウェブに関する主な指標」" width="480" height="270" class="ccc"></amp-img></p><p>ただし、上記のPageSpeed InsightsやLighthouseなどの測定結果とは違い、こちらのSearch Consoleでは具体的な参考情報は表示されないため、問題のあるページで個別にLighthouseなどを実行して修正していくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem -->
+<div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../access/index.html">アクセスアップ</a>　&#8260;　<a href="../../access/seo.html">SEO対策</a>　&#8260;　<b>Core Web Vitals</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../css/chrome-devtool.html">CSSの確認はChromeデベロッパーツールが便利</a></li>
+<li class="list-li"><a href="../../hp/image-compression.html">画像の容量を削減する方法</a></li>
+<li class="list-li"><a href="../../css/minify.html">CSSのMinify化で容量を圧縮</a></li>
+<li class="list-li"><a href="../../access/search-console.html">Google Search Consoleに登録して最適化</a></li>
+<li class="list-li"><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li class="list-li"><a href="../../rental-server/transfer-amount.html">レンタルサーバーの「転送量」とは？</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.homepage-tukurikata.com/access/core-webvitals.html"
+      },
+      "headline": "Core Web Vitals（コアウェブバイタル）とは？",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/search-vital-1280.png"
+       ],
+      "datePublished": "2021-06-22T21:50:49+09:00",
+      "dateModified": "2021-06-22T21:50:49+09:00",
+      "author": {
+        "@type": "Person",
+        "name": "サイト管理人"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "www.homepage-tukurikata.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.homepage-tukurikata.com/amp-logo.png"
+        }
+      }
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセスアップ",
+        "item": "https://www.homepage-tukurikata.com/access/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO対策",
+        "item": "https://www.homepage-tukurikata.com/access/seo.html"
+      },{
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Core Web Vitals",
+        "item": "https://www.homepage-tukurikata.com/access/core-webvitals.html"
+      }]
+    }
+</script>
+</body>
+</html>

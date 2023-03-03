@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ホームページに画像の貼り方</title>
+<meta name="description" content="ホームページに画像を貼り付けましょう。初心者でも簡単な画像タグの作り方です。">
+<meta name="keywords" content="ホームページ,画像,貼り方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/image.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/image-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="image.html">
+<link rel="amphtml" href="../amp/hp/image.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ホームページに画像の貼り方">
+<meta property="og:description" content="ホームページに画像を貼り付けましょう。初心者でも簡単な画像タグの作り方です。">
+<meta property="og:image" content="../image/hanikami-kakou-2.jpg">
+<meta property="og:image" content="../image/paint-size.png">
+<meta property="og:image" content="../image/image-gazou.png">
+<meta property="og:url" content="image.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/image.woff2) format("woff2"),
+url(../fonts/image.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/image-bold.woff2) format("woff2"),
+url(../fonts/image-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body><div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>ホームページに画像の貼り方</h1>
+<p>ホームページに画像を貼り付ける際は、<a href="../html/img.html">&lt;img src=</a>のHTMLタグを使って貼り付けます。<br />
+こちらのようなHTMLタグになります。</p><p>&lt;img src="http://画像のあるURL" alt="画像の説明" width="幅" height="高さ" border="外枠のありなし"&gt;</p>
+<hr />
+<p>ここでは実際の貼り付け手順をご紹介します。</p><p id="step1" class="blue">■<b>画像のアップロード</b></p><p>まず最初にやることはホームページスペースへの画像のアップロードです。<br />
+画像は「image」や「img」などの<a href="folder.html">フォルダを作成</a>し、HTMLファイルとは区別してまとめて管理しておくとよいでしょう。</p><p>ジオシティーズの場合はEZアップロードのボタンを押し、参照ボタンで自分のパソコン内にある画像を指定すれば簡単にアップロードすることができます。あるいは、<a href="ffftp-setuzoku.html">FTP接続でアップロードする</a>こともできます。</p><p><img src="../image/image-gazou.png" alt="画像のアップロード方法" width="326" height="199"></p><p>レンタルサーバーでも、ファイルマネージャーやFTP接続でアップロードできます。</p>
+<!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem -->
+<p id="step2" class="blue">■<b>画像のURL</b></p>
+<p>次に、表示ボタンを押してアップロードした画像のみを実際に表示します。<br />
+すると、その画像の「URL」と「大きさ」を確認できます。</p>
+<p>上のHTMLタグで「画像のあるURL」の箇所については、ブラウザに表示されているURLをそのままコピペして貼り付けます。</p>
+<p>例えば、このページではこちらのURLの画像を使用しています。<br /> 
+https://www.homepage-tukurikata.com/image/hanikami.jpg</p><p>このURLを&lt;imgタグにそのまま貼り付けます。</p>
+<p id="step3" class="blue">■<b>画像の大きさ</b></p>
+<p>画像の大きさについてですが、IEでは画像上で右クリックをして「プロパティー」の箇所で幅と高さを調べることができます。この場合、「320px × 212px」と確認できます。また、Edgeでは右クリックで「cortanaに質問」、chromeやfirefoxでは、画像のみを表示させればブラウザのタブ上に表示されているはずです。</p>
+<p><img src="../image/hanikami-ookisa.png" alt="" width="216" height="56" class="ccc"></p><p>ちなみに、パソコン上で確認する場合は、画像を右クリックして「プロパティー - 詳細 - 大きさ」で確認できます。</p><p><img src="../image/px-syousai.png" width="202" height="180" alt="" class="ccc"></p><p>あるいは、画像の大きさを一覧表示で確認したい場合は、右クリックの「表示 - 詳細」で一覧表示させ、さらに「並べ替え - その他」で「大きさ」を指定します。</p><p><img src="../image/px-ookisa.png" width="289" height="186" alt="" class="ccc"></p><p>すると、pxでの大きさを一覧で確認することができます。</p><p><img src="../image/px-hyouji.png" width="300" height="119" alt="" class="ccc"></p>
+<p>いずれの方法でも画像の大きさが「320px × 212px」とわかりますので、上記のHTMLタグの「width」の箇所に320、「height」に212などと記入します。この際、width="320" height="212" のように<span class="aka">pxを付けないで</span>記入しましょう。</p>
+<p id="step4" class="blue">■<b>画像の説明文</b></p>
+<p>alt属性にその画像の説明を簡単に記載します。これは画像が表示されなかった際、ここに記載されたテキストが表示されます。この説明文を記述しておくと検索エンジンの画像検索などでもヒットしやすくなります。</p>
+<p id="step5" class="blue">■<b>外枠のあり・なし</b></p>
+<p>「border=&quot;0&quot;」で指定すると「外枠なし」となり、「border="1"」などと記入すると外枠が1pxで表示されます。</p>
+<p>ここまでを上のタグに記入すると、出来上がりのhtmlタグはこのようになります。</p><p>&lt;img src="https://www.homepage-tukurikata.com/image/hanikami.jpg" alt="リュックを持ったハニカミ女子" width="320" height="212" border="0"&gt;</p><p>これをHTMLファイルに貼りつけると、実際に表示される画像はこのようになります。</p>
+<p><img src="../image/hanikami.jpg" alt="ハニカミ女子" width="320" height="212" border="0" /></p><p class="blue"><b>画像の種類と容量</b></p>
+<p>サイト上で画像を使用する際、「bmp」は容量が大きいのでウェブ素材には適しません。できれば「png」、もしくは「jpg」や「gif」を選択するのがよいでしょう。</p><p>「jpg」はデジカメなどで撮影した写真素材、「gif」は動きのあるアニメーション画像や色数の少ない単色の画像に最適ですが、一般的には「png」にしておくのがぶなんです。</p>
+<p>あまりに容量が大きく、サイトの表示が遅くなってしまう場合、<a href="../access/seo.html">検索エンジン対策</a>には不利といわれています。そのため、容量が大きい場合は圧縮をするなどして、画質を落とさずに<a href="image-compression.html">画像の容量を削減する</a>とよいでしょう。</p>
+<p class="blue">■<b>Pタグでくくる</b></p>
+<p>画像の上下左右の間隔については、スタイルシートでも調整できますが、<a href="../html/br.html">段落分けのPタグ</a>でくくっておくと上下の間隔が自然になるはずです。</p><p>上の例でいえば、このようになります。</p>
+<p>&lt;p&gt;&lt;img src="https://www.homepage-tukurikata.com/image/hanikami.jpg" alt="リュックを持ったハニカミ女子" width="320" height="212" border="0"&gt;&lt;/p&gt;</p><p>画像を中央に寄せる際は、このPタグに「text-align:center;」を指定しておくとよいでしょう。</p><p>&lt;p style=&quot;text-align:center;&quot;&gt;&lt;img src="https://www.homepage-tukurikata.com/image/hanikami.jpg" alt="リュックを持ったハニカミ女子" width="320" height="212" border="0"&gt;&lt;/p&gt;</p>
+<p class="blue">■<b>CSS側での設定</b></p><p>上記の「border="外枠のありなし"」については、CSS側で設定しておけば記載する必要がなく、全ての画像に一括で適用されます。CSSで画像のデザインを一括で指定する際には、img {ほにゃらら}の箇所で指定します。</p><p>外枠の色はデフォルトでは黒のため、灰色などに指定しておくのがぶなんかもしれません。</p>
+<p>例えば、色が#ccccccの1pxの実線で指定する際は以下のようになります。</p>
+<p>img {<br />
+border: solid 1px #cccccc;<br />
+}</p><p>外枠なしの場合はCSSに以下のように記載します。</p><p>img {border: 0;}</p>
+<p>CSSで全ての画像に一括で指定するのではなく、その画像のみに適用させたい場合、<a href="../html/style-zokusei.html">style属性</a>で以下のようにHTMLタグに直接指定するとよいでしょう。</p>
+<p>&lt;img src="http://" alt="" width="" height="" style="border: solid 1px #cccccc;"&gt;</p>
+<p class="blue">■<b>回り込みの指定</b></p>
+<p>回り込みを指定する場合には、以下のように指定します。</p>
+<p>&lt;img src="" alt="" width="" height="" align="left" hspace="左右の余白" vspace="上下の余白" border="0" /&gt;</p>
+<p>align="left"やalign="right"で左や右に回りこませ、左右の余白を15pxとるにはhspace="15"などと記述します。</p>
+<p>回り込みを解除する箇所では、改行タグを使い、以下のようにclear="all"を指定しておくとぶなんでしょう。</p>
+<p>&lt;br clear="all" /&gt;</p>
+<p>この回り込みの解除を指定しておかないと崩れますのでご注意ください。</p>
+<p>この左右上下の余白についてですが、hspaceやvspaceは左右の両方に適用されてしまいます。右の余白のみ10px空けたいなどの場合、hspaceなどは使わずに、style属性で次のように指定するとよいかもしれません。</p>
+<p>&lt;img src="" alt="" width="" height="" align="left" style="padding:0px 10px 0px 0px;" border="0" /&gt;</p>
+<p>こちらについても、解除する箇所でclear="all"を指定しておきます。</p>
+<p>&lt;br clear="all" /&gt;</p>
+<p class="blue">■<b>スマホへの対応</b></p>
+<p><a href="responsive.html">レスポンシブウェブデザイン</a>でスマホにも最適化している場合、一般的なスマホのデバイス幅は320px～375px程度しかないため、それよりも大きい画像を貼りつけるとデザインが崩れてしまう可能性があります。そのため、スマホ用のCSS側で<a href="../css/max-width.html">max-width: 100%;</a>などを指定し、デバイス幅まで縮小させることをおすすめします。</p>
+<p>サイズが大きい場合には、Windows付属のペイントなどのツールでも縮小することができます。画像を「右クリック - 編集」を選択すれば、ペイントが起動するはずですので、サイズを変更するとよいでしょう。</p>
+<p><img src="../image/paint-size.png" alt="" width="320" height="329" class="ccc"></p><p>変更したあとは、メニューの「名前を付けて保存」からjpgやpngなどファイル名を選択して保存します。</p><p>ただし、最近は<a href="json.html">構造化データ</a>で使用する画像で1200px程度の大きさが推奨されており、今後、画像サイズを大きく変更する必要が出てくるかもしれません。撮影した画像の元データはバックアップしておくことをおすすめします。</p>
+<p class="blue">■<b>ウェブ上で使える素材サイト</b></p>
+<p>ちなみに、上の画像はドメインパーキングで有名なお姉さんですが、istockphotoで購入してきたものです。ホームページ素材については有料サイトなどから購入してくることができます。<br />
+→ <a href="hp-sozai.html">ホームページ画像や素材のサイト</a></p>
+<p>これらの素材については加工が許可されているケースが多いので、そのまま使用するよりも、Photoshopなどで加工してから使用することをおすすめします。</p>
+<p>例えば、上の画像に文字などを入れて加工するとこのようになります。</p><p><img src="../image/hanikami-kakou-2.jpg" alt="" width="320" height="212"></p><p>ほか、ヘッダー部分を画像で表示させたりする際など、サイト全体のデザインに組み込む際にはスタイルシートの方で一括して指定されることをおすすめします。</p><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../html/img.html">&lt;img src=は画像を表示するhtmlタグ</a></li>
+<li class="list-li"><a href="image-compression.html">画像の容量を削減する方法</a></li>
+<li class="list-li"><a href="image-size.html">画像サイズを縮小する方法</a></li>
+<li class="list-li"><a href="hp-sozai.html">ホームページ素材に使える画像の購入サイト</a></li>
+<li class="list-li"><a href="../html/style-zokusei.html">HTMLタグにstyle属性の指定方法 style=</a></li>
+<li class="list-li"><a href="../css/max-width.html">画像の大きさを最適化する max-width:100%;</a></li>
+<li class="list-li"><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="basic.html">無料ホームページとは？</a></li>
+<li><a href="css.html">トップページを複製しての作り方</a></li>
+<li><a href="tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="file.html">ホームページファイルの種類</a></li>
+<li><a href="style.html">ホームページファイルの作成方法</a></li>
+<li><a href="ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="html-make1.html">個別ページの作成方法</a></li>
+<li><a href="link.html">リンクタグの作り方</a></li>
+<li><a href="kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="image.html">ホームページに画像の貼り方</a></li>
+<li><a href="banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="amp.html">AMPページの作り方</a></li>
+<li><a href="json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="hp-sozai.html">ホームページ素材</a></li>
+<li><a href="soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "HowTo",
+      "name": "ホームページに画像の貼り方",
+      "description": "ホームページに画像を貼り付ける際、imgタグに「画像のURL」や「サイズ」、「alt属性」、「外枠のあり・なし」などを記載してHTMLファイルに貼り付けます。",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://www.homepage-tukurikata.com/image/px-syousai.png",
+        "height": "180",
+        "width": "202"
+      }, "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "画像素材"
+        }
+      ],
+	  "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "FTP転送ツール"
+        }, {
+          "@type": "HowToTool",
+          "name": "画像加工ツール"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "url": "https://www.homepage-tukurikata.com/hp/image.html#step1",
+          "name": "画像のアップロード",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "ホームページに「image」や「img」などの画像専用のフォルダを作成し、FTP接続などでアップロードします。画像ファイルはHTMLファイルとは区別してまとめて管理しておくとよいでしょう。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/image-gazou.png",
+            "height": "199",
+            "width": "326"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "画像URLの指定",
+          "url": "https://www.homepage-tukurikata.com/hp/image.html#step2",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "「画像のURL」は、アップロードした画像を実際にブラウザで表示させ、そのURLをコピペで貼り付けます。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "画像サイズの入力",
+          "url": "https://www.homepage-tukurikata.com/hp/image.html#step3",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "画像のサイズについては、chromeやfirefoxなどのブラウザで画像のみを表示させればブラウザのタブ上に表示されます。パソコン上で確認する場合は、画像を右クリックして「プロパティー - 詳細 - 大きさ」で確認できます。このサイズをimgタグの「width」や「height」に記入しますが、pxを付けないで記載します。"
+          }],
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://www.homepage-tukurikata.com/image/px-syousai.png",
+            "height": "180",
+            "width": "202"
+          }
+        }, {
+          "@type": "HowToStep",
+          "name": "説明文「alt属性」の記入",
+          "url": "https://www.homepage-tukurikata.com/hp/image.html#step4",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "alt属性にその画像の説明を簡単に記載します。これは画像が表示されなかった際、ここに記載されたテキストが表示されます。この説明文を記述しておくと検索エンジンの画像検索などでもヒットしやすくなります。"
+          }]
+        }, {
+          "@type": "HowToStep",
+          "name": "外枠の「あり・なし」の指定",
+          "url": "https://www.homepage-tukurikata.com/hp/image.html#step5",
+          "itemListElement": [{
+            "@type": "HowToDirection",
+            "text": "borderを「0」で指定すると外枠なしとなり、「border=「1」で指定すると外枠が1pxで表示されます。外枠の指定は、できるだけCSS側で一括して指定することをおすすめします。"
+          }]
+        }],
+      "totalTime": "PT1H"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "ホームページに画像の貼り方",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/hanikami-640px.jpg"
+       ],
+      "datePublished": "2014-12-24T16:38:29+09:00",
+      "dateModified": "2021-02-10T18:52:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "作り方",
+        "item": "https://www.homepage-tukurikata.com/hp/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "ホームページに画像の貼り方",
+        "item": "https://www.homepage-tukurikata.com/hp/image.html"
+      }]
+    }
+</script>
+</body>
+</html>

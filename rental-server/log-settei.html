@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サーバーアクセスログの設定方法</title>
+<meta name="description" content="レンタルサーバーを契約した際には、アクセスログの保存設定をしておくことをおすすめします。自動では保存されませんので、契約した段階で設定しておきましょう。">
+<meta name="keywords" content="レンタルサーバー,アクセスログ,保存設定">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/log-settei.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/log-settei-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../pagination.css">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="log-settei.html">
+<link rel="amphtml" href="../amp/rental-server/log-settei.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="サーバーアクセスログの設定方法">
+<meta property="og:description" content="レンタルサーバーを契約した際には、アクセスログの保存設定をしておくことをおすすめします。自動では保存されませんので、契約した段階で設定しておきましょう。">
+<meta property="og:image" content="../image/x-log.png">
+<meta property="og:image" content="../image/x-tuika.png">
+<meta property="og:image" content="../image/onamae-log-kannri.png">
+<meta property="og:url" content="log-settei.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/log-settei.woff2) format("woff2"),
+url(../fonts/log-settei.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/log-settei-bold.woff2) format("woff2"),
+url(../fonts/log-settei-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>サーバーアクセスログの設定方法</h1>
+<p>レンタルサーバーを契約した際には、<a href="../access/log.html">アクセスログ</a>の保存設定をしておくことをおすすめします。</p><p>不正アクセスにあった際など、後々何らかの事情でアクセスログが必要になることもありますが、たいていのレンタルサーバーでは<span class="aka">自動ではデータが保存されません</span>。ユーザーが保存設定をしてからデータが蓄積されていく仕様が多いため、契約した段階で設定しておくことをおすすめします。</p><p>また、一定期間が経過したらデータが削除されるケースも多いため、可能であれば、定期的にアクセスログをダウンロードしてPC内に保存しておくとよいでしょう。</p><p>加えて、「Awstats」などのアクセスログの解析ツールを利用する場合、こちらも利用するには設定をしておかないとデータが集積されていきません。「<b>アクセスログ</b>」と「<b>アクセス解析ツール</b>」の設定を契約した段階でしておくことをおすすめします。</p><p>■<b>エックスサーバーの例</b></p><p><a href="xserver.html">エックスサーバー</a>では「ログファイル」の箇所から保存設定ができます。</p><p><img src="../image/x-log.png" width="320" height="224" alt="エックスサーバー ログファイル" class="ccc" /></p><p>ログの保存期間は最大で「9週間」となっています。</p><p><img src="../image/x-hozonn.png" width="320" height="192" alt="エックスサーバー ログ保存" class="ccc" /></p><p>また、エックスサーバーの場合、「アクセスログの保存設定」のほかにも、アクセス解析ツールも追加しておくとよいでしょう。</p><p><img src="../image/x-tuika.png" width="320" height="244" alt="アクセス解析ツール 追加" class="ccc" /></p><p>■<b>お名前.comレンタルサーバーの場合</b></p><p><a href="rensaba.html">お名前.comサーバー</a>の場合、コントロールパネルの「アクセス解析+SEO総合診断」の箇所から設定できます。</p><p><img src="../image/onamae-log-kannri.png" width="320" height="273" class="ccc" alt="アクセス解析+SEO総合診断" /></p><p>設定を「有効」にしておくとよいでしょう。</p><p><img src="../image/onamae-log.png" width="320" height="225" alt="保存設定 有効" class="ccc" /></p><p>お名前.comレンタルサーバーの場合、オリジナルのアクセス解析のツールを利用することができます。</p><p>■<b>さくらインターネットの例</b></p><p><a href="sakura-server.html">さくらインターネット</a>の場合、ドメインごとにデータを解析するには、「ホスト名の情報」の箇所の設定も必要になります。こちらも「残す」に設定しておくとよいでしょう。</p><p><img src="../image/sakura-log-settei.png" width="234" height="127" alt="アクセスログの設定" class="ccc" /></p><p><img src="../image/sakura-log.png" width="320" height="157" alt="保存期間" class="ccc" /></p><p>■<b>コアサーバーの例</b></p><p><a href="coreserver.html">コアサーバー</a>の場合、「アクセスログ閲覧」の箇所から保存設定をすることができます。</p><p><img src="../image/core-log.png" width="320" height="157" alt="コアサーバー ログ保存" class="ccc" /></p><p>■<b>ロリポップの例</b></p><p><a href="lolipop.html">ロリポップ！</a>の場合、特に設定は必要ありません。<br />
+90日間は自動で保存されますので、定期的にログをダウンロードしておくことをおすすめします。</p><p><img src="../image/lolipop-log.png" width="320" height="147" alt="ロリポップ アクセスログ" class="ccc" /></p><p>■<b>ヘテムルの例</b></p><p><a href="heteml.html">ヘテムル</a>もログの保存設定は必要ありませんが、ダウンロードできるのは「過去 30 日分」となっています。</p><p><img src="../image/heteml-log.png" width="226" height="140" alt="アクセス解析" class="ccc" /></p><p>上記のように、なかには何もしなくても自動で保存されるレンタルサーバーもありますが、ほとんどのケースでは最初に「保存設定」をしておかないとデータが蓄積されていきません。サーバー契約をした際には、まずはアクセスログの保存設定をしておくとよいでしょう。</p>
+<p class="nextpage">次のページ → <a href="../access/user-agent.html">クローラーアクセスの確認方法</a></p>
+<ul class="pagination">
+<li><a href="../access/log.html">前へ</a></li>
+<li><a href="../access/log.html">1</a></li>
+<li class="this">2</li>
+<li><a href="../access/user-agent.html">3</a></li>
+<li><a href="../access/crawler-list.html">4</a></li>
+<li><a href="../access/user-agent.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../access/log.html">サーバー生ログのアクセス解析の方法</a></li>
+<li class="list-li"><a href="../access/user-agent.html">クローラーアクセスの確認方法</a></li>
+<li class="list-li"><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+<li class="list-li"><a href="../access/google-analytics.html">Googleアナリティクスの設定方法</a></li>
+<li class="list-li"><a href="../access/log-ipaddress.html">ログのIPアドレスから個人情報を特定できる？</a></li>
+<li class="list-li"><a href="index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="houjin.html">法人向けレンタルサーバー比較</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "サーバーアクセスログの設定方法",
+      "image": [
+        "https://www.homepage-tukurikata.com/image/x-log-1200.png"
+       ],
+      "datePublished": "2017-01-27T00:00:00+09:00",
+      "dateModified": "2021-07-27T15:26:00+09:00"
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "レンタルサーバー比較",
+        "item": "https://www.homepage-tukurikata.com/rental-server/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "サーバーアクセスログの設定方法",
+        "item": "https://www.homepage-tukurikata.com/rental-server/log-settei.html"
+      }]
+    }
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセス解析",
+        "item": "https://www.homepage-tukurikata.com/access/analysis.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "サーバーアクセスログの設定方法",
+        "item": "https://www.homepage-tukurikata.com/rental-server/log-settei.html"
+      }]
+    }
+</script>
+</body>
+</html>

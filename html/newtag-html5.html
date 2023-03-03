@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>HTML5の新しいタグの使い方</title>
+<meta name="description" content="XHTMLからHTML5へ修正する際、DTDやmetaタグなどを修正した後、コンテンツの部分についてはHTML5から新しく追加されたタグを使って修正していきます。">
+<meta name="keywords" content="HTML5,新しいタグ,使い方">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/newtag.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/newtag-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../pagination.css">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="newtag-html5.html">
+<link rel="amphtml" href="../amp/html/newtag-html5.html">
+<link rel="prev" href="howto-html5.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5の新しいタグの使い方">
+<meta property="og:description" content="XHTMLからHTML5へ修正する際、DTDやmetaタグなどを修正した後、コンテンツの部分についてはHTML5から新しく追加されたタグを使って修正していきます。">
+<meta property="og:image" content="../image/tokutei.png">
+<meta property="og:image" content="../image/main-padding.png">
+<meta property="og:url" content="newtag-html5.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/newtag.woff2) format("woff2"),
+url(../fonts/newtag.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/newtag-bold.woff2) format("woff2"),
+url(../fonts/newtag-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../access/index.html">アクセスアップ</a></li><li class="btm"><a href="index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>HTML5の新しいタグの使い方</h1>
+<p>XHTMLからHTML5へ修正する際、<a href="howto-html5.html">DTDやmetaタグの修正</a>をした後、コンテンツの部分についてはHTML5から新しく追加されたタグを使って修正していきます。</p>
+<ul>
+<li>&lt;header&gt;</li>
+<li>&lt;main&gt;</li>
+<li>&lt;article&gt;</li>
+<li>&lt;nav&gt;</li>
+<li>&lt;aside&gt;</li>
+<li>&lt;footer&gt;</li>
+<li>&lt;section&gt;</li>
+</ul>
+<p>これらのタグの使い方については、サイト運営者の意図によって使い方に違いが出てきます。</p><p>例えば、サイトバーを主要なナビゲーションと考えれば&lt;nav&gt;で囲むことになりますし、補足情報と考えれば&lt;aside&gt;で囲むことになります。また、&lt;article&gt;や&lt;aside&gt;などはまったく使用していないサイトも多いです。</p><p>この新しいHTML5タグの使用は必須ではないため、使い方の判断が難しい場合には無理には使用せず、既存の&lt;div&gt;のままにしておくのもよいでしょう。</p><p>ヤフーニュースなどがそうですが、HTML5ではあるものの、これらの新しいタグを使用していないサイトも多いです。</p><p>特に&lt;article&gt;などは<span class="aka">アウトラインといわれる文章構造へ影響を与えるタグ</span>になりますが、従来通り、シンプルにh1やh2だけで暗黙的にアウトラインを作成していった方が綺麗に仕上がる可能性があります。SEO対策上、どちらが有利かは分からないため、サイト運営者によって違いがあるものと思われます。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>XHTMLからHTML5の新しいタグへの修正方法</h2>
+<p class="blue">&lt;header&gt;部分の修正</p><p>&lt;header&gt;部分については、既存のID属性をそのまま利用して置換することをおすすめします。</p><p>例えば、既存サイトで&lt;div id=&quot;abc&quot;&gt;がヘッダー部分の場合、このID属性をそのまま利用して&lt;header id=&quot;abc&quot;&gt;と修正するだけで既存のスタイルシートをそのまま利用できます。</p><p>当サイトでは&lt;div id=&quot;header&quot;&gt;がヘッダー部分のため、どちらもheaderで紛らわしくはなるものの、これを&lt;header id=&quot;header&quot;&gt;へと一括で置換しました。</p>
+<hr /><p>&lt;div id=&quot;header&quot;&gt;&lt;/div&gt;</p><p>　　↓「特定のタグ」で一括置換</p><p>&lt;header id=&quot;header&quot;&gt;&lt;/header&gt;</p><hr /><p>Dreamweaverの場合、「特定のタグ」で「div」を選択し、属性も「id」で「header」を指定します。次に、「タグを変更」を選択し、変更後のタグを「header」に指定すれば、閉じタグまでを含めて一括で置換することができます。</p><p><img src="../image/tokutei.png" width="320" height="114" alt="特定のタグを置換" class="ccc"></p><p class="blue">&lt;footer&gt;部分の修正</p><p>次に、こちらも運営者によるタグに使い方にあまり違いがない&lt;footer&gt;部分を修正するとよいでしょう。このフッター部分についても、既存のID属性をそのまま利用して置換することをおすすめします。</p><hr /><p>&lt;div id=&quot;footer&quot;&gt;&lt;/div&gt;</p><p>　　↓「特定のタグ」で一括置換</p><p>&lt;footer id=&quot;footer&quot;&gt;&lt;/footer&gt;</p><hr />
+<p class="blue">&lt;nav&gt;部分の修正</p><p>グローバルナビゲーションがある場合には、この部分を&lt;nav&gt;&lt;/nav&gt;に置換します。</p><p>&lt;nav&gt;&lt;/nav&gt;</p><p>この&lt;nav&gt;の部分は判断が分かれるかと思いますが、「主要なグローバルナビゲーション」についてはこの&lt;nav&gt;タグを使って間違いありません。また、パンくずリストについても使用しても特に問題はないかと思います。</p><p>ただし、関連記事についてはどちらかというと「補足情報」を意味する&lt;aside&gt;を使用した方がいいのかなという気もしております。</p><p>また、サイドバーについても、一般的には&lt;aside&gt;を設定するかと思いますが、グローバルナビゲーションがないサイトの場合、サイドバーが主要なナビゲーションになるはずなので、&lt;nav&gt;で設定してもよいかと思います。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><p class="blue">&lt;main&gt;と&lt;article&gt;の違い</p><p>&lt;main&gt;と&lt;article&gt;の使い方には微妙な違いがありますが、&lt;main&gt;は主要なコンテンツ部分であることを意味するタグで１ページに１回しか使えません。一方、&lt;article&gt;は何度でも使えます。</p><p>また、&lt;main&gt;はセクションを生成しないのに対し&lt;article&gt;はセクションを生成します。</p><p>カテゴリーページなどでの記事一覧がある場合、それぞれの個別記事を&lt;article&gt;で囲い、そのコンテンツ部分の全体を&lt;main&gt;で囲むといった使い方になるかと思います。</p>
+<ul>
+<li>&lt;main&gt;&lt;/main&gt; → １ページに１回だけ → セクションしない</li>
+<li>&lt;article&gt;&lt;/article&gt; → 何回でも使える → セクション生成でアウトラインへ影響</li>
+</ul>
+<p>ちなみに、Dreamweaverの古いバージョンでは「タグを変更」の箇所で「main」がないため、「任意」の箇所に直接記入するとよいでしょう。</p><p>概ね、１ページを「ヘッダー」と「コンテンツ」、「サイドバー」、「フッター」の領域に分け、それぞれを&lt;header&gt;と&lt;main&gt;、&lt;aside&gt;、&lt;footer&gt;に割り当ててしまうのがシンプルかと感じています。</p><p>そして、&lt;main&gt;内の個別の記事にそれぞれ&lt;article&gt;を設定するのかどうかでアウトラインへ影響してしまうため、このあたりはサイト運営者によって判断が分かれるかもしれません。</p><p>■<b>「main」への「display:block;」の指定</b></p>
+<p>この「main」については、FirefoxやChromeではデフォルトで「<a href="../css/display-block.html">display:block;</a>」ではあるものの、<span class="aka">IE11ではデフォルトで「display:inline;」</span>となっています。そのため、IE11で表示した際、main要素のpaddingが効かないはずです。</p><p>当サイトでもコンテンツ部分のpaddingが効かず、IE11では余白が空いていませんでした。</p><p><img src="../image/main-padding.png" width="320" height="213" alt="main要素のpadding" class="ccc"></p><p>これを回避するために、main {display:block;}を指定しておくとよいでしょう。</p>
+<p class="blue">&lt;aside&gt;部分の修正</p><p>サイドバーについては、補足情報を意味する&lt;aside&gt;かナビゲーションを意味する&lt;nav&gt;を利用するかで迷う箇所かもしれません。</p><p>&lt;nav&gt;は主要なナビゲーションリンクに使うものですが、当サイトではサイドバーも主要なリンクと考えてますので、以下のような形でもよい気がしております。</p><p>&lt;aside&gt;<br>
+&lt;nav&gt;<br>
+サイドバー全て<br>
+&lt;/nav&gt;<br>
+&lt;/aside&gt;</p><p>ただし、サイドバーを広告表示や新着情報の一覧などで使用している場合、単に&lt;aside&gt;だけの方がぶなんかと思います。</p><p>また、関連記事については各個別記事についての補足情報になるかと思いますので、&lt;nav&gt;ではなく、&lt;article&gt;タグ内に内包する形で&lt;aside&gt;で囲んでおく方がよい気もします。</p><p>&lt;main&gt;<br>
+&lt;article&gt;<br>
+&lt;h1&gt;記事タイトル&lt;/h1&gt;
+<br>
+記事内容<br>
+&lt;aside&gt;<br>
+関連記事<br>
+&lt;/aside&gt;<br>
+&lt;/article&gt;<br>
+&lt;/main&gt;</p><p>当サイトでは、極力、html5の新しいタグは使わないようにしていますので、&lt;header&gt;や&lt;footer&gt;などの必要最低限なものだけを使用するようにしています。サイト運営者によって、これらHTML5タグの使い方に違いがありますので、主要メディアでの使い方も参考にしてみるとよいでしょう。</p>
+<ul class="pagination">
+<li><a href="howto-html5.html">前へ</a></li>
+<li><a href="html5.html">1</a></li>
+<li><a href="howto-html5.html">2</a></li>
+<li class="this">3</li>
+<li class="pre">次へ</li>
+</ul><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="navi"><a href="../index.html">トップページ</a>　&#8260;　<a href="index.html">htmlタグ</a>　&#8260;　<b>HTML5の新しいタグの使い方</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="howto-html5.html">HTML5への修正方法</a></li>
+<li class="list-li"><a href="html5.html">HTML5とXHTML 1.0の違い</a></li>
+<li class="list-li"><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li class="list-li"><a href="dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li class="list-li"><a href="../hp/soft.html">おすすめのホームページ作成ソフト</a></li>
+<li class="list-li"><a href="section.html">&lt;section&gt;はアウトラインを明示するタグ</a></li>
+<li class="list-li"><a href="ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HTMLタグ",
+        "item": "https://www.homepage-tukurikata.com/html/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HTML5タグの使い方"
+      }]
+    }
+</script>
+</body>
+</html>

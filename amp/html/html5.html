@@ -1,0 +1,239 @@
+<!doctype html>
+<html ⚡ lang="ja">
+<head>
+<meta charset="utf-8">
+<title>HTML5とXHTML 1.0の違い</title>
+<meta name="description" content="「html5」ではタグに意味的な要素が加えられており、よりセマンティックなホームページを作成することができます。加えて、以前までのXHTML 1.0と比べてhtml5ではタグが簡略化されており、htmlソースがすっきりと軽量化されている点でも違いがあります。">
+<meta name="keywords" content="HTML5,XHTML,違い">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" href="../../image/favicon.ico">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="canonical" href="../../html/html5.html">
+<link rel="next" href="../../html/howto-html5.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5とXHTML 1.0の違い">
+<meta property="og:description" content="「html5」ではタグに意味的な要素が加えられており、よりセマンティックなホームページを作成することができます。加えて、以前までのXHTML 1.0と比べてhtml5ではタグが簡略化されており、htmlソースがすっきりと軽量化されている点でも違いがあります。">
+<meta property="og:image" content="../../image/ogp-400.png">
+<meta property="og:url" content="../../html/html5.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style amp-custom>body{margin:0;padding:0;font-family:"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;}#outer{background-image:url(../../image/kinkin.png);background-repeat:repeat-x;padding:0;line-height:1.6;position:relative;}@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;src:url(../../fonts/nbold.woff2) format("woff2"),url(https://www.homepage-tukurikata.com/fonts/nbold.woff) format("woff");font-display:swap;}a{color:#03c;}pre{white-space:pre-wrap;word-wrap:break-word;overflow:auto;}.breadcrumb{margin-left:0;font-weight:bold;color:#555;}hr{border-width:1px 0 0 0;border-style:solid;border-color:#ccc;height:1px;}.hasen{border-style:dotted;border-color:#999;}blockquote{border:1px solid #ccc;padding:5px;margin:10px;}.cnt{text-align:center;}#outer{width:100%;font-size:100%;}#header-inner{width:100%;}.logo{font-size:18px;padding:10px 0 6px 16px;margin:0;color:#033;font-family:"Noto Sans JP";font-weight:700;}.logo a{color:#190F0B;text-decoration:none;display:block;}.logo a:hover{text-decoration:none;}h1{font-size:18px;margin:0;color:#190F0B;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2, h3{font-size:18px;background-color:#FCF5DC;line-height:1.3;padding:12px 10px 12px 10px;}h2 a,h3 a{text-decoration:none;}.kai{display:block;font-weight:bold;color:#333;}.blue{font-size:16px;background-color:#d8e4e8;font-weight:bold;padding:10px 0 10px 10px;}.yellow{padding:14px 0 14px 10px;color:#000;background:#FCF5DC;font-weight:bold;}.black{background-color:#fff;background:none;font-size:16px;padding:4px 10px;}.black:before{content:"■";}.htarrow{background-image:url(/image/html-arrow.png);background-position:left center;background-repeat:no-repeat;padding:0 0 0 15px;margin:1em 0 1em 10px;}#navigation{width:100%;height:auto;}.main-navi{position:relative;z-index:1;margin:0;padding:0;}.main-navi .cut{display:none;}.main-navi li{font-size:14px;margin:0;display:inline-block;height:36px;line-height:36px;position:relative;width:33.3%;text-align:center;box-sizing:border-box;}.main-navi li a{font-weight:bold;color:#333;display:block;padding:0;font-size:12px;border-right:1px solid #f9f9f9;border-top:1px solid #f9f9f9;text-decoration:none;}.main-navi li a:hover{border-bottom:#06c 2px solid;}.main-navi .btm{border-bottom:1px solid #f9f9f9;}.main-navi .lft{border-left:1px solid #f9f9f9;}.navi{font-weight:normal;color:#333;padding:9px 0 9px 10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-top:15px;}.ad-top{display:block;padding:8px 0 0 0;text-align:center;height:100px;}p{margin:1em 0;word-wrap:break-word;color:#333;padding:0 10px;}#content{width:100%;padding:0 0 0 0;margin:0;overflow:auto;}#main{width:100%;clear:both;}.inner{display:block;padding:8px 0 20px 0;}.inner a{font-weight:bold;}.aka{color:#B0231D;font-weight:bold;}.akai{color:#f00;font-weight:normal;}.orange{color:#C30;font-weight:bold;}.ccc{border:solid 1px #ccc;}table{color:#333;}form{margin:7px;}.list{padding:10px 0 0 0;}.listtitle{font-size:20px;font-weight:bold;color:#0a0a0a;padding:0 0 6px 20px;margin:0;border-bottom:solid #ccc 1px;}.list-ul{margin:0;}.list-li{list-style:none;margin:0 10px;border-bottom:1px #ccc solid;padding:0;font-size:14px;}.list-li a{display:block;text-decoration:none;padding:7px 0;}.list-li a:hover{text-decoration:underline;}#sidebar{font-size:100%;padding:0;color:#004C25;width:100%;}.sidet{font-size:15px;font-weight:bold;}.hpcss{color:#fff;background-color:#004C25;}.hikaku{color:#333;background-color:#efece4;border-top:1px solid #000;border-bottom:1px solid #000;}.hikaku, .hpcss{font-size:110%;padding:9px 0 9px 20px;}.ctop{margin-top:0;border-top-left-radius:4px;border-top-right-radius:4px;}.side{padding:3px 0 14px 0;background-color:#F3F7F2;color:#777;background-color:#fff;}.side li{font-size:15px;list-style:none;margin:0;padding:0;border-bottom:1px #ccc solid;}a{font-weight:bold;color:#006ccc;}.side a{display:block;font-weight:bold;color:#0063c1;text-decoration:none;}.side ul{margin:0;padding:0;}.side li a{padding:10px 0 10px 20px;text-decoration:none;}.side li a:hover{text-decoration:none;}.kiiro{padding:9px 0 14px 0;background-color:#fdfbf2;}.momo{padding:9px 0 14px 0;background-color:#fffdfb;}.haiiro{padding:9px 0 14px 0;background-color:#f8f8f8;border-bottom-left-radius:4px;border-bottom-right-radius:4px;}ul{margin:0 0 0 1.4em;padding:0;}ol{margin:0 0 0 2em;padding:0;}.rs{margin:0;}.rs li{list-style:none;margin:0;border-bottom:1px #ccc solid;padding:10px 0;}.selected{color:#212121;font-weight:bold;}#selected{color:#e34352;font-weight:bold;}img{max-width:100%;height:auto;border:0;}.copyright{padding-top:0;margin-left:0;color:#666;text-align:center;}.copy-ul{margin:0;padding:0;list-style-type:none;}.copy-li{margin:0;padding:0 2px;display:inline;}.copy-li a{color:#666;text-decoration:none;font-weight:normal;}.copy-li a:hover{text-decoration:underline;}.copy-li:before{content:"|";margin-right:4px;}.copy-li:first-child:before{display:none}.copyright p{color:#666;}footer{height:179px;width:100%;}.pagetop{font-size:16px;padding:4px 10px 4px 0;text-align:right;}.pagetop a{font-size:36px;padding:20px 0 0 0;}.pagetop a:hover{text-decoration:underline;}.copyright{font-size:13px;}.copy-li{line-height:1.9;display: inline-block;}.sp-bottom{display:block;padding:10px 0 0 0;text-align:center;}.svg-outer{border:1px solid #dadce0;border-radius:50%;padding:9px;}.upward{fill:#75797D;}a:hover .upward{fill:#111;}a:hover .svg-outer{background-color:#f8f8f8;}#kanren{padding:0 10px 0 10px;display:block;}a:hover{color:#06c;text-decoration:none;}.width-320{width:92%;}.smll{font-size:16px;}ul, ol{padding:0 10px;}.sp{padding:0;display:block;}.rs-t{margin-bottom:8px;}.nextpage {text-align:left;padding: 24px 10px 24px 10px;font-size: 13px;background-color:#fafafa;border-radius: 4px;border:#e3e3e3 solid 1px;}.nextpage a{display:block;font-weight:bold;text-decoration:none;}.nextpage a:hover{text-decoration:underline;}.pagination {padding-bottom:20px;text-align:center;}.pagination li {display: inline-block;height:40px;line-height:40px;width:40px;text-align:center;border:1px #ccc solid;color:#000053;border-radius: 5px / 5px;}.pagination .pre {background-color:#efefef;color:#333;}.pagination .this {background-color:#777;color:#fff;}.pagination li a{display:block;text-decoration: none;}.pagination li a:hover {color: #fff;text-decoration: none;background-color: #003396;}
+@media screen and (min-width:768px){#header-inner{margin:0 auto;width:600px;}.logo{padding:10px 0 6px 10px;}#navigation{height:44px;border-bottom:1px #e0e0e0 solid;box-sizing:border-box;}.main-navi{margin:0 auto;width:600px;}.main-navi li{font-size:14px;display:inline;width:auto;margin:0;height:44px;line-height:44px;text-align:center;}.main-navi li a{padding:12px 16px;color:#190F0B;text-decoration:none;display:inline;}.main-navi li a:hover{border-bottom:#06c 2px solid;}#main{margin:0 auto;width:600px;}#sidebar{margin:0 auto;width:600px;}.inner{padding:16px 0;margin:0;}.sidet{font-size:20px;padding:9px 0 9px 40px;}.side{padding:9px 0 14px 0;}.side li{margin:0;padding:3px 0 3px 16px;}}
+</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script async src="../../../cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-ad" src="../../../cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+<script async custom-element="amp-analytics" src="../../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+</head>
+<body>
+<amp-analytics type="gtag" data-credentials="include"><script type="application/json">{"vars" :{"gtag_id": "UA-2336808-16","config" : {"UA-2336808-16": { "groups": "default" }}}}</script></amp-analytics>
+<div id="outer">
+<header>
+<div id="header-inner">
+<div class="logo"><a href="../../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../../index.html">トップ</a></li><li class="lft"><a href="../../hp/index.html">作り方</a></li><li><a href="../../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="../../access/index.html">アクセスアップ</a></li><li class="btm"><a href="../../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../../css/index.html">CSS</a></li>
+</ul>
+</nav></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>HTML5とXHTML 1.0の違い</h1>
+<p>以前までは「XHTML 1.0」のDTDが主流でしたが、現在では最新バージョンの「<b>html5</b>」でホームページを作成する人が多くなってきました。</p><p>この「html5」ではタグに<span class="aka">意味的な要素</span>が加えられており、よりセマンティックなホームページの作成が可能になっています。この「セマンティック」というのは「意味の」とか「意味論的な」を表す言葉ですが、htmlタグが何を意味するものなのかを明確に示すことができるようになりました。</p><p>例えば、XHTML 1.0では&lt;div&gt;で囲んだ領域が何を意味するのかは中身を見ないとわかりませんが、HTML5で追加された新しいタグの&lt;header&gt;タグを使えば、その領域がヘッダー部分であることを明示することができます。</p><p>他にもコンテンツ部分の&lt;main&gt;や&lt;article&gt;、あるいはナビゲーション部分の&lt;nav&gt;の要素などが追加されており、これらの新しいタグを使用することにより、検索エンジンにサイト制作者の意図を正確に伝えることができます。</p><p>実際に既存サイトをHTML5に修正する際の手順については、こちらのページもご参照ください。<br>→ <a href="../../html/howto-html5.html">HTML5への修正方法</a></p><p>さらに、html5ではタグが簡略化されており、htmlソースがすっきりと軽量化されています。今後、ホームページを作成する際には「HTML5」で作成していくとよいでしょう。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>HTML5で追加された新しいタグ</h2>
+<p>当サイトではテンプレートのサンプルを「XHTML1.0」で作成していましたが、ヘッダー部分やコンテンツ部分、サイドバー、あるいはフッターなどの&lt;div&gt;領域のID属性を何にするかで迷うことがありました。</p><p>例えば、ヘッダー部分は&lt;div id=&quot;header&quot;&gt;とか&lt;div id=&quot;head&quot;&gt;などのID属性が一般的に使用されていましたが、ID属性は任意の文字列のため、&lt;div id=&quot;abc&quot;&gt;などと書いても特に問題はなく、どのようなID属性を付けるべきかは統一されていませんでした。</p><p>けれども、&lt;div id=&quot;abc&quot;&gt;などと書かれていた場合、それがヘッダー部分なのか、コンテンツなのか、あるいはフッターなのかは分かりません。ID属性が任意の状態では、どこが重要なコンテンツの部分であるかを検索エンジン側へ伝えづらい面がありました。</p><p>その点、「html5」ではヘッダー部分には&lt;header&gt;、フッター部分には&lt;footer&gt;、あるいはコンテンツの部分には&lt;article&gt;の新しいタグを使用することになりましたので、「header」などの文字列は機械的な記号ではなく、そのタグ自体に意味を持つようになっています。</p><p>この&lt;div id=&quot;header&quot;&gt;と&lt;header&gt;でよく似ていますが、前者が単なる<a href="../../html/div.html">&lt;div&gt;タグ</a>であるのに対し、<span class="aka">&lt;header&gt;タグはHTML5から新しく出来たタグ</span>です。</p>
+<ul>
+<li><b>&lt;div id=&quot;header&quot;&gt;</b> → &lt;div&gt;タグ→ 「入れ子」で意味を持たない</li>
+<li><b>&lt;header&gt;</b> → &lt;header&gt;タグ → 「ヘッダー部分」の意味を持つ</li>
+</ul>
+<p>つまり、&lt;div id=&quot;header&quot;&gt;の場合はID属性に「header」の文字列があったとしても、それは単なる入れ子の&lt;div&gt;要素に過ぎませんでしたが、html5の&lt;header&gt;タグはそれがヘッダー部分であるという<span class="aka">意味的な役割を持つ</span>ようになっています。</p><p>ほかにも、以下のような新しいタグがHTML5で追加されています。</p><p>■<b>HTML5で追加された主な新しいタグ</b></p>
+<ul>
+<li>&lt;header&gt;</li>
+<li>&lt;main&gt;</li>
+<li>&lt;article&gt;</li>
+<li>&lt;nav&gt;</li>
+<li>&lt;aside&gt;</li>
+<li>&lt;footer&gt;</li>
+<li>&lt;section&gt;</li>
+</ul>
+<p>例えば、ヘッダー部分とフッター部分を&lt;header&gt;と&lt;footer&gt;で囲み、コンテンツ部分を&lt;main&gt;と&lt;article&gt;で囲みます。その他、グローバルナビゲーションがあれば&lt;nav&gt;で囲み、サイドバーがあれば、&lt;aside&gt;や&lt;nav&gt;などで囲む使い方になります。</p><p>→ <a href="../../html/newtag-html5.html">HTML5の新しいタグの使い方</a></p><p>これにより、検索エンジン側でコンテンツ部分を探すには&lt;main&gt;や&lt;article&gt;の部分を探せばよくなりましたし、サイドバーやナビゲーションなどに含まれる無関係なキーワードを除外することができますので、ページ内容をより正確に認識しやすくなったものと思われます。</p><p>加えて、サイト運営者側でも検索エンジン側にどの部分が重要なコンテンツであるのかを明示することが可能になったため、より検索エンジンフレンドリーなサイト作成が可能になっています。</p><p>当ホームページでは<a href="../../access/title-keyword.html">タイトルタグの付け方を最適化</a>する方法についてご紹介してましたが、新しい&lt;header&gt;や&lt;main&gt;タグを使用することで、あまりこだわる必要はなくなったと感じています。</p><p>このサイト運営者の意図を反映した「セマンティックなサイト作成」が可能になった点が、HTML5の大きなメリットのひとつといえるでしょう。</p><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><h2>HTML5ではDTDなどのhtmlソースが簡略化</h2>
+<p>HTML5の実際の書き方についてですが、XHTML 1.0と比較すると省略できるタグが多くなっており、htmlソースがシンプルですっきりしました。</p>
+<h3 class="blue">DTDの指定</h3><p>まず、<a href="../../html/dtd.html">DTD</a>になりますが、単にhtmlと書くだけですみます。以前までのXHTML1.0と比較するとかなり簡略化されました。</p><p><b>XHTML 1.0の場合</b></p><p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;<br />
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</p><p>　　　↓</p><p><b>HTML5の場合</b> <span class="aka">NEW！</span></p><p>&lt;!DOCTYPE html&gt;</p><h3 class="blue">html要素の指定</h3><p>html要素の指定についてもシンプルになりました。</p><p><b>XHTML 1.0の場合</b></p><p>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;ja&quot; lang=&quot;ja&quot;&gt;</p><p>　　　↓</p><p><b>HTML5の場合</b> <span class="aka">NEW！</span></p><p>&lt;html lang=&quot;ja&quot;&gt;</p><h3 class="blue">metaタグの文字コードの指定</h3><p>文字コードの指定も簡略化されています。</p><p><b>XHTML 1.0の場合</b></p><p>&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;</p><p>　　　↓</p><p><b>HTML5の場合</b> <span class="aka">NEW！</span></p><p>&lt;meta charset=&quot;utf-8&quot;&gt;</p><h3 class="blue">「style」や「script」のtype属性の指定</h3>
+<p>style要素指定の&lt;link rel=&quot;stylesheet&quot;&gt;のtype属性の初期値は「text/css」となりましたので、「type=&quot;text/css&quot;」を省略することができます。</p><p><b>XHTML 1.0の場合</b></p><p>&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; type=&quot;text/css&quot; /&gt;</p><p>　　　↓</p><p><b>HTML5の場合</b> <span class="aka">NEW！</span></p><p>&lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt;</p><p>同様に&lt;script&gt;のtype属性の初期値も「text/javascript」となりましたので、&lt;script type=&quot;text/javascript&quot;&gt;を使用する場合には「type=&quot;text/javascript&quot;」の記述を省略することができます。</p>
+<h3 class="blue">&lt;meta http-equivの指定</h3><p>上記のように<b>type属性の初期値が「text/css」や「text/javascript」となりました</b>ので、metaタグで記載していたstyleタイプの「Content-Style-Type」とscriptタイプの「Content-Script-Type」の記述はできなくなりました。</p><p><b>XHTML 1.0の場合</b></p><p>&lt;meta http-equiv=&quot;Content-Style-Type&quot; content=&quot;text/css&quot; /&gt;<br />
+&lt;meta http-equiv=&quot;Content-Script-Type&quot; content=&quot;text/javascript&quot; /&gt;</p><p>　　　↓</p><p><b>HTML5の場合</b> <span class="aka">NEW！</span></p><p>記載しない</p><p>HTML5では新しく追加されたセマンティックな&lt;header&gt;要素や&lt;article&gt;要素などを使用することが重要なポイントになり、HTML5の肝ともいえますが、かといってこれらのタグの使用は特に必須なわけでもありません。</p><p>とりあえず、上記の部分の変更をするだけでもHTML5に対応することができます。</p>
+<h2>HTML5はIE8以下のブラウザでは非対応</h2>
+<p>HTML5は<span class="aka">IE8以下のブラウザでは非対応</span>となっており、新しく追加されたセクション要素などを認識せず、CSSの指定が反映されずにそのままの状態で表示されてしまいます。</p><p>ただし、「IE8」は2009年に公開され、その後、2013年には「IE11」が公開されたのち「Microsoft Edge」に移行しましたので、現在ではIE8以下を利用しているユーザーはかなり少ないです。</p><p>2015年あたりではまだ時期尚早という気もしていましたが、2018年の現在、自サイトのアクセス解析上の割合では「コンマ数％」以下まで下がってきました。また、既に公式サポートも終了しており、サポートが継続しているのはIE11のみですので、HTML5への対応・非対応のほかにもセキュリティー上の問題があります。</p><p>さらに、主要メディアでHTML5へ移行済みのケースが多くなってきており、日経や朝日などの大手メディアではまだXHTML1.0ではあるものの、ロイターや時事通信、読売、毎日、産経、ブルームバーグ、ハフポスト、あるいはCNNなどのサイトは既にHTML5となっています。</p><p>加えて、首相官邸や財務省などの公官庁ホームページではXHTML 1.0のままではあるものの、国税庁や米国ホワイトハウス、NASA、FBIなどはHTML5となっています。</p><p>現在では主要なホームページでHTML5に移行しているケースが多くなってきており、IE8以下のユーザーは様々な非対応を承知の上でネットを閲覧しているはずですので、個人サイトでHTML5に移行しても特に問題はないといえるでしょう。</p>
+<p class="nextpage">次のページ → <a href="../../html/howto-html5.html">HTML5への修正方法</a></p>
+<ul class="pagination">
+<li class="pre">前へ</li>
+<li class="this">1</li>
+<li><a href="../../html/howto-html5.html">2</a></li>
+<li><a href="../../html/newtag-html5.html">3</a></li>
+<li><a href="../../html/howto-html5.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/amp-kanren.lbi" -->
+<span id="kanren"><amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"
+     data-auto-format="mcrspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad></span><!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/ad-a.lbi" -->
+<amp-ad width="100vw" height="320"
+     type="adsense"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-auto-format="rspv"
+     data-full-width="">
+  <div overflow=""></div>
+</amp-ad><!-- #EndLibraryItem --><div class="navi"><a href="../../index.html">トップページ</a>　&#8260;　<a href="../../html/index.html">htmlタグ</a>　&#8260;　<b>HTML5とXHTML 1.0の違い</b></div>
+<div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li class="list-li"><a href="../../html/newtag-html5.html">HTML5の新しいタグの使い方</a></li>
+<li class="list-li"><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li class="list-li"><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li class="list-li"><a href="../../html/section.html">&lt;section&gt;はアウトラインを明示するタグ</a></li>
+<li class="list-li"><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/amp-side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="../../access/w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="../../access/robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../../access/index.html">アクセスアップの方法</a></li>
+<li><a href="../../access/seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="../../access/mobile.html">モバイル端末への最適化</a></li>
+<li><a href="../../access/attract.html">ホームページの集客方法</a></li>
+<li><a href="../../access/analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../../css/index.html">CSSの一覧</a></li>
+<li><a href="../../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../../index.html">トップページ</a></li><li class="copy-li"><a href="../../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../../terms.html">利用規約</a></li><li class="copy-li"><a href="../../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "HTMLタグ",
+        "item": "https://www.homepage-tukurikata.com/html/"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "HTML5とXHTML 1.0の違い"
+      }]
+    }
+</script>
+</body>
+</html>

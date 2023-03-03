@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>クローラーアクセスの確認方法</title>
+<meta name="description" content="検索エンジンなどのクローラーによるアクセスは、サーバーのアクセスログで確認することができます。クローラーのアクセスを拒否する場合、robots.txtや.htaccessを使用するとよいでしょう。">
+<meta name="keywords" content="クローラー,アクセス,ユーザーエージェント,拒否">
+<meta name="viewport" content="width=device-width">
+<link rel="preload" as="font" href="../fonts/user-agent.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="preload" as="font" href="../fonts/user-agent-bold.woff2" crossorigin="anonymous" media="screen and (min-width:768px)">
+<link rel="stylesheet" href="../new-reiwab2b8.css?202107">
+<link rel="stylesheet" href="../pagination.css">
+<link rel="icon" href="../image/favicon.ico">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="canonical" href="user-agent.html">
+<link rel="amphtml" href="../amp/access/user-agent.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="クローラーアクセスの確認方法">
+<meta property="og:description" content="検索エンジンなどのクローラーによるアクセスは、サーバーのアクセスログで確認することができます。クローラーのアクセスを拒否する場合、robots.txtや.htaccessを使用するとよいでしょう。">
+<meta property="og:image" content="../image/user-agent.png">
+<meta property="og:url" content="user-agent.html">
+<meta property="og:site_name" content="ホームページの作り方">
+<meta name="twitter:card" content="summary">
+<style>
+@media screen and (min-width: 768px) {
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 300;
+src: url(../fonts/user-agent.woff2) format("woff2"),
+url(../fonts/user-agent.woff) format("woff");font-display: swap;}
+@font-face {font-family: "Noto Sans CJK JP";font-style: normal;font-weight: 700;
+src: url(../fonts/user-agent-bold.woff2) format("woff2"),
+url(../fonts/user-agent-bold.woff) format("woff");font-display: swap;}
+main {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 300;}
+h1,h2,b,.aka {font-family:"Noto Sans CJK JP",sans-serif;font-weight: 700;font-synthesis: none;}
+h2 {padding: 12px 16px 14px 16px;}
+}
+</style>
+</head>
+<body>
+<div id="outer"><header>
+<div id="header-inner">
+<div class="logo"><a href="../index.html">ホームページの作り方</a></div>
+</div>
+<nav id="navigation">
+<ul class="main-navi">
+<li class="cut"><a href="../index.html">トップ</a></li><li class="lft"><a href="../hp/index.html">作り方</a></li><li><a href="../rental-server/index.html">レンタルサーバー</a></li><!-- 
+--><li><a href="../domain/index.html">ドメイン取得</a></li><li class="lft btm"><a href="index.html">アクセスアップ</a></li><li class="btm"><a href="../html/index.html">HTMLタグ</a></li><li class="btm"><a href="../css/index.html">CSS</a></li>
+</ul>
+</nav><!-- #BeginLibraryItem "/Library/ad-top.lbi" --><span class="ad-top">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-top -->
+<ins class="adsbygoogle homepage-top"
+     style="display:inline-block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="1376095861"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></span><!-- #EndLibraryItem --></header>
+<div id="content">
+<div id="main">
+<main class="inner">
+<h1>クローラーアクセスの確認方法</h1>
+<p>検索エンジンなどのクローラーによるアクセスは、<a href="log.html">サーバーのアクセスログ</a>で確認することができます。Google analyticsのようなJavascriptタイプのアクセス解析ではチェックできないため、アクセスログで確認するとよいでしょう。</p><p>チェックする際、ログをExcel等などに貼り付けて<span class="aka">ユーザーエージェント</span>で並べ替え、botなどの文字列をチェックすると分かりやすいです。ブラウザもクローラーも共に「Mozilla/5.0」のユーザーエージェントで始まっていることが多いですが、クローラーロボットの場合はクロールの目的などが記載されているURLが付いていることが多いです。</p><p>例えば、Googleボットの場合は以下のようなログになっていますが、URLにてこのクローラーロボットの詳細が記載されています。</p><p>&quot;Mozilla/5.0 (compatible; Googlebot/2.1; <span class="aka">+http://www.google.com/bot.html</span>)&quot;</p><p>このようなURL付きのアクセスログをチェックしていくとよいでしょう。</p><p><img src="../image/user-agent.png" alt="クローラーのアクセスログ" width="320" height="216" class="ccc"></p><p>当サイト運営者が確認したクローラーのリスト一覧はこちらをご参照ください。<br>
+→ <a href="crawler-list.html">Webクローラーの比較一覧</a></p><p>また並べ替えた際、IPアドレスとセットで確認してみて、明らかに他のアドレスと違う場合は偽装されている可能性があります。つまり、「わたしはグーグルのロボットです。」と名乗ってはいても、実はグーグルボットではない可能性もあります。</p><p>その際は「IPアドレスを逆引き」して本物かどうかを確認してみることをおすすめします。</p><!-- #BeginLibraryItem "/Library/kiji-ue.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>クローラーのアクセスを拒否する方法</h2>
+<p>クローラーによるアクセスを拒否する場合、<a href="robotstxt.html">robots.txtで指定する</a>のが一般的です。</p><p>robots.txtは強制ではないため、なかには書いてることを守らないクローラーもいますが、大手のクローラーは概ね守ってくれる傾向にあります。</p><p>そのほか、.htaccessで「ユーザーエージェント」や「ホスト名」、あるいは「IPアドレス」を指定する方法もありますが、クローラーの「IPアドレス」については動的に変更になる可能性があるため、ユーザーエージェントの方が確実かもしれません。</p>
+<ul>
+<li>robots.txt → 効き目にバラツキがある</li>
+<li>.htaccessで「IPアドレス」→ 変更になる可能性がある</li>
+<li>.htaccessで「ホスト名」→ 無害なクローラーまで拒否する可能性がある</li>
+<li>.htaccessで「ユーザーエージェント」→ 使い勝手がよい</li>
+</ul>
+<p>ただし、この.htaccessで拒否する場合は難しいです。</p><p>設定を間違えると、逆にロボットのみを許可して<span class="aka">通常のブラウザのアクセスを拒否してしまうリスク</span>があるため、できるだけrobots.txtで指定することをおすすめします。</p>
+<h2>.htaccessで強制的にクローラーを拒否する方法</h2>
+<p>もし.htaccessで強制的に拒否する場合、Apache公式サイトの<a href="https://httpd.apache.org/docs/2.4/ja/mod/mod_access_compat.html" target="_blank" rel="nofollow noopener">AllowとDenyディレクティブ</a>の箇所にて、「全てのアクセスを拒否してから、let_me_inで指定したUser-Agentを許可する例」が紹介されていますので、そちらを参考にされることをおすすめします。</p><p>User-Agentで「拒否する場合」はこれの逆になります。</p><p>■<b>.htaccessで「拒否」する場合の例</b></p><p>SetEnvIf User-Agent &quot;<span class="aka">ロボット１</span>&quot; let_me_out<br>
+SetEnvIf User-Agent &quot;<span class="aka">ロボット２</span>&quot; let_me_out<br>
+Order Allow,Deny<br>
+Allow from all<br>
+Deny from env=let_me_out</p><p>つまり、「Order Allow,Deny」を指定したのち、「すべてのアクセスを許可（Allow from all）してから、let_me_outで指定したUser-Agentのロボットを拒否する」という意味になります。</p><p>■<b>「Allow,Deny」と「Deny,Allow」の順序の違い</b></p><p>この「Order ほにゃらら」の順序が重要ですが、「Order Allow,Deny」は<span class="aka">デフォルトで拒否</span>、「Order Deny,Allow」は<span class="aka">デフォルトで許可</span>の違いがあります。</p>
+<p>上記の公式サイトには以下の記述があり、単に「Order ほにゃらら」のみを指定して「Allow from」などを何も記述しなかった場合、どちらにも該当しなくなりますが、この場合は２番目がデフォルトになります。</p><p><img src="../image/allow-deny.png" alt="AllowとDeny" width="320" height="234"></p><p>つまり、「Order Allow,<span class="aka">Deny</span>」の場合は２番目の「Deny」がデフォルトになり拒否、「Order Deny,<span class="aka">Allow</span>」の順番の場合は２番目の「Allow」がデフォルトになり許可という意味です。</p>
+<ul>
+<li>「Order Allow,<span class="aka">Deny</span>」→ デフォルトでDeny</li>
+<li>「Order Deny,<span class="aka">Allow</span>」→ デフォルトでAllow</li>
+</ul>
+<p>実際に試してみると分かりますが、単に「Order Allow,Deny」のみを記載した場合はサイトが表示されないのに対し、「Order Deny,Allow」のみの場合はサイトが表示されるはずです。</p><p>そのため、上記のように「Order Allow,Deny」を指定したあとは、必ず「Allow from all」を忘れないようにすることをおすすめします。</p><p>また、拒否するボットは「Allow from all」と「Deny from env=let_me_out」で両方にマッチしますが、「Order Allow,Deny」の場合は「最後のマッチした方：拒否」が適用されて拒否される仕組みになります。</p><p>例えば、当サイトではユーザーエージェントのほか、IPアドレスやホスト名なども組み合わせて以下のように設定しています。</p><p><img src="../image/deny-sample.png" alt="当サイトのAllow,Deny" width="320" height="277" class="ccc"></p><p>すると、アクセスログではこのように「403 Forbidden」で出力されます。</p><p><img src="../image/jitulog-403.png" alt="403ログ" width="320" height="213" class="ccc"></p><p>ちなみに、「Order Deny,Allow」がデフォルトで許可なら、「Allow from」を省略して以下のように書けそうな気もしますが、あまり一般的ではないかもしれません。</p><p>Order Deny,Allow<br>
+Deny from env=let_me_out</p><p>特定のホスト名を一括で拒否しつつ、このホストを利用している特定のクローラーのみを許可するといった場合にはこのような記述方法をすればよいかと思います。</p><p>また、上記の公式サイトでは「user-agent の文字列が KnockKnock/2.0 で始まるブラウザのみがアクセスが許可され、」とあるため、user-agentを完全に指定しなくても制御できますが、そのロボットに特有の文字列のみを使用し、うっかり他のロボットまで拒否してしまわないように注意しましょう。</p><p>例えば、&quot;Mozilla/5.0 (compatible; Examplebot/2.1; +http://www.example.com)&quot;などといった場合、「SetEnvIf User-Agent &quot;Examplebot&quot; let_me_out」のように指定します。</p><p>.htaccessで指定した後はサイトが表示されるかを確認し、実際に設定が反映されているかをアクセスログでも確認してみることをおすすめします。</p><!-- #BeginLibraryItem "/Library/kiji-nai.lbi" --><span class="sp">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- mobile-homepage -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="7441039866"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><h2>Webスクレイピング・クローラーの見分け方</h2>
+<p>一般的なクローラーはuser-agentで身元を名乗ってきますし、概ねサーバーに負担がかからないような配慮がされているため、それほど問題はないかと思います。</p><p>けれども、最近ではPython（パイソン）などを利用したスクレイピングと呼ばれる自動収集のロボットが大量にやってくることも多いです。サーバーのリソースを消耗してしまう場合、サイトの読み込み速度が低下してしまうため、何らかの対処をしておくとよいでしょう。</p><p>■<b>スクレイピングクローラーの特徴</b></p>
+<ul>
+<li>ユーザーエージェントに「Python」や「Scrapy」などの文字列がある</li>
+<li><span class="aka">リファラが空白</span>な大量のアクセス</li>
+<li>月単位でみて同一IPアドレスからの大量のアクセス</li>
+<li>AWSなどのクラウドサービスからのアクセス</li>
+</ul>
+<p>このようなアクセスがある場合、もしかして？スクレイピング・クローラーなのかもしれません。</p><p>例えば、「ec2-～.compute.amazonaws.com」などからのアクセスはあやしいケースが多く、これらのアクセスはリファラが空白なケースが多いです。</p><p><img src="../image/amazon-aws.png" alt="amazon aws" width="320" height="226" class="ccc"></p><p>もちろん、アマゾンやGoogle、マイクロソフト自体が何かをやっているわけではなく、クラウドサービスを利用しているユーザーが作成したボットになりますが、あまりに大量なアクセスの場合は何らかの対処が必要かもしれません。</p><p>ただし、無料SSLの「Let's Encrypt」などでもAWSのホストから認証ロボットがやってくるケースもあり、ホスト名で一括ではじいていると認証が失敗してしまうかもしれません。</p><p>また、「～.bc.googleusercontent.com」については、このドメインはGoogleウェブキャッシュの「webcache.googleusercontent.com」でも使用されており、ドメインごと拒否すると支障が出てしまう可能性があります。加えて、「google-proxy-何とか.google.com」についても、こちらは通常のブラウザによるアクセスになるため、うっかり拒否してしまうと通常のアクセスも拒否してしまうことになりかねません。</p><p>また、「Deny from ホスト名」でドメインごと拒否した場合、レンタルサーバー会社によっては「<a href="https://httpd.apache.org/docs/2.4/ja/mod/core.html#hostnamelookups" target="_blank" rel="nofollow noopener">HostnameLookups</a>」でログがホスト名も表示する様式になってしまい、IPアドレスから逆引きしてしまうため、サーバーのパフォーマンスが低下してしまうかもしれません。</p><p>そのため、あえてノーガードで何も対策しないという選択もありますが、アナリティクスなどのデータでサイトの表示速度が低下したと感じた場合にはチェックしてみるとよいでしょう。</p>
+<p class="nextpage">次のページ → <a href="crawler-list.html">Webクローラーの比較一覧</a></p>
+<ul class="pagination">
+<li><a href="../rental-server/log-settei.html">前へ</a></li>
+<li><a href="log.html">1</a></li>
+<li><a href="../rental-server/log-settei.html">2</a></li>
+<li class="this">3</li>
+<li><a href="crawler-list.html">4</a></li>
+<li><a href="crawler-list.html">次へ</a></li>
+</ul><!-- #BeginLibraryItem "/Library/kannrenn.lbi" -->
+<span id="kanren">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- homepage-bottom -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="5479947143"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span>
+<span class="sp-bottom">
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-7318724010966086"
+     data-ad-slot="9390056168"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</span><!-- #EndLibraryItem --><div class="list">
+<div class="listtitle">関連ページ</div>
+<ul class="list-ul">
+<li class="list-li"><a href="log.html">サーバー生ログのアクセス解析の方法</a></li>
+<li class="list-li"><a href="crawler-list.html">Webクローラーの比較一覧</a></li>
+<li class="list-li"><a href="../rental-server/log-settei.html">サーバーアクセスログの設定方法</a></li>
+<li class="list-li"><a href="robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li class="list-li"><a href="log-ipaddress.html">ログのIPアドレスから個人情報を特定できる？</a></li>
+<li class="list-li"><a href="analysis.html">アクセス解析の設置方法</a></li>
+<li class="list-li"><a href="keyword.html">キーワードの月間検索回数を調べる方法</a></li>
+<li class="list-li"><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li class="list-li"><a href="../rental-server/transfer-amount.html">レンタルサーバーの「転送量」とは？</a></li>
+<li class="list-li"><a href="../hp/apple-touch-icon.html">apple-touch-icon.pngの作り方</a></li>
+</ul>
+</div>
+</main>
+</div><aside id="sidebar"><!-- #BeginLibraryItem "/Library/side.lbi" -->
+<div class="sidet hpcss ctop">基礎知識</div>
+<div class="side">
+<ul>
+<li><a href="../hp/basic.html">無料ホームページとは？</a></li>
+<li><a href="../hp/css.html">トップページを複製しての作り方</a></li>
+<li><a href="../hp/tag-teuti.html">HTMLタグを手打ちしての作り方</a></li>
+<li><a href="../hp/file.html">ホームページファイルの種類</a></li>
+<li><a href="../hp/style.html">ホームページファイルの作成方法</a></li>
+<li><a href="../hp/ffftp-setuzoku.html">FTP接続によるアップロード方法</a></li>
+<li><a href="../hp/folder.html">フォルダ分けによる階層化</a></li>
+<li><a href="../hp/toppage.html">index.htmlとトップページの関係</a></li>
+<li><a href="../hp/ouyou.html">レンタルサーバーでの作り方</a></li>
+<li><a href="../domain/domein.html">独自ドメインとは何ですか？</a></li>
+<li><a href="../domain/nameserver.html">独自ドメインの設定方法</a></li>
+<li><a href="../hp/name.html">個別ページのファイル名の付け方</a></li>
+<li><a href="../hp/public-html.html">public_htmlフォルダとは？</a></li>
+<li><a href="w3c-valid.html">W3C Validでウェブ標準な作り方</a></li>
+<li><a href="../html/dtd.html">DTDとはいったい何でしょうか？</a></li>
+<li><a href="robotstxt.html">「robots.txt」の記述例とサンプル</a></li>
+<li><a href="../hp/redirect.html">リダイレクト設定による転送方法</a></li>
+<li><a href="../hp/kihon.html">その他の基本事項</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">ホームページスペース</div>
+<div class="side kiiro">
+<ul>
+<li><a href="../rental-server/index.html">個人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/houjin.html">法人向けレンタルサーバー比較</a></li>
+<li><a href="../rental-server/free-space.html">無料ホームページスペース比較</a></li>
+<li><a href="../domain/index.html">独自ドメインの取得方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">簡単な作り方</div>
+<div class="side">
+<ul>
+<li><a href="../hp/make.html">簡単な無料ホームページの作り方</a></li>
+<li><a href="../hp/freesample.html">テンプレートのカスタマイズ方法</a></li>
+<li><a href="../hp/styles-css.html">スタイルシートでデザインを変更</a></li>
+<li><a href="../css/howto-css.html">スタイルシートの作り方</a></li>
+<li><a href="../hp/css-example.html">スタイルシートカスタマイズの手順</a></li>
+<li><a href="../hp/css-hp.html">最新版のテンプレートサンプル</a></li>
+<li><a href="../hp/html-make1.html">個別ページの作成方法</a></li>
+<li><a href="../hp/link.html">リンクタグの作り方</a></li>
+<li><a href="../hp/kaisya-hp.html">会社ホームページの作り方</a></li>
+<li><a href="../hp/image.html">ホームページに画像の貼り方</a></li>
+<li><a href="../hp/banner.html">サイトのロゴ画像の作り方</a></li>
+<li><a href="../hp/mt.html">CMSでのホームページ作成方法</a></li>
+<li><a href="../hp/moving.html">レンタルサーバーへの引越方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">応用</div>
+<div class="side momo">
+<ul>
+<li><a href="../html/howto-html5.html">HTML5への修正方法</a></li>
+<li><a href="../hp/responsive.html">レスポンシブサイトの作り方</a></li>
+<li><a href="../rental-server/ssl.html">独自SSLの設定でHTTPS化</a></li>
+<li><a href="../html/ogp.html">OGPのmetaタグでSNSに最適化</a></li>
+<li><a href="../hp/what-webfont.html">WEBフォントとは何ですか？</a></li>
+<li><a href="../hp/amp.html">AMPページの作り方</a></li>
+<li><a href="../hp/json.html">構造化データの作り方</a></li>
+</ul>
+</div>
+<div class="sidet hikaku">アクセスアップ</div>
+<div class="side kiiro">
+<ul>
+<li><a href="index.html">アクセスアップの方法</a></li>
+<li><a href="seo.html">SEO対策でアクセスアップ</a></li>
+<li><a href="mobile.html">モバイル端末への最適化</a></li>
+<li><a href="attract.html">ホームページの集客方法</a></li>
+<li><a href="analysis.html">アクセス解析の設置方法</a></li>
+</ul>
+</div>
+<div class="sidet hpcss">その他</div>
+<div class="side haiiro">
+<ul>
+<li><a href="../html/index.html">HTMLタグの一覧</a></li>
+<li><a href="../css/index.html">CSSの一覧</a></li>
+<li><a href="../html/programming-school.html">プログラミングスクール一覧</a></li>
+<li><a href="../hp/koukoku-syuunyuu.html">広告収入のススメ</a></li>
+<li><a href="../hp/website-creation-company.html">ホームページ制作会社</a></li>
+<li><a href="../hp/hp-sozai.html">ホームページ素材</a></li>
+<li><a href="../hp/soft.html">HP作成ソフト</a></li>
+<li><a href="https://template.homepage-tukurikata.com/">無料テンプレート</a></li>
+</ul>
+</div>
+<form action="https://www.google.co.jp/cse" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-7318724010966086:4665406818">
+    <input type="hidden" name="ie" value="UTF-8">
+    <input type="text" name="q" id="search-input" placeholder="サイト内を検索">
+    <input type="submit" name="sa" value="検索" id="search-button">
+  </div>
+</form><!-- #EndLibraryItem --></aside></div><footer>
+<div class="pagetop"><a href="#outer"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" class="svg-outer" role="img" aria-label="このページの上へ"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" class="upward"/></svg></a></div>
+<div class="copyright"><ul class="copy-ul">
+<li class="copy-li"><a href="../index.html">トップページ</a></li><li class="copy-li"><a href="../privacy.html">プライバシーポリシー</a></li><!-- 
+--><li class="copy-li"><a href="../terms.html">利用規約</a></li><li class="copy-li"><a href="../hp/about.html">About</a></li><!-- 
+--><li class="copy-li"><a href="../sitemap.html">サイトマップ</a></li><li class="copy-li"><a href="https://blog-tips.net/">ブログの作り方</a></li>
+</ul>
+<p>&copy;2023 www.homepage-tukurikata.com</p></div>
+</footer>
+</div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-2336808-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-2336808-16');
+</script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://www.homepage-tukurikata.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "アクセス解析",
+        "item": "https://www.homepage-tukurikata.com/access/analysis.html"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "クローラー"
+      }]
+    }
+</script>
+</body>
+</html>
